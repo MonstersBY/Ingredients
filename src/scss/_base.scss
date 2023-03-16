@@ -11,6 +11,7 @@ html {
 	box-sizing: border-box;
 	font-family: $font-primary;
 	font-size: calc((100 / 1920) * 1vw); // px to rem
+	font-weight: 500;
 	scroll-behavior: smooth;
 
 	&.has-cursor,
@@ -31,6 +32,8 @@ body {
 	text-rendering: optimizeLegibility;
 	text-size-adjust: 100%;
 	-webkit-tap-highlight-color: transparent;
+	font-size: 16rem;
+	line-height: 150%;
 }
 
 main {
@@ -139,15 +142,7 @@ iframe {
 	z-index: 1;
 	margin: 0 auto;
 	width: 100%;
-	max-width: 100%;
-}
-
-.site {
-	display: flex;
-	flex-direction: column;
-	min-height: 100vh; // fallback
-	// stylelint-disable-next-line
-	min-height: var(--vh);
+	max-width: 1520rem;
 }
 
 /* stylelint-disable */
@@ -155,16 +150,16 @@ iframe {
 * Немедленно переместите любую анимацию в конечную точку, если пользователь установил свое устройство в положение "prefers reduced motion".
 * Это может привести к плохим(непреднамеренным) последствиям. Удалите по мере необходимости и напишите свой собственный код для prefers-reduced-motion.
 */
-@media (prefers-reduced-motion: reduce) {
-	*,
-	*:before,
-	*:after {
-		animation-duration: 0.001s !important;
-		animation-delay: 0s !important;
-		transition-duration: 0.001s !important;
-		transition-delay: 0s !important;
-	}
-}
+// @media (prefers-reduced-motion: reduce) {
+// 	*,
+// 	*:before,
+// 	*:after {
+// 		animation-duration: 0.001s !important;
+// 		animation-delay: 0s !important;
+// 		transition-duration: 0.001s !important;
+// 		transition-delay: 0s !important;
+// 	}
+// }
 /* stylelint-enable */
 
 
