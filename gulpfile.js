@@ -471,11 +471,11 @@ gulp.task('build', gulp.series(
 	'copy',
 	'pug',
 	'share',
-	'robots',
+	// 'robots',
 	gulp.parallel(
 		'images',
 		// 'sprites:png',
-		// 'sprites:svg',
+		'sprites:svg',
 		'scss',
 		'js',
 	),

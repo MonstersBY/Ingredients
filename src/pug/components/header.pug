@@ -1,11 +1,57 @@
 header.header
 	.container
 		.header__top
-			a(href="#").logo
+			a.logo(href="#")
 				img(src="images/logo.png" alt="logo")
+
 			form.localizer
 				select(name="lang")
 					option(value="ru" selected) Ru
 					option(value="en") En
 
+			.header__links
+				a.logo(href="#") О нас
+				a.logo(href="#") Сотрудничество
+
+			a.btn.feedback(type="button") Связаться с нами
+
+			.header__setup
+				a(href="#").icon
+					+svg("like")
+				a(href="#").icon
+					+svg("note")
+				a(href="#").icon
+					+svg("notif")
+				a(href="#").icon
+					+svg("profile")
+
 		.header__bottom
+			nav.nav
+				ul.nav__list
+					li: a(href="#")  О проекте
+
+					li
+						a(href="#")  Материалы
+						ul.nav__list_drop
+							li: a(href="#") Материалы 1
+							li: a(href="#") Материалы 2
+							li: a(href="#") Материалы 3
+							li: a(href="#") Материалы 4
+
+					li
+						a(href="#")  Инновации
+						ul.nav__list_drop
+							li: a(href="#") Инновации 1
+							li: a(href="#") Инновации 2
+							li: a(href="#") Инновации 3
+							li: a(href="#") Инновации 4
+
+					li
+						a(href="#")  Технологии
+						ul.nav__list_drop
+							li: a(href="#") Технологии 1
+							li: a(href="#") Технологии 2
+							li: a(href="#") Технологии 3
+							li: a(href="#") Технологии 4
+
+					li: a(href="#")  Поставшики

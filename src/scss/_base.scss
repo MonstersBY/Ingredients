@@ -110,29 +110,6 @@ iframe {
 	display: block;
 }
 
-.btn {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin: 0;
-	border: 0;
-	padding: 0;
-	text-align: center;
-	background-color: transparent;
-	transition: $duration-normal;
-	user-select: none;
-
-	&__content {
-		position: relative;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		min-width: 100%;
-		color: currentColor;
-		transform: translateZ(0);
-	}
-}
-
 .js-lazy-load:not(.is-loaded) {
 	max-height: 50vh;
 }
