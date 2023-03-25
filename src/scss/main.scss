@@ -14,3 +14,64 @@
 @import "components/nice-select";
 
 @import "pages/home";
+
+
+.logo {
+	flex-shrink: 0;
+	width: 195rem;
+	height: 50rem;
+}
+
+.localizer {
+
+	font-size: 20rem;
+
+	.nice-select {
+		border: none;
+		background: none;
+		font-size: inherit;
+		font-weight: inherit;
+
+		&:after {
+			border-color: #000;
+			height: 10rem;
+			margin-top: -7rem;
+			right: 12rem;
+			width: 10rem;
+
+		}
+
+		&.open:after {
+			transform: rotate(-135deg);
+		}
+
+	}
+
+}
+
+.btn {
+	flex-shrink: 0;
+	padding: 14rem 32rem;
+	font-size: 16rem;
+	font-weight: 700;
+	background: #201702;
+	box-shadow: 5rem 5rem 25rem rgba(153, 173, 187, 0.1);
+	border-radius: 5rem;
+	color: #FBFBFB;
+}
+
+.icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 52rem;
+	height: 52rem;
+	background: rgba(255, 255, 255, 0.4);
+	box-shadow: 5rem 5rem 25rem rgba(153, 173, 187, 0.1);
+	border-radius: 5rem;
+
+	svg {
+		display: block;
+		width: 24rem;
+	}
+}

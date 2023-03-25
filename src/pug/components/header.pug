@@ -10,27 +10,27 @@ header.header
 					option(value="en") En
 
 			.header__links
-				a.logo(href="#") О нас
-				a.logo(href="#") Сотрудничество
+				a(href="#") О нас
+				a(href="#") Сотрудничество
 
 			a.btn.feedback(type="button") Связаться с нами
 
 			.header__setup
-				a(href="#").icon
-					+svg("like")
-				a(href="#").icon
-					+svg("note")
-				a(href="#").icon
-					+svg("notif")
-				a(href="#").icon
-					+svg("profile")
+				a.icon(href="#")
+					include ../svg/like.svg
+				a.icon(href="#")
+					include ../svg/note.svg
+				a.icon(href="#")
+					include ../svg/notif.svg
+				a.icon(href="#")
+					include ../svg/profile.svg
 
 		.header__bottom
 			nav.nav
 				ul.nav__list
-					li: a(href="#")  О проекте
+					li.nav__item: a(href="#")  О проекте
 
-					li
+					li.nav__item.nav__item_drop
 						a(href="#")  Материалы
 						ul.nav__list_drop
 							li: a(href="#") Материалы 1
@@ -38,7 +38,7 @@ header.header
 							li: a(href="#") Материалы 3
 							li: a(href="#") Материалы 4
 
-					li
+					li.nav__item.nav__item_drop
 						a(href="#")  Инновации
 						ul.nav__list_drop
 							li: a(href="#") Инновации 1
@@ -46,7 +46,7 @@ header.header
 							li: a(href="#") Инновации 3
 							li: a(href="#") Инновации 4
 
-					li
+					li.nav__item.nav__item_drop
 						a(href="#")  Технологии
 						ul.nav__list_drop
 							li: a(href="#") Технологии 1
@@ -54,4 +54,8 @@ header.header
 							li: a(href="#") Технологии 3
 							li: a(href="#") Технологии 4
 
-					li: a(href="#")  Поставшики
+					li.nav__item: a(href="#")  Поставшики
+
+			button.search_open(type="button")
+				include ../svg/search.svg
+
