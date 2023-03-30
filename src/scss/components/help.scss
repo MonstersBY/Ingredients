@@ -1,0 +1,42 @@
+.help {
+
+	&__img {
+		position: relative;
+		border-radius: 5rem;
+		overflow: hidden;
+		z-index: 0;
+	}
+
+	&__inner {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 722rem;
+		margin: -182rem auto 0;
+		padding-top: 80rem;
+		background-color: #F0F4F6;
+		border-radius: 5rem;
+		z-index: 2;
+	}
+
+	.section__title {
+		margin-bottom: 28rem;
+	}
+
+	&__subtitle {
+		margin-bottom: 40rem;
+		color: #999;
+	}
+
+	&__btns {
+		display: flex;
+		align-items: center;
+
+		.btn:not(:last-child) {
+			margin-right: 28rem;
+		}
+	}
+
+}

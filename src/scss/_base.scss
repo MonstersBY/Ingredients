@@ -116,6 +116,14 @@ iframe {
 	max-height: 50vh;
 }
 
+input {
+	font-weight: 500;
+
+	&::placeholder {
+		color: inherit;
+	}
+}
+
 .container {
 	position: relative;
 	z-index: 1;

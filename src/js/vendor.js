@@ -9,9 +9,16 @@ svg4everybody();
 objectFitImages();
 // objectFitVideos();
 
+// import Swiper JS
+import Swiper, { Navigation, Pagination, EffectFade } from 'swiper';
+
 window.$ = $;
 window.jQuery = $;
 window.objectFitImages = objectFitImages;
+window.Swiper = Swiper;
+window.Navigation = Navigation;
+window.Pagination = Pagination;
+window.EffectFade = EffectFade;
 // window.objectFitVideos = objectFitVideos;
 
 require('ninelines-ua-parser');

@@ -1,0 +1,44 @@
+.switcher {
+
+	.swiper {
+		margin: 0;
+	}
+
+	&__control {
+		margin-left: auto;
+		padding: 4rem;
+		background: #f5f8fa;
+		box-shadow: 5rem 5rem 25rem rgba(153, 173, 187, 0.1);
+		border-radius: 5rem;
+	}
+
+	&__btn {
+		min-width: 145rem;
+		height: 44rem;
+		padding: 0;
+
+		&:not(.active) {
+			font-weight: 500;
+			color: inherit;
+			background: none;
+			box-shadow: none;
+		}
+	}
+
+	&__container {
+		position: relative;
+		height: 469rem;
+		margin-top: -50rem;
+		z-index: 1;
+	}
+
+	&__content {
+		position: absolute;
+		width: 100%;
+		transition: opacity 300ms;
+		&_hide {
+			opacity: 0;
+			pointer-events: none;
+		}
+	}
+}

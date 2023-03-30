@@ -1,0 +1,98 @@
+.banner {
+	margin: 76rem 0 60rem;
+	padding: 44rem 0 54rem;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+
+	&__title {
+		max-width: 850rem;
+		margin-bottom: 28rem;
+		font-size: 50rem;
+		line-height: 62rem;
+		font-weight: 700;
+		color: #fff;
+
+		span {
+			font-weight: 300;
+		}
+	}
+
+	&__subtitle {
+		max-width: 310rem;
+		color: #fff;
+	}
+
+	&__info {
+		margin-bottom: 28rem;
+		text-align: right;
+		color: #fff;
+
+		strong,
+		span,
+		b {
+			font-size: 32rem;
+			line-height: 39rem;
+
+			color: #fff;
+		}
+	}
+
+}
+
+.search {
+	display: flex;
+
+	&__filter {
+
+		select,
+		.nice-select {
+			min-width: 260rem;
+			margin-right: 24rem;
+			background: #FBFBFB;
+			border-radius: 5rem;
+		}
+	}
+
+	&__inner {
+		flex-grow: 1;
+		display: flex;
+		border-radius: 5rem;
+		overflow: hidden;
+	}
+
+	label {
+		flex-grow: 1;
+		position: relative;
+		background: #FBFBFB;
+
+		svg {
+			position: absolute;
+			top: 50%;
+			left: 24rem;
+			transform: translateY(-50%);
+			width: 24rem;
+		}
+	}
+
+	input {
+		display: block;
+		padding: 14rem 24rem 14rem 68rem;
+		background: none;
+		border: none;
+		outline: none;
+	}
+
+	button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 70rem;
+		background: #7C9DA8;
+		border: none;
+
+		svg {
+			width: 16rem;
+		}
+	}
+}

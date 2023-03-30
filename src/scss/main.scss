@@ -9,12 +9,6 @@
 @import "base";
 @import "helpers";
 
-@import "components/header";
-@import "components/footer";
-@import "components/nice-select";
-
-@import "pages/home";
-
 
 .logo {
 	flex-shrink: 0;
@@ -23,33 +17,17 @@
 }
 
 .localizer {
-
 	font-size: 20rem;
+}
 
-	.nice-select {
-		border: none;
-		background: none;
-		font-size: inherit;
-		font-weight: inherit;
-
-		&:after {
-			border-color: #000;
-			height: 10rem;
-			margin-top: -7rem;
-			right: 12rem;
-			width: 10rem;
-
-		}
-
-		&.open:after {
-			transform: rotate(-135deg);
-		}
-
-	}
-
+button {
+	border: none;
 }
 
 .btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	flex-shrink: 0;
 	padding: 14rem 32rem;
 	font-size: 16rem;
@@ -58,6 +36,14 @@
 	box-shadow: 5rem 5rem 25rem rgba(153, 173, 187, 0.1);
 	border-radius: 5rem;
 	color: #FBFBFB;
+	transition: 300ms;
+	white-space: nowrap;
+
+	svg {
+		max-width: 24rem;
+		max-height: 24rem;
+		margin-left: 24rem;
+	}
 }
 
 .icon {
@@ -75,3 +61,36 @@
 		width: 24rem;
 	}
 }
+
+.section {
+	padding: 100rem 0;
+
+	&__top {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-right: 185rem;
+		z-index: 2;
+
+	}
+
+	&__title {
+		font-weight: 700;
+		font-size: 55rem;
+		line-height: 62rem;
+		color: #181818;
+	}
+}
+
+@import "components/header";
+@import "components/footer";
+@import "components/nice-select";
+@import "components/banner";
+@import "components/materials";
+@import "components/switcher";
+@import "components/tiles";
+@import "components/swiper";
+@import "components/solutions";
+@import "components/vendors";
+@import "components/help";

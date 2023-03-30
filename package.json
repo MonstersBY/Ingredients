@@ -2,9 +2,7 @@
 	"name": "74101-template",
 	"version": "1.0",
 	"description": "Шаблон для разработки сайтов",
-	"scripts": {
-
-	},
+	"scripts": {},
 	"author": "74101",
 	"license": "ISC",
 	"private": true,
@@ -72,7 +70,8 @@
 		"normalize.css": "8.0.1",
 		"object-fit-images": "3.2.4",
 		"object-fit-videos": "1.0.4",
-		"svg4everybody": "2.1.9"
+		"svg4everybody": "2.1.9",
+		"swiper": "9.1.1"
 	},
 	"lint-staged": {
 		"*.(js|jsx|ts|tsx)": "eslint --color --fix",

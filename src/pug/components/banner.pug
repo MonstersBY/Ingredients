@@ -1,0 +1,25 @@
+section.banner(style="background-image:url(images/banner/banner_bg.jpg)")
+	.container
+		.banner__title
+			span Маркетплейс
+			|  материалов, инноваций и новых технологий
+		.banner__subtitle: | Находите лучшие предложения #[br] или размещайте собственные позиции
+		.banner__info
+			b 1200+ 
+			| позиций
+		.banner__inner
+
+			form.search
+				.search__filter
+					select(name="search")
+						option(value="0" selected) Все категории
+						option(value="1") Категория 1
+						option(value="2") Категория 2
+						option(value="3") Категория 3
+
+				.search__inner
+					label
+						include ../svg/search_grey.svg
+						input(type="text" placeholder="Название ингредиента")
+					button(type="submit")
+						include ../svg/arrow.svg

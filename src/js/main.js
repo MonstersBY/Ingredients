@@ -10,6 +10,10 @@ import scrollToAnchor from './modules/scrollToAnchor';
 
 
 import './components/jquery.nice-select';
+import './components/switcher';
+import './components/swiper_materials';
+import './components/swiper_solutions';
+import './components/swiper_vendors';
 
 $('select').niceSelect();
 
