@@ -1,3 +1,10 @@
+.vendors {
+	.swiper-slide {
+		max-width: 359rem;
+	}
+}
+
+
 .vendor {
 	display: flex;
 	align-items: center;
@@ -12,7 +19,7 @@
 	filter: drop-shadow(-10rem -10rem 20rem rgba(255, 255, 255, 0.2)) drop-shadow(10rem 10rem 10rem rgba(139, 168, 189, 0.05));
 	user-select: none;
 	transition: background-color 300ms, border-color 300ms;
-	
+
 	&__title {
 		margin-bottom: 52rem;
 		transition: color 300ms;

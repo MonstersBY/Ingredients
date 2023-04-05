@@ -5,6 +5,8 @@
 	}
 
 	&__control {
+		display: flex;
+		align-items: center;
 		margin-left: auto;
 		padding: 4rem;
 		background: #f5f8fa;
@@ -28,7 +30,7 @@
 	&__container {
 		position: relative;
 		height: 469rem;
-		margin-top: -50rem;
+		margin-top: -42rem;
 		z-index: 1;
 	}
 

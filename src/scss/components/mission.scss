@@ -1,0 +1,32 @@
+.mission {
+
+	.container {
+		display: flex;
+		align-items: center;
+	}
+
+	.section__title {
+		margin-bottom: 28rem;
+	}
+
+	&__text {
+		font-size: 24rem;
+		line-height: 130%;
+		color: #737373;
+	}
+
+	&__images {
+		display: flex;
+		align-items: flex-start;
+		margin-right: 60rem;
+	}
+
+	.frame {
+		width: 419rem;
+
+		&:nth-child(2) {
+			margin-top: 72rem;
+			margin-left: -125rem;
+		}
+	}
+}

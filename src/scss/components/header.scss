@@ -5,6 +5,10 @@
 		align-items: center;
 		padding: 24rem 0 18rem;
 	}
+	
+	.logo {
+		margin-right: 48rem;
+	}
 
 	&__links {
 		display: flex;
@@ -33,7 +37,7 @@
 	&__bottom {
 		display: flex;
 		align-items: center;
-		padding: 14rem 0;
+		padding: 10rem 0;
 		border: 2px solid #fff;
 		border-left: none;
 		border-right: none;
@@ -57,7 +61,7 @@
 	&__item {
 
 		&:not(:last-child) {
-			margin-right: 120rem;
+			margin-right: 140rem;
 		}
 	}
 

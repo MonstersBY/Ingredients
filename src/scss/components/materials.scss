@@ -1,5 +1,15 @@
 .materials {
-	background-position: 0 190rem;
-	background-repeat: no-repeat;
-	background-size: contain;
+	position: relative;
+
+	&_bg {
+		position: absolute;
+		top: 90rem;
+		left: 0;
+		right: 0;
+		pointer-events: none;
+
+		img {
+			object-fit: cover;
+		}
+	}
 }

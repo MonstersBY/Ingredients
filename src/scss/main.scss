@@ -12,7 +12,7 @@
 
 .logo {
 	flex-shrink: 0;
-	width: 195rem;
+	width: 153rem;
 	height: 50rem;
 }
 
@@ -63,14 +63,17 @@ button {
 }
 
 .section {
-	padding: 100rem 0;
+
+	&:not(:last-child) {
+		margin-bottom: 200rem;
+	}
 
 	&__top {
 		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		margin-right: 185rem;
+		margin-right: 190rem;
 		z-index: 2;
 
 	}
@@ -80,6 +83,36 @@ button {
 		font-size: 55rem;
 		line-height: 62rem;
 		color: #181818;
+	}
+}
+
+.frame {
+	position: relative;
+	padding: 20rem;
+	border: 2px solid #fff;
+	background: linear-gradient(133.18deg, rgba(255, 255, 255, 0.75) 0.79%, rgba(247, 249, 251, 0.75) 0.8%, rgba(247, 249, 251, 0) 99.98%);
+	filter: drop-shadow(-15rem -15rem 40rem rgba(255, 255, 255, 0.5)) drop-shadow(15rem 15rem 40rem rgba(139, 168, 189, 0.15));
+	backdrop-filter: blur(19rem);
+	border-radius: 10rem;
+
+	img {
+		display: block;
+		border-radius: 10rem;
+		overflow: hidden;
+	}
+
+	&__inner {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		display: flex;
+		align-items: flex-end;
+		padding: 27rem;
+		font-size: 16rem;
+		line-height: 19rem;
+		color: #fff;
 	}
 }
 
@@ -94,3 +127,6 @@ button {
 @import "components/solutions";
 @import "components/vendors";
 @import "components/help";
+@import "components/advantages";
+@import "components/mission";
+@import "components/news";
