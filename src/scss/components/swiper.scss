@@ -62,3 +62,20 @@
 	}
 
 }
+
+.swiper_container {
+	padding: 50rem;
+	margin: -50rem;
+	overflow: hidden;
+
+	.swiper {
+		overflow: visible;
+
+		&-slide-next + .swiper-slide + .swiper-slide,
+		&-slide-prev {
+			opacity: 0;
+		}
+	}
+
+	
+}

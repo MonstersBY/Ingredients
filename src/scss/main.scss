@@ -89,7 +89,6 @@ button {
 .frame {
 	position: relative;
 	padding: 20rem;
-	border: 2px solid #fff;
 	background: linear-gradient(133.18deg, rgba(255, 255, 255, 0.75) 0.79%, rgba(247, 249, 251, 0.75) 0.8%, rgba(247, 249, 251, 0) 99.98%);
 	filter: drop-shadow(-15rem -15rem 40rem rgba(255, 255, 255, 0.5)) drop-shadow(15rem 15rem 40rem rgba(139, 168, 189, 0.15));
 	backdrop-filter: blur(19rem);
@@ -113,6 +112,26 @@ button {
 		font-size: 16rem;
 		line-height: 19rem;
 		color: #fff;
+	}
+}
+
+.gradient_border {
+	position: relative;
+	border-left: 2px solid #fff;
+	overflow: hidden;
+
+	&::after {
+		content: '';
+		pointer-events: none;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: -2px;
+		border-width: 2px;
+		border-style: solid;
+		border-image: linear-gradient(to right,#fff,rgba(255, 255, 255, 0.3)) 1 1%;
+		transition: 300ms;
 	}
 }
 
