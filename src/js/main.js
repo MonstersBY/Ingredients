@@ -15,6 +15,7 @@ import './components/swiper_materials';
 import './components/swiper_solutions';
 import './components/swiper_vendors';
 import './components/swiper_news';
+import './components/navigation';
 
 $('select').niceSelect();
 

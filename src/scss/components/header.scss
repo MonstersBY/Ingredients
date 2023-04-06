@@ -1,4 +1,14 @@
 .header {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 10;
+	background-color: rgba($main_bg, .95);
+
+	+ * {
+		margin-top: 158rem;
+	}
 
 	&__top {
 		display: flex;
@@ -38,9 +48,25 @@
 		display: flex;
 		align-items: center;
 		padding: 10rem 0;
-		border: 2px solid #fff;
+		border: 2rem solid #fff;
 		border-left: none;
 		border-right: none;
+	}
+
+}
+
+.drop {
+	display: none;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	right: 0;
+	padding: 40rem 0;
+	background-color: $main_bg;
+
+	&__title {
+		display: inline-block;
+		margin-bottom: 24rem;
 	}
 }
 
@@ -52,16 +78,56 @@
 		display: flex;
 		align-items: center;
 
-		
 		&_drop {
-			display: none;
+			display: flex;
+			color: #686666;
+
+			li {
+				flex-grow: 1;
+				max-width: 220rem;
+
+				&:not(:last-child) {
+					margin-right: 35rem;
+				}
+			}
 		}
 	}
-	
+
 	&__item {
+		user-select: none;
 
 		&:not(:last-child) {
-			margin-right: 140rem;
+			margin-right: 120rem;
+		}
+
+		.drop_btn {
+			position: relative;
+			padding-right: 26rem;
+			// Arrow
+			&::after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: 4rem;
+				display: block;
+				width: 10rem;
+				height: 10rem;
+				margin-top: -5rem;
+				border: 2rem solid $color_black;
+				border-top: none;
+				border-left: none;
+				pointer-events: none;
+				transform-origin: 66% 66%;
+				transform: rotate(45deg);
+				transition: all 0.15s ease-in-out;
+			}
+
+		}
+
+		&.active {
+			.drop_btn::after {
+				transform: rotate(-135deg);
+			}
 		}
 	}
 

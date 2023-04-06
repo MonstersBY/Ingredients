@@ -199,16 +199,12 @@ $arrow_color: $gray !default;
 	font-weight: inherit;
 
 	&:after {
-		border-color: #000;
+		border-color: $color_black;
 		height: 10rem;
 		margin-top: -7rem;
 		right: 12rem;
 		width: 10rem;
-
 	}
 
-	&.open:after {
-		transform: rotate(-135deg);
-	}
 
 }

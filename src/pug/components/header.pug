@@ -28,33 +28,42 @@ header.header
 		.header__bottom
 			nav.nav
 				ul.nav__list
-					li.nav__item: a(href="#")  О проекте
+					li.nav__item: a(href="#") О проекте
 
-					li.nav__item.nav__item_drop
-						a(href="#")  Материалы
-						ul.nav__list_drop
-							li: a(href="#") Материалы 1
-							li: a(href="#") Материалы 2
-							li: a(href="#") Материалы 3
-							li: a(href="#") Материалы 4
+					li.nav__item
+						a.drop_btn(type="#") Материалы
+						.drop
+							.drop_content
+								a.drop__title(href="#") Материалы
+								ul.nav__list_drop
+									li: a(href="#") Подраздел 1
+									li: a(href="#") Подраздел 2
+									li: a(href="#") Подраздел 3 с длинным названием
+									li: a(href="#") Подраздел 4
 
-					li.nav__item.nav__item_drop
-						a(href="#")  Инновации
-						ul.nav__list_drop
-							li: a(href="#") Инновации 1
-							li: a(href="#") Инновации 2
-							li: a(href="#") Инновации 3
-							li: a(href="#") Инновации 4
+					li.nav__item
+						a.drop_btn(type="#") Инновации
+						.drop
+							.drop_content
+								a.drop__title(href="#") Инновации
+								ul.nav__list_drop
+									li: a(href="#") Подраздел 1
+									li: a(href="#") Подраздел 3 с длинным названием
+									li: a(href="#") Подраздел 2
+									li: a(href="#") Подраздел 4
 
-					li.nav__item.nav__item_drop
-						a(href="#")  Технологии
-						ul.nav__list_drop
-							li: a(href="#") Технологии 1
-							li: a(href="#") Технологии 2
-							li: a(href="#") Технологии 3
-							li: a(href="#") Технологии 4
+					li.nav__item
+						a.drop_btn(type="#") Технологии
+						.drop
+							.drop_content
+								a.drop__title(href="#") Технологии
+								ul.nav__list_drop
+										li: a(href="#") Подраздел 3 с длинным названием
+										li: a(href="#") Подраздел 1
+										li: a(href="#") Подраздел 2
+										li: a(href="#") Подраздел 4
 
-					li.nav__item: a(href="#")  Поставщики
+					li.nav__item: a(href="#") Поставщики
 
 			button.search_open(type="button")
 				include ../svg/search.svg

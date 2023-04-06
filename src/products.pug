@@ -1,0 +1,15 @@
+extends pug/base
+
+prepend vars
+	//-
+	- title = "Продукты"
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+		include pug/components/catalog_section
+		include pug/components/solutions
+		include pug/components/vendors

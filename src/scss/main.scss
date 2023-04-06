@@ -12,7 +12,7 @@
 
 .logo {
 	flex-shrink: 0;
-	width: 153rem;
+	width: 144rem;
 	height: 50rem;
 }
 
@@ -63,10 +63,11 @@ button {
 }
 
 .section {
+	margin-bottom: 200rem;
 
-	&:not(:last-child) {
-		margin-bottom: 200rem;
-	}
+	// &:not(:last-child) {
+	// 	margin-bottom: 200rem;
+	// }
 
 	&__top {
 		position: relative;
@@ -117,7 +118,7 @@ button {
 
 .gradient_border {
 	position: relative;
-	border-left: 2px solid #fff;
+	border-left: 2rem solid #fff;
 	overflow: hidden;
 
 	&::after {
@@ -127,10 +128,10 @@ button {
 		top: 0;
 		right: 0;
 		bottom: 0;
-		left: -2px;
-		border-width: 2px;
+		left: -2rem;
+		border-width: 2rem;
 		border-style: solid;
-		border-image: linear-gradient(to right,#fff,rgba(255, 255, 255, 0.3)) 1 1%;
+		border-image: linear-gradient(to right,#fff,rgba(0, 0, 0, 0)) 1 1%;
 		transition: 300ms;
 	}
 }
@@ -149,3 +150,4 @@ button {
 @import "components/advantages";
 @import "components/mission";
 @import "components/news";
+@import "components/cards";
