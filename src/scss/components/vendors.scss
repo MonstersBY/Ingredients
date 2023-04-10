@@ -11,16 +11,22 @@
 	justify-content: center;
 	flex-direction: column;
 	padding: 38rem 40rem 72rem;
-	font-size: 32rem;
-	line-height: 39rem;
 	background: linear-gradient(133.18deg, rgba(255, 255, 255, 0) 0.79%, rgba(247, 249, 251, 0.09) 0.8%, rgba(247, 249, 251, 0.09) 99.98%);
 	border-radius: 10rem;
-	filter: drop-shadow(-10rem -10rem 20rem rgba(255, 255, 255, 0.2)) drop-shadow(10rem 10rem 10rem rgba(139, 168, 189, 0.05));
+	box-shadow: -10rem -10rem 20rem rgba(255, 255, 255, 0.2), 10rem 10rem 10rem rgba(139, 168, 189, 0.05);
 	user-select: none;
 	transition: background-color 300ms, border-color 300ms;
 
 	&__title {
-		margin-bottom: 52rem;
+		margin-bottom: 4rem;
+		font-size: 32rem;
+		line-height: 39rem;
+		transition: color 300ms;
+	}
+
+	&__subtitle {
+		margin-bottom: 46rem;
+		color: #999;
 		transition: color 300ms;
 	}
 
@@ -44,6 +50,7 @@
 		background-color: #BBCBD0;
 		border-color: #BBCBD0;
 
+		.vendor__subtitle,
 		.vendor__title {
 			color: #fff;
 		}

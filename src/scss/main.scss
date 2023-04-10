@@ -63,6 +63,7 @@ button {
 }
 
 .section {
+	position: relative;
 	margin-bottom: 200rem;
 
 	// &:not(:last-child) {
@@ -87,11 +88,24 @@ button {
 	}
 }
 
+.lines {
+	position: absolute;
+	top: 90rem;
+	left: 0;
+	right: 0;
+	pointer-events: none;
+
+	img {
+		object-fit: cover;
+	}
+}
+
 .frame {
 	position: relative;
 	padding: 20rem;
 	background: linear-gradient(133.18deg, rgba(255, 255, 255, 0.75) 0.79%, rgba(247, 249, 251, 0.75) 0.8%, rgba(247, 249, 251, 0) 99.98%);
-	filter: drop-shadow(-15rem -15rem 40rem rgba(255, 255, 255, 0.5)) drop-shadow(15rem 15rem 40rem rgba(139, 168, 189, 0.15));
+	box-shadow: -15rem -15rem 40rem rgba(255, 255, 255, 0.5), 15rem 15rem 40rem rgba(139, 168, 189, 0.15);
+	
 	backdrop-filter: blur(19rem);
 	border-radius: 10rem;
 
