@@ -4,7 +4,7 @@ const CONTAINER_WIDTH = 1004;
 const swiper_news = new Swiper('.swiper_news', {
 	modules: [Navigation, Pagination],
 	slidesPerView: 4,
-	speed: 200,
+	speed: 1000,
 	spaceBetween: SLIDES_GAP / CONTAINER_WIDTH * 100 + '%',
 	pagination: {
 		el: ".swiper-pagination",

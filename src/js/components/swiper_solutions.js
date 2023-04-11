@@ -5,7 +5,7 @@ const swiper_solutions = new Swiper('.swiper_solutions', {
 	modules: [Navigation, Pagination],
 	slidesPerView: 3,
 	slidesPerGroup: 3,
-	speed: 200,
+	speed: 1000,
 	spaceBetween: SLIDES_GAP / CONTAINER_WIDTH * 100 + '%',
 	pagination: {
 		el: ".swiper-pagination",

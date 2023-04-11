@@ -10,7 +10,7 @@ objectFitImages();
 // objectFitVideos();
 
 // import Swiper JS
-import Swiper, { Navigation, Pagination, EffectFade } from 'swiper';
+import Swiper, { Navigation, Pagination, EffectFade, Grid } from 'swiper';
 
 window.$ = $;
 window.jQuery = $;
@@ -19,6 +19,7 @@ window.Swiper = Swiper;
 window.Navigation = Navigation;
 window.Pagination = Pagination;
 window.EffectFade = EffectFade;
+window.Grid = Grid;
 // window.objectFitVideos = objectFitVideos;
 
 require('ninelines-ua-parser');

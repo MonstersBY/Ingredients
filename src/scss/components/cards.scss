@@ -75,42 +75,6 @@
 	}
 
 	&__btn {
-
-		position: relative;
-		display: inline-block;
 		margin-top: auto;
-		padding-right: 55rem;
-		padding-bottom: 5rem;
-
-
-		// Arrow
-		&::before {
-			content: '';
-			position: absolute;
-			top: 50%;
-			right: 3rem;
-			display: block;
-			width: 10rem;
-			height: 10rem;
-			margin-top: -5rem;
-			border: 2rem solid $color_black;
-			border-bottom: none;
-			border-left: none;
-			pointer-events: none;
-			transform-origin: 66% 66%;
-			transform: rotate(45deg);
-		}
-
-		// Line
-		&::after {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			right: 0;
-			display: block;
-			height: 1px;
-			background: #000;
-		}
 	}
 }

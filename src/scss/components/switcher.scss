@@ -5,9 +5,8 @@
 	}
 
 	&__control {
-		display: flex;
+		display: inline-flex;
 		align-items: center;
-		margin-left: auto;
 		padding: 4rem;
 		background: #f5f8fa;
 		box-shadow: 5rem 5rem 25rem rgba(153, 173, 187, 0.1);
@@ -17,7 +16,7 @@
 	&__btn {
 		min-width: 145rem;
 		height: 44rem;
-		padding: 0;
+		padding: 5rem 29rem;
 
 		&:not(.active) {
 			font-weight: 500;

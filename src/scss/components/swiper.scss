@@ -18,7 +18,7 @@
 
 	.swiper-pagination {
 		position: static;
-		min-width: 50rem;
+		min-width: 54rem;
 		text-align: right;
 	}
 
@@ -64,35 +64,58 @@
 }
 
 .swiper_shadow {
-	$padding: 50rem;
+	$padding: 27rem;
+	$padding_bottom: 50rem;
+	$padding_top: 50rem;
 	padding: $padding;
+	padding-bottom: $padding_bottom;
+	padding-top: $padding_top;
 	margin: -$padding;
+	margin-bottom: -$padding_bottom;
+	margin-top: -$padding_top;
 	overflow: hidden;
 
 	.swiper {
 		overflow: visible;
 	}
 
-	&.swiper_2slides {
-		.swiper-slide-next + .swiper-slide,
-		.swiper-slide-prev {
-			opacity: 0;
-		}
+	// &.swiper_2slides {
+	// 	.swiper-slide-next + .swiper-slide,
+	// 	.swiper-slide-prev {
+	// 		opacity: 0;
+	// 	}
+	// }
+
+	// &.swiper_3slides {
+	// 	.swiper-slide-next + .swiper-slide + .swiper-slide,
+	// 	.swiper-slide-prev {
+	// 		opacity: 0;
+	// 	}
+	// }
+
+	// &.swiper_4slides {
+	// 	.swiper-slide-next + .swiper-slide + .swiper-slide + .swiper-slide,
+	// 	.swiper-slide-prev {
+	// 		opacity: 0;
+	// 	}
+	// }
+
+
+}
+
+.swiper_grid_container {
+	$margin: 14rem;
+	margin-top: 50rem;
+	margin-left: -$margin;
+	margin-right: -$margin;
+
+	.slide {
+		padding: $margin;
 	}
 
-	&.swiper_3slides {
-		.swiper-slide-next + .swiper-slide + .swiper-slide,
-		.swiper-slide-prev {
-			opacity: 0;
-		}
+	.swiper_control {
+		margin-top: 26rem;
+		margin-bottom: 0;
+		margin-right: 20rem;
 	}
-
-	&.swiper_4slides {
-		.swiper-slide-next + .swiper-slide + .swiper-slide + .swiper-slide,
-		.swiper-slide-prev {
-			opacity: 0;
-		}
-	}
-
-
 }
