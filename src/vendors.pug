@@ -54,8 +54,11 @@ block content
 									include ./pug/svg/arrow.svg
 
 						.filter__inner.filter__control
-							button.icon(type="button")
-								include ./pug/svg/view-square.svg
+							button.displaying.displaying_tiles.icon(type="button")
+								.icon__tiles
+									include ./pug/svg/view-square.svg
+								.icon__list
+									include ./pug/svg/view-list.svg
 							button.icon(type="button")
 								include ./pug/svg/share.svg
 

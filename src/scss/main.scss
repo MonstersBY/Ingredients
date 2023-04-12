@@ -190,6 +190,32 @@ button {
 	}
 }
 
+.displaying {
+	position: relative;
+
+	.icon__tiles,
+	.icon__list {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		opacity: 1;
+		transition: opacity 500ms;
+	}
+
+	&_tiles {
+		.icon__list {
+			opacity: 0;
+		}
+	}
+
+	&_list {
+		.icon__tiles {
+			opacity: 0;
+		}
+	}
+}
+
 @import "components/header";
 @import "components/footer";
 @import "components/nice-select";

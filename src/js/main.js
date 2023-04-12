@@ -17,6 +17,7 @@ import './components/swiper_news';
 import './components/swiper_grid';
 import './components/navigation';
 import './components/switcher';
+import './components/displaying';
 
 $('select').niceSelect();
 
