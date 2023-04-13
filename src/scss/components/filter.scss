@@ -5,6 +5,7 @@
 	display: flex;
 
 	&__filter {
+	
 
 		select,
 		.nice-select {
@@ -15,6 +16,7 @@
 			margin-right: 24rem;
 			background: #FBFBFB;
 			border-radius: 5rem;
+			box-shadow: 5rem 5rem 25rem rgba(153, 173, 187, 0.1);
 			&:after {
 				right: 27rem;
 			}
@@ -26,6 +28,7 @@
 		display: flex;
 		border-radius: 5rem;
 		overflow: hidden;
+		box-shadow: 5rem 5rem 25rem rgba(153, 173, 187, 0.1);
 	}
 
 	label {
@@ -69,6 +72,7 @@
 	position: relative;
 	margin-bottom: 38rem;
 	z-index: 2;
+	transition: margin 500ms;
 
 	&__inner {
 		display: flex;
@@ -109,6 +113,10 @@
 .section_filter {
 	padding-top: 73rem;
 
+	.lines {
+		top: 550rem;
+	}
+
 	.section__title {
 		margin-bottom: 44rem;
 	}
@@ -128,4 +136,11 @@
 		}
 	}
 
+}
+
+
+.section_displaying_list {
+	.filter {
+		margin-bottom: 59rem;
+	}
 }

@@ -1,6 +1,49 @@
 footer.footer
-	.footer__copyright
-		span(data-actual-year)
+	.container
+		.footer__top
+			.footer__col
+				ul.footer__list
+					li: a.title(href="#") Компания
+					li: a(href="#") Инвесторам
+					li: a(href="#") Новости
+					li: a(href="#") О проекте
+					li: a(href="#") Вакансии
 
-	.footer__developer
-		| &copy;&nbsp;Девять линий
+			.footer__col
+				ul.footer__list
+					li: a.title(href="#") Пользователям
+					li: a(href="#") Поиск по виду отрасли
+					li: a(href="#") Запрос документов
+					li: a(href="#") Поиск по трендам и решениям
+					li: a(href="#") Запрос образца
+					li: a(href="#") Расчет цены
+
+			.footer__col
+				ul.footer__list
+					li: a.title(href="#") Поставщикам
+					li: a(href="#") Продажи с MIT
+					li: a(href="#") MIT Premium
+					li: a(href="#") Тех.поддержка
+
+
+			.footer__col
+				a.logo(href="#")
+					img(src="images/logo.svg" alt="logo")
+
+				.footer__text Добро пожаловать на MIT.   Портал по продаже сырья, материалов и оборудования. Все для разработки и внедрения новых продуктов  в одном  месте.
+				form.search
+					.search__inner
+						label
+							include ../svg/search_grey.svg
+							input(type="text" placeholder="Название ингредиента")
+						button(type="submit")
+							include ../svg/arrow.svg
+
+				a.footer__phone(href="tel:+73515362703") + 7 (351) 536-27-03
+				a.footer__email(href="mailto:example@mail.com") example@mail.com
+				.footer__address г. Москва, ул. 1905 года, д.476, 003
+		.footer__bottom
+			a.footer__policy(href="#") Политика обработки персональных данных
+			a.developer(href="#") 
+
+//- span(data-actual-year)

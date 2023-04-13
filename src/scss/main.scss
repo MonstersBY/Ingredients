@@ -65,7 +65,7 @@ button {
 
 .section {
 	position: relative;
-	margin-bottom: 200rem;
+	margin-bottom: 204rem;
 
 	// &:not(:last-child) {
 	// 	margin-bottom: 200rem;
@@ -204,13 +204,13 @@ button {
 	}
 
 	&_tiles {
-		.icon__list {
+		.icon__tiles {
 			opacity: 0;
 		}
 	}
 
 	&_list {
-		.icon__tiles {
+		.icon__list {
 			opacity: 0;
 		}
 	}
@@ -232,3 +232,4 @@ button {
 @import "components/news";
 @import "components/cards";
 @import "components/filter";
+@import "components/dropdown";

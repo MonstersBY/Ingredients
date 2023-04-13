@@ -13,20 +13,21 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		width: 722rem;
+		width: 100%;
+		max-width: 1014rem;
 		margin: -182rem auto 0;
-		padding-top: 80rem;
+		padding-top: 76rem;
 		background-color: #F0F4F6;
 		border-radius: 5rem;
 		z-index: 2;
 	}
 
 	.section__title {
-		margin-bottom: 28rem;
+		margin-bottom: 31rem;
 	}
 
 	&__subtitle {
-		margin-bottom: 40rem;
+		margin-bottom: 41rem;
 		color: #999;
 	}
 

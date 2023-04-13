@@ -1,5 +1,7 @@
 .solution {
 	position: relative;
+	display: flex;
+	flex-direction: column;
 	max-width: 486rem;
 	height: 100%;
 	padding: 38.5rem 45.5rem;
@@ -41,16 +43,23 @@
 	}
 
 	&__list {
+		margin-bottom: 29rem;
 		font-size: 24rem;
 		line-height: 130%;
 		color: #737373;
 
 		li {
-			padding: 11rem 0;
+			padding: 11rem 0 12rem;
 
 			&:not(:last-child) {
 				border-bottom: 1px solid rgba(187, 203, 208, 0.6);
 			}
 		}
 	}
+
+	&__link {
+		align-self: flex-start;
+		margin-top: auto;
+	}
+
 }
