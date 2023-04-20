@@ -1,0 +1,38 @@
+extends pug/base
+
+prepend vars
+	//-
+	- title = "Ingredients | Вход"
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+		section.section.section_login
+			.container
+				.section__title Вход
+				.section__subtitle Добро пожаловать на MIT.   Портал по продаже сырья, материалов и оборудования. Все для разработки и внедрения новых продуктов  в одном  месте.
+				form.form.form_login
+					label.form__item
+						span.form__icon
+							include pug/svg/email.svg
+						input.input(type="email")
+						span.placeholder E-mail
+
+					label.form__item
+						span.form__icon
+							include pug/svg/lock.svg
+						input.input(type="password")
+						span.placeholder Пароль
+
+					.form__bottom
+						button(type="submit") Войти
+						.form__link
+							span Еще не зарегистрировались?
+							a(href="#")
+								| /
+								span регистрация
+
+	include pug/components/footer

@@ -1,0 +1,103 @@
+.footer {
+	&__top {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		padding: 58rem 51rem 38rem;
+		border: 2rem solid #fff;
+		border-left: none;
+		border-right: none;
+	}
+
+	&__col {
+		&:not(:last-child) {
+			margin-right: 20rem;
+		}
+
+		&:nth-child(2) {
+			position: relative;
+			right: -55rem;
+		}
+
+		&:nth-child(3) {
+			position: relative;
+			left: -17rem;
+		}
+	}
+
+	&__inner {
+		max-width: 488rem;
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 24rem 51rem 60rem;
+	}
+
+	&__list {
+		max-width: 220rem;
+
+		li:not(:last-child) {
+			margin-bottom: 12rem;
+
+			&.title {
+				margin-bottom: 21rem;
+				font-size: 20rem;
+				line-height: 150%;
+			}
+		}
+	}
+
+	.logo {
+		width: 116rem;
+		height: 40rem;
+		margin-top: 2rem;
+		margin-left: 1rem;
+		margin-bottom: 24rem;
+	}
+
+	&__text {
+		margin-bottom: 23rem;
+		font-size: 15rem;
+		line-height: 130%;
+		color: #999;
+	}
+
+	.search {
+		margin-bottom: 24rem;
+
+		input {
+			padding: 16rem 24rem 17rem 68rem;
+		}
+
+		button {
+			background-color: #181818;
+		}
+
+		label svg {
+			left: 20rem;
+		}
+	}
+
+	&__phone {
+		display: inline-block;
+		margin-right: 24rem;
+		margin-bottom: 12rem;
+	}
+	
+	&__email {
+		display: inline-block;
+		margin-bottom: 12rem;
+	}
+
+	&__policy {
+		margin-top: -4rem;
+	}
+
+	.developer {
+		width: 175rem;
+		height: 47rem;
+	}
+}

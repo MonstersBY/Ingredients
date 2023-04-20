@@ -11,6 +11,7 @@
 
 
 .logo {
+	display: block;
 	flex-shrink: 0;
 	width: 144rem;
 	height: 50rem;
@@ -216,6 +217,7 @@ button {
 	}
 }
 
+@import "components/form";
 @import "components/header";
 @import "components/footer";
 @import "components/nice-select";
@@ -233,3 +235,4 @@ button {
 @import "components/cards";
 @import "components/filter";
 @import "components/dropdown";
+@import "components/login";
