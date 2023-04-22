@@ -1,0 +1,24 @@
+.section_reg {
+	margin: 0;
+	padding: 76rem 0 425rem;
+	overflow: hidden;
+
+	.section__title {
+		margin-bottom: 30rem;
+	}
+
+	.section__subtitle {
+		max-width: 805rem;
+		margin-bottom: 42rem;
+		font-size: 20rem;
+		line-height: 150%;
+		color: #999;
+	}
+
+	.switcher {
+
+		&__control {
+			margin-bottom: 40rem;
+		}
+	}
+}

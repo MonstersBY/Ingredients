@@ -32,6 +32,7 @@ button {
 	flex-shrink: 0;
 	padding: 14rem 32rem;
 	font-size: 16rem;
+	line-height: 150%;
 	font-weight: 700;
 	background: #201702;
 	box-shadow: 5rem 5rem 25rem rgba(153, 173, 187, 0.1);
@@ -217,6 +218,28 @@ button {
 	}
 }
 
+.section_lines {
+	position: relative;
+
+	.lines {
+		top: 315rem;
+		left: auto;
+		right: -720rem;
+		transform: rotate(-70deg);
+	}
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 587rem;
+		height: 401rem;
+		pointer-events: none;
+		background: linear-gradient(180deg, #EFF3F6 5%, transparent 50%);
+	}
+}
+
 @import "components/form";
 @import "components/header";
 @import "components/footer";
@@ -236,3 +259,4 @@ button {
 @import "components/filter";
 @import "components/dropdown";
 @import "components/login";
+@import "components/registration";

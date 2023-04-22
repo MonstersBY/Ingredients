@@ -19,6 +19,7 @@ import './components/navigation';
 import './components/switcher';
 import './components/displaying';
 import './components/dropdown';
+import './components/forms';
 
 $('select').niceSelect();
 

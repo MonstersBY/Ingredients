@@ -1,5 +1,11 @@
 .vendors {
 
+
+	.switcher {
+		&__container {
+			margin-top: -42rem;
+		}
+	}
 }
 
 
@@ -145,5 +151,12 @@
 			display: none;
 		}
 
+	}
+
+	
+	.switcher {
+		&__container {
+			height: 760rem;
+		}
 	}
 }

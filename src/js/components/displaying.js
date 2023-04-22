@@ -25,5 +25,7 @@ $('.displaying').on('click', function (evt) {
 	}
 
 	setTimeout(swiperUpdate, 10);
+	setTimeout(switcherContainerHeight, 300);
+
 
 });

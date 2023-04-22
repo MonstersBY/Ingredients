@@ -1,5 +1,124 @@
 .form {
 	&__item {
 		position: relative;
+		display: flex;
+		align-items: center;
+		min-height: 52rem;
+		margin-bottom: 24rem;
+		background: #FBFBFB;
+		box-shadow: 5rem 5rem 25rem rgba(153, 173, 187, 0.1);
+		border-radius: 5rem;
+
+		.nice-select {
+			width: 100%;
+			padding-top: 5rem;
+			padding-bottom: 5rem;
+			height: 100%;
+			padding-left: 24rem;
+
+			&::after {
+				right: 27rem;
+			}
+		}
+	}
+
+	&__icon {
+		position: absolute;
+		top: 50%;
+		left: 24rem;
+		display: block;
+		width: 24rem;
+		height: 24rem;
+		pointer-events: none;
+		transform: translateY(-50%);
+
+		svg {
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	.input {
+		position: relative;
+		width: 100%;
+		display: block;
+		padding: 14rem 29rem 14rem 69rem;
+		border: 1rem solid transparent;
+		background: none;
+		outline: none;
+		font-size: 16rem;
+		line-height: 150%;
+		border-radius: 5rem;
+		overflow: hidden;
+		z-index: 1;
+		transition: 300ms;
+
+		&:focus {
+			border-color: #7C9DA8;
+		}
+
+		&.invalid {
+			border-color: #F96190;
+		}
+	}
+
+	.placeholder {
+		position: absolute;
+		top: 50%;
+		left: 67rem;
+		display: block;
+		padding: 1rem 5rem;
+		font-size: 16rem;
+		line-height: 150%;
+		color: #999;
+		transform: translateY(-50%);
+		pointer-events: none;
+		background: #FBFBFB;
+		border-radius: 5rem;
+		transition: 300ms;
+		z-index: 0;
+
+		&.active {
+			top: 0;
+			font-size: 14rem;
+			z-index: 2;
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-top: 40rem;
+	}
+
+	&__link {
+		font-size: 16rem;
+		line-height: 150%;
+		> span {
+			color: #999;
+		}
+
+		a {
+			span {
+				padding: 0;
+
+				&::after {
+					bottom: 3rem;
+				}
+
+				&::before {
+					content: none;
+				}
+			}
+		}
+	}
+
+	.required {
+		background: url(../images/icons/asterisk.svg) no-repeat center right 24rem / 15rem;
+	}
+
+	&_login {
+		max-width: 1003rem;
 	}
 }

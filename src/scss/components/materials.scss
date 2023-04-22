@@ -1,5 +1,12 @@
 .materials {
-	.switcher__control {
-		margin-left: auto;
+	.switcher {
+		&__container {
+			margin-top: -42rem;
+		}
+
+		&__control {
+			margin-left: auto;
+		}
 	}
+
 }

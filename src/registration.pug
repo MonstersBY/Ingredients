@@ -1,0 +1,107 @@
+extends pug/base
+
+prepend vars
+	//-
+	- title = "Ingredients | Регистрация"
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+		section.section.switcher.section_lines.section_reg
+			.lines
+				img(src="images/lines.svg" alt="lines.svg")
+			.container
+				.section__title Регистрация
+				.section__subtitle Добро пожаловать на MIT.   Портал по продаже сырья, материалов и оборудования. Все для разработки и внедрения новых продуктов  в одном  месте.
+
+				.switcher__control
+					button.btn.switcher__btn.active(type="button") Я клиент
+					button.btn.switcher__btn(type="button") Я поставщик
+
+				.switcher__container
+					.switcher__content.active
+
+						form.form.form_login.form_validation
+							label.form__item
+								span.form__icon
+									include pug/svg/phone.svg
+								input.input.required(type="tel")
+								span.placeholder Номер телефона
+
+							label.form__item
+								span.form__icon
+									include pug/svg/email.svg
+								input.input.required(type="email")
+								span.placeholder E-mail
+
+							label.form__item
+								span.form__icon
+									include pug/svg/profile_input.svg
+								input.input.required(type="text")
+								span.placeholder Фамилия, Имя, Отчество
+
+							label.form__item
+								span.form__icon
+									include pug/svg/company.svg
+								input.input.required(type="text")
+								span.placeholder Компания
+
+							label.form__item
+								span.form__icon
+									include pug/svg/position.svg
+								input.input.required(type="text")
+								span.placeholder Должность
+
+							.form__item
+								select(name="")
+									option Отдел
+									option Отдел 2
+									option Отдел 3
+
+							.form__item
+								select(name="")
+									option Отрасль
+									option Отрасль 2
+									option Отрасль 3
+
+							.form__bottom
+								button.btn(type="submit") Зарегистрироваться
+								.form__link
+									span Уже есть аккаунт? 
+									a(href="./login.html")
+										|  / 
+										span.underline  войти
+
+					.switcher__content
+
+						form.form.form_login.form_validation
+							label.form__item
+								span.form__icon
+									include pug/svg/phone.svg
+								input.input.required(type="tel")
+								span.placeholder Номер телефона
+
+							label.form__item
+								span.form__icon
+									include pug/svg/email.svg
+								input.input.required(type="email")
+								span.placeholder E-mail
+
+							label.form__item
+								span.form__icon
+									include pug/svg/profile_input.svg
+								input.input.required(type="text")
+								span.placeholder Фамилия, Имя, Отчество
+
+							.form__bottom
+								button.btn(type="submit") Зарегистрироваться
+								.form__link
+									span Уже есть аккаунт? 
+									a(href="./login.html")
+										|  / 
+										span.underline  войти
+
+	include pug/components/footer

@@ -28,18 +28,18 @@
 
 	&__container {
 		position: relative;
-		height: 469rem;
-		margin-top: -42rem;
 		z-index: 1;
 	}
 
 	&__content {
+		opacity: 0;
+		pointer-events: none;
 		position: absolute;
 		width: 100%;
 		transition: opacity 300ms;
-		&_hide {
-			opacity: 0;
-			pointer-events: none;
+		&.active {
+			opacity: 1;
+			pointer-events: auto;
 		}
 	}
 }
