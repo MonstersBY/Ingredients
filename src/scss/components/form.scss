@@ -95,7 +95,8 @@
 	&__link {
 		font-size: 16rem;
 		line-height: 150%;
-		> span {
+
+		>span {
 			color: #999;
 		}
 
@@ -114,6 +115,126 @@
 		}
 	}
 
+	.checkbox {
+		position: absolute;
+		top: 0;
+		left: 0;
+		display: block;
+		width: 20rem;
+		height: 20rem;
+		border-radius: 50%;
+		border: 1.5rem solid #181818;
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 5rem;
+			left: 5rem;
+			width: 8rem;
+			height: 5rem;
+			border: 1.5rem solid #181818;
+			border-top: none;
+			border-right: none;
+			transform: rotate(-45deg);
+			opacity: 0;
+			transition: 500ms;
+		}
+
+		&_text {
+			>span {
+				color: #7C9DA8;
+			}
+		}
+	}
+
+	&__checkbox {
+		position: relative;
+		max-width: 700rem;
+		margin-bottom: 24rem;
+		padding-left: 34rem;
+		user-select: none;
+		font-size: 16rem;
+		line-height: 150%;
+
+		label {
+			cursor: pointer;
+		}
+
+		input:checked+.checkbox::after {
+			opacity: 1;
+		}
+	}
+
+	.file {
+		+ * {
+			margin-top: 48rem;
+		}
+
+		+ .file {
+			margin-top: 24rem;
+		}
+
+		&__zone {
+			position: relative;
+			min-height: 128rem;
+			margin-bottom: 16rem;
+			padding: 20rem 20rem 20rem 128rem;
+			font-size: 16rem;
+			line-height: 150%;
+			border: 2rem dashed #DEE4F3;
+			border-radius: 5rem;
+			background: url(../images/forms/jpeg.svg) no-repeat 24rem 24rem / 80rem;
+		}
+
+		&__title {
+			margin-bottom: 8rem;
+		}
+
+		&__descr {
+			max-width: 440rem;
+			color: #999;
+		}
+
+		&__btn {
+			position: absolute;
+			top: 38rem;
+			right: 24rem;
+			min-width: 140rem;
+			padding: 13rem 20rem;
+			font-weight: 700;
+			font-size: 16rem;
+			line-height: 150%;
+			border: 1rem solid #BBCBD0;
+			box-shadow: 5rem 5rem 25rem rgba(153, 173, 187, 0.1);
+			border-radius: 5px;
+			background: none;
+		}
+
+		&__progress {
+			display: flex;
+			align-items: center;
+			min-height: 52rem;
+			padding: 13rem 24rem;
+			font-size: 16rem;
+			line-height: 150%;
+			background: rgba(222, 228, 243, 0.5);
+			border: 1rem solid #DEE4F3;
+			border-radius: 5rem;
+		}
+
+		&__name {
+			margin-right: 16rem;
+		}
+
+		&__weight {
+			color: #999;
+		}
+
+		&__icon {
+			margin-left: auto;
+		}
+	}
+
 	.required {
 		background: url(../images/icons/asterisk.svg) no-repeat center right 24rem / 15rem;
 	}
@@ -121,4 +242,35 @@
 	&_login {
 		max-width: 1003rem;
 	}
+}
+
+.drop-zone--over {
+	border-color: red !important;
+}
+
+.drop-zone__thumb {
+	display: inline-block;
+	width: 200rem;
+	height: 200rem;
+	margin-top: 20rem;
+    margin-right: 12rem;
+	border-radius: 10rem;
+	overflow: hidden;
+	background-color: #cccccc;
+	background-size: cover;
+	background-position: center;
+	position: relative;
+}
+
+.drop-zone__thumb::after {
+	content: attr(data-label);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 5px 0;
+	color: #ffffff;
+	background: rgba(0, 0, 0, 0.75);
+	font-size: 14px;
+	text-align: center;
 }
