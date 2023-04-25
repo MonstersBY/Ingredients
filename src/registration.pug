@@ -67,29 +67,25 @@ block content
 									option Отрасль 2
 									option Отрасль 3
 
-							.file
-								.file__zone.drop-zone
-									.file__title Ваша фотография
-									.file__descr Перетащите не менее 2 документов формата jpeg Размер файла не более 2 мб.
-									button.file__btn(type="button") Загрузить
+							.files
+								.files__zone.drop-zone
+									.files__title Ваша фотография
+									.files__descr Перетащите не менее 2 документов формата jpeg Размер файла не более 2 мб.
+									button.files__btn(type="button") Загрузить
 									input.visually-hidden.drop-zone__input(type="file" multiple name="")
-								.file__progress
-									.file__name File 1
-									.file__weight 32 kb
-									.file__icon
-										include pug/svg/done.svg
 
-							.file
-								.file__zone.drop-zone
-									.file__title Логотип компании (не обязательно)
-									.file__descr Перетащите не менее 2 документов формата jpeg Размер файла не более 2 мб.
-									button.file__btn(type="button") Загрузить
+
+							.files
+								.files__zone.drop-zone
+									.files__title Логотип компании (не обязательно)
+									.files__descr Перетащите не менее 2 документов формата jpeg Размер файла не более 2 мб.
+									button.files__btn(type="button") Загрузить
 									input.visually-hidden.drop-zone__input(type="file" multiple name="")
-								.file__progress
-									.file__name File 1
-									.file__weight 32 kb
-									.file__icon
-										include pug/svg/done.svg
+								//- .file__progress
+								//- 	.file__name File 1
+								//- 	.file__weight 32 kb
+								//- 	.file__icon
+								//- 		include pug/svg/done.svg
 
 
 							.form__checkbox

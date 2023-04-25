@@ -57,7 +57,7 @@ document.querySelectorAll('.drop-zone__input').forEach((inputElement) => {
 
 	inputElement.addEventListener('change', (e) => {
 		if (inputElement.files.length) {
-			updateThumbnail(dropZoneElement, inputElement.files);
+			updateProgress(dropZoneElement, inputElement.files);
 		}
 	});
 
@@ -77,52 +77,47 @@ document.querySelectorAll('.drop-zone__input').forEach((inputElement) => {
 
 		if (e.dataTransfer.files.length) {
 			inputElement.files = e.dataTransfer.files;
-			updateThumbnail(dropZoneElement, e.dataTransfer.files);
+			updateProgress(dropZoneElement, e.dataTransfer.files);
 		}
 
 		dropZoneElement.classList.remove('drop-zone--over');
 	});
 });
 
-/**
- * Updates the thumbnail on a drop zone element.
- *
- * @param {HTMLElement} dropZoneElement
- * @param {Files} files
- */
-function updateThumbnail(dropZoneElement, files) {
-	let thumbnailElements = dropZoneElement.querySelector('.drop-zone__thumb');
-	let progressElement = dropZoneElement.nextElementSibling;
-	let fileNameElement = progressElement.querySelector('.file__name');
-	let fileWeightElement = progressElement.querySelector('.file__weight');
+
+function updateProgress(dropZoneElement, files) {
+	let progressElements = dropZoneElement.nextElementSibling;
 
 	// First time - remove the prompt
-	if (dropZoneElement.querySelector('.drop-zone__prompt')) {
-		dropZoneElement.querySelector('.drop-zone__prompt').remove();
+	if (progressElements) {
+		progressElements.remove();
 	}
 
-	// First time - there is no thumbnail element, so lets create it
-	if (!thumbnailElement) {
-		thumbnailElement = document.createElement('div');
-		thumbnailElement.classList.add('drop-zone__thumb');
-		dropZoneElement.appendChild(thumbnailElement);
-	}
+	progressElements = document.createElement('div');
+	progressElements.classList.add('progress_elements');
+	dropZoneElement.after(progressElements);
 
-	thumbnailElement.dataset.label = file.name;
-	fileNameElement.innerHTML = file.name;
-	fileWeightElement.innerHTML = Math.trunc(file.size / 1024) + ' kb';
+	files.forEach((elem) => {
+		let progressElement = document.createElement('div');
+		progressElement.classList.add('file__progress');
 
-	console.log(file);
+		let fileNameElement = document.createElement('div');
+		fileNameElement.classList.add('file__name');
+		fileNameElement.innerHTML = elem.name;
+		
+		let fileWeightElement = document.createElement('div');
+		fileWeightElement.classList.add('file__weight');
+		fileWeightElement.innerHTML = Math.trunc(elem.size / 1024) + ' kb';
 
-	// Show thumbnail for image files
-	if (file.type.startsWith('image/')) {
-		const reader = new FileReader();
+		let fileIconElement = document.createElement('div');
+		fileIconElement.classList.add('file__icon');
 
-		reader.readAsDataURL(file);
-		reader.onload = () => {
-			thumbnailElement.style.backgroundImage = `url('${reader.result}')`;
-		};
-	} else {
-		thumbnailElement.style.backgroundImage = null;
-	}
+		progressElement.append(fileNameElement, fileWeightElement, fileIconElement);
+		progressElements.appendChild(progressElement);
+
+	});
+
+
+	switcherContainerHeight();
+
 }
