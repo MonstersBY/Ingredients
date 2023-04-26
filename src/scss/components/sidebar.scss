@@ -1,0 +1,143 @@
+.sidebar {
+	flex-grow: 0;
+	flex-shrink: 0;
+	width: 357rem;
+	margin-right: 31rem;
+	background: linear-gradient(133.18deg, rgba(255, 255, 255, 0) 0.79%, rgba(247, 249, 251, 0.09) 0.8%, rgba(247, 249, 251, 0.09) 99.98%);
+	border-radius: 10rem;
+	box-shadow: -10rem -10rem 20rem rgba(255, 255, 255, 0.2), 10rem 10rem 10rem rgba(139, 168, 189, 0.05);
+
+	&__top {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		grid-column-gap: 20rem;
+		padding: 28rem 24rem;
+		border-bottom: 2rem solid rgba(207, 224, 230, 0.4);
+	}
+
+	&__img {
+		grid-row-start: 1;
+		grid-row-end: 3;
+		width: 52rem;
+		height: 52rem;
+		background: #fff;
+		box-shadow: 6.3415rem 6.3415rem 38.0488rem rgba(113, 147, 173, 0.1);
+		border-radius: 6.3415rem;
+		overflow: hidden;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__suptitle {
+		color: #999;
+	}
+
+	&__title {
+		font-size: 20rem;
+	}
+
+	&__items {
+		padding: 16rem 14rem 27rem;
+	}
+
+	.item {
+		&:not(:last-child) {
+			margin-bottom: 10rem;
+		}
+
+		&__btn {
+			display: flex;
+			align-items: center;
+			padding: 8rem 13rem;
+			border-radius: 5rem;
+			overflow: hidden;
+			transition: 500ms;
+
+			&.item__drop_btn::after {
+				content: "";
+				width: 10rem;
+				height: 10rem;
+				margin-left: auto;
+				border: 2rem solid #999;
+				border-left: none;
+				border-bottom: none;
+				transform: rotate(45deg);
+				transform-origin: 30% 20%;
+				transition: 300ms;
+			}
+
+			&.active,
+			&:hover {
+
+					background: rgba(187, 203, 208, 0.2);
+
+				.item__name {
+					color: #181818;
+				}
+			}
+	
+			&.active {
+				&::after {
+					transform: rotate(135deg);
+				}
+			}
+
+		}
+
+		&__icon {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 39rem;
+			height: 39rem;
+			margin-right: 23rem;
+			border-radius: 50%;
+			overflow: hidden;
+			background: rgba(255, 255, 255, 0.4);
+			box-shadow: 5rem 5rem 25rem rgba(153, 173, 187, 0.1);
+
+			svg {
+				width: 24rem;
+				height: 24rem;
+			}
+		}
+
+		&__name {
+			color: #999;
+			transition: 500ms;
+		}
+
+		&__drop {
+			display: none;
+		}
+
+		&__list {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			padding-top: 11rem;
+			padding-left: 74rem;
+			padding-bottom: 5rem;
+			color: #999;
+
+			a {
+				display: block;
+				transition: 500ms;
+
+				&:not(:last-child) {
+					margin-bottom: 7rem;
+				}
+
+				&.active,
+				&:hover {
+					color: #181818;
+				}
+			}
+		}
+
+	}
+}

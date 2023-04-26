@@ -81,12 +81,6 @@ block content
 									.files__descr Перетащите не менее 2 документов формата jpeg Размер файла не более 2 мб.
 									button.files__btn(type="button") Загрузить
 									input.visually-hidden.drop-zone__input(type="file" multiple name="")
-								//- .file__progress
-								//- 	.file__name File 1
-								//- 	.file__weight 32 kb
-								//- 	.file__icon
-								//- 		include pug/svg/done.svg
-
 
 							.form__checkbox
 								label
@@ -107,6 +101,10 @@ block content
 									a(href="./login.html")
 										|  / 
 										span.underline  войти
+
+							.form__agreement
+								span Нажимая кнопку зарегистрироваться, вы принимаете условия 
+								a.underline(href="#") пользовательского соглашения
 
 					.switcher__content
 

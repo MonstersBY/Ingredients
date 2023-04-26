@@ -20,6 +20,8 @@ import './components/switcher';
 import './components/displaying';
 import './components/dropdown';
 import './components/forms';
+import './components/cabinet';
+import './components/tags';
 
 $('select').niceSelect();
 

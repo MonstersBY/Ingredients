@@ -1,0 +1,148 @@
+extends pug/base
+
+prepend vars
+	//-
+	- title = "Ingredients | Личные данные"
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+		section.section.cabinet
+			.container
+				.sidebar.gradient_border
+					.sidebar__top
+						.sidebar__img
+							img(src="images/cabinet/profile_img.png" alt="profile_img")
+						.sidebar__suptitle Компания
+						.sidebar__title ООО «Милорада»
+
+					.sidebar__items
+
+						.item
+							a.item__btn.item__drop_btn.active(href="#")
+								.item__icon
+									include pug/svg/cabinet/profile.svg
+								.item__name Профиль
+							.item__drop(style="display: block")
+								.item__list
+									a.active(href="#") Личные данные
+									a(href="#") Мои заказы
+									a(href="#") Профиль 3
+									a(href="#") Профиль 4
+						.item
+							a.item__btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/sms.svg
+								.item__name Сообщения
+
+						.item
+							a.item__btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/search.svg
+								.item__name Сохраненный поиск
+
+						.item
+							a.item__btn.item__drop_btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/box.svg
+								.item__name Закупки
+							.item__drop
+								.item__list
+									a(href="#") Закупки 1
+									a(href="#") Закупки 2
+									a(href="#") Закупки 3
+									a(href="#") Закупки 4
+
+				.cabinet__content
+					.section__title Личные данные
+
+					form.form.form_login.form_validation
+						label.form__item
+							span.form__icon
+								include pug/svg/phone.svg
+							input.input.required(type="tel")
+							span.placeholder Номер телефона
+
+						label.form__item
+							span.form__icon
+								include pug/svg/email.svg
+							input.input.required(type="email")
+							span.placeholder E-mail
+
+						label.form__item
+							span.form__icon
+								include pug/svg/profile_input.svg
+							input.input.required(type="text")
+							span.placeholder Фамилия, Имя, Отчество
+
+						label.form__item
+							span.form__icon
+								include pug/svg/company.svg
+							input.input.required(type="text")
+							span.placeholder Компания
+
+						label.form__item
+							span.form__icon
+								include pug/svg/position.svg
+							input.input.required(type="text")
+							span.placeholder Должность
+
+						.tags
+							button.tags__top(type="button")
+								.tags__title Отдел
+								.tags__status
+									span.checked_tags 0
+									| /
+									span.total_tags 0
+									|  выбрано
+							.tags__bottom
+								.tags__wrap
+									label.tag
+										input.visually-hidden(type="checkbox")
+										span Глюкоза
+
+									label.tag
+										input.visually-hidden(type="checkbox")
+										span Сахароза
+
+									label.tag
+										input.visually-hidden(type="checkbox")
+										span Глюкоза
+
+									label.tag
+										input.visually-hidden(type="checkbox")
+										span Сахароза
+
+
+						.files
+							.files__zone.drop-zone
+								.files__title Ваша фотография
+								.files__descr Перетащите не менее 2 документов формата jpeg Размер файла не более 2 мб.
+								button.files__btn(type="button") Загрузить
+								input.visually-hidden.drop-zone__input(type="file" multiple name="")
+
+
+						.files
+							.files__zone.drop-zone
+								.files__title Логотип компании (не обязательно)
+								.files__descr Перетащите не менее 2 документов формата jpeg Размер файла не более 2 мб.
+								button.files__btn(type="button") Загрузить
+								input.visually-hidden.drop-zone__input(type="file" multiple name="")
+
+						.form__checkbox
+							label
+								input.visually-hidden(type="checkbox" name="" checked)
+								span.checkbox
+								span.checkbox_text Я согласен получать рассылку на почту
+
+						.form__bottom
+							button.btn(type="submit") Сохранить
+
+
+
+
+
+	include pug/components/footer

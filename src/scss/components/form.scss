@@ -166,11 +166,11 @@
 	}
 
 	.files {
-		+ * {
+		+* {
 			margin-top: 48rem;
 		}
 
-		+ .files {
+		+.files {
 			margin-top: 24rem;
 		}
 
@@ -248,6 +248,30 @@
 
 	&_login {
 		max-width: 1003rem;
+	}
+
+	&__agreement {
+		max-width: 410rem;
+		margin-top: 12rem;
+		font-size: 16rem;
+		line-height: 150%;
+
+		span {
+			color: #696D70;
+		}
+
+		a {
+			padding: 0;
+			font-weight: 700;
+
+			&::before {
+				content: none;
+			}
+
+			&::after {
+				bottom: 1.5rem;
+			}
+		}
 	}
 }
 

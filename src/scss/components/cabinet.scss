@@ -1,0 +1,20 @@
+.cabinet {
+	padding-top: 60rem;
+
+	.container {
+		display: flex;
+		align-items: flex-start;
+	}
+
+	&__content {
+		flex-grow: 1;
+	}
+
+	.section__title {
+		margin-bottom: 40rem;
+	}
+
+	.form {
+		max-width: 100%;
+	}
+}
