@@ -1,0 +1,123 @@
+extends pug/base
+
+prepend vars
+	//-
+	- title = "Ingredients | Мои заказы"
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+		section.section.cabinet.orders
+			.container
+				.sidebar.gradient_border
+					.sidebar__top
+						.sidebar__img
+							img(src="images/cabinet/profile_img.png" alt="profile_img")
+						.sidebar__suptitle Компания
+						.sidebar__title ООО «Милорада»
+
+					.sidebar__items
+
+						.item
+							a.item__btn.item__drop_btn.active(href="#")
+								.item__icon
+									include pug/svg/cabinet/profile.svg
+								.item__name Профиль
+							.item__drop(style="display: block")
+								.item__list
+									a(href="#") Личные данные
+									a.active(href="#") Мои заказы
+									a(href="#") Профиль 3
+									a(href="#") Профиль 4
+						.item
+							a.item__btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/sms.svg
+								.item__name Сообщения
+
+						.item
+							a.item__btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/search.svg
+								.item__name Сохраненный поиск
+
+						.item
+							a.item__btn.item__drop_btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/box.svg
+								.item__name Закупки
+							.item__drop
+								.item__list
+									a(href="#") Закупки 1
+									a(href="#") Закупки 2
+									a(href="#") Закупки 3
+									a(href="#") Закупки 4
+
+				.cabinet__content
+					.section__title Мои заказы
+					form.search.cabinet__search
+						label
+							include ./pug/svg/search_grey.svg
+							input(type="text" placeholder="Поиск заявки")
+						button(type="submit")
+							include ./pug/svg/arrow.svg
+
+					table.table
+						thead.thead
+							tr
+								th.th.status_change Статус изменен
+								th.th.order_title Заказ и компания
+								th.th.price Сумма
+								th.th.date Дата заявки
+								th.th.read_more Подробнее
+								th.th.status Статус
+						tbody.tbody
+							tr.tr.gradient_border
+								td.td.status_change 01.02.23
+								td.td.order_title
+									span ООО “Мелорана”
+									| Аскорбил пальмитат
+								td.td.price 83 000 ₽ 
+								td.td.date 01.02.23
+								td.td.read_more Написать в чат
+								td.td.status.status_new Новый
+
+							tr.tr.gradient_border
+								td.td.status_change 01.02.23
+								td.td.order_title
+									span ООО “Мелорана”
+									| Аскорбил пальмитат
+								td.td.price 83 000 ₽ 
+								td.td.date 01.02.23
+								td.td.read_more Написать в чат
+								td.td.status.status_warning Товар не забрали
+
+							tr.tr.gradient_border
+								td.td.status_change 01.02.23
+								td.td.order_title
+									span ООО “Мелорана”
+									| Аскорбил пальмитат
+								td.td.price 83 000 ₽ 
+								td.td.date 01.02.23
+								td.td.read_more Написать в чат
+								td.td.status Самовывоз
+
+							tr.tr.gradient_border
+								td.td.status_change 01.02.23
+								td.td.order_title
+									span ООО “Мелорана”
+									| Аскорбил пальмитат
+								td.td.price 83 000 ₽ 
+								td.td.date 01.02.23
+								td.td.read_more Написать в чат
+								td.td.status Самовывоз
+
+
+
+
+
+
+	include pug/components/footer

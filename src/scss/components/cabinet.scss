@@ -17,4 +17,123 @@
 	.form {
 		max-width: 100%;
 	}
+
+	.search {
+		margin-bottom: 40rem;
+		border-radius: 5rem;
+		overflow: hidden;
+
+		input {
+			padding: 15rem 20rem 18rem 70rem;
+		}
+
+		button {
+			background: #181818;
+		}
+	}
+}
+
+.orders {
+	padding-top: 66rem;
+
+	.section__title {
+		margin-bottom: 44rem;
+	}
+}
+
+.table,
+.thead,
+.tbody {
+	display: block;
+}
+
+.thead tr {
+	margin-bottom: 16rem;
+}
+
+
+.table {
+
+
+	.status_change {
+		flex-shrink: 0;
+		width: 122rem;
+	}
+
+	.order_title {
+		display: flex;
+		flex-direction: column;
+		min-width: 260rem;
+
+		span {
+			display: block;
+			margin-bottom: 8rem;
+			font-size: 16rem;
+			text-decoration-line: underline;
+			color: #999;
+		}
+	}
+
+	.price {
+		flex-shrink: 0;
+		width: 120rem;
+	}
+
+	.date {
+		flex-shrink: 0;
+		width: 138rem;
+	}
+
+	.read_more {
+		min-width: 150rem;
+	}
+
+	.status {
+		min-width: 170rem;
+		color: #7C9DA8;
+
+		&_new {
+			color: #E0BC44;
+		}
+
+		&_warning {
+			color: #E33046;
+		}
+	}
+
+	tr {
+		display: flex;
+		align-items: center;
+		padding-left: 13rem;
+		padding-right: 13rem;
+	}
+
+	th {
+		font-weight: 500;
+		color: #686666;
+	}
+}
+
+.tr {
+	min-height: 94rem;
+	border-radius: 10rem;
+	overflow: hidden;
+	box-shadow: -10rem -10rem 20rem rgba(255, 255, 255, 0.2), 10rem 10rem 10rem rgba(139, 168, 189, 0.05);
+
+	&:not(:last-child) {
+		margin-bottom: 20rem;
+	}
+}
+
+.th,
+.td {
+	display: block;
+	width: 100%;
+	margin: 0 10rem;
+	padding: 0;
+	text-align: left;
+}
+
+.td {
+	font-size: 20rem;
 }
