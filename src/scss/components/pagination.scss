@@ -1,0 +1,59 @@
+.pagination {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	max-width: 200rem;
+	align-self: flex-end;
+	margin-top: 36rem;
+	margin-left: auto;
+
+	.pagination__inner {
+		position: static;
+		min-width: 54rem;
+		text-align: right;
+		margin-left: 13rem;
+	}
+
+	.pagination__button-prev,
+	.pagination__button-next {
+		position: static;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 30rem;
+		height: 30rem;
+		margin: 0;
+		padding: 0;
+		background: none;
+
+		&::after {
+			content: '';
+			width: 10rem;
+			height: 10rem;
+			border: 2rem solid $color_black;
+			transform: rotate(45deg);
+
+		}
+	}
+
+	.pagination__button-prev {
+		margin-right: 5rem;
+
+		&::after {
+			content: '';
+			width: 15rem;
+			height: 15rem;
+			border-top: none;
+			border-right: none;
+		}
+	}
+
+	.pagination__button-next {
+
+		&::after {
+			border-left: none;
+			border-bottom: none;
+		}
+	}
+
+}

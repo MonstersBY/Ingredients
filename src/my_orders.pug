@@ -115,9 +115,13 @@ block content
 								td.td.read_more Написать в чат
 								td.td.status Самовывоз
 
-
-
-
+					.pagination
+						button(type="button").pagination__button-prev
+						button(type="button").pagination__button-next
+						.pagination__inner
+							span.pagination__current 01
+							|  / 
+							span.pagination__total 10
 
 
 	include pug/components/footer

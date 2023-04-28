@@ -1,0 +1,154 @@
+.section_messages {
+	padding-top: 80rem;
+
+	.switcher__control {
+		margin-bottom: 32rem;
+	}
+
+	.switcher__btn {
+		min-width: auto;
+	}
+
+	.search input::placeholder {
+		color: #999;
+	}
+}
+
+.message {
+	position: relative;
+	display: flex;
+	align-items: center;
+	padding: 20rem 26rem;
+	background: rgba(255, 255, 255, 0.4);
+	box-shadow: -10rem -10rem 20rem rgba(255, 255, 255, 0.2), 10rem 10rem 10rem rgba(139, 168, 189, 0.05);
+	border-radius: 10rem;
+	transition: 500ms;
+
+	&:not(:last-child) {
+		margin-bottom: 20rem;
+	}
+
+	&__img {
+		flex-shrink: 0;
+		width: 70rem;
+		height: 70rem;
+		margin-right: 20rem;
+		border-radius: 70rem;
+		overflow: hidden;
+	}
+
+	&__inner {
+		position: relative;
+
+		&::after {
+			content: "";
+		}
+	}
+
+	&__top {
+		display: grid;
+		grid-template-columns: auto 1fr;
+		margin-bottom: 4rem;
+		padding-right: 50rem;
+	}
+
+	&__author {
+		flex-shrink: 0;
+		margin-right: 2rem;
+		font-size: 20rem;
+		line-height: 150%;
+		color: #7C9DA8;
+		transition: color 500ms;
+
+		&:after {
+			content: ":";
+		}
+	}
+
+	&__text {
+		display: -webkit-box;
+		-webkit-line-clamp: 1; // количество строк
+		-webkit-box-orient: vertical;
+		overflow: hidden;
+		font-size: 20rem;
+		line-height: 150%;
+		color: #999;
+		transition: color 500ms;
+	}
+
+	&__bottom {
+		display: flex;
+		align-items: center;
+		color: #999;
+		transition: color 500ms;
+
+		span {
+			+span {
+				margin-left: 9rem;
+
+				&::before {
+					content: "";
+					display: inline-block;
+					width: 4rem;
+					height: 4rem;
+					margin-right: 7rem;
+					margin-bottom: 3rem;
+					background: #999;
+					border-radius: 4rem;
+					transition: background 500ms;
+				}
+			}
+		}
+	}
+
+	&__passed {
+		margin-left: auto;
+		color: #7C9DA8;
+		transition: color 500ms;
+	}
+
+	&.unread {
+
+		.message__inner {
+			padding-left: 20rem;
+
+			&::after {
+				position: absolute;
+				top: 10rem;
+				left: 0;
+				display: block;
+				width: 8rem;
+				height: 8rem;
+				background: #7C9DA8;
+				border-radius: 8rem;
+				transition: background 500ms;
+			}
+		}
+	}
+
+	&:hover {
+		background: rgba(187, 203, 208, 0.8);
+		box-shadow: -10rem -10rem 20rem rgba(255, 255, 255, 0.2), 10rem 10rem 10rem rgba(139, 168, 189, 0.05);
+
+		.message {
+			&__passed,
+			&__bottom,
+			&__author,
+			&__text {
+				color: #fff;
+			}
+			&__inner::after,
+			&__bottom span::before {
+				background: #fff;
+			}
+		}
+	}
+}
+
+.messages {
+	&.unread_only {
+		.message:not(.unread) {
+			display: none;
+		}
+	}
+}
