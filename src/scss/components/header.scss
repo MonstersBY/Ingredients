@@ -134,6 +134,26 @@
 
 }
 
+
+.search_wrap {
+	display: none;
+	padding: 20rem 0;
+
+	select,
+	.nice-select {
+		margin: 0;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
+	.search {
+		&__inner {
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+	}
+}
+
 .search_open {
 	display: flex;
 	align-items: center;
@@ -143,4 +163,23 @@
 	padding: 8rem;
 	background: none;
 	border: none;
+}
+
+.search_close {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40rem;
+	height: 40rem;
+	margin-left: 28rem;
+	padding: 12rem;
+	background: none;
+	border: none;
+}
+
+
+.search_container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }

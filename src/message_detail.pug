@@ -1,0 +1,101 @@
+extends pug/base
+
+prepend vars
+	//-
+	- title = "Ingredients | Сообщение подробно"
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+
+		section.section.cabinet.section_messages
+			.container
+				.sidebar.gradient_border
+					.sidebar__top
+						.sidebar__img
+							img(src="images/cabinet/profile_img.png" alt="profile_img")
+						.sidebar__suptitle Компания
+						.sidebar__title ООО «Милорада»
+
+					.sidebar__items
+
+						.item
+							a.item__btn.item__drop_btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/profile.svg
+								.item__name Профиль
+							.item__drop
+								.item__list
+									a(href="#") Личные данные
+									a(href="#") Мои заказы
+									a(href="#") Профиль 3
+									a(href="#") Профиль 4
+						.item
+							a.item__btn.active(href="#")
+								.item__icon
+									include pug/svg/cabinet/sms.svg
+								.item__name Сообщения
+
+						.item
+							a.item__btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/search.svg
+								.item__name Сохраненный поиск
+
+						.item
+							a.item__btn.item__drop_btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/box.svg
+								.item__name Закупки
+							.item__drop
+								.item__list
+									a(href="#") Закупки 1
+									a(href="#") Закупки 2
+									a(href="#") Закупки 3
+									a(href="#") Закупки 4
+
+				.cabinet__content
+					a.underline.cabinet__back(href="") Назад
+					.messages
+						a(href="#").message.gradient_border
+							.message__img
+								img(src="images/cabinet/message_img.jpg" alt="message_img")
+							.message__inner
+								.message__top
+									span.message__author Викторов Александр
+									span.message__text Здравствуйте! Разнообразный и богатый опыт начало повседневной работы по формированию позиции влечет за собой...
+								.message__bottom
+									span Милорада
+									span Логист
+									span 13 февраля, 2023 в 12:30
+
+						a(href="#").message.gradient_border.unread
+							.message__img
+								img(src="images/cabinet/message_img.jpg" alt="message_img")
+							.message__inner
+								.message__top
+									span.message__author Викторов Александр
+									span.message__text Здравствуйте! Разнообразный и богатый опыт начало повседневной работы по формированию позиции влечет за собой...
+								.message__bottom
+									span Милорада
+									span Логист
+									span 13 февраля, 2023 в 12:30
+									.message__passed 5 м
+
+						a(href="#").message.gradient_border
+							.message__img
+								img(src="images/cabinet/message_img.jpg" alt="message_img")
+							.message__inner
+								.message__top
+									span.message__author Викторов Александр
+									span.message__text Здравствуйте! Разнообразный и богатый опыт начало повседневной работы по формированию позиции влечет за собой...
+								.message__bottom
+									span Милорада
+									span Логист
+									span 13 февраля, 2023 в 12:30
+
+
+	include pug/components/footer

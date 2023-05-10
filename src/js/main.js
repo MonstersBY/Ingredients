@@ -22,6 +22,7 @@ import './components/dropdown';
 import './components/forms';
 import './components/cabinet';
 import './components/tags';
+import './components/search';
 
 $('select').niceSelect();
 
