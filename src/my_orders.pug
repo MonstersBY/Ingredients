@@ -65,63 +65,187 @@ block content
 						button(type="submit")
 							include ./pug/svg/arrow.svg
 
-					table.table
-						thead.thead
-							tr
-								th.th.status_change Статус изменен
-								th.th.order_title Заказ и компания
-								th.th.price Сумма
-								th.th.date Дата заявки
-								th.th.read_more Подробнее
-								th.th.status Статус
-						tbody.tbody
-							tr.tr.gradient_border
-								td.td.status_change 01.02.23
-								td.td.order_title
-									span ООО “Мелорана”
-									| Аскорбил пальмитат
-								td.td.price 83 000 ₽ 
-								td.td.date 01.02.23
-								td.td.read_more Написать в чат
-								td.td.status.status_new Новый
+					.table
+						.thead
+							.tr
+								.th.status_change Статус изменен
+								.th.order_title Заказ и компания
+								.th.price Сумма
+								.th.date Дата заявки
+								.th.read_more Подробнее
+								.th.status Статус
 
-							tr.tr.gradient_border
-								td.td.status_change 01.02.23
-								td.td.order_title
-									span ООО “Мелорана”
-									| Аскорбил пальмитат
-								td.td.price 83 000 ₽ 
-								td.td.date 01.02.23
-								td.td.read_more Написать в чат
-								td.td.status.status_warning Товар не забрали
+					.swiper_shadow.tbody
+						.swiper.swiper_my_orders
 
-							tr.tr.gradient_border
-								td.td.status_change 01.02.23
-								td.td.order_title
-									span ООО “Мелорана”
-									| Аскорбил пальмитат
-								td.td.price 83 000 ₽ 
-								td.td.date 01.02.23
-								td.td.read_more Написать в чат
-								td.td.status Самовывоз
+							.swiper_control
+								.swiper-button-prev
+								.swiper-button-next
+								.swiper-pagination
 
-							tr.tr.gradient_border
-								td.td.status_change 01.02.23
-								td.td.order_title
-									span ООО “Мелорана”
-									| Аскорбил пальмитат
-								td.td.price 83 000 ₽ 
-								td.td.date 01.02.23
-								td.td.read_more Написать в чат
-								td.td.status Самовывоз
+							.swiper-wrapper
 
-					.pagination
-						button(type="button").pagination__button-prev
-						button(type="button").pagination__button-next
-						.pagination__inner
-							span.pagination__current 01
-							|  / 
-							span.pagination__total 10
+
+								.swiper-slide
+									.tr.gradient_border
+										.td.status_change
+											span.mobile Статус изменен
+											| 01.02.23
+										.td.order_title
+											span.mobile Заказ и компания
+											span ООО “Мелорана”
+											| Аскорбил пальмитат
+										.td.price
+											span.mobile Сумма
+											| 83 000 ₽
+										.td.date
+											span.mobile Дата заявки
+											| 01.02.23
+										.td.read_more Написать в чат
+										.td.status.status_new
+											span.mobile Статус:
+											| Новый
+
+								.swiper-slide
+									.tr.gradient_border
+										.td.status_change
+											span.mobile Статус изменен
+											| 01.02.23
+										.td.order_title
+											span.mobile Заказ и компания
+											span ООО “Мелорана”
+											| Аскорбил пальмитат
+										.td.price
+											span.mobile Сумма
+											| 83 000 ₽
+										.td.date
+											span.mobile Дата заявки
+											| 01.02.23
+										.td.read_more Написать в чат
+										.td.status.status_warning
+											span.mobile Статус:
+											| Товар не забрали
+
+								.swiper-slide
+									.tr.gradient_border
+										.td.status_change
+											span.mobile Статус изменен
+											| 01.02.23
+										.td.order_title
+											span.mobile Заказ и компания
+											span ООО “Мелорана”
+											| Аскорбил пальмитат
+										.td.price
+											span.mobile Сумма
+											| 83 000 ₽
+										.td.date
+											span.mobile Дата заявки
+											| 01.02.23
+										.td.read_more Написать в чат
+										.td.status.status
+											span.mobile Статус:
+											| Самовывоз
+
+								.swiper-slide
+									.tr.gradient_border
+										.td.status_change
+											span.mobile Статус изменен
+											| 01.02.23
+										.td.order_title
+											span.mobile Заказ и компания
+											span ООО “Мелорана”
+											| Аскорбил пальмитат
+										.td.price
+											span.mobile Сумма
+											| 83 000 ₽
+										.td.date
+											span.mobile Дата заявки
+											| 01.02.23
+										.td.read_more Написать в чат
+										.td.status.status
+											span.mobile Статус:
+											| Самовывоз
+
+								.swiper-slide
+									.tr.gradient_border
+										.td.status_change
+											span.mobile Статус изменен
+											| 01.02.23
+										.td.order_title
+											span.mobile Заказ и компания
+											span ООО “Мелорана”
+											| Аскорбил пальмитат
+										.td.price
+											span.mobile Сумма
+											| 83 000 ₽
+										.td.date
+											span.mobile Дата заявки
+											| 01.02.23
+										.td.read_more Написать в чат
+										.td.status.status_new
+											span.mobile Статус:
+											| Новый
+
+								.swiper-slide
+									.tr.gradient_border
+										.td.status_change
+											span.mobile Статус изменен
+											| 01.02.23
+										.td.order_title
+											span.mobile Заказ и компания
+											span ООО “Мелорана”
+											| Аскорбил пальмитат
+										.td.price
+											span.mobile Сумма
+											| 83 000 ₽
+										.td.date
+											span.mobile Дата заявки
+											| 01.02.23
+										.td.read_more Написать в чат
+										.td.status.status_warning
+											span.mobile Статус:
+											| Товар не забрали
+
+								.swiper-slide
+									.tr.gradient_border
+										.td.status_change
+											span.mobile Статус изменен
+											| 01.02.23
+										.td.order_title
+											span.mobile Заказ и компания
+											span ООО “Мелорана”
+											| Аскорбил пальмитат
+										.td.price
+											span.mobile Сумма
+											| 83 000 ₽
+										.td.date
+											span.mobile Дата заявки
+											| 01.02.23
+										.td.read_more Написать в чат
+										.td.status.status
+											span.mobile Статус:
+											| Самовывоз
+
+								.swiper-slide
+									.tr.gradient_border
+										.td.status_change
+											span.mobile Статус изменен
+											| 01.02.23
+										.td.order_title
+											span.mobile Заказ и компания
+											span ООО “Мелорана”
+											| Аскорбил пальмитат
+										.td.price
+											span.mobile Сумма
+											| 83 000 ₽
+										.td.date
+											span.mobile Дата заявки
+											| 01.02.23
+										.td.read_more Написать в чат
+										.td.status.status
+											span.mobile Статус:
+											| Самовывоз
+
 
 
 	include pug/components/footer

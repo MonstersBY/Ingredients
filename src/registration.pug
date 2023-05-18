@@ -57,13 +57,31 @@ block content
 									option Должность 2
 									option Должность 3
 
-							.form__item.select-department
-								select(name="")
-									option(data-display="Отдел") Отдел
-									option(data-display="Отдел") Отдел 2
-									option(data-display="Отдел") Отдел 3
+							.tags
+								button.tags__top(type="button")
+									.tags__title Отдел
+									.tags__status
+										span.checked_tags 0
+										| /
+										span.total_tags 0
+										|  выбрано
+								.tags__bottom
+									.tags__wrap
+										label.tag
+											input.visually-hidden(type="checkbox")
+											span Глюкоза
 
-							.select-department-list
+										label.tag
+											input.visually-hidden(type="checkbox")
+											span Сахароза
+
+										label.tag
+											input.visually-hidden(type="checkbox")
+											span Глюкоза
+
+										label.tag
+											input.visually-hidden(type="checkbox")
+											span Сахароза
 
 							.form__item
 								select(name="")
@@ -181,11 +199,31 @@ block content
 									option Должность 2
 									option Должность 3
 
-							.form__item
-								select(name="")
-									option Отдел
-									option Отдел 2
-									option Отдел 3
+							.tags
+								button.tags__top(type="button")
+									.tags__title Отдел
+									.tags__status
+										span.checked_tags 0
+										| /
+										span.total_tags 0
+										|  выбрано
+								.tags__bottom
+									.tags__wrap
+										label.tag
+											input.visually-hidden(type="checkbox")
+											span Глюкоза
+
+										label.tag
+											input.visually-hidden(type="checkbox")
+											span Сахароза
+
+										label.tag
+											input.visually-hidden(type="checkbox")
+											span Глюкоза
+
+										label.tag
+											input.visually-hidden(type="checkbox")
+											span Сахароза
 
 							.form__item
 								select(name="")

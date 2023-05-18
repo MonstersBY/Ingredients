@@ -79,7 +79,7 @@
 					color: #181818;
 				}
 			}
-	
+
 			&.active {
 				&::after {
 					transform: rotate(135deg);
@@ -139,5 +139,11 @@
 			}
 		}
 
+	}
+}
+
+@include mobile {
+	.sidebar {
+		display: none;
 	}
 }

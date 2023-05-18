@@ -25,24 +25,3 @@ $('.form_validation').on('submit', function(evt) {
 		}
 	});
 });
-
-const select = document.querySelectorAll('.select-department')
-let selectedArr = []
-
-select.forEach((btn)=>{
-	btn.addEventListener('click', (evt)=>{
-		const target = evt.target.closest('.option')
-		if (!target) return
-		if (btn.querySelector('.current').innerText == target.innerText) return
-		const div = document.createElement('div')
-		div.classList.add('selected-dep')
-		if(selectedArr.find((i) => i === target.innerText)) return
-		selectedArr.push(target.innerText)
-		div.innerHTML = target.innerText
-		div.addEventListener('click', (divEvt) => {
-			div.remove()
-			selectedArr = selectedArr.filter((i) => {return i !== target.innerText})
-		})
-		btn.nextSibling.nextSibling.append(div);
-	})
-})

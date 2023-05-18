@@ -1,4 +1,4 @@
-window.Swiper_grid = function(slidesPerView, slidesPerGroup, rows) { 
+window.Swiper_grid = function(slidesPerView, slidesPerGroup, rows) {
 	const swiper_grid = new Swiper('.swiper_grid', {
 		modules: [Navigation, Pagination, Grid],
 		slidesPerView: slidesPerView,

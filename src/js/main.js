@@ -14,6 +14,7 @@ import './components/swiper_materials';
 import './components/swiper_solutions';
 import './components/swiper_vendors';
 import './components/swiper_news';
+import './components/swiper_my_orders';
 import './components/swiper_grid';
 import './components/navigation';
 import './components/switcher';
