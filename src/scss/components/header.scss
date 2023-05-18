@@ -15,7 +15,7 @@
 		align-items: center;
 		padding: 24rem 0 18rem;
 	}
-	
+
 	.logo {
 		margin-right: 57rem;
 		margin-top: -6rem;
@@ -182,4 +182,14 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+@include mobile {
+	.header {
+		display: none;
+
+		+ * {
+			margin-top: 60rem;
+		}
+	}
 }

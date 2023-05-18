@@ -49,17 +49,21 @@ block content
 								input.input.required(type="text")
 								span.placeholder Компания
 
-							label.form__item
+							.form__item
 								span.form__icon
 									include pug/svg/position.svg
-								input.input.required(type="text")
-								span.placeholder Должность
-
-							.form__item
 								select(name="")
-									option Отдел
-									option Отдел 2
-									option Отдел 3
+									option Должность
+									option Должность 2
+									option Должность 3
+
+							.form__item.select-department
+								select(name="")
+									option(data-display="Отдел") Отдел
+									option(data-display="Отдел") Отдел 2
+									option(data-display="Отдел") Отдел 3
+
+							.select-department-list
 
 							.form__item
 								select(name="")
@@ -70,17 +74,29 @@ block content
 							.files
 								.files__zone.drop-zone
 									.files__title Ваша фотография
-									.files__descr Перетащите не менее 2 документов формата jpeg Размер файла не более 2 мб.
+									.files__descr #[span.desktop Перетащите]#[span.mobile Загрузите] не менее 2 документов формата jpeg Размер файла не более 2 мб.
 									button.files__btn(type="button") Загрузить
 									input.visually-hidden.drop-zone__input(type="file" multiple name="")
 
 
 							.files
 								.files__zone.drop-zone
-									.files__title Логотип компании (не обязательно)
-									.files__descr Перетащите не менее 2 документов формата jpeg Размер файла не более 2 мб.
+									.files__title Логотип компании #[br.mobile] (не обязательно)
+									.files__descr #[span.desktop Перетащите]#[span.mobile Загрузите] не менее 2 документов формата jpeg Размер файла не более 2 мб.
 									button.files__btn(type="button") Загрузить
 									input.visually-hidden.drop-zone__input(type="file" multiple name="")
+
+							label.form__item
+								span.form__icon
+									include pug/svg/lock.svg
+								input.input.required(type="text")
+								span.placeholder Введите пароль
+
+							label.form__item
+								span.form__icon
+									include pug/svg/lock.svg
+								input.input.required(type="text")
+								span.placeholder Повторите пароль
 
 							.form__checkbox
 								label
@@ -96,15 +112,21 @@ block content
 
 							.form__bottom
 								button.btn(type="submit") Зарегистрироваться
-								.form__link
-									span Уже есть аккаунт? 
+								.form__link.desktop
+									span Уже есть аккаунт?
 									a(href="./login.html")
-										|  / 
+										|  /
 										span.underline  войти
 
 							.form__agreement
-								span Нажимая кнопку зарегистрироваться, вы принимаете условия 
+								span Нажимая кнопку зарегистрироваться, вы принимаете условия
 								a.underline(href="#") пользовательского соглашения
+
+							.form__link.mobile
+								span Уже есть аккаунт?
+								a(href="./login.html")
+									|  /
+									span.underline  войти
 
 					.switcher__content
 
@@ -127,12 +149,111 @@ block content
 								input.input.required(type="text")
 								span.placeholder Фамилия, Имя, Отчество
 
+							label.form__item
+								span.form__icon
+									include pug/svg/company.svg
+								input.input.required(type="text")
+								span.placeholder Компания
+
+							label.form__item
+								span.form__icon
+									include pug/svg/document-text.svg
+								input.input.required(type="text")
+								span.placeholder ОКВЭД
+
+							label.form__item
+								span.form__icon
+									include pug/svg/document-text.svg
+								input.input.required(type="text")
+								span.placeholder ИНН
+
+							label.form__item
+								span.form__icon
+									include pug/svg/document-text.svg
+								input.input.required(type="text")
+								span.placeholder ОКПД2
+
+							.form__item
+								span.form__icon
+									include pug/svg/position.svg
+								select(name="")
+									option Должность
+									option Должность 2
+									option Должность 3
+
+							.form__item
+								select(name="")
+									option Отдел
+									option Отдел 2
+									option Отдел 3
+
+							.form__item
+								select(name="")
+									option Категории товаров
+									option Категории товаров 2
+									option Категории товаров 3
+
+							.files
+								.files__zone.drop-zone
+									.files__title Ваша фотография
+									.files__descr #[span.desktop Перетащите]#[span.mobile Загрузите] не менее 2 документов формата jpeg Размер файла не более 2 мб.
+									button.files__btn(type="button") Загрузить
+									input.visually-hidden.drop-zone__input(type="file" multiple name="")
+
+
+							.files
+								.files__zone.drop-zone
+									.files__title Логотип компании #[br.mobile] (не обязательно)
+									.files__descr #[span.desktop Перетащите]#[span.mobile Загрузите] не менее 2 документов формата jpeg Размер файла не более 2 мб.
+									button.files__btn(type="button") Загрузить
+									input.visually-hidden.drop-zone__input(type="file" multiple name="")
+
+							label.form__item
+								span.form__icon
+									include pug/svg/lock.svg
+								input.input.required(type="text")
+								span.placeholder Введите пароль
+
+							label.form__item
+								span.form__icon
+									include pug/svg/lock.svg
+								input.input.required(type="text")
+								span.placeholder Повторите пароль
+
+							.form__checkbox
+								label
+									input.visually-hidden(type="checkbox" name="")
+									span.checkbox
+									span.checkbox_text Выражаю #[span согласие] на обработку моих персональных данных в соответствии с Политикой обработки персональных данных
+
+							.form__checkbox
+								label
+									input.visually-hidden(type="checkbox" name="")
+									span.checkbox
+									span.checkbox_text Выражаю согласие с положениями #[span Договора публичной оферты] и принимаю их
+
+							.form__checkbox
+								label
+									input.visually-hidden(type="checkbox" name="")
+									span.checkbox
+									span.checkbox_text Выражаю #[span согласие] на получение рекламной рассылки и обработку моих персональных данных в соответствии с Политикой обработки персональных данных
+
 							.form__bottom
 								button.btn(type="submit") Зарегистрироваться
-								.form__link
-									span Уже есть аккаунт? 
+								.form__link.desktop
+									span Уже есть аккаунт?
 									a(href="./login.html")
-										|  / 
+										|  /
 										span.underline  войти
+
+							.form__agreement
+								span Нажимая кнопку зарегистрироваться, вы принимаете условия
+								a.underline(href="#") пользовательского соглашения
+
+							.form__link.mobile
+								span Уже есть аккаунт?
+								a(href="./login.html")
+									|  /
+									span.underline  войти
 
 	include pug/components/footer

@@ -30,3 +30,39 @@
 		}
 	}
 }
+
+@include mobile {
+	.mission {
+
+		.container {
+			display: flex;
+			align-items: center;
+			flex-direction: column-reverse;
+		}
+
+		.section__title {
+			margin-bottom: 32rem;
+		}
+
+		&__text {
+			font-size: 15rem;
+			line-height: 150%;
+			margin-bottom: 32rem;
+		}
+
+		&__images {
+			display: flex;
+			align-items: flex-start;
+			margin-right: 0;
+		}
+
+		.frame {
+			width: 200rem;
+
+			&:nth-child(2) {
+				margin-top: 40rem;
+				margin-left: -60rem;
+			}
+		}
+	}
+}

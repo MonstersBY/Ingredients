@@ -43,3 +43,51 @@
 	}
 
 }
+
+@include mobile {
+	.banner {
+		margin-top: 34rem;
+		margin-bottom: 124rem;
+		padding: 68rem 0 68rem;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
+
+		&__title {
+			max-width: 850rem;
+			margin-bottom: 20rem;
+			font-size: 30rem;
+			line-height: 36rem;
+			font-weight: 700;
+			color: #fff;
+
+			span {
+				font-size: 30rem;
+				font-weight: 300;
+			}
+		}
+
+		&__subtitle {
+			max-width: 310rem;
+			color: #fff;
+			margin-bottom: 32rem;
+		}
+
+		&__info {
+			margin-top: 0;
+			margin-bottom: 32rem;
+			text-align: initial;
+			color: #fff;
+
+			strong,
+			span,
+			b {
+				font-size: 20rem;
+				line-height: 24rem;
+
+				color: #fff;
+			}
+		}
+
+	}
+}

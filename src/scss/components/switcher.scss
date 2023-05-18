@@ -43,3 +43,35 @@
 		}
 	}
 }
+
+@include mobile {
+	.switcher {
+
+		.swiper {
+			margin: 0;
+		}
+
+		&__btn {
+			min-width: 0;
+			height: 43rem;
+			padding: 14rem 0;
+		}
+
+		&__container {
+			position: relative;
+			z-index: 1;
+		}
+
+		&__content {
+			opacity: 0;
+			pointer-events: none;
+			position: absolute;
+			width: 100%;
+			transition: opacity 300ms;
+			&.active {
+				opacity: 1;
+				pointer-events: auto;
+			}
+		}
+	}
+}

@@ -3,10 +3,10 @@ const CONTAINER_WIDTH = 1520;
 
 const swiper_solutions = new Swiper('.swiper_solutions', {
 	modules: [Navigation, Pagination],
-	slidesPerView: 3,
-	slidesPerGroup: 3,
+	slidesPerView: 1,
+	slidesPerGroup: 1,
 	speed: 1000,
-	spaceBetween: SLIDES_GAP / CONTAINER_WIDTH * 100 + '%',
+	spaceBetween: SLIDES_GAP / CONTAINER_WIDTH * 500 + '%',
 	pagination: {
 		el: ".swiper-pagination",
 		type: "fraction",
@@ -15,4 +15,12 @@ const swiper_solutions = new Swiper('.swiper_solutions', {
 		nextEl: ".swiper-button-next",
 		prevEl: ".swiper-button-prev",
 	},
+	breakpoints: {
+		769: {
+			slidesPerView: 3,
+			slidesPerGroup: 3,
+			spaceBetween: SLIDES_GAP / CONTAINER_WIDTH * 100 + '%',
+			speed: 1500,
+		  }
+	}
 });

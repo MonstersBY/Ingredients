@@ -101,6 +101,9 @@ button {
 	img {
 		object-fit: cover;
 	}
+	&.mobile {
+		display: none;
+	}
 }
 
 .frame {
@@ -108,7 +111,7 @@ button {
 	padding: 20rem;
 	background: linear-gradient(133.18deg, rgba(255, 255, 255, 0.75) 0.79%, rgba(247, 249, 251, 0.75) 0.8%, rgba(247, 249, 251, 0) 99.98%);
 	box-shadow: -15rem -15rem 40rem rgba(255, 255, 255, 0.5), 15rem 15rem 40rem rgba(139, 168, 189, 0.15);
-	
+
 	backdrop-filter: blur(19rem);
 	border-radius: 10rem;
 
@@ -237,6 +240,245 @@ button {
 		height: 401rem;
 		pointer-events: none;
 		background: linear-gradient(180deg, #EFF3F6 5%, transparent 50%);
+	}
+}
+
+@include mobile {
+	.logo {
+		display: block;
+		flex-shrink: 0;
+		width: 144rem;
+		height: 50rem;
+	}
+
+	.localizer {
+		font-size: 20rem;
+	}
+
+	button {
+		border: none;
+	}
+
+	.btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		padding: 16.5rem 29rem;
+		font-size: 15rem;
+		line-height: 130%;
+		font-weight: 700;
+		background: #201702;
+		box-shadow: 5rem 5rem 25rem rgba(153, 173, 187, 0.1);
+		border-radius: 5rem;
+		color: #FBFBFB;
+		transition: 300ms;
+		white-space: nowrap;
+		width: 100%;
+
+		svg {
+			max-width: 24rem;
+			max-height: 24rem;
+			margin-left: 24rem;
+		}
+	}
+
+	.icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 52rem;
+		height: 52rem;
+		background: rgba(255, 255, 255, 0.4);
+		box-shadow: 5rem 5rem 25rem rgba(153, 173, 187, 0.1);
+		border-radius: 5rem;
+
+		svg {
+			display: block;
+			width: 24rem;
+			height: 24rem;
+		}
+	}
+
+	.section {
+		position: relative;
+		margin-bottom: 120rem;
+
+		// &:not(:last-child) {
+		// 	margin-bottom: 200rem;
+		// }
+
+		&__top {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			align-items: baseline;
+			justify-content: space-between;
+			margin-right: 0;
+			z-index: 2;
+			gap: 36rem;
+			margin-bottom: 32rem;
+
+		}
+
+		&__title {
+			font-weight: 700;
+			font-size: 30rem;
+			line-height: 40rem;
+			color: #181818;
+		}
+	}
+
+	.lines {
+		position: absolute;
+		top: 224rem;
+		left: 0;
+		right: 0;
+		pointer-events: none;
+
+		img {
+			object-fit: cover;
+		}
+		&.mobile {
+			display: block;
+		}
+		&.desktop {
+			display: none;
+		}
+	}
+
+	.frame {
+		position: relative;
+		padding: 8rem;
+		background: linear-gradient(133.18deg, rgba(255, 255, 255, 0.75) 0.79%, rgba(247, 249, 251, 0.75) 0.8%, rgba(247, 249, 251, 0) 99.98%);
+		box-shadow: -15rem -15rem 40rem rgba(255, 255, 255, 0.5), 15rem 15rem 40rem rgba(139, 168, 189, 0.15);
+
+		backdrop-filter: blur(19rem);
+		border-radius: 10rem;
+
+		img {
+			display: block;
+			border-radius: 10rem;
+			overflow: hidden;
+		}
+
+		&__inner {
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			display: flex;
+			align-items: flex-end;
+			padding: 27rem;
+			font-size: 16rem;
+			line-height: 19rem;
+			color: #fff;
+		}
+	}
+
+	.gradient_border {
+		position: relative;
+		border-left: 2rem solid #fff;
+		overflow: hidden;
+
+		&::after {
+			content: '';
+			pointer-events: none;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: -2rem;
+			border-width: 2rem;
+			border-style: solid;
+			border-image: linear-gradient(to right,#fff,rgba(0, 0, 0, 0)) 1 1%;
+			transition: 300ms;
+		}
+	}
+
+
+	.underline {
+		position: relative;
+		display: inline-block;
+		padding-right: 55rem;
+		padding-bottom: 5rem;
+
+
+		// Arrow
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: 3rem;
+			display: block;
+			width: 10rem;
+			height: 10rem;
+			margin-top: -5rem;
+			border: 2rem solid $color_black;
+			border-bottom: none;
+			border-left: none;
+			pointer-events: none;
+			transform-origin: 66% 66%;
+			transform: rotate(45deg);
+		}
+
+		// Line
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			display: block;
+			height: 1px;
+			background: #000;
+		}
+	}
+
+	.displaying {
+		position: relative;
+
+		.icon__tiles,
+		.icon__list {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			opacity: 1;
+			transition: opacity 500ms;
+		}
+
+		&_tiles {
+			.icon__tiles {
+				opacity: 0;
+			}
+		}
+
+		&_list {
+			.icon__list {
+				opacity: 0;
+			}
+		}
+	}
+
+	.section_lines {
+		position: relative;
+
+		.lines {
+			display: none;
+		}
+
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 587rem;
+			height: 401rem;
+			pointer-events: none;
+			background: none;
+		}
 	}
 }
 

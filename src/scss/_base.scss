@@ -155,7 +155,15 @@ input {
 
 
 @include mobile {
+	body {
+		font-size: 15rem;
+		line-height: 130%;
+	}
 	html {
 		font-size: calc((100 / 375) * 1vw);  // 375 = mobile width
+	}
+	.drop_content,
+	.container {
+		padding: 0 20rem;
 	}
 }

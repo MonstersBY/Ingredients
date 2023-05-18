@@ -86,7 +86,7 @@
 		margin-right: 24rem;
 		margin-bottom: 12rem;
 	}
-	
+
 	&__email {
 		display: inline-block;
 		margin-bottom: 12rem;
@@ -99,5 +99,11 @@
 	.developer {
 		width: 175rem;
 		height: 47rem;
+	}
+}
+
+@include mobile {
+	.footer {
+		display: none;
 	}
 }
