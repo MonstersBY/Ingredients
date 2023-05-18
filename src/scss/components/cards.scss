@@ -78,3 +78,66 @@
 		margin-top: auto;
 	}
 }
+
+@include mobile {
+	.cards {
+		display: flex;
+		flex-direction: column;
+		gap: 20rem;
+	}
+
+	.card {
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-start;
+		flex-direction: column;
+		padding: 0 23rem 28rem;
+
+		background: rgba(255, 255, 255, 0.2);
+		box-shadow: -15rem -15rem 40rem rgba(255, 255, 255, 0.5), 15rem 15rem 40rem rgba(139, 168, 189, 0.15);
+		backdrop-filter: blur(5rem);
+		/* Note: backdrop-filter has minimal browser support */
+
+		border-radius: 5rem;
+
+		&__img {
+			width: 333px;
+			height: 100px;
+			margin-left: -23rem;
+			margin-right: -23rem;
+			padding-top: 1rem;
+			padding-right: 1rem;
+			margin-bottom: 28rem;
+
+			img {
+				display: block;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+
+		&__title {
+			margin-bottom: 16rem;
+			font-size: 20rem;
+			line-height: 26rem;
+		}
+
+		&__props {
+			margin-bottom: 28rem;
+		}
+
+		&__prop {
+			color: #686666;
+
+			+.card__prop {
+				margin-top: 5rem;
+			}
+
+		}
+
+		&__btn {
+			margin-top: auto;
+		}
+	}
+}
