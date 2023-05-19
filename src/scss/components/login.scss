@@ -16,3 +16,24 @@
 	}
 
 }
+
+@include mobile {
+	.section_login {
+		margin: 0;
+		padding: 76rem 0 264rem;
+		overflow: hidden;
+
+		.section__title {
+			margin-bottom: 16rem;
+		}
+
+		.section__subtitle {
+			max-width: 805rem;
+			margin-bottom: 32rem;
+			font-size: 13rem;
+			line-height: 150%;
+			color: #999;
+		}
+
+	}
+}

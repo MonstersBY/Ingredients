@@ -59,43 +59,35 @@ block content
 
 				.cabinet__content
 					a.underline.cabinet__back(href="") Назад
-					.messages
-						a(href="#").message.gradient_border
-							.message__img
-								img(src="images/cabinet/message_img.jpg" alt="message_img")
-							.message__inner
-								.message__top
-									span.message__author Викторов Александр
-									span.message__text Здравствуйте! Разнообразный и богатый опыт начало повседневной работы по формированию позиции влечет за собой...
-								.message__bottom
-									span Милорада
-									span Логист
-									span 13 февраля, 2023 в 12:30
 
-						a(href="#").message.gradient_border.unread
-							.message__img
-								img(src="images/cabinet/message_img.jpg" alt="message_img")
-							.message__inner
-								.message__top
-									span.message__author Викторов Александр
-									span.message__text Здравствуйте! Разнообразный и богатый опыт начало повседневной работы по формированию позиции влечет за собой...
-								.message__bottom
-									span Милорада
-									span Логист
-									span 13 февраля, 2023 в 12:30
-									.message__passed 5 м
-
-						a(href="#").message.gradient_border
-							.message__img
-								img(src="images/cabinet/message_img.jpg" alt="message_img")
-							.message__inner
-								.message__top
-									span.message__author Викторов Александр
-									span.message__text Здравствуйте! Разнообразный и богатый опыт начало повседневной работы по формированию позиции влечет за собой...
-								.message__bottom
-									span Милорада
-									span Логист
-									span 13 февраля, 2023 в 12:30
+					.messages__box
+						.messages__box-top
+							.message.gradient_border
+								.message__img
+									img(src="images/cabinet/message_img.jpg" alt="message_img")
+								.message__inner
+									.message__top
+										span.message__author Викторов Александр
+									.message__bottom
+										span Милорада
+										span Логист
+										span.desktop 13 февраля, 2023 в 12:30
+										span.mobile 13.02.23 в 12:30
+						.messages__box-bottom
+							.message__boxs
+								.message__box-date Сегодня
+								.message__box.another.unread
+									.message__box-text Здравствуйте! Разнообразный и богатый опыт начало повседневной работы по формированию позиции влечет за собой...
+									.message__box-time 16:41
+								.message__box.my
+									.message__box-text Здравствуйте! Разнообразный и богатый опыт начало повседневной работы по формированию позиции влечет за собой...
+									.message__box-time 16:41
+							form.search.cabinet__search
+								label
+									include ./pug/svg/search_grey.svg
+									input(type="text" placeholder="Введите текст сообщения")
+								button(type="submit")
+									include ./pug/svg/arrow.svg
 
 
 	include pug/components/footer

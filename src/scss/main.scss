@@ -466,7 +466,12 @@ button {
 		position: relative;
 
 		.lines {
-			display: none;
+			top: 400rem;
+			left: auto;
+			right: -650rem;
+			transform: rotate(-75deg);
+			width: 1400rem;
+			z-index: -1;
 		}
 
 		&::after {

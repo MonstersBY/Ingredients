@@ -15,6 +15,7 @@ block content
 				img(src="images/lines.svg" alt="lines.svg")
 			.container
 				.section__title Поставщики
+				.section__subtitle.mobile Представлено 457 категорий
 
 				.filter
 					.switcher__control
@@ -22,31 +23,38 @@ block content
 						button.btn.switcher__btn(type="button") Оборудование
 
 					.filter__inner.filter__top
-						.section__subtitle Представлено 457 категорий
+						.section__subtitle.desktop Представлено 457 категорий
 						a.underline(href="#") Выгрузить список в excel
 
 					.filter__inner.filter__bottom
 						form.search
-							.search__filter
+							.search__filter.desktop
 								select(name="search1")
 									option(value="0" selected) По отраслям
 									option(value="1") По отраслям 1
 									option(value="2") По отраслям 2
 									option(value="3") По отраслям 3
 
-							.search__filter
+							.search__filter.desktop
 								select(name="search2")
 									option(value="0" selected) По функциям
 									option(value="1") По функциям 1
 									option(value="2") По функциям 2
 									option(value="3") По функциям 3
 
-							.search__filter
+							.search__filter.desktop
 								select(name="search2")
 									option(value="0" selected) Сортировать список
 									option(value="1") Сортировать список 1
 									option(value="2") Сортировать список 2
 									option(value="3") Сортировать список 3
+
+							.search__filter.mobile
+								select(name="search2")
+									option(value="0" selected) Фильтры
+									option(value="1") Фильтры 1
+									option(value="2") Фильтры 2
+									option(value="3") Фильтры 3
 
 							.search__inner
 								label
@@ -98,336 +106,336 @@ block content
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Милорада
+													.vendor__title #[span Компания] Милорада
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor1.png" alt="Милорада")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title HItema
+													.vendor__title #[span Компания] HItema
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor2.jpg" alt="HItema")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Nanophase
+													.vendor__title #[span Компания] Nanophase
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor3.jpg" alt="Nanophase")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Bio
+													.vendor__title #[span Компания] Bio
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor4.jpg" alt="Bio-fed")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Милорада
+													.vendor__title #[span Компания] Милорада
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor1.png" alt="Милорада")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title HItema
+													.vendor__title #[span Компания] HItema
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor2.jpg" alt="HItema")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Nanophase
+													.vendor__title #[span Компания] Nanophase
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor3.jpg" alt="Nanophase")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Bio
+													.vendor__title #[span Компания] Bio
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor4.jpg" alt="Bio-fed")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Милорада
+													.vendor__title #[span Компания] Милорада
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor1.png" alt="Милорада")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title HItema
+													.vendor__title #[span Компания] HItema
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor2.jpg" alt="HItema")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Nanophase
+													.vendor__title #[span Компания] Nanophase
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor3.jpg" alt="Nanophase")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Bio
+													.vendor__title #[span Компания] Bio
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor4.jpg" alt="Bio-fed")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Милорада
+													.vendor__title #[span Компания] Милорада
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor1.png" alt="Милорада")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title HItema
+													.vendor__title #[span Компания] HItema
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor2.jpg" alt="HItema")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Nanophase
+													.vendor__title #[span Компания] Nanophase
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor3.jpg" alt="Nanophase")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Bio
+													.vendor__title #[span Компания] Bio
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor4.jpg" alt="Bio-fed")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Милорада
+													.vendor__title #[span Компания] Милорада
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor1.png" alt="Милорада")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title HItema
+													.vendor__title #[span Компания] HItema
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor2.jpg" alt="HItema")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Nanophase
+													.vendor__title #[span Компания] Nanophase
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor3.jpg" alt="Nanophase")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Bio
+													.vendor__title #[span Компания] Bio
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor4.jpg" alt="Bio-fed")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Милорада
+													.vendor__title #[span Компания] Милорада
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor1.png" alt="Милорада")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title HItema
+													.vendor__title #[span Компания] HItema
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor2.jpg" alt="HItema")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Nanophase
+													.vendor__title #[span Компания] Nanophase
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor3.jpg" alt="Nanophase")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Bio
+													.vendor__title #[span Компания] Bio
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor4.jpg" alt="Bio-fed")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
@@ -447,336 +455,336 @@ block content
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Милорада 2
+													.vendor__title #[span Компания] Милорада 2
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor1.png" alt="Милорада")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title HItema 2
+													.vendor__title #[span Компания] HItema 2
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor2.jpg" alt="HItema")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Nanophase 2
+													.vendor__title #[span Компания] Nanophase 2
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor3.jpg" alt="Nanophase")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Bio 2
+													.vendor__title #[span Компания] Bio 2
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor4.jpg" alt="Bio-fed")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Милорада 2
+													.vendor__title #[span Компания] Милорада 2
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor1.png" alt="Милорада")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title HItema 2
+													.vendor__title #[span Компания] HItema 2
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor2.jpg" alt="HItema")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Nanophase 2
+													.vendor__title #[span Компания] Nanophase 2
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor3.jpg" alt="Nanophase")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Bio 2
+													.vendor__title #[span Компания] Bio 2
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor4.jpg" alt="Bio-fed")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Милорада 2
+													.vendor__title #[span Компания] Милорада 2
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor1.png" alt="Милорада")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title HItema 2
+													.vendor__title #[span Компания] HItema 2
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor2.jpg" alt="HItema")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Nanophase 2
+													.vendor__title #[span Компания] Nanophase 2
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor3.jpg" alt="Nanophase")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Bio 2
+													.vendor__title #[span Компания] Bio 2
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor4.jpg" alt="Bio-fed")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Милорада 2
+													.vendor__title #[span Компания] Милорада 2
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor1.png" alt="Милорада")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title HItema 2
+													.vendor__title #[span Компания] HItema 2
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor2.jpg" alt="HItema")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Nanophase 2
+													.vendor__title #[span Компания] Nanophase 2
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor3.jpg" alt="Nanophase")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Bio 2
+													.vendor__title #[span Компания] Bio 2
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor4.jpg" alt="Bio-fed")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Милорада 2
+													.vendor__title #[span Компания] Милорада 2
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor1.png" alt="Милорада")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title HItema 2
+													.vendor__title #[span Компания] HItema 2
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor2.jpg" alt="HItema")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Nanophase 2
+													.vendor__title #[span Компания] Nanophase 2
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor3.jpg" alt="Nanophase")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Bio 2
+													.vendor__title #[span Компания] Bio 2
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor4.jpg" alt="Bio-fed")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Милорада 2
+													.vendor__title #[span Компания] Милорада 2
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor1.png" alt="Милорада")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title HItema 2
+													.vendor__title #[span Компания] HItema 2
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor2.jpg" alt="HItema")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Nanophase 2
+													.vendor__title #[span Компания] Nanophase 2
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor3.jpg" alt="Nanophase")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 
 										.swiper-slide
 											.slide
 												a.vendor.gradient_border(href="#")
-													.vendor__title Bio 2
+													.vendor__title #[span Компания] Bio 2
 													.vendor__subtitle 100 продуктов
 													.vendor__img
 														img(src="images/vendors/vendor4.jpg" alt="Bio-fed")
 
-													.list_view.column_name.column_name_manufactures Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
-													.list_view.column_name.column_name_categories Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
-													.list_view.column_name.column_name_areas Животноводство, Молочные продукты, Животноводство, Молочные продукты
+													.list_view.column_name.column_name_manufactures #[span Производит товары] Хлеб, Молоко, Соль, Сахар, Добавки пищевые, Концентраты, эмульгаторы...
+													.list_view.column_name.column_name_categories #[span Категории] Сельское хозяйство, Сельское хозяйство, Сельское хозяйство, Сельское хозяйство
+													.list_view.column_name.column_name_areas #[span Области] Животноводство, Молочные продукты, Животноводство, Молочные продукты
 
 													.list_view.underline Cмотреть
 

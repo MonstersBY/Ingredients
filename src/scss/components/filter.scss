@@ -212,4 +212,48 @@
 			}
 		}
 	}
+	.filter {
+		position: relative;
+		margin-bottom: 38rem;
+		z-index: 2;
+		transition: margin 500ms;
+
+		&__inner {
+			flex-direction: column;
+			gap: 16rem;
+		}
+
+		&__top {
+			justify-content: space-between;
+			margin-bottom: 25rem;
+
+			.underline {
+				margin-top: 0;
+				padding-right: 63rem;
+				margin-right: auto;
+			}
+		}
+
+		&__control {
+			margin-left: 0;
+			flex-direction: row;
+			margin-right: auto;
+
+			.icon {
+
+				&:not(:last-child) {
+					margin-right: 0;
+				}
+			}
+		}
+
+		.search {
+			width: 100%;
+			max-width: 1262rem;
+
+			button {
+				background-color: #181818;
+			}
+		}
+	}
 }

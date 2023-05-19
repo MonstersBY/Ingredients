@@ -469,6 +469,8 @@
 
 		&__bottom {
 			display: flex;
+			flex-direction: column;
+			gap: 20rem;
 			align-items: center;
 			justify-content: space-between;
 			margin-top: 40rem;

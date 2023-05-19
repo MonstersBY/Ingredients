@@ -11,11 +11,11 @@ $('.displaying').on('click', function (evt) {
 	if ($this.hasClass('displaying_tiles')) {
 		$this.removeClass('displaying_tiles').addClass('displaying_list');
 		$root.addClass('section_displaying_list');
-		Swiper_grid(1, 1, 5);
+		Swiper_grid(1, 1, 5, 1, 1, 2);
 	} else if ($this.hasClass('displaying_list')) {
 		$this.removeClass('displaying_list').addClass('displaying_tiles');
 		$root.removeClass('section_displaying_list');
-		Swiper_grid(4, 4, 3);
+		Swiper_grid(4, 4, 3, 2, 2, 4);
 	}
 
 	function swiperUpdate() {

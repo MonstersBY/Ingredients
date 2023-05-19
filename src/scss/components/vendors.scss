@@ -6,6 +6,9 @@
 			margin-top: -42rem;
 		}
 	}
+	.mobile {
+		display: none;
+	}
 }
 
 
@@ -27,6 +30,10 @@
 		font-size: 32rem;
 		line-height: 39rem;
 		transition: color 300ms;
+
+		span {
+			display: none;
+		}
 	}
 
 	&__subtitle {
@@ -162,9 +169,6 @@
 }
 
 @include mobile {
-	// .swiper_vendors {
-	// 	display: none;
-	// }
 	.vendors {
 
 
@@ -172,6 +176,24 @@
 			&__container {
 				margin-top: -42rem;
 			}
+		}
+		.desktop {
+			display: none;
+		}
+		.mobile {
+			display: block;
+		}
+		.section__title {
+			margin-bottom: 12rem;
+		}
+		.section__subtitle {
+			margin-bottom: 36rem;
+		}
+		.lines {
+			display: none;
+		}
+		.swiper {
+			flex-direction: column;
 		}
 	}
 
@@ -183,8 +205,8 @@
 		justify-content: center;
 		flex-direction: column;
 		padding: 20rem 40rem 20rem;
-		margin-right: 20rem;
-		margin-bottom: 20rem;
+		margin-right: 0;
+		margin-bottom: 0;
 		background: linear-gradient(133.18deg, rgba(255, 255, 255, 0) 0.79%, rgba(247, 249, 251, 0.09) 0.8%, rgba(247, 249, 251, 0.09) 99.98%);
 		border-radius: 10rem;
 		backdrop-filter: blur(5rem);
@@ -221,11 +243,14 @@
 
 		.list_view {
 			display: none;
-			color: #686666;
+			color: #181818;
 			transition: 300ms;
 
 			&.underline {
-				color: inherit;
+				color: #181818;
+				margin-right: auto;
+				font-size: 15rem;
+				line-height: 130%;
 			}
 		}
 
@@ -251,23 +276,11 @@
 
 	}
 
-
-	.column_names {
-		display: flex;
-		align-items: center;
-		opacity: 0;
-		height: 0;
-		padding-left: 4rem;
-		margin-bottom: 0;
-		color: #686666;
-		transition: 300ms;
-	}
-
 	.column_name {
 		width: 100%;
 
 		&:not(:last-child) {
-			margin-right: 28rem;
+			margin-right: 0;
 		}
 
 		&_company {
@@ -290,16 +303,17 @@
 	.section_displaying_list {
 
 		.column_names {
-			opacity: 1;
-			height: auto;
-			margin-bottom: -45rem;
+			display: none;
 		}
 
 
 		.vendor {
 			justify-content: flex-start;
-			flex-direction: row;
+			flex-direction: column;
+			gap: 16rem;
 			padding: 28rem;
+			font-size: 13rem;
+			line-height: 150%;
 
 			.list_view {
 				display: block;
@@ -309,14 +323,18 @@
 				width: 100%;
 				max-width: 202rem;
 				margin-bottom: 0;
-				margin-right: 28rem;
-				font-size: 24rem;
-				line-height: 130%;
+				font-size: 13rem;
+				line-height: 150%;
+				margin-right: auto;
 			}
 
 			&__subtitle,
 			&__img {
 				display: none;
+			}
+			span {
+				display: block;
+				color: #686666;
 			}
 
 		}

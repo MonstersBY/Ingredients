@@ -13,6 +13,23 @@
 	.search input::placeholder {
 		color: #999;
 	}
+	.underline {
+		padding-right: 0;
+		padding-left: 55rem;
+		margin-bottom: 36rem;
+		color: #999999;
+
+		&::before {
+			margin-top: -10rem;
+			transform: rotate(-135deg);
+			right: 0;
+    		left: 3rem;
+			opacity: 0.5;
+		}
+		&::after {
+			background: #999999;
+		}
+	}
 }
 
 .message {
@@ -147,15 +164,79 @@
 			}
 		}
 	}
+	&__boxs {
+		margin-bottom: 0rem;
+		margin-top: 0rem;
+		height: 500rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: end;
+		gap: 32rem;
+		padding-bottom: 32rem;
+	}
+	&__box {
+		width: 825rem;
+		display: flex;
+		padding: 10rem 16rem;
+		border-radius: 5rem;
+		&-date {
+			align-self: center;
+			font-size: 20rem;
+			line-height: 150%;
+			color: #999999;
+		}
+		&.another {
+			background: rgba(222, 228, 243, 0.5);
+		}
+		&.my {
+			background: rgba(187, 203, 208, 0.3);
+			margin-left: auto;
+		}
+		&-text {
+			font-size: 20rem;
+			line-height: 150%;
+			color: #181818;
+		}
+		&-time {
+			font-size: 20rem;
+			line-height: 150%;
+			color: #999999;
+		}
+		&.unread {
+			.message__box-time {
+				margin-left: 35rem;
+				position: relative;
+
+				&::before {
+					position: absolute;
+					content: '';
+					width: 8rem;
+					height: 8rem;
+					background: #7C9DA8;
+					border-radius: 50%;
+					left: -20rem;
+    				top: 14rem;
+				}
+			}
+		}
+	}
 }
 
 .messages {
+	max-width: 1132rem;
 	&.unread_only {
 		.message:not(.unread) {
 			display: none;
 		}
 	}
+	&__box-bottom {
+		box-shadow: -10px -10px 20px rgba(255, 255, 255, 0.2), 10px 10px 10px rgba(139, 168, 189, 0.05);
+		padding: 0 48rem 32rem;
+		overflow: hidden;
+		border-radius: 10rem;
+	}
 }
+
 
 @include mobile {
 	.section_messages {
@@ -170,8 +251,10 @@
 			width: 163.5rem;
 		}
 
-		.search input::placeholder {
-			color: #999;
+		.search {
+			input::placeholder {
+				color: #999;
+			}
 		}
 	}
 	.message {
@@ -314,6 +397,52 @@
 				&__bottom span::before {
 					background: #fff;
 				}
+			}
+		}
+		&__boxs {
+			margin-bottom: 0rem;
+			margin-top: 0rem;
+			height: 500rem;
+			display: flex;
+			flex-direction: column;
+			justify-content: end;
+			gap: 8rem;
+			padding-bottom: 20rem;
+		}
+		&__box {
+			width: 279rem;
+			&-date {
+				font-size: 13rem;
+				margin-bottom: 12rem;
+			}
+			&-text {
+				font-size: 13rem;
+			}
+			&-time {
+				font-size: 13rem;
+			}
+			&.unread {
+				.message__box-time {
+					margin-left: 25rem;
+
+					&::before {
+						width: 4rem;
+						height: 4rem;
+						left: -10rem;
+						top: 8rem;
+					}
+				}
+			}
+		}
+	}
+	.messages {
+		max-width: 335rem;
+
+
+		&__box {
+			width: 335rem;
+			&-bottom {
+				padding: 0 8rem 0;
 			}
 		}
 	}
