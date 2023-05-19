@@ -1,0 +1,71 @@
+.products-category {
+	.section__title {
+		margin-bottom: 28rem;
+	}
+	.section__subtitle {
+		margin-bottom: 40rem;
+	}
+	.search__filter .nice-select {
+		min-width: 233rem;
+	}
+	.btn {
+		width: 100%;
+		padding: 14rem 24rem;
+		justify-content: flex-start;
+	}
+}
+.product-category {
+	background: rgba(255, 255, 255, 0.2);
+	backdrop-filter: blur(5px);
+	border-radius: 10rem;
+	position: relative;
+	padding-bottom: 32rem;
+	&__img {
+		margin-bottom: 72rem;
+		img {
+			border-radius: 10rem;
+		}
+	}
+	&__vendor {
+		position: absolute;
+		left: 20rem;
+    	top: 95rem;
+		width: 103rem;
+		height: 102rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background: #FFFFFF;
+		box-shadow: 5rem 5rem 30rem rgba(113, 147, 173, 0.1);
+		border-radius: 5rem;
+	}
+	&__like {
+		position: absolute;
+		width: 24rem;
+		height: 24rem;
+		right: 20rem;
+		top: 160rem;
+	}
+	&__name {
+		margin: 0 20rem 4rem;
+		font-size: 20rem;
+		line-height: 150%;
+		color: #999999;
+	}
+	&__title {
+		margin: 0 20rem 16rem;
+		font-size: 24rem;
+		line-height: 130%;
+		color: #181818;
+	}
+	&__text {
+		margin: 0 20rem 24rem;
+		font-size: 16rem;
+		line-height: 150%;
+		color: #999999;
+	}
+	&__link {
+		margin: 0 20rem;
+		color: #181818;
+	}
+}

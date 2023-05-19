@@ -1,0 +1,92 @@
+extends pug/base
+
+prepend vars
+	//-
+	- title = "Контакты"
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+		section.section.contacts
+			.lines
+				img(src="images/lines.svg" alt="lines.svg")
+			.container
+				.section__title Контакты
+				.contacts__us
+					.contact__us.gradient_border
+						.contact__us-circle
+						.contact__us-icon
+							img(src="images/contacts/call.svg" alt="")
+						.contact__us-inner
+							.contact__us-title Номер телефона
+							.contact__us-text + 7 (351) 536-27-03
+
+					.contact__us.gradient_border
+						.contact__us-circle
+						.contact__us-icon
+							img(src="images/contacts/mail.svg" alt="")
+						.contact__us-inner
+							.contact__us-title Электронная почта
+							.contact__us-text example@mail.com
+
+					.contact__us.gradient_border
+						.contact__us-circle
+						.contact__us-icon
+							img(src="images/contacts/location.svg" alt="")
+						.contact__us-inner
+							.contact__us-title Локация
+							.contact__us-text г. Москва, ул. 1905 года, д.476, 003
+
+					.contact__us.gradient_border
+						form.form.form_login.form_validation
+							.contact__us-title Обратная связь
+							label.form__item
+								input.input(type="text")
+								span.placeholder Ваше имя
+							label.form__item
+								input.input(type="tel")
+								span.placeholder Номер телефона
+							label.form__item
+								input.input(type="email")
+								span.placeholder E-mail
+							label.form__item
+								textarea.textarea
+								span.placeholder Сообщение
+							.form__bottom
+								button.btn(type="submit") Отправить
+
+		section.section.contacts-info
+			.container
+				.section__title Откройте возможности digital продаж с помощью MIT
+				.contacts-info__container
+					.contacts-info__left
+						.contacts-info__title Интуитивно понятный интерфейс cайта
+						ul.contacts-info__list
+							li Личный магазин компании и карточки продуктов
+							li Делитесь спецификациями, SDS, стартовыми рецептурами, рекламными проспектами взамен на контакты лидов 
+							li Получайте он-лайн запросы на образцы и расчет цен
+						.contacts-info__title Аналитика данных и инструменты для оптимизации лид- менеджмента
+						ul.contacts-info__list
+							li Анализийруте кто просматривали ваш каталог
+							li Тренды поиска дают возможность понять, в какой категории заинтересованы пользователи
+						.contacts-info__title Месенджер поставщик - клиент
+						ul.contacts-info__list
+							li Добавляйте экспертов своей компании в чат
+							li Оказывайте технологическую поддержкку и обсуждайте условия контракта
+						.contacts-info__title Автоматизированный диджитал - маркетинг
+						ul.contacts-info__list
+							li Возможность настроить автоматизированные таргет - рассылки чтобы подогревать интерес клиента и привести его к покупке.
+						form.form
+							label.form__item
+								input.input(type="email")
+								span.placeholder E-mail
+							.form__bottom
+								button.btn(type="submit") Запросить презентацию
+					.contacts-info__right
+						.contacts-info__img
+							img(src="images/contacts/img.png" alt="")
+
+	include pug/components/footer

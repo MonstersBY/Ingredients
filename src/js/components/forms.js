@@ -11,6 +11,19 @@ $('.form__item input').on('input', function(evt) {
 		$placeholder.removeClass('active');
 	}
 });
+$('.form__item textarea').on('input', function(evt) {
+	let $this = $(this);
+	let $parent = $this.parent();
+	let $placeholder = $parent.find('.placeholder');
+
+	$this.removeClass('invalid');
+
+	if ($this.val()) {
+		$placeholder.addClass('active');
+	} else {
+		$placeholder.removeClass('active');
+	}
+});
 
 $('.form_validation').on('submit', function(evt) {
 	let $this = $(this);

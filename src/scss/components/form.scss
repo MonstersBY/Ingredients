@@ -312,6 +312,25 @@
 			}
 		}
 	}
+	.textarea {
+		position: relative;
+		width: 100%;
+		display: block;
+		padding: 14rem 29rem 14rem 69rem;
+		border: 1rem solid transparent;
+		background: none;
+		outline: none;
+		font-size: 16rem;
+		line-height: 150%;
+		border-radius: 5rem;
+		overflow: hidden;
+		z-index: 1;
+		transition: 300ms;
+
+		&:focus {
+			border-color: #7C9DA8;
+		}
+	}
 }
 
 .drop-zone--over {

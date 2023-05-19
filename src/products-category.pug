@@ -1,0 +1,481 @@
+extends pug/base
+
+prepend vars
+	//-
+	- title = "Продукция по категории"
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+		section.section.products-category
+			.lines
+				img(src="images/lines.svg" alt="lines.svg")
+			.container
+				.section__title Поставщики
+				.section__subtitle Представлено 457 категорий
+				.filter
+
+					.filter__inner.filter__bottom
+						form.search
+							.search__filter.desktop
+								select(name="search1")
+									option(value="0" selected) Категория
+									option(value="1") Категория 1
+									option(value="2") Категория 2
+									option(value="3") Категория 3
+
+							.search__filter.desktop
+								select(name="search2")
+									option(value="0" selected) Поставщики
+									option(value="1") Поставщики 1
+									option(value="2") Поставщики 2
+									option(value="3") Поставщики 3
+
+							.search__filter.desktop
+								select(name="search2")
+									option(value="0" selected) Сертификаты
+									option(value="1") Сертификаты 1
+									option(value="2") Сертификаты 2
+									option(value="3") Сертификаты 3
+
+							.search__filter.desktop
+								select(name="search2")
+									option(value="0" selected) Логистика
+									option(value="1") Логистика 1
+									option(value="2") Логистика 2
+									option(value="3") Логистика 3
+
+							.search__inner
+								button.btn Все фильтры
+
+
+						.filter__inner.filter__control
+							.dropdown
+								button.dropdown_btn.icon(type="button")
+									include ./pug/svg/share.svg
+								.dropdown_list
+									a(href="#")
+										.svg
+											include ./pug/svg/whatsapp.svg
+										| What’s up
+									a(href="#")
+										.svg
+											include ./pug/svg/telegram.svg
+										| Telegram
+									a(href="#")
+										.svg
+											include ./pug/svg/linkedin.svg
+										| Linked in
+							button.icon(type="button")
+								.icon
+									include ./pug/svg/export.svg
+
+				.swiper_shadow
+					.swiper_grid_container
+						.swiper.swiper_products-category
+
+							.swiper-wrapper
+
+								.swiper-slide
+									.slide
+										.product-category.gradient_border
+											.product-category__img
+												img(src="images/prod-category/img1.jpg" alt="Продукт")
+											.product-category__vendor
+												img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+											.product-category__like
+												include ./pug/svg/like-blank.svg
+											.product-category__name HItema
+											.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+											.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+											a.product-category__link.underline Подробнее
+								.swiper-slide
+									.slide
+										.product-category.gradient_border
+											.product-category__img
+												img(src="images/prod-category/img1.jpg" alt="Продукт")
+											.product-category__vendor
+												img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+											.product-category__like
+												include ./pug/svg/like-blank.svg
+											.product-category__name HItema
+											.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+											.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+											a.product-category__link.underline Подробнее
+								.swiper-slide
+									.slide
+										.product-category.gradient_border
+											.product-category__img
+												img(src="images/prod-category/img1.jpg" alt="Продукт")
+											.product-category__vendor
+												img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+											.product-category__like
+												include ./pug/svg/like-blank.svg
+											.product-category__name HItema
+											.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+											.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+											a.product-category__link.underline Подробнее
+								.swiper-slide
+									.slide
+										.product-category.gradient_border
+											.product-category__img
+												img(src="images/prod-category/img1.jpg" alt="Продукт")
+											.product-category__vendor
+												img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+											.product-category__like
+												include ./pug/svg/like-blank.svg
+											.product-category__name HItema
+											.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+											.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+											a.product-category__link.underline Подробнее
+								.swiper-slide
+									.slide
+										.product-category.gradient_border
+											.product-category__img
+												img(src="images/prod-category/img1.jpg" alt="Продукт")
+											.product-category__vendor
+												img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+											.product-category__like
+												include ./pug/svg/like-blank.svg
+											.product-category__name HItema
+											.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+											.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+											a.product-category__link.underline Подробнее
+								.swiper-slide
+									.slide
+										.product-category.gradient_border
+											.product-category__img
+												img(src="images/prod-category/img1.jpg" alt="Продукт")
+											.product-category__vendor
+												img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+											.product-category__like
+												include ./pug/svg/like-blank.svg
+											.product-category__name HItema
+											.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+											.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+											a.product-category__link.underline Подробнее
+								.swiper-slide
+									.slide
+										.product-category.gradient_border
+											.product-category__img
+												img(src="images/prod-category/img1.jpg" alt="Продукт")
+											.product-category__vendor
+												img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+											.product-category__like
+												include ./pug/svg/like-blank.svg
+											.product-category__name HItema
+											.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+											.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+											a.product-category__link.underline Подробнее
+								.swiper-slide
+									.slide
+										.product-category.gradient_border
+											.product-category__img
+												img(src="images/prod-category/img1.jpg" alt="Продукт")
+											.product-category__vendor
+												img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+											.product-category__like
+												include ./pug/svg/like-blank.svg
+											.product-category__name HItema
+											.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+											.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+											a.product-category__link.underline Подробнее
+								.swiper-slide
+									.slide
+										.product-category.gradient_border
+											.product-category__img
+												img(src="images/prod-category/img1.jpg" alt="Продукт")
+											.product-category__vendor
+												img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+											.product-category__like
+												include ./pug/svg/like-blank.svg
+											.product-category__name HItema
+											.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+											.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+											a.product-category__link.underline Подробнее
+								.swiper-slide
+									.slide
+										.product-category.gradient_border
+											.product-category__img
+												img(src="images/prod-category/img1.jpg" alt="Продукт")
+											.product-category__vendor
+												img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+											.product-category__like
+												include ./pug/svg/like-blank.svg
+											.product-category__name HItema
+											.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+											.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+											a.product-category__link.underline Подробнее
+								.swiper-slide
+									.slide
+										.product-category.gradient_border
+											.product-category__img
+												img(src="images/prod-category/img1.jpg" alt="Продукт")
+											.product-category__vendor
+												img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+											.product-category__like
+												include ./pug/svg/like-blank.svg
+											.product-category__name HItema
+											.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+											.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+											a.product-category__link.underline Подробнее
+								.swiper-slide
+									.slide
+										.product-category.gradient_border
+											.product-category__img
+												img(src="images/prod-category/img1.jpg" alt="Продукт")
+											.product-category__vendor
+												img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+											.product-category__like
+												include ./pug/svg/like-blank.svg
+											.product-category__name HItema
+											.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+											.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+											a.product-category__link.underline Подробнее
+								.swiper-slide
+									.slide
+										.product-category.gradient_border
+											.product-category__img
+												img(src="images/prod-category/img1.jpg" alt="Продукт")
+											.product-category__vendor
+												img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+											.product-category__like
+												include ./pug/svg/like-blank.svg
+											.product-category__name HItema
+											.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+											.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+											a.product-category__link.underline Подробнее
+								.swiper-slide
+									.slide
+										.product-category.gradient_border
+											.product-category__img
+												img(src="images/prod-category/img1.jpg" alt="Продукт")
+											.product-category__vendor
+												img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+											.product-category__like
+												include ./pug/svg/like-blank.svg
+											.product-category__name HItema
+											.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+											.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+											a.product-category__link.underline Подробнее
+								.swiper-slide
+									.slide
+										.product-category.gradient_border
+											.product-category__img
+												img(src="images/prod-category/img1.jpg" alt="Продукт")
+											.product-category__vendor
+												img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+											.product-category__like
+												include ./pug/svg/like-blank.svg
+											.product-category__name HItema
+											.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+											.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+											a.product-category__link.underline Подробнее
+								.swiper-slide
+									.slide
+										.product-category.gradient_border
+											.product-category__img
+												img(src="images/prod-category/img1.jpg" alt="Продукт")
+											.product-category__vendor
+												img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+											.product-category__like
+												include ./pug/svg/like-blank.svg
+											.product-category__name HItema
+											.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+											.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+											a.product-category__link.underline Подробнее
+								.swiper-slide
+									.slide
+										.product-category.gradient_border
+											.product-category__img
+												img(src="images/prod-category/img1.jpg" alt="Продукт")
+											.product-category__vendor
+												img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+											.product-category__like
+												include ./pug/svg/like-blank.svg
+											.product-category__name HItema
+											.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+											.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+											a.product-category__link.underline Подробнее
+								.swiper-slide
+									.slide
+										.product-category.gradient_border
+											.product-category__img
+												img(src="images/prod-category/img1.jpg" alt="Продукт")
+											.product-category__vendor
+												img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+											.product-category__like
+												include ./pug/svg/like-blank.svg
+											.product-category__name HItema
+											.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+											.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+											a.product-category__link.underline Подробнее
+								.swiper-slide
+									.slide
+										.product-category.gradient_border
+											.product-category__img
+												img(src="images/prod-category/img1.jpg" alt="Продукт")
+											.product-category__vendor
+												img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+											.product-category__like
+												include ./pug/svg/like-blank.svg
+											.product-category__name HItema
+											.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+											.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+											a.product-category__link.underline Подробнее
+								.swiper-slide
+									.slide
+										.product-category.gradient_border
+											.product-category__img
+												img(src="images/prod-category/img1.jpg" alt="Продукт")
+											.product-category__vendor
+												img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+											.product-category__like
+												include ./pug/svg/like-blank.svg
+											.product-category__name HItema
+											.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+											.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+											a.product-category__link.underline Подробнее
+								.swiper-slide
+									.slide
+										.product-category.gradient_border
+											.product-category__img
+												img(src="images/prod-category/img1.jpg" alt="Продукт")
+											.product-category__vendor
+												img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+											.product-category__like
+												include ./pug/svg/like-blank.svg
+											.product-category__name HItema
+											.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+											.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+											a.product-category__link.underline Подробнее
+								.swiper-slide
+									.slide
+										.product-category.gradient_border
+											.product-category__img
+												img(src="images/prod-category/img1.jpg" alt="Продукт")
+											.product-category__vendor
+												img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+											.product-category__like
+												include ./pug/svg/like-blank.svg
+											.product-category__name HItema
+											.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+											.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+											a.product-category__link.underline Подробнее
+								.swiper-slide
+									.slide
+										.product-category.gradient_border
+											.product-category__img
+												img(src="images/prod-category/img1.jpg" alt="Продукт")
+											.product-category__vendor
+												img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+											.product-category__like
+												include ./pug/svg/like-blank.svg
+											.product-category__name HItema
+											.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+											.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+											a.product-category__link.underline Подробнее
+								.swiper-slide
+									.slide
+										.product-category.gradient_border
+											.product-category__img
+												img(src="images/prod-category/img1.jpg" alt="Продукт")
+											.product-category__vendor
+												img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+											.product-category__like
+												include ./pug/svg/like-blank.svg
+											.product-category__name HItema
+											.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+											.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+											a.product-category__link.underline Подробнее
+								.swiper-slide
+									.slide
+										.product-category.gradient_border
+											.product-category__img
+												img(src="images/prod-category/img1.jpg" alt="Продукт")
+											.product-category__vendor
+												img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+											.product-category__like
+												include ./pug/svg/like-blank.svg
+											.product-category__name HItema
+											.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+											.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+											a.product-category__link.underline Подробнее
+								.swiper-slide
+									.slide
+										.product-category.gradient_border
+											.product-category__img
+												img(src="images/prod-category/img1.jpg" alt="Продукт")
+											.product-category__vendor
+												img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+											.product-category__like
+												include ./pug/svg/like-blank.svg
+											.product-category__name HItema
+											.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+											.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+											a.product-category__link.underline Подробнее
+								.swiper-slide
+									.slide
+										.product-category.gradient_border
+											.product-category__img
+												img(src="images/prod-category/img1.jpg" alt="Продукт")
+											.product-category__vendor
+												img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+											.product-category__like
+												include ./pug/svg/like-blank.svg
+											.product-category__name HItema
+											.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+											.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+											a.product-category__link.underline Подробнее
+								.swiper-slide
+									.slide
+										.product-category.gradient_border
+											.product-category__img
+												img(src="images/prod-category/img1.jpg" alt="Продукт")
+											.product-category__vendor
+												img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+											.product-category__like
+												include ./pug/svg/like-blank.svg
+											.product-category__name HItema
+											.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+											.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+											a.product-category__link.underline Подробнее
+								.swiper-slide
+									.slide
+										.product-category.gradient_border
+											.product-category__img
+												img(src="images/prod-category/img1.jpg" alt="Продукт")
+											.product-category__vendor
+												img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+											.product-category__like
+												include ./pug/svg/like-blank.svg
+											.product-category__name HItema
+											.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+											.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+											a.product-category__link.underline Подробнее
+								.swiper-slide
+									.slide
+										.product-category.gradient_border
+											.product-category__img
+												img(src="images/prod-category/img1.jpg" alt="Продукт")
+											.product-category__vendor
+												img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+											.product-category__like
+												include ./pug/svg/like-blank.svg
+											.product-category__name HItema
+											.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+											.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+											a.product-category__link.underline Подробнее
+
+							.swiper_control
+								.swiper-button-prev
+								.swiper-button-next
+								.swiper-pagination
+
+
+
+
+	include pug/components/footer
