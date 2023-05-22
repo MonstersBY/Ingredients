@@ -183,6 +183,107 @@
 	align-items: center;
 	justify-content: center;
 }
+.header-blur {
+    position: absolute;
+	display: none;
+    width: 100%;
+    height: 100%;
+	background: rgba(129, 140, 147, 0.5);
+	backdrop-filter: blur(7.5px);
+	z-index: 3;
+	&.active {
+		display: block;
+
+	}
+}
+
+.head-search {
+	&-help {
+		position: absolute;
+		width: 727rem;
+		height: 461rem;
+		padding: 24rem 0 0 32rem;
+		background: #FBFBFB;
+		box-shadow: 5rem 5rem 25rem rgba(153, 173, 187, 0.1);
+		border-radius: 5rem;
+		left: 617rem;
+		top: 235rem;
+		display: none;
+		justify-content: space-between;
+		color: #686666;
+
+		&.active {
+			display: flex;
+		}
+	}
+	&-left, &-right {
+		width: 45%;
+		overflow-y: auto;
+
+		&::after {
+			content: none;
+		}
+		&::-webkit-scrollbar {
+			width: 2rem;
+		}
+		::-webkit-scrollbar-track {
+			box-shadow: inset 0 0 5rem grey;
+			border-radius: 10rem;
+		}
+		&::-webkit-scrollbar-thumb {
+			background: #181818;
+			border-radius: 10rem;
+		}
+	}
+	&-title {
+		margin-bottom: 12rem;
+	}
+	&-list {
+		margin-bottom: 24rem;
+
+		li {
+			margin: 12rem;
+			padding-left: 32rem;
+			position: relative;
+
+			&::after {
+				content: '';
+				background: url(../images/icons/search.svg) no-repeat;
+				position: absolute;
+				width: 24rem;
+				height: 24rem;
+				top: 0rem;
+				left: 0rem;
+				opacity: 0.5;
+			}
+		}
+	}
+	&-container {
+		margin-bottom: 24rem;
+	}
+	&-item {
+		display: flex;
+		gap: 13rem;
+		align-items: center;
+		margin-bottom: 12rem;
+	}
+	&-icon {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 60rem;
+		height: 60rem;
+		background: #FFFFFF;
+		box-shadow: 5rem 5rem 30rem rgba(113, 147, 173, 0.1);
+		border-radius: 5rem;
+
+		img {
+			width: 48rem;
+		}
+	}
+}
+
+
 
 @include mobile {
 	.header {

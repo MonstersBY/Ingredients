@@ -2,14 +2,13 @@
 	https://github.com/hernansartorio/jquery-nice-select
 	Made by Hernán Sartorio  */
 
-(function ($) {
-
-	$.fn.niceSelect = function (method) {
+(function($) {
+	$.fn.niceSelect = function(method) {
 
 		// Methods
 		if (typeof method == 'string') {
 			if (method == 'update') {
-				this.each(function () {
+				this.each(function() {
 					var $select = $(this);
 					var $dropdown = $(this).next('.nice-select');
 					var open = $dropdown.hasClass('open');
@@ -24,7 +23,7 @@
 					}
 				});
 			} else if (method == 'destroy') {
-				this.each(function () {
+				this.each(function() {
 					var $select = $(this);
 					var $dropdown = $(this).next('.nice-select');
 
@@ -46,7 +45,7 @@
 		this.hide();
 
 		// Create custom markup
-		this.each(function () {
+		this.each(function() {
 			var $select = $(this);
 
 			if (!$select.next().hasClass('nice-select')) {
@@ -59,17 +58,38 @@
 				.addClass('nice-select')
 				.addClass($select.attr('class') || '')
 				.addClass($select.attr('disabled') ? 'disabled' : '')
+				.addClass($select.attr('multiple') ? 'has-multiple' : '')
 				.attr('tabindex', $select.attr('disabled') ? null : '0')
-				.html('<span class="current"></span><ul class="list"></ul>')
+				.html($select.attr('multiple') ? '<span class="multiple-options"></span><div class="nice-select-search-box"><input type="text" class="nice-select-search" placeholder="Поиск"/></div><ul class="list"></ul>' : '<span class="current"></span><div class="nice-select-search-box"><input type="text" class="nice-select-search" placeholder="Поиск"/></div><ul class="list"></ul>')
 			);
 
 			var $dropdown = $select.next();
 			var $options = $select.find('option');
-			var $selected = $select.find('option:selected');
+			if ($select.attr('multiple')) {
+				var $selected = $select.find('option:selected');
+				var $selected_html = '';
+				$selected.each(function() {
+					$selected_option = $(this);
+					$selected_text = $selected_option.data('display') ||  $selected_option.text();
 
-			$dropdown.find('.current').html($selected.data('display') || $selected.text());
+					if (!$selected_option.val()) {
+						return;
+					}
 
-			$options.each(function (i) {
+					$selected_html += '<span class="current">' + $selected_text + '</span>';
+				});
+				$select_placeholder = $select.data('js-placeholder') || $select.attr('js-placeholder');
+				$select_placeholder = !$select_placeholder ? 'Select' : $select_placeholder;
+				console.log($select_placeholder);
+				$selected_html = $selected_html === '' ? $select_placeholder : $selected_html;
+				$dropdown.find('.multiple-options').html($selected_html);
+			} else {
+				var $selected = $select.find('option:selected');
+				$dropdown.find('.current').html($selected.data('display') ||  $selected.text());
+			}
+
+
+			$options.each(function(i) {
 				var $option = $(this);
 				var display = $option.data('display');
 
@@ -90,7 +110,7 @@
 		$(document).off('.nice_select');
 
 		// Open/close
-		$(document).on('click.nice_select', '.nice-select', function (event) {
+		$(document).on('click.nice_select', '.nice-select', function(event) {
 			var $dropdown = $(this);
 
 			$('.nice-select').not($dropdown).removeClass('open');
@@ -98,36 +118,89 @@
 
 			if ($dropdown.hasClass('open')) {
 				$dropdown.find('.option');
+				$dropdown.find('.nice-select-search').val('');
+				$dropdown.find('.nice-select-search').focus();
 				$dropdown.find('.focus').removeClass('focus');
 				$dropdown.find('.selected').addClass('focus');
+				$dropdown.find('ul li').show();
 			} else {
 				$dropdown.focus();
 			}
 		});
 
+		$(document).on('click', '.nice-select-search-box', function(event) {
+			event.stopPropagation();
+			return false;
+		});
+		$(document).on('keyup.nice-select-search', '.nice-select', function() {
+			var $self = $(this);
+			var $text = $self.find('.nice-select-search').val();
+			var $options = $self.find('ul li');
+			if ($text == '')
+				$options.show();
+			else if ($self.hasClass('open')) {
+				$text = $text.toLowerCase();
+				var $matchReg = new RegExp($text);
+				if (0 < $options.length) {
+					$options.each(function() {
+						var $this = $(this);
+						var $optionText = $this.text().toLowerCase();
+						var $matchCheck = $matchReg.test($optionText);
+						$matchCheck ? $this.show() : $this.hide();
+					})
+				} else {
+					$options.show();
+				}
+			}
+			$self.find('.option'),
+				$self.find('.focus').removeClass('focus'),
+				$self.find('.selected').addClass('focus');
+		});
+
 		// Close when clicking outside
-		$(document).on('click.nice_select', function (event) {
+		$(document).on('click.nice_select', function(event) {
 			if ($(event.target).closest('.nice-select').length === 0) {
 				$('.nice-select').removeClass('open').find('.option');
 			}
 		});
 
 		// Option click
-		$(document).on('click.nice_select', '.nice-select .option:not(.disabled)', function (event) {
+		$(document).on('click.nice_select', '.nice-select .option:not(.disabled)', function(event) {
 			var $option = $(this);
 			var $dropdown = $option.closest('.nice-select');
+			if ($dropdown.hasClass('has-multiple')) {
+				console.log('clicked', $option);
+				if ($option.hasClass('selected')) {
+					$option.removeClass('selected');
+				} else {
+					$option.addClass('selected');
+				}
+				$selected_html = '';
+				$selected_values = [];
 
-			$dropdown.find('.selected').removeClass('selected');
-			$option.addClass('selected');
-
-			var text = $option.data('display') || $option.text();
-			$dropdown.find('.current').text(text);
-
-			$dropdown.prev('select').val($option.data('value')).trigger('change');
+				$dropdown.find('.selected').each(function() {
+					$selected_option = $(this);
+					var text = $selected_option.data('display') ||  $selected_option.text();
+					$selected_html += '<span class="current">' + text + '</span>';
+					$selected_values.push($selected_option.data('value'));
+				});
+				$select_placeholder = $dropdown.prev('select').data('js-placeholder') || $dropdown.prev('select').attr('js-placeholder');
+				console.log($dropdown.prev('select'));
+				$select_placeholder = !$select_placeholder ? 'Select' : $select_placeholder;
+				$selected_html = $selected_html === '' ? $select_placeholder : $selected_html;
+				$dropdown.find('.multiple-options').html($selected_html);
+				$dropdown.prev('select').val($selected_values).trigger('change');
+			} else {
+				$dropdown.find('.selected').removeClass('selected');
+				$option.addClass('selected');
+				var text = $option.data('display') || $option.text();
+				$dropdown.find('.current').text(text);
+				$dropdown.prev('select').val($option.data('value')).trigger('change');
+			}
 		});
 
 		// Keyboard events
-		$(document).on('keydown.nice_select', '.nice-select', function (event) {
+		$(document).on('keydown.nice_select', '.nice-select', function(event) {
 			var $dropdown = $(this);
 			var $focused_option = $($dropdown.find('.focus') || $dropdown.find('.list .option.selected'));
 

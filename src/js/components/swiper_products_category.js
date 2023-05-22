@@ -1,9 +1,9 @@
 const swiper_grid = new Swiper('.swiper_products-category', {
 	modules: [Navigation, Pagination, Grid],
-	slidesPerView: 4,
-	slidesPerGroup: 4,
+	slidesPerView: 1,
+	slidesPerGroup: 1,
 	grid: {
-		rows: 3,
+		rows: 6,
 		fill: 'row',
 	},
 	speed: 1000,
@@ -27,4 +27,3 @@ const swiper_grid = new Swiper('.swiper_products-category', {
 		  }
 	}
 });
-console.log(1234)

@@ -1,4 +1,7 @@
 .products-category {
+	.swiper {
+		flex-direction: column;
+	}
 	.section__title {
 		margin-bottom: 28rem;
 	}
@@ -12,6 +15,11 @@
 		width: 100%;
 		padding: 14rem 24rem;
 		justify-content: flex-start;
+	}
+	.search__modal {
+		.btn {
+			width: auto;
+		}
 	}
 }
 .product-category {
@@ -67,5 +75,11 @@
 	&__link {
 		margin: 0 20rem;
 		color: #181818;
+	}
+}
+
+@include mobile {
+	.desktop {
+		display: none;
 	}
 }

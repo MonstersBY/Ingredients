@@ -1,3 +1,4 @@
+.header-blur
 header.header
 	.container
 		.header__top
@@ -72,18 +73,103 @@ header.header
 			.search_container
 				form.search
 					.search__filter
-						select(name="search")
+						select.head-category(name="search")
 							option(value="0" selected) Все категории
-							option(value="1") Категория 1
-							option(value="2") Категория 2
-							option(value="3") Категория 3
+							option(value="1") Молочные продукты
+							option(value="2") Снэки и злаки
+							option(value="3") Напитки
+							option(value="4") Детское питание
+							option(value="5") Плодово-овощные консервы
+							option(value="6") Мороженое
+							option(value="7") Веган альтернативы
 
-					.search__inner
+					.search__inner.head-search
 						label
 							include ../svg/search_grey.svg
-							input(type="text" placeholder="Название ингредиента")
+							input.head-search-input(type="text" placeholder="Название ингредиента")
 						button(type="submit")
 							include ../svg/arrow.svg
+						.head-search-help
+							.head-search-left
+								.head-search-container
+									.head-search-title Молочные продукты
+									ul.head-search-list
+										li: a(href="#") Молоко
+										li: a(href="#") Верблюжье молоко
+										li: a(href="#") Козье молоко
+								.head-search-container
+									.head-search-title Детское питание
+									ul.head-search-list
+										li: a(href="#") Молоко
+										li: a(href="#") Верблюжье молоко
+										li: a(href="#") Козье молоко
+										li: a(href="#") Овечье молоко
+										li: a(href="#") Овечье молоко
+								.head-search-container
+									.head-search-title Молочные продукты
+									ul.head-search-list
+										li: a(href="#") Молоко
+										li: a(href="#") Верблюжье молоко
+										li: a(href="#") Козье молоко
+								.head-search-container
+									.head-search-title Детское питание
+									ul.head-search-list
+										li: a(href="#") Молоко
+										li: a(href="#") Верблюжье молоко
+										li: a(href="#") Козье молоко
+										li: a(href="#") Овечье молоко
+										li: a(href="#") Овечье молоко
+
+							.head-search-right
+								.head-search-container
+									.head-search-title Поставщики
+									a(href="#").head-search-item
+										.head-search-icon
+											img(src="images/vendors/vendor1.png" alt="Милорада")
+										.head-search-name Милорада
+									a(href="#").head-search-item
+										.head-search-icon
+											img(src="images/vendors/vendor1.png" alt="Милорада")
+										.head-search-name Милорада
+								.head-search-container
+									.head-search-title Бренд
+									a(href="#").head-search-item
+										.head-search-icon
+											img(src="images/vendors/vendor1.png" alt="Милорада")
+										.head-search-name Милорада
+									a(href="#").head-search-item
+										.head-search-icon
+											img(src="images/vendors/vendor1.png" alt="Милорада")
+										.head-search-name Милорада
+									a(href="#").head-search-item
+										.head-search-icon
+											img(src="images/vendors/vendor1.png" alt="Милорада")
+										.head-search-name Милорада
+								.head-search-container
+									.head-search-title Поставщики
+									a(href="#").head-search-item
+										.head-search-icon
+											img(src="images/vendors/vendor1.png" alt="Милорада")
+										.head-search-name Милорада
+									a(href="#").head-search-item
+										.head-search-icon
+											img(src="images/vendors/vendor1.png" alt="Милорада")
+										.head-search-name Милорада
+								.head-search-container
+									.head-search-title Бренд
+									a(href="#").head-search-item
+										.head-search-icon
+											img(src="images/vendors/vendor1.png" alt="Милорада")
+										.head-search-name Милорада
+									a(href="#").head-search-item
+										.head-search-icon
+											img(src="images/vendors/vendor1.png" alt="Милорада")
+										.head-search-name Милорада
+									a(href="#").head-search-item
+										.head-search-icon
+											img(src="images/vendors/vendor1.png" alt="Милорада")
+										.head-search-name Милорада
+
 
 				button.search_close(type="button")
 					include ../svg/cross.svg
