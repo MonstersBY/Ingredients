@@ -28,6 +28,9 @@ import './components/cabinet';
 import './components/tags';
 import './components/search';
 import './components/filter_modal';
+import './components/swiper_experts';
+import './components/header_mobile';
+import './components/modal_experts';
 
 $('select').niceSelect();
 

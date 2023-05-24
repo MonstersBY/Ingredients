@@ -1,0 +1,401 @@
+extends pug/base
+
+prepend vars
+	//-
+	- title = "Ingredients | Личные данные"
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+		section.section.switcher.cabinet
+			.container
+				.sidebar.gradient_border
+					.sidebar__top
+						.sidebar__img
+							img(src="images/cabinet/profile_img.png" alt="profile_img")
+						.sidebar__suptitle Компания
+						.sidebar__title ООО «Милорада»
+
+					.sidebar__items
+						.item
+							a.item__btn.item__drop_btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/box.svg
+								.item__name Товары
+							.item__drop
+								.item__list
+									a(href="#") Товары 1
+									a(href="#") Товары 2
+									a(href="#") Товары 3
+									a(href="#") Товары 4
+						.item
+							a.item__btn.item__drop_btn.active(href="#")
+								.item__icon
+									include pug/svg/cabinet/profile_2user.svg
+								.item__name Личный кабинет
+							.item__drop(style="display: block")
+								.item__list
+									a.active(href="#") Личные данные
+									a(href="#") Личный кабинет 1
+									a(href="#") Личный кабинет 1
+									a(href="#") Личный кабинет 1
+
+						.item
+							a.item__btn.item__drop_btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/sms.svg
+								.item__name Запросы
+							.item__drop
+								.item__list
+									a(href="#") Запросы 1
+									a(href="#") Запросы 2
+									a(href="#") Запросы 3
+									a(href="#") Запросы 4
+
+
+
+				.cabinet__content
+					.switcher__control
+						button.btn.switcher__btn.active(type="button") Личные данные
+						button.btn.switcher__btn(type="button") Данные компании
+					.switcher__container
+						.switcher__content.active
+							.section__title Личные данные
+
+							form.form.form_login.form_validation
+								label.form__item
+									span.form__icon
+										include pug/svg/phone.svg
+									input.input.required(type="tel")
+									span.placeholder Номер телефона
+
+								label.form__item
+									span.form__icon
+										include pug/svg/email.svg
+									input.input.required(type="email")
+									span.placeholder E-mail
+
+								label.form__item
+									span.form__icon
+										include pug/svg/profile_input.svg
+									input.input.required(type="text")
+									span.placeholder Фамилия, Имя, Отчество
+
+								label.form__item
+									span.form__icon
+										include pug/svg/company.svg
+									input.input.required(type="text")
+									span.placeholder Компания
+
+								label.form__item
+									span.form__icon
+										include pug/svg/position.svg
+									input.input.required(type="text")
+									span.placeholder Должность
+
+								.tags
+									button.tags__top(type="button")
+										.tags__title Отдел
+										.tags__status
+											span.checked_tags 0
+											| /
+											span.total_tags 0
+											|  выбрано
+									.tags__bottom
+										.tags__wrap
+											label.tag
+												input.visually-hidden(type="checkbox")
+												span Глюкоза
+
+											label.tag
+												input.visually-hidden(type="checkbox")
+												span Сахароза
+
+											label.tag
+												input.visually-hidden(type="checkbox")
+												span Глюкоза
+
+											label.tag
+												input.visually-hidden(type="checkbox")
+												span Сахароза
+
+
+								.files
+									.files__zone.drop-zone
+										.files__title Ваша фотография
+										.files__descr #[span.desktop Перетащите]#[span.mobile Загрузите] не менее 2 документов формата jpeg Размер файла не более 2 мб.
+										button.files__btn(type="button") Загрузить
+										input.visually-hidden.drop-zone__input(type="file" multiple name="")
+
+
+								.form__checkbox
+									label
+										input.visually-hidden(type="checkbox" name="" checked)
+										span.checkbox
+										span.checkbox_text Я согласен получать рассылку на почту
+
+								.form__bottom
+									button.btn(type="submit") Сохранить
+						.switcher__content
+							.section__title Данные компании
+
+							form.form.form_login.form_validation
+
+								label.form__item
+									span.form__icon
+										include pug/svg/company.svg
+									input.input.required(type="text")
+									span.placeholder Компания
+
+								label.form__item
+									span.form__icon
+										include pug/svg/phone.svg
+									input.input.required(type="tel")
+									span.placeholder Номер телефона
+
+								label.form__item
+									span.form__icon
+										include pug/svg/email.svg
+									input.input.required(type="email")
+									span.placeholder E-mail
+
+								label.form__item
+									span.form__icon
+										include pug/svg/document-text.svg
+									input.input.required(type="text")
+									span.placeholder ОКВЭД
+
+								label.form__item
+									span.form__icon
+										include pug/svg/document-text.svg
+									input.input.required(type="text")
+									span.placeholder ИНН
+
+								label.form__item
+									span.form__icon
+										include pug/svg/document-text.svg
+									input.input.required(type="text")
+									span.placeholder ОКПД2
+
+								.form__title Описание компании
+								label.form__item
+									textarea.textarea.required
+									span.placeholder Сообщение
+
+								.files
+									.files__zone.drop-zone
+										.files__title Логотип компании (не обязательно)
+										.files__descr #[span.desktop Перетащите]#[span.mobile Загрузите] не менее 2 документов формата jpeg Размер файла не более 2 мб.
+										button.files__btn(type="button") Загрузить
+										input.visually-hidden.drop-zone__input(type="file" multiple name="")
+
+								.files
+									.files__zone.drop-zone
+										.files__title Данные экспертов
+										.files__descr #[span.desktop Перетащите]#[span.mobile Загрузите] не менее 2 документов формата jpeg Размер файла не более 2 мб.
+										button.files__btn(type="button") Загрузить
+										input.visually-hidden.drop-zone__input(type="file" multiple name="")
+
+							.section__title Сертификаты
+							form.form
+								.document
+									.document__zone.gradient_border
+										.document__icon.icon
+											include pug/svg/document-fill.svg
+										.document__text Сертификат соответствия системы менеджмента качества требованиям ГОСТ ISO 9001-2011...
+										.document__watch.icon
+											include pug/svg/eye-black.svg
+										.document__delete.icon
+											include pug/svg/trash.svg
+								.document
+									.document__zone.gradient_border
+										.document__icon.icon
+											include pug/svg/document-fill.svg
+										.document__text Сертификат соответствия системы менеджмента качества требованиям ГОСТ ISO 9001-2011...
+										.document__watch.icon
+											include pug/svg/eye-black.svg
+										.document__delete.icon
+											include pug/svg/trash.svg
+
+								.files
+									.files__zone.drop-zone
+										.files__title Сертификат
+										.files__descr #[span.desktop Перетащите]#[span.mobile Загрузите] не менее 2 документов формата jpeg Размер файла не более 2 мб.
+										button.files__btn(type="button") Загрузить
+										input.visually-hidden.drop-zone__input(type="file" multiple name="")
+
+							.section__title Эксперты компании
+							.company-experts
+								.company-experts__container
+									button.btn.company-experts__add Добавить эксперта
+									.company-experts__modal
+										.company-experts__modal-container
+											button.company-experts__close(type="button")
+												include pug/svg/cross.svg
+											.section__title Добавить эксперта
+											.section__subtitle Добро пожаловать на портал по продаже ингридиентов
+											form.form.form_login.form_validation
+												.files
+													.files__zone.drop-zone
+														.files__title Сертификат
+														.files__descr #[span.desktop Перетащите]#[span.mobile Загрузите] фото формата jpeg #[br]Размер файла не более 2 мб.
+														button.files__btn(type="button") Загрузить
+														input.visually-hidden.drop-zone__input(type="file" multiple name="")
+
+												label.form__item
+													input.input.required(type="text")
+													span.placeholder ФИО
+
+												label.form__item
+													input.input(type="tel")
+													span.placeholder Должность
+
+												.form__item
+													select(name="")
+														option Логистика
+														option Логистика 2
+														option Логистика 3
+
+												label.form__item
+													input.input(type="tel")
+													span.placeholder Номер телефона
+
+												label.form__item
+													input.input(type="email")
+													span.placeholder E-mail
+
+												.form__bottom
+													button.btn(type="submit") Сохранить
+
+									.company-experts__column
+										.company-experts__column_name ФИО
+										.company-experts__column_department Отдел
+										.company-experts__column_position Должность
+										.company-experts__column_registration Дата регистрации
+									.swiper_shadow
+										.swiper_grid_container
+											.swiper.swiper_experts
+
+												.swiper-wrapper
+
+													.swiper-slide
+														.expert.gradient_border
+															.expert__img
+																img(src="images/cabinet/message_img.jpg" alt="message_img")
+															.expert__name
+																span.mobile ФИО
+																| Николаев Сергей Викторович
+															.expert__department
+																span.mobile Отдел
+																| Логистика
+															.expert__position
+																span.mobile Должность
+																| Менеджер по продажам
+															.expert__registration
+																span.mobile Дата регистрации
+																| 01.02.2023
+															.expert__change.underline Изменить
+
+													.swiper-slide
+														.expert.gradient_border
+															.expert__img
+																img(src="images/cabinet/message_img.jpg" alt="message_img")
+															.expert__name
+																span.mobile ФИО
+																| Николаев Сергей Викторович
+															.expert__department
+																span.mobile Отдел
+																| Логистика
+															.expert__position
+																span.mobile Должность
+																| Менеджер по продажам
+															.expert__registration
+																span.mobile Дата регистрации
+																| 01.02.2023
+															.expert__change.underline Изменить
+
+													.swiper-slide
+														.expert.gradient_border
+															.expert__img
+																img(src="images/cabinet/message_img.jpg" alt="message_img")
+															.expert__name
+																span.mobile ФИО
+																| Николаев Сергей Викторович
+															.expert__department
+																span.mobile Отдел
+																| Логистика
+															.expert__position
+																span.mobile Должность
+																| Менеджер по продажам
+															.expert__registration
+																span.mobile Дата регистрации
+																| 01.02.2023
+															.expert__change.underline Изменить
+
+													.swiper-slide
+														.expert.gradient_border
+															.expert__img
+																img(src="images/cabinet/message_img.jpg" alt="message_img")
+															.expert__name
+																span.mobile ФИО
+																| Николаев Сергей Викторович
+															.expert__department
+																span.mobile Отдел
+																| Логистика
+															.expert__position
+																span.mobile Должность
+																| Менеджер по продажам
+															.expert__registration
+																span.mobile Дата регистрации
+																| 01.02.2023
+															.expert__change.underline Изменить
+
+													.swiper-slide
+														.expert.gradient_border
+															.expert__img
+																img(src="images/cabinet/message_img.jpg" alt="message_img")
+															.expert__name
+																span.mobile ФИО
+																| Николаев Сергей Викторович
+															.expert__department
+																span.mobile Отдел
+																| Логистика
+															.expert__position
+																span.mobile Должность
+																| Менеджер по продажам
+															.expert__registration
+																span.mobile Дата регистрации
+																| 01.02.2023
+															.expert__change.underline Изменить
+
+												.swiper_control
+													.swiper-button-prev
+													.swiper-button-next
+													.swiper-pagination
+
+							.section__title Договоры
+							form.form
+								.document
+									.document__zone.gradient_border
+										.document__icon.icon
+											include pug/svg/document-fill.svg
+										.document__text Сертификат соответствия системы менеджмента качества требованиям ГОСТ ISO 9001-2011...
+										.document__watch.icon
+											include pug/svg/eye-black.svg
+										.document__download.icon
+											include pug/svg/download-simple.svg
+								.document
+									.document__zone.gradient_border
+										.document__icon.icon
+											include pug/svg/document-fill.svg
+										.document__text Сертификат соответствия системы менеджмента качества требованиям ГОСТ ISO 9001-2011...
+										.document__watch.icon
+											include pug/svg/eye-black.svg
+										.document__download.icon
+											include pug/svg/download-simple.svg
+
+
+	include pug/components/footer

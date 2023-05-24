@@ -24,6 +24,9 @@ html {
 	&.is-lock-scroll body {
 		overflow: hidden;
 	}
+	&.modal {
+		overflow: hidden;
+	}
 }
 
 body {
@@ -45,6 +48,10 @@ main {
 	display: flex;
 	flex-direction: column;
 	flex: 1;
+
+	&.modal {
+		z-index: 10;
+	}
 }
 
 p {

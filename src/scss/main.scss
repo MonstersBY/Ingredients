@@ -88,6 +88,7 @@ button {
 		font-size: 55rem;
 		line-height: 62rem;
 		color: #181818;
+		margin-bottom: 28rem;
 	}
 }
 
@@ -97,6 +98,7 @@ button {
 	left: 0;
 	right: 0;
 	pointer-events: none;
+	z-index: -1;
 
 	img {
 		object-fit: cover;
@@ -515,3 +517,5 @@ button {
 @import "components/contacts";
 @import "components/contacts-info";
 @import "components/products-category";
+@import "components/error";
+@import "components/experts";

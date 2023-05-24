@@ -37,9 +37,11 @@
 		position: absolute;
 		width: 100%;
 		transition: opacity 300ms;
+		display: none;
 		&.active {
 			opacity: 1;
 			pointer-events: auto;
+			display: block;
 		}
 	}
 }

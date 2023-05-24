@@ -1,0 +1,89 @@
+.error {
+	margin-top: 127rem;
+	&__container {
+		&-title {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 85rem;
+			align-items: center;
+			span {
+				font-weight: 700;
+				font-size: 55rem;
+				line-height: 62rem;
+				color: #181818;
+			}
+			span:first-child {
+				font-size: 100rem;
+				line-height: 120%;
+				margin-bottom: 28rem;
+			}
+		}
+		&-text {
+			display: flex;
+			flex-direction: column;
+			margin-bottom: 40rem;
+			align-items: center;
+			span {
+				font-size: 20rem;
+				line-height: 150%;
+				color: #686666;
+			}
+			span:first-child {
+				color: #181818;
+				margin-bottom: 8rem;
+			}
+		}
+	}
+	&__btn {
+		padding: 14rem 32rem;
+		background: #181818;
+		box-shadow: 5rem 5rem 25rem rgba(153, 173, 187, 0.1);
+		border-radius: 5rem;
+		color: #FBFBFB;
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+@include mobile {
+	.error {
+		.lines {
+			top: -100rem;
+			img {
+				height: 500rem;
+			}
+		}
+		margin-top: 92rem;
+		&__container {
+			&-title {
+				margin-bottom: 66rem;
+				span {
+					font-size: 30rem;
+					line-height: 40rem;
+				}
+				span:first-child {
+					font-size: 44rem;
+					line-height: 91%;
+					margin-bottom: 12rem;
+				}
+			}
+			&-text {
+				margin-bottom: 32rem;
+				span {
+					font-size: 13rem;
+					line-height: 150%;
+				}
+				span:first-child {
+					font-size: 15rem;
+					line-height: 130%;
+					margin-bottom: 4rem;
+				}
+			}
+		}
+		&__btn {
+			padding: 16.5rem 29rem;
+			border-radius: 5rem;
+			width: 100%;
+		}
+	}
+}

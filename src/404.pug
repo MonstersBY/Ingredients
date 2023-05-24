@@ -1,0 +1,25 @@
+extends pug/base
+
+prepend vars
+	//-
+	- title = "404"
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+		section.section.error
+			.lines
+				img(src="images/lines.svg" alt="lines.svg")
+			.container
+				.error__container-title
+					span 404
+					span страница не найдена
+				.error__container-text
+					span Что-то пошло не так
+					span Мы не смогли найти страницу, которую вы ищите
+				button.error__btn: a(href='#') Перейти на главную
+
+	include pug/components/footer

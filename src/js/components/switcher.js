@@ -4,7 +4,11 @@ let $switcher__containers = $('.switcher__container');
 
 window.switcherContainerHeight = () => {
 	$('.switcher__container').each(function (index, elem) {
-		let switcher_content_height = $(elem).find('.switcher__content.active').outerHeight();
+		console.log($(elem).find('.switcher__content.active').outerHeight())
+		console.log($(elem).find('.switcher__content.active').innerHeight())
+		let number = 1920 / window.outerWidth
+		if (window.outerWidth <= 768) number = 375 / window.outerWidth
+		let switcher_content_height = $(elem).find('.switcher__content.active').outerHeight() * number;
 		$(elem).css('height', `${switcher_content_height}rem`);
 	});
 }
@@ -19,7 +23,9 @@ if ($switcher_btns.length > 0) {
 		let $switcher = $this.closest('.switcher');
 		let $switcher_container = $switcher.find('.switcher__container');
 		let $switcher_contents = $switcher_container.find('.switcher__content');
-		let switcher_content_height = $($switcher_contents[index]).outerHeight();
+		let number = 1920 / window.outerWidth
+		if (window.outerWidth <= 768) number = 375 / window.outerWidth
+		let switcher_content_height = $($switcher_contents[index]).outerHeight() * number;
 
 		$this.siblings('.switcher__btn').removeClass('active');
 		$this.addClass('active');
@@ -97,25 +103,42 @@ function updateProgress(dropZoneElement, files) {
 	progressElements.classList.add('progress_elements');
 	dropZoneElement.after(progressElements);
 
-	files.forEach((elem) => {
-		let progressElement = document.createElement('div');
-		progressElement.classList.add('file__progress');
+	let progressElement = document.createElement('div');
+	progressElement.classList.add('file__progress');
 
-		let fileNameElement = document.createElement('div');
-		fileNameElement.classList.add('file__name');
-		fileNameElement.innerHTML = elem.name;
-		
-		let fileWeightElement = document.createElement('div');
-		fileWeightElement.classList.add('file__weight');
-		fileWeightElement.innerHTML = Math.trunc(elem.size / 1024) + ' kb';
+	let fileNameElement = document.createElement('div');
+	fileNameElement.classList.add('file__name');
+	fileNameElement.innerHTML = files[0].name;
 
-		let fileIconElement = document.createElement('div');
-		fileIconElement.classList.add('file__icon');
+	let fileWeightElement = document.createElement('div');
+	fileWeightElement.classList.add('file__weight');
+	fileWeightElement.innerHTML = Math.trunc(files[0].size / 1024) + ' kb';
 
-		progressElement.append(fileNameElement, fileWeightElement, fileIconElement);
-		progressElements.appendChild(progressElement);
+	let fileIconElement = document.createElement('div');
+	fileIconElement.classList.add('file__icon');
 
-	});
+	progressElement.append(fileNameElement, fileWeightElement, fileIconElement);
+	progressElements.appendChild(progressElement);
+
+	// files.forEach((elem) => {
+	// 	let progressElement = document.createElement('div');
+	// 	progressElement.classList.add('file__progress');
+
+	// 	let fileNameElement = document.createElement('div');
+	// 	fileNameElement.classList.add('file__name');
+	// 	fileNameElement.innerHTML = elem.name;
+
+	// 	let fileWeightElement = document.createElement('div');
+	// 	fileWeightElement.classList.add('file__weight');
+	// 	fileWeightElement.innerHTML = Math.trunc(elem.size / 1024) + ' kb';
+
+	// 	let fileIconElement = document.createElement('div');
+	// 	fileIconElement.classList.add('file__icon');
+
+	// 	progressElement.append(fileNameElement, fileWeightElement, fileIconElement);
+	// 	progressElements.appendChild(progressElement);
+
+	// });
 
 
 	switcherContainerHeight();
