@@ -1,0 +1,142 @@
+extends pug/base
+
+prepend vars
+	//-
+	- title = "Ingredients | Запрос образцов"
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+
+		section.section.cabinet.sample_request
+			.container
+				.sidebar.gradient_border
+					.sidebar__top
+						.sidebar__img
+							img(src="images/cabinet/profile_img.png" alt="profile_img")
+						.sidebar__suptitle Компания
+						.sidebar__title ООО «Милорада»
+
+					.sidebar__items
+
+						.item
+							a.item__btn.item__drop_btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/profile.svg
+								.item__name Профиль
+							.item__drop
+								.item__list
+									a(href="#") Личные данные
+									a(href="#") Мои заказы
+									a(href="#") Профиль 3
+									a(href="#") Профиль 4
+						.item
+							a.item__btn.active(href="#")
+								.item__icon
+									include pug/svg/cabinet/sms.svg
+								.item__name Сообщения
+
+						.item
+							a.item__btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/search.svg
+								.item__name Сохраненный поиск
+
+						.item
+							a.item__btn.item__drop_btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/box.svg
+								.item__name Закупки
+							.item__drop
+								.item__list
+									a(href="#") Закупки 1
+									a(href="#") Закупки 2
+									a(href="#") Закупки 3
+									a(href="#") Закупки 4
+
+				.cabinet__content
+					.section__title Запрос образцов
+					form.search
+						label
+							include ./pug/svg/search_grey.svg
+							input(type="text" placeholder="Название образца")
+						button(type="submit")
+							include ./pug/svg/arrow.svg
+
+					.sample_request__column
+						.sample_request__column_name Название товара
+						.sample_request__column_company Компания
+						.sample_request__column_date Дата заявки
+						.sample_request__column_status Статус
+					.sample_request__list
+						.sample_request__item.gradient_border
+							.sample_request__name
+								span.mobile Название товара
+								| Аскорбил пальмитат
+							.sample_request__company
+								span.mobile Компания
+								| Милорада
+							.sample_request__date
+								span.mobile Дата
+								| 01.02.23
+							.sample_request__status
+								span.mobile Статус
+								| На рассмотрении
+							.sample_request__line
+								.sample_request__load.underline Скачать документ
+
+						.sample_request__item.gradient_border
+							.sample_request__name
+								span.mobile Название товара
+								| Аскорбил пальмитат
+							.sample_request__company
+								span.mobile Компания
+								| Милорада
+							.sample_request__date
+								span.mobile Дата
+								| 01.02.23
+							.sample_request__status.answer
+								span.mobile Статус
+								| Есть ответ
+							.sample_request__line
+								.sample_request__load.underline Скачать документ
+
+						.sample_request__item.gradient_border
+							.sample_request__name
+								span.mobile Название товара
+								| Аскорбил пальмитат
+							.sample_request__company
+								span.mobile Компания
+								| Милорада
+							.sample_request__date
+								span.mobile Дата
+								| 01.02.23
+							.sample_request__status
+								span.mobile Статус
+								| На рассмотрении
+							.sample_request__line
+								.sample_request__load.underline Скачать документ
+
+						.sample_request__item.gradient_border
+							.sample_request__name
+								span.mobile Название товара
+								| Аскорбил пальмитат
+							.sample_request__company
+								span.mobile Компания
+								| Милорада
+							.sample_request__date
+								span.mobile Дата
+								| 01.02.23
+							.sample_request__status
+								span.mobile Статус
+								| На рассмотрении
+							.sample_request__line
+								.sample_request__load.underline Скачать документ
+
+
+					.sample_request__show.underline Показать еще
+
+	include pug/components/footer

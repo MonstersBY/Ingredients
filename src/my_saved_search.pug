@@ -1,0 +1,133 @@
+extends pug/base
+
+prepend vars
+	//-
+	- title = "Ingredients | Сохраненный поиск"
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+
+		section.section.cabinet.saved_search
+			.container
+				.sidebar.gradient_border
+					.sidebar__top
+						.sidebar__img
+							img(src="images/cabinet/profile_img.png" alt="profile_img")
+						.sidebar__suptitle Компания
+						.sidebar__title ООО «Милорада»
+
+					.sidebar__items
+
+						.item
+							a.item__btn.item__drop_btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/profile.svg
+								.item__name Профиль
+							.item__drop
+								.item__list
+									a(href="#") Личные данные
+									a(href="#") Мои заказы
+									a(href="#") Профиль 3
+									a(href="#") Профиль 4
+						.item
+							a.item__btn.active(href="#")
+								.item__icon
+									include pug/svg/cabinet/sms.svg
+								.item__name Сообщения
+
+						.item
+							a.item__btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/search.svg
+								.item__name Сохраненный поиск
+
+						.item
+							a.item__btn.item__drop_btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/box.svg
+								.item__name Закупки
+							.item__drop
+								.item__list
+									a(href="#") Закупки 1
+									a(href="#") Закупки 2
+									a(href="#") Закупки 3
+									a(href="#") Закупки 4
+
+				.cabinet__content
+					.section__title Сохраненный поиск
+					form.search
+						.search__filter.mobile
+							select(name="search2")
+								option(value="0" selected) Все категории
+								option(value="1") Все категории 1
+								option(value="2") Все категории 2
+								option(value="3") Все категории 3
+
+					.saved_search__column
+						.saved_search__column_name Пользователь
+						.saved_search__column_company Компания
+						.saved_search__column_sub Подразделение
+						.saved_search__column_search Название поиска
+					.saved_search__list
+						.saved_search__item.gradient_border
+							span.mobile Пользователь
+							.saved_search__icon
+								img(src="images/cabinet/message_img.jpg" alt="message_img")
+							.saved_search__name Николаев Сергей
+							.saved_search__company
+								span.mobile Компания
+								| ООО “Трансмедикгруппа”
+							.saved_search__sub
+								span.mobile Подразделение
+								| Логистика
+							.saved_search__line
+								.saved_search__search.underline Топ 10 ключевых поставщиков
+
+						.saved_search__item.gradient_border
+							span.mobile Пользователь
+							.saved_search__icon
+								img(src="images/cabinet/message_img.jpg" alt="message_img")
+							.saved_search__name Николаев Сергей
+							.saved_search__company
+								span.mobile Компания
+								| ООО “Трансмедикгруппа”
+							.saved_search__sub
+								span.mobile Подразделение
+								| Логистика
+							.saved_search__line
+								.saved_search__search.underline Топ 10 ключевых поставщиков
+
+						.saved_search__item.gradient_border
+							span.mobile Пользователь
+							.saved_search__icon
+								img(src="images/cabinet/message_img.jpg" alt="message_img")
+							.saved_search__name Николаев Сергей
+							.saved_search__company
+								span.mobile Компания
+								| ООО “Трансмедикгруппа”
+							.saved_search__sub
+								span.mobile Подразделение
+								| Логистика
+							.saved_search__line
+								.saved_search__search.underline Топ 10 ключевых поставщиков
+
+						.saved_search__item.gradient_border
+							span.mobile Пользователь
+							.saved_search__icon
+								img(src="images/cabinet/message_img.jpg" alt="message_img")
+							.saved_search__name Николаев Сергей
+							.saved_search__company
+								span.mobile Компания
+								| ООО “Трансмедикгруппа”
+							.saved_search__sub
+								span.mobile Подразделение
+								| Логистика
+							.saved_search__line
+								.saved_search__search.underline Топ 10 ключевых поставщиков
+
+
+	include pug/components/footer

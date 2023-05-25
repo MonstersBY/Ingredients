@@ -1,0 +1,413 @@
+extends pug/base
+
+prepend vars
+	//-
+	- title = "Ingredients | Запросы образцов"
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+		section.section.cabinet.orders
+			.container
+				.sidebar.gradient_border
+					.sidebar__top
+						.sidebar__img
+							img(src="images/cabinet/profile_img.png" alt="profile_img")
+						.sidebar__suptitle Компания
+						.sidebar__title ООО «Милорада»
+
+					.sidebar__items
+
+						.item
+							a.item__btn.item__drop_btn.active(href="#")
+								.item__icon
+									include pug/svg/cabinet/profile.svg
+								.item__name Профиль
+							.item__drop(style="display: block")
+								.item__list
+									a(href="#") Личные данные
+									a.active(href="#") Мои заказы
+									a(href="#") Профиль 3
+									a(href="#") Профиль 4
+						.item
+							a.item__btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/sms.svg
+								.item__name Сообщения
+
+						.item
+							a.item__btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/search.svg
+								.item__name Сохраненный поиск
+
+						.item
+							a.item__btn.item__drop_btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/box.svg
+								.item__name Закупки
+							.item__drop
+								.item__list
+									a(href="#") Закупки 1
+									a(href="#") Закупки 2
+									a(href="#") Закупки 3
+									a(href="#") Закупки 4
+
+				.cabinet__content.my_sample_request
+					.section__title Поиск заявки
+					.switcher__control
+						button.btn.switcher__btn.all_btn.active(type="button") Все #[span (4)]
+						button.btn.switcher__btn.new_btn(type="button") Новые #[span (1)]
+						button.btn.switcher__btn.delivered_btn(type="button") Доставлено #[span (1)]
+						button.btn.switcher__btn.denied_btn(type="button") Отказано #[span (1)]
+					form.search.cabinet__search
+						label
+							include ./pug/svg/search_grey.svg
+							input(type="text" placeholder="Поиск заявки")
+						button(type="submit")
+							include ./pug/svg/arrow.svg
+
+					.sample_request__column.my
+						.sample_request__column_date Статус изменен
+						.sample_request__column_product Продукт
+						.sample_request__column_company Бренд / Компания
+						.sample_request__column_sup Поддержка
+						.sample_request__column_status Статус
+
+					.swiper_shadow
+						.swiper.swiper_sample_request
+
+							.swiper-wrapper
+
+								.swiper-slide
+									.sample_request__item.gradient_border
+										.sample_request__date
+											span.mobile Статус изменен
+											| 01.02.23
+										.sample_request__product
+											span.mobile Продукт
+											| Аскорбил пальмитат
+										.sample_request__company
+											span.mobile Бренд / Компания
+											| Lycasin / Roquette
+										.sample_request__line
+											.sample_request__sup Написать в чат
+										.sample_request__status
+											span.mobile Статус:
+											| Доставлено
+
+								.swiper-slide.status_new
+									.sample_request__item.gradient_border
+										.sample_request__date
+											span.mobile Статус изменен
+											| 01.02.23
+										.sample_request__product
+											span.mobile Продукт
+											| Аскорбил пальмитат
+										.sample_request__company
+											span.mobile Бренд / Компания
+											| Lycasin / Roquette
+										.sample_request__line
+											.sample_request__sup Написать в чат
+										.sample_request__status.new
+											span.mobile Статус:
+											| Новый
+
+								.swiper-slide.status_denied
+									.sample_request__item.gradient_border
+										.sample_request__date
+											span.mobile Статус изменен
+											| 01.02.23
+										.sample_request__product
+											span.mobile Продукт
+											| Аскорбил пальмитат
+										.sample_request__company
+											span.mobile Бренд / Компания
+											| Lycasin / Roquette
+										.sample_request__line
+											.sample_request__sup Написать в чат
+										.sample_request__status.denied
+											span.mobile Статус:
+											| Отказано
+
+								.swiper-slide.status_denied
+									.sample_request__item.gradient_border
+										.sample_request__date
+											span.mobile Статус изменен
+											| 01.02.23
+										.sample_request__product
+											span.mobile Продукт
+											| Аскорбил пальмитат
+										.sample_request__company
+											span.mobile Бренд / Компания
+											| Lycasin / Roquette
+										.sample_request__line
+											.sample_request__sup Написать в чат
+										.sample_request__status.denied
+											span.mobile Статус:
+											| Отказано
+
+								.swiper-slide
+									.sample_request__item.gradient_border
+										.sample_request__date
+											span.mobile Статус изменен
+											| 01.02.23
+										.sample_request__product
+											span.mobile Продукт
+											| Аскорбил пальмитат
+										.sample_request__company
+											span.mobile Бренд / Компания
+											| Lycasin / Roquette
+										.sample_request__line
+											.sample_request__sup Написать в чат
+										.sample_request__status
+											span.mobile Статус:
+											| Доставлено
+
+								.swiper-slide.status_new
+									.sample_request__item.gradient_border
+										.sample_request__date
+											span.mobile Статус изменен
+											| 01.02.23
+										.sample_request__product
+											span.mobile Продукт
+											| Аскорбил пальмитат
+										.sample_request__company
+											span.mobile Бренд / Компания
+											| Lycasin / Roquette
+										.sample_request__line
+											.sample_request__sup Написать в чат
+										.sample_request__status.new
+											span.mobile Статус:
+											| Новый
+
+								.swiper-slide.status_denied
+									.sample_request__item.gradient_border
+										.sample_request__date
+											span.mobile Статус изменен
+											| 01.02.23
+										.sample_request__product
+											span.mobile Продукт
+											| Аскорбил пальмитат
+										.sample_request__company
+											span.mobile Бренд / Компания
+											| Lycasin / Roquette
+										.sample_request__line
+											.sample_request__sup Написать в чат
+										.sample_request__status.denied
+											span.mobile Статус:
+											| Отказано
+
+								.swiper-slide.status_denied
+									.sample_request__item.gradient_border
+										.sample_request__date
+											span.mobile Статус изменен
+											| 01.02.23
+										.sample_request__product
+											span.mobile Продукт
+											| Аскорбил пальмитат
+										.sample_request__company
+											span.mobile Бренд / Компания
+											| Lycasin / Roquette
+										.sample_request__line
+											.sample_request__sup Написать в чат
+										.sample_request__status.denied
+											span.mobile Статус:
+											| Отказано
+
+								.swiper-slide
+									.sample_request__item.gradient_border
+										.sample_request__date
+											span.mobile Статус изменен
+											| 01.02.23
+										.sample_request__product
+											span.mobile Продукт
+											| Аскорбил пальмитат
+										.sample_request__company
+											span.mobile Бренд / Компания
+											| Lycasin / Roquette
+										.sample_request__line
+											.sample_request__sup Написать в чат
+										.sample_request__status
+											span.mobile Статус:
+											| Доставлено
+
+								.swiper-slide.status_new
+									.sample_request__item.gradient_border
+										.sample_request__date
+											span.mobile Статус изменен
+											| 01.02.23
+										.sample_request__product
+											span.mobile Продукт
+											| Аскорбил пальмитат
+										.sample_request__company
+											span.mobile Бренд / Компания
+											| Lycasin / Roquette
+										.sample_request__line
+											.sample_request__sup Написать в чат
+										.sample_request__status.new
+											span.mobile Статус:
+											| Новый
+
+								.swiper-slide.status_denied
+									.sample_request__item.gradient_border
+										.sample_request__date
+											span.mobile Статус изменен
+											| 01.02.23
+										.sample_request__product
+											span.mobile Продукт
+											| Аскорбил пальмитат
+										.sample_request__company
+											span.mobile Бренд / Компания
+											| Lycasin / Roquette
+										.sample_request__line
+											.sample_request__sup Написать в чат
+										.sample_request__status.denied
+											span.mobile Статус:
+											| Отказано
+
+								.swiper-slide.status_denied
+									.sample_request__item.gradient_border
+										.sample_request__date
+											span.mobile Статус изменен
+											| 01.02.23
+										.sample_request__product
+											span.mobile Продукт
+											| Аскорбил пальмитат
+										.sample_request__company
+											span.mobile Бренд / Компания
+											| Lycasin / Roquette
+										.sample_request__line
+											.sample_request__sup Написать в чат
+										.sample_request__status.denied
+											span.mobile Статус:
+											| Отказано
+
+								.swiper-slide
+									.sample_request__item.gradient_border
+										.sample_request__date
+											span.mobile Статус изменен
+											| 01.02.23
+										.sample_request__product
+											span.mobile Продукт
+											| Аскорбил пальмитат
+										.sample_request__company
+											span.mobile Бренд / Компания
+											| Lycasin / Roquette
+										.sample_request__line
+											.sample_request__sup Написать в чат
+										.sample_request__status
+											span.mobile Статус:
+											| Доставлено
+
+								.swiper-slide.status_new
+									.sample_request__item.gradient_border
+										.sample_request__date
+											span.mobile Статус изменен
+											| 01.02.23
+										.sample_request__product
+											span.mobile Продукт
+											| Аскорбил пальмитат
+										.sample_request__company
+											span.mobile Бренд / Компания
+											| Lycasin / Roquette
+										.sample_request__line
+											.sample_request__sup Написать в чат
+										.sample_request__status.new
+											span.mobile Статус:
+											| Новый
+
+								.swiper-slide.status_denied
+									.sample_request__item.gradient_border
+										.sample_request__date
+											span.mobile Статус изменен
+											| 01.02.23
+										.sample_request__product
+											span.mobile Продукт
+											| Аскорбил пальмитат
+										.sample_request__company
+											span.mobile Бренд / Компания
+											| Lycasin / Roquette
+										.sample_request__line
+											.sample_request__sup Написать в чат
+										.sample_request__status.denied
+											span.mobile Статус:
+											| Отказано
+
+								.swiper-slide.status_denied
+									.sample_request__item.gradient_border
+										.sample_request__date
+											span.mobile Статус изменен
+											| 01.02.23
+										.sample_request__product
+											span.mobile Продукт
+											| Аскорбил пальмитат
+										.sample_request__company
+											span.mobile Бренд / Компания
+											| Lycasin / Roquette
+										.sample_request__line
+											.sample_request__sup Написать в чат
+										.sample_request__status.denied
+											span.mobile Статус:
+											| Отказано
+
+								.swiper-slide
+									.sample_request__item.gradient_border
+										.sample_request__date
+											span.mobile Статус изменен
+											| 01.02.23
+										.sample_request__product
+											span.mobile Продукт
+											| Аскорбил пальмитат
+										.sample_request__company
+											span.mobile Бренд / Компания
+											| Lycasin / Roquette
+										.sample_request__line
+											.sample_request__sup Написать в чат
+										.sample_request__status
+											span.mobile Статус:
+											| Доставлено
+
+								.swiper-slide.status_new
+									.sample_request__item.gradient_border
+										.sample_request__date
+											span.mobile Статус изменен
+											| 01.02.23
+										.sample_request__product
+											span.mobile Продукт
+											| Аскорбил пальмитат
+										.sample_request__company
+											span.mobile Бренд / Компания
+											| Lycasin / Roquette
+										.sample_request__line
+											.sample_request__sup Написать в чат
+										.sample_request__status.new
+											span.mobile Статус:
+											| Новый
+
+								.swiper-slide.status_denied
+									.sample_request__item.gradient_border
+										.sample_request__date
+											span.mobile Статус изменен
+											| 01.02.23
+										.sample_request__product
+											span.mobile Продукт
+											| Аскорбил пальмитат
+										.sample_request__company
+											span.mobile Бренд / Компания
+											| Lycasin / Roquette
+										.sample_request__line
+											.sample_request__sup Написать в чат
+										.sample_request__status.denied
+											span.mobile Статус:
+											| Отказано
+
+							.swiper_control
+								.swiper-button-prev
+								.swiper-button-next
+								.swiper-pagination
+
+	include pug/components/footer

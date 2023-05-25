@@ -1,6 +1,3 @@
-const SLIDES_GAP = 29;
-const CONTAINER_WIDTH = 1520;
-
 const swiper_my_orders = new Swiper('.swiper_my_orders', {
 	modules: [Navigation, Pagination, Grid],
 	speed: 1000,
@@ -18,4 +15,3 @@ const swiper_my_orders = new Swiper('.swiper_my_orders', {
 		prevEl: ".swiper-button-prev",
 	},
 });
-

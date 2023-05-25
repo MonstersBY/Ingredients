@@ -41,9 +41,21 @@
 			color: #fff;
 		}
 	}
+	&__inner {
+		position: relative;
+		z-index: 3;
+	}
 
 }
-
+.banner-search__container {
+	display: flex;
+	width: 727rem;
+	justify-content: space-between;
+}
+.head-search-help.baner-search {
+	top: 65rem;
+	left: unset;
+}
 @include mobile {
 	.banner {
 		margin-top: 34rem;
@@ -89,5 +101,20 @@
 			}
 		}
 
+	}
+	.banner-search__container {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		justify-content: space-between;
+		overflow: auto;
+	}
+	.head-search-help.baner-search {
+		width: 100%;
+		top: 130rem;
+	}
+	.head-search-left, .head-search-right {
+		width: 100%;
+		overflow-y: unset;
 	}
 }

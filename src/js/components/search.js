@@ -33,3 +33,8 @@ $('.search__category-wrapper').on('click', function(evt) {
 		$search_container.slideToggle();
 	}
 });
+
+// baner
+$('.banner__input').on('input', function(evt){
+	$(this).val() ? $('.baner-search').addClass('active') : $('.baner-search').removeClass('active')
+})

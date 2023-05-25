@@ -46,7 +46,7 @@ if ($switcher_btns.length > 0) {
 		$switcher_container.css('height', `${switcher_content_height}rem`);
 
 		let $swiper_update = $this.closest('.section').find('.swiper');
-		if ($swiper_update.length) {
+		if ($swiper_update.length[index]) {
 			$swiper_update[index].swiper.slideTo(0, 0, false);
 		}
 	});
