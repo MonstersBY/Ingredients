@@ -45,6 +45,7 @@ body {
 }
 
 main {
+	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	flex: 1;
