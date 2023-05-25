@@ -1,5 +1,9 @@
 $('.head-search-input').on('input', function(evt){
-	$(this).val() ? $('.head-search-help').addClass('active') : $('.head-search-help').removeClass('active')
+
+	let $this = $(this);
+	let $section = $this.closest('.head-search');
+	let $search = $section.find('.head-search-help');
+	$(this).val() ? $search.addClass('active') : $search.removeClass('active')
 })
 
 $('.head-search-input-mobile').on('input', function(evt){
