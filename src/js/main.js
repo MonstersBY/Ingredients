@@ -33,6 +33,8 @@ import './components/header_mobile';
 import './components/modal_experts';
 import './components/swiper_sample_request';
 import './components/swiper_provider_orders';
+import './components/swiper_brand';
+import './components/modal_brand';
 
 $('select').niceSelect();
 

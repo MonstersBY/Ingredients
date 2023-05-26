@@ -1,0 +1,132 @@
+.modal-box {
+	display: none;
+	background: rgba(129, 140, 147, 0.5);
+	backdrop-filter: blur(7.5px);
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	overflow: auto;
+
+	&__container {
+		display: none;
+		position: absolute;
+		width: 812rem;
+		padding: 60rem 80rem 60rem;
+		background: #EFF3F6;
+		border-radius: 10rem;
+		left: 0;
+		right: 0;
+		top: 5vh;
+		margin: 0 auto;
+	}
+	&.active {
+		display: block;
+	}
+	.section__title {
+		margin-bottom: 12rem;
+	}
+	.section__subtitle {
+		margin-bottom: 40rem;
+		color: #686666;
+	}
+
+	.form {
+		.form__icon ~ .input {
+			padding: 14rem 29rem 14rem 69rem;
+		}
+		.form__icon ~ .placeholder {
+			left: 67rem;
+		}
+		.input {
+			padding: 14rem 29rem 14rem 24rem;
+		}
+		.placeholder {
+			left: 24rem;
+		}
+	}
+	&__exit {
+		margin-left: auto;
+		display: block;
+
+		svg {
+			width: 32rem;
+			height: 32rem;
+			path {
+				stroke: #686666;
+			}
+		}
+	}
+}
+
+@include mobile {
+	.modal-box {
+		display: none;
+		background: rgba(129, 140, 147, 0.5);
+		backdrop-filter: blur(7.5px);
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 2;
+		overflow: auto;
+
+		&__container {
+			display: none;
+			position: absolute;
+			width: 335rem;
+			padding: 28rem 20rem 40rem;
+			background: #EFF3F6;
+			border-radius: 10rem;
+			left: 0;
+			right: 0;
+			top: 5vh;
+			margin: 0 auto;
+		}
+		&.active {
+			display: block;
+		}
+		.section__title {
+			margin-bottom: 8rem;
+		}
+		.section__subtitle {
+			font-size: 13rem;
+			margin-bottom: 32rem;
+			color: #686666;
+		}
+
+		.form {
+			.form__icon ~ .input {
+				padding: 14rem 29rem 14rem 56rem;
+			}
+			.form__icon ~ .placeholder {
+				left: 56rem;
+			}
+			.input {
+				padding: 14rem 29rem 14rem 24rem;
+			}
+			.placeholder {
+				left: 24rem;
+			}
+			.files__btn {
+				right: 16rem;
+				min-width: 262rem;
+			}
+			.files__zone {
+				padding: 24rem 6rem 20rem 98rem;
+			}
+		}
+		&__exit {
+			margin-left: auto;
+			display: block;
+
+			svg {
+				width: 20rem;
+				height: 20rem;
+			}
+		}
+	}
+}

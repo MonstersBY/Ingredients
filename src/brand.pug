@@ -1,0 +1,287 @@
+extends pug/base
+
+prepend vars
+	//-
+	- title = "Ingredients | Заказы"
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+		section.section.cabinet.brand
+			.lines
+				img(src="images/lines.svg" alt="lines.svg")
+			.container
+				.sidebar.gradient_border
+					.sidebar__top
+						.sidebar__img
+							img(src="images/cabinet/profile_img.png" alt="profile_img")
+						.sidebar__suptitle Компания
+						.sidebar__title ООО «Милорада»
+
+					.sidebar__items
+						.item
+							a.item__btn.item__drop_btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/box.svg
+								.item__name Товары
+							.item__drop
+								.item__list
+									a(href="#") Товары
+									a(href="#") Заказы
+									a(href="#") Отзывы и вопросы
+									a(href="#") Бренды
+						.item
+							a.item__btn.item__drop_btn.active(href="#")
+								.item__icon
+									include pug/svg/cabinet/profile_2user.svg
+								.item__name Личный кабинет
+							.item__drop(style="display: block")
+								.item__list
+									a.active(href="#") Личные данные
+									a(href="#") Личный кабинет 1
+									a(href="#") Личный кабинет 1
+									a(href="#") Личный кабинет 1
+
+						.item
+							a.item__btn.item__drop_btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/sms.svg
+								.item__name Запросы
+							.item__drop
+								.item__list
+									a(href="#") Запросы 1
+									a(href="#") Запросы 2
+									a(href="#") Запросы 3
+									a(href="#") Запросы 4
+
+				.cabinet__content
+					.section__title Бренды
+					.brand__description
+						.section__subtitle Здесь отображены все бренды, которые Вы создали или выбрали при создании карточки товара. #[br] По умолчанию для новых брендов генерируется стандартный логотип, но вы можете загрузить свой.
+						button.btn.brand__add Добавить
+					form.search.cabinet__search
+						label
+							include ./pug/svg/search_grey.svg
+							input(type="text" placeholder="Название ингредиента")
+						button(type="submit")
+							include ./pug/svg/arrow.svg
+
+
+					.swiper_shadow
+						.swiper.swiper_brand
+
+							.swiper-wrapper
+
+								.swiper-slide
+									.slide
+										.brand__item.gradient_border
+											.brand__title HItema
+											.brand__img
+												img(src="images/vendors/vendor2.jpg" alt="HItema")
+											.brand__change.icon
+												include pug/svg/edit.svg
+
+
+								.swiper-slide
+									.slide
+										.brand__item.gradient_border
+											.brand__title Nanophase
+											.brand__img
+												img(src="images/vendors/vendor3.jpg" alt="HItema")
+											.brand__change.icon
+												include pug/svg/edit.svg
+
+
+								.swiper-slide
+									.slide
+										.brand__item.gradient_border
+											.brand__title Bio-fed
+											.brand__img
+												img(src="images/vendors/vendor4.jpg" alt="HItema")
+											.brand__change.icon
+												include pug/svg/edit.svg
+
+								.swiper-slide
+									.slide
+										.brand__item.gradient_border
+											.brand__title HItema
+											.brand__img
+												img(src="images/vendors/vendor2.jpg" alt="HItema")
+											.brand__change.icon
+												include pug/svg/edit.svg
+
+								.swiper-slide
+									.slide
+										.brand__item.gradient_border
+											.brand__title Nanophase
+											.brand__img
+												img(src="images/vendors/vendor3.jpg" alt="HItema")
+											.brand__change.icon
+												include pug/svg/edit.svg
+
+								.swiper-slide
+									.slide
+										.brand__item.gradient_border
+											.brand__title Bio-fed
+											.brand__img
+												img(src="images/vendors/vendor4.jpg" alt="HItema")
+											.brand__change.icon
+												include pug/svg/edit.svg
+
+								.swiper-slide
+									.slide
+										.brand__item.gradient_border
+											.brand__title HItema
+											.brand__img
+												img(src="images/vendors/vendor2.jpg" alt="HItema")
+											.brand__change.icon
+												include pug/svg/edit.svg
+
+								.swiper-slide
+									.slide
+										.brand__item.gradient_border
+											.brand__title Nanophase
+											.brand__img
+												img(src="images/vendors/vendor3.jpg" alt="HItema")
+											.brand__change.icon
+												include pug/svg/edit.svg
+
+								.swiper-slide
+									.slide
+										.brand__item.gradient_border
+											.brand__title Bio-fed
+											.brand__img
+												img(src="images/vendors/vendor4.jpg" alt="HItema")
+											.brand__change.icon
+												include pug/svg/edit.svg
+
+								.swiper-slide
+									.slide
+										.brand__item.gradient_border
+											.brand__title HItema
+											.brand__img
+												img(src="images/vendors/vendor2.jpg" alt="HItema")
+											.brand__change.icon
+												include pug/svg/edit.svg
+
+								.swiper-slide
+									.slide
+										.brand__item.gradient_border
+											.brand__title Nanophase
+											.brand__img
+												img(src="images/vendors/vendor3.jpg" alt="HItema")
+											.brand__change.icon
+												include pug/svg/edit.svg
+
+								.swiper-slide
+									.slide
+										.brand__item.gradient_border
+											.brand__title Bio-fed
+											.brand__img
+												img(src="images/vendors/vendor4.jpg" alt="HItema")
+											.brand__change.icon
+												include pug/svg/edit.svg
+
+								.swiper-slide
+									.slide
+										.brand__item.gradient_border
+											.brand__title HItema
+											.brand__img
+												img(src="images/vendors/vendor2.jpg" alt="HItema")
+											.brand__change.icon
+												include pug/svg/edit.svg
+
+								.swiper-slide
+									.slide
+										.brand__item.gradient_border
+											.brand__title Nanophase
+											.brand__img
+												img(src="images/vendors/vendor3.jpg" alt="HItema")
+											.brand__change.icon
+												include pug/svg/edit.svg
+
+								.swiper-slide
+									.slide
+										.brand__item.gradient_border
+											.brand__title Bio-fed
+											.brand__img
+												img(src="images/vendors/vendor4.jpg" alt="HItema")
+											.brand__change.icon
+												include pug/svg/edit.svg
+
+
+							.swiper_control
+								.swiper-button-prev
+								.swiper-button-next
+								.swiper-pagination
+
+					.modal-box.brand__modal
+						.modal-box__container.brand__change-box
+							button.modal-box__exit.brand__change-close(type="button")
+								include pug/svg/cross.svg
+							.section__title Редактирование бренда
+							.section__subtitle Отправьте документы подтверждающие вашу причастность к бренду
+							form.form.form_next
+								label.form__item
+									span.form__icon
+										include pug/svg/company.svg
+									input.input.required(type="text")
+									span.placeholder Компания
+
+								.files
+									.files__zone.drop-zone
+										.files__title Сертификат
+										.files__descr #[span.desktop Перетащите]#[span.mobile Загрузите] не менее 2 документов формата jpeg #[br]Размер файла не более 2 мб.
+										button.files__btn(type="button") Загрузить
+										input.visually-hidden.drop-zone__input(type="file" multiple name="")
+								.form__bottom
+									button.btn(type="submit") Сохранить
+
+						.modal-box__container.brand__add-box
+							button.modal-box__exit.brand__add-close(type="button")
+								include pug/svg/cross.svg
+							.section__title Добавить бренда
+							.section__subtitle Отправьте документы подтверждающие вашу причастность к бренду
+							form.form.form_next
+								label.form__item
+									span.form__icon
+										include pug/svg/company.svg
+									input.input.required(type="text")
+									span.placeholder Компания
+
+								.files
+									.files__zone.drop-zone
+										.files__title Сертификат
+										.files__descr #[span.desktop Перетащите]#[span.mobile Загрузите] не менее 2 документов формата jpeg #[br]Размер файла не более 2 мб.
+										button.files__btn(type="button") Загрузить
+										input.visually-hidden.drop-zone__input(type="file" multiple name="")
+								.form__bottom
+									button.btn(type="submit") Добавить
+
+						.modal-box__container.brand__confirm
+							button.modal-box__exit.brand__confirm-close(type="button")
+								include pug/svg/cross.svg
+							.section__title Подтверждение представителя бренда
+							.section__subtitle Отправьте документы подтверждающие вашу причастность к бренду
+							form.form.form_confirm
+								.files
+									.files__zone.drop-zone
+										.files__title Договор УИЛ или ОКПД 2
+										.files__descr #[span.desktop Перетащите]#[span.mobile Загрузите] не менее 2 документов формата jpeg #[br]Размер файла не более 2 мб.
+										button.files__btn(type="button") Загрузить
+										input.required.visually-hidden.drop-zone__input(type="file" multiple name="")
+
+								.form__bottom
+									button.btn(type="submit") Подтвердить
+
+						.modal-box__container.brand__consideration
+							button.modal-box__exit.brand__consideration-close(type="button")
+								include pug/svg/cross.svg
+							.section__title Мы рассмотрим заявку
+							.section__subtitle И пришлем вам подтверждение в уведомлении
+							button.btn.brand__consideration-close Готово
+
+	include pug/components/footer
