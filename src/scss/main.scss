@@ -46,6 +46,12 @@ button {
 		max-height: 24rem;
 		margin-left: 24rem;
 	}
+	&.empty {
+		background: inherit;
+		border: 1rem solid #BBCBD0;
+		color: #181818;
+		filter: drop-shadow(5rem 5rem 25rem rgba(153, 173, 187, 0.1));
+	}
 }
 
 .icon {
@@ -495,6 +501,7 @@ button {
 @import "components/header";
 @import "components/footer";
 @import "components/nice-select";
+@import "components/multi-select";
 @import "components/banner";
 @import "components/materials";
 @import "components/switcher";
@@ -524,3 +531,4 @@ button {
 @import "components/my_saved_search";
 @import "components/orders";
 @import "components/brand";
+@import "components/product_creation";

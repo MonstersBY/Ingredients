@@ -1,0 +1,29 @@
+extends pug/base
+
+prepend vars
+	//-
+	- title = "Ingredients | Создание товара"
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+		section.section.product_creation_start
+			.container
+				.section__title Создать новый товарт
+				form.form.product_validation
+					.photo
+						.photo__zone
+							input.visually-hidden.photo__zone-input(type="file" name="")
+							include ./pug/svg/big-camera.svg
+					.form__text Или вставьте фото по ссылке, мы #[br.mobile] скачаем его и вставим
+					label.form__item
+						input.input(type="text")
+						span.placeholder Ссылка на фото или видео
+					.form__2btn
+						button.btn.empty(type="submit") Продолжить без фото
+						button.btn(type="submit") Далее
+
+	include pug/components/footer

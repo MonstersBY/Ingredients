@@ -1,0 +1,191 @@
+extends pug/base
+
+prepend vars
+	//-
+	- title = "Ingredients | Создание товара"
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+		section.section.cabinet.provider_orders
+			.container
+				.sidebar.gradient_border
+					.sidebar__items
+						.item
+							a.item__btn.item__drop_btn(href="#")
+								.item__icon
+									include ./pug/svg/cabinet/setting.svg
+								.item__name Характеристики
+							.item__drop
+								.item__list
+									a(href="#") Характеристики 1
+									a(href="#") Характеристики 2
+									a(href="#") Характеристики 3
+									a(href="#") Характеристики 4
+						.item
+							a.item__btn.item__drop_btn(href="#")
+								.item__icon
+									include ./pug/svg/cabinet/box.svg
+								.item__name Товары
+							.item__drop
+								.item__list
+									a(href="#") Товары 1
+									a(href="#") Товары 2
+									a(href="#") Товары 3
+									a(href="#") Товары 4
+
+				.cabinet__content
+					.section__title Характеристики
+					form.form.form_login.form_validation
+						.form__item
+							select.required.multi-select
+								option Категория товара
+								option Категория товара 2
+								option Категория товара 3
+						.form__text Упаковка
+						.form__2input
+							label.form__item
+								span.form__icon
+									include pug/svg/3d-rotate.svg
+								input.input.required(type="text")
+								span.placeholder Тип упаковки
+							label.form__item
+								span.form__icon
+									include pug/svg/weight.svg
+								input.input.required(type="text")
+								span.placeholder Вес
+						label.form__item
+							span.form__icon
+								include pug/svg/box-not-fill.svg
+							input.input(type="text")
+							span.placeholder Название товара
+						label.form__item
+							span.form__icon
+								include pug/svg/verify.svg
+							input.input(type="text")
+							span.placeholder Бренд
+						label.form__item
+							span.form__icon
+								include pug/svg/global.svg
+							input.input(type="text")
+							span.placeholder Страна происхождения
+						label.form__item
+							span.form__icon
+								include pug/svg/composition.svg
+							input.input(type="text")
+							span.placeholder Состав
+						.form__2input
+							label.form__item
+								span.form__icon
+									include pug/svg/clock.svg
+								input.input(type="text")
+								span.placeholder Срок годности
+							label.form__item
+								span.form__icon
+									include pug/svg/thermometer.svg
+								input.input.required(type="text")
+								span.placeholder Условия хранения
+						.form__item
+							span.form__icon
+								include pug/svg/transport.svg
+							select
+								option Транспортировка
+								option Транспортировка 2
+								option Транспортировка 3
+						.tags
+							button.tags__top(type="button")
+								.tags__title Область применения
+								.tags__status
+									span.checked_tags 0
+									| /
+									span.total_tags 0
+									|  выбрано
+							.tags__bottom
+								.tags__wrap
+									label.tag
+										input.visually-hidden(type="checkbox")
+										span Глюкоза
+
+									label.tag
+										input.visually-hidden(type="checkbox")
+										span Сахароза
+
+									label.tag
+										input.visually-hidden(type="checkbox")
+										span Глюкоза
+
+									label.tag
+										input.visually-hidden(type="checkbox")
+										span Сахароза
+						.tags
+							button.tags__top(type="button")
+								.tags__title Функциональные свойства
+								.tags__status
+									span.checked_tags 0
+									| /
+									span.total_tags 0
+									|  выбрано
+							.tags__bottom
+								.tags__wrap
+									label.tag
+										input.visually-hidden(type="checkbox")
+										span Глюкоза
+
+									label.tag
+										input.visually-hidden(type="checkbox")
+										span Сахароза
+
+									label.tag
+										input.visually-hidden(type="checkbox")
+										span Глюкоза
+
+									label.tag
+										input.visually-hidden(type="checkbox")
+										span Сахароза
+						.form__item
+							select
+								option Класс ингридиента
+								option Класс ингридиента 2
+								option Класс ингридиента 3
+						.form__text Описание товара
+						label.form__item
+							textarea.textarea
+							span.placeholder Описание товара
+
+						.form__text Внешний вид
+						label.form__item
+							textarea.textarea
+							span.placeholder Описание
+
+						.form__2input
+							label.form__item
+								span.form__icon
+									include pug/svg/receipt-search.svg
+								input.input(type="text")
+								span.placeholder Срок годности
+							.form__item
+								select
+									option Вид продукции
+									option Вид продукции 2
+									option Вид продукции 3
+
+						.form__text Агрегатное состояние
+
+						.switcher__control
+							button.btn.switcher__btn.active(type="button") Твердое
+							button.btn.switcher__btn(type="button") Жидкое
+
+						.files
+							.files__zone.drop-zone
+								.files__title Загрузите лицензии
+								.files__descr #[span.desktop Перетащите]#[span.mobile Загрузите] не менее 2 документов формата jpeg #[br] Размер файла не более 2 мб.
+								button.files__btn(type="button") Загрузить
+								input.visually-hidden.drop-zone__input(type="file" multiple name="")
+
+						button.btn(type="submit") Добавить
+
+
+	include pug/components/footer

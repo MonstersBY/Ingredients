@@ -4,8 +4,6 @@ let $switcher__containers = $('.switcher__container');
 
 window.switcherContainerHeight = () => {
 	$('.switcher__container').each(function (index, elem) {
-		console.log($(elem).find('.switcher__content.active').outerHeight())
-		console.log($(elem).find('.switcher__content.active').innerHeight())
 		let number = 1920 / window.outerWidth
 		if (window.outerWidth <= 768) number = 375 / window.outerWidth
 		let switcher_content_height = $(elem).find('.switcher__content.active').outerHeight() * number;
@@ -90,6 +88,65 @@ document.querySelectorAll('.drop-zone__input').forEach((inputElement) => {
 	});
 });
 
+document.querySelectorAll('.photo__zone-input').forEach((inputElement) => {
+	const dropZoneElement = inputElement.closest('.photo__zone');
+
+	dropZoneElement.addEventListener('click', (e) => {
+		inputElement.click();
+	});
+	const validImageTypes = ['image/jpeg', 'image/png'];
+	inputElement.addEventListener('change', (e) => {
+		const fileType = inputElement.files[0]["type"];
+		if (inputElement.files.length && validImageTypes.includes(fileType)) {
+			addPhoto(dropZoneElement, inputElement.files)
+		}
+	});
+
+	dropZoneElement.addEventListener('dragover', (e) => {
+		e.preventDefault();
+	});
+
+	dropZoneElement.addEventListener('drop', (e) => {
+		e.preventDefault();
+		const fileType = e.dataTransfer.files[0]["type"];
+		if (e.dataTransfer.files.length && validImageTypes.includes(fileType)) {
+			inputElement.files = e.dataTransfer.files;
+			addPhoto(dropZoneElement, inputElement.files)
+		}
+	});
+});
+
+function addPhoto(dropZoneElement, files) {
+	let progressElements = dropZoneElement.nextElementSibling;
+
+	// First time - remove the prompt
+	if (progressElements) {
+		progressElements.remove();
+	}
+
+	progressElements = document.createElement('div');
+	progressElements.classList.add('progress_elements');
+	dropZoneElement.after(progressElements);
+
+	let progressElement = document.createElement('div');
+	progressElement.classList.add('photo__show');
+
+	let deleteElement = document.createElement('div');
+	deleteElement.classList.add('photo__delete');
+
+	let mainElement = document.createElement('div');
+	mainElement.classList.add('photo__main');
+	mainElement.innerText = 'главная'
+
+	let fileImgElement = document.createElement('img');
+	fileImgElement.src = URL.createObjectURL(files[0]);
+
+	progressElement.append(fileImgElement, mainElement, deleteElement);
+	progressElements.appendChild(progressElement);
+	deleteElement.addEventListener('click', () =>{
+		progressElements.remove();
+	})
+}
 
 function updateProgress(dropZoneElement, files) {
 	let progressElements = dropZoneElement.nextElementSibling;
@@ -103,42 +160,24 @@ function updateProgress(dropZoneElement, files) {
 	progressElements.classList.add('progress_elements');
 	dropZoneElement.after(progressElements);
 
-	let progressElement = document.createElement('div');
-	progressElement.classList.add('file__progress');
+	Array.from(files).forEach((elem) => {
+		let progressElement = document.createElement('div');
+		progressElement.classList.add('file__progress');
 
-	let fileNameElement = document.createElement('div');
-	fileNameElement.classList.add('file__name');
-	fileNameElement.innerHTML = files[0].name;
+		let fileNameElement = document.createElement('div');
+		fileNameElement.classList.add('file__name');
+		fileNameElement.innerHTML = elem.name;
 
-	let fileWeightElement = document.createElement('div');
-	fileWeightElement.classList.add('file__weight');
-	fileWeightElement.innerHTML = Math.trunc(files[0].size / 1024) + ' kb';
+		let fileWeightElement = document.createElement('div');
+		fileWeightElement.classList.add('file__weight');
+		fileWeightElement.innerHTML = Math.trunc(elem.size / 1024) + ' kb';
 
-	let fileIconElement = document.createElement('div');
-	fileIconElement.classList.add('file__icon');
+		let fileIconElement = document.createElement('div');
+		fileIconElement.classList.add('file__icon');
 
-	progressElement.append(fileNameElement, fileWeightElement, fileIconElement);
-	progressElements.appendChild(progressElement);
-
-	// files.forEach((elem) => {
-	// 	let progressElement = document.createElement('div');
-	// 	progressElement.classList.add('file__progress');
-
-	// 	let fileNameElement = document.createElement('div');
-	// 	fileNameElement.classList.add('file__name');
-	// 	fileNameElement.innerHTML = elem.name;
-
-	// 	let fileWeightElement = document.createElement('div');
-	// 	fileWeightElement.classList.add('file__weight');
-	// 	fileWeightElement.innerHTML = Math.trunc(elem.size / 1024) + ' kb';
-
-	// 	let fileIconElement = document.createElement('div');
-	// 	fileIconElement.classList.add('file__icon');
-
-	// 	progressElement.append(fileNameElement, fileWeightElement, fileIconElement);
-	// 	progressElements.appendChild(progressElement);
-
-	// });
+		progressElement.append(fileNameElement, fileWeightElement, fileIconElement);
+		progressElements.appendChild(progressElement);
+	});
 
 
 	switcherContainerHeight();

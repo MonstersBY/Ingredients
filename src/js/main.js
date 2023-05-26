@@ -10,6 +10,8 @@ import scrollToAnchor from './modules/scrollToAnchor';
 
 
 import './components/jquery.nice-select';
+import './components/jquery.quicksearch';
+import './components/jquery.multi-select';
 import './components/search-header';
 import './components/footer';
 import './components/swiper_materials';
@@ -35,6 +37,7 @@ import './components/swiper_sample_request';
 import './components/swiper_provider_orders';
 import './components/swiper_brand';
 import './components/modal_brand';
+import './components/multi-select';
 
 $('select').niceSelect();
 

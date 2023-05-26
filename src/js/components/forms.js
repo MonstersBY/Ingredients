@@ -38,3 +38,17 @@ $('.form_validation').on('submit', function(evt) {
 		}
 	});
 });
+
+$('.product_validation').on('submit', function(evt) {
+	evt.preventDefault();
+	let $this = $(this);
+	let $inputs = $this.find('.required');
+
+	$inputs.each(function(index, elem) {
+		if ($(elem).val()) {
+			$(elem).removeClass('invalid');
+		} else {
+			$(elem).addClass('invalid');
+		}
+	});
+});

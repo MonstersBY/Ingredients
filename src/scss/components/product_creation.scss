@@ -1,0 +1,31 @@
+.product_creation {
+	&_start {
+		form {
+			max-width: 1004rem;
+			.input {
+				padding: 14rem 29rem 14rem 24rem;
+			}
+			.placeholder {
+				left: 24rem;
+			}
+		}
+		.mobile {
+			display: none;
+		}
+	}
+}
+
+@include mobile {
+	.product_creation {
+		&_start {
+			form {
+				.btn {
+					width: auto;
+				}
+			}
+			.mobile {
+				display: block;
+			}
+		}
+	}
+}
