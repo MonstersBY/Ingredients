@@ -38,6 +38,12 @@ $('.form_validation').on('submit', function(evt) {
 		}
 	});
 });
+$('.textarea').on('keyup', function(evt) {
+	let $this = $(this);
+	if ($this.siblings('.count-text').length){
+		$this.siblings('.count-text').children('span').text(`${$this.val().length}`)
+	}
+});
 
 $('.product_validation').on('submit', function(evt) {
 	evt.preventDefault();

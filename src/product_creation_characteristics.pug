@@ -95,56 +95,80 @@ block content
 								option Транспортировка
 								option Транспортировка 2
 								option Транспортировка 3
-						.tags
-							button.tags__top(type="button")
-								.tags__title Область применения
-								.tags__status
-									span.checked_tags 0
-									| /
-									span.total_tags 0
-									|  выбрано
-							.tags__bottom
-								.tags__wrap
-									label.tag
-										input.visually-hidden(type="checkbox")
-										span Глюкоза
-
-									label.tag
-										input.visually-hidden(type="checkbox")
-										span Сахароза
-
-									label.tag
-										input.visually-hidden(type="checkbox")
-										span Глюкоза
-
-									label.tag
-										input.visually-hidden(type="checkbox")
-										span Сахароза
-						.tags
-							button.tags__top(type="button")
-								.tags__title Функциональные свойства
-								.tags__status
-									span.checked_tags 0
-									| /
-									span.total_tags 0
-									|  выбрано
-							.tags__bottom
-								.tags__wrap
-									label.tag
-										input.visually-hidden(type="checkbox")
-										span Глюкоза
-
-									label.tag
-										input.visually-hidden(type="checkbox")
-										span Сахароза
-
-									label.tag
-										input.visually-hidden(type="checkbox")
-										span Глюкоза
-
-									label.tag
-										input.visually-hidden(type="checkbox")
-										span Сахароза
+						.choose-tag
+							label.form__item
+								input.input(type="text" placeholder="Область применения")
+								span.form__icon
+									include pug/svg/search_grey.svg
+							.choose-tag__box
+								.choose-tag__container
+									label.choose-tag__item Спортивное питание
+										input(type="checkbox")
+										.choose-tag__indicator
+									label.choose-tag__item Продукты здорового питания
+										input(type="checkbox")
+										.choose-tag__indicator
+									label.choose-tag__item Биоактивные добавки
+										input(type="checkbox")
+										.choose-tag__indicator
+									label.choose-tag__item Спортивные и энергетические напитки
+										input(type="checkbox")
+										.choose-tag__indicator
+									label.choose-tag__item Производство безалкогольных напитков
+										input(type="checkbox")
+										.choose-tag__indicator
+									label.choose-tag__item Спортивное питание 1
+										input(type="checkbox")
+										.choose-tag__indicator
+									label.choose-tag__item Продукты здорового питания 1
+										input(type="checkbox")
+										.choose-tag__indicator
+									label.choose-tag__item Биоактивные добавки 1
+										input(type="checkbox")
+										.choose-tag__indicator
+									label.choose-tag__item Спортивные и энергетические напитки 1
+										input(type="checkbox")
+										.choose-tag__indicator
+									label.choose-tag__item Производство безалкогольных напитков 1
+										input(type="checkbox")
+										.choose-tag__indicator
+						.choose-tag
+							label.form__item
+								input.input(type="text" placeholder="Функциональные свойства")
+								span.form__icon
+									include pug/svg/search_grey.svg
+							.choose-tag__box
+								.choose-tag__container
+									label.choose-tag__item Спортивное питание
+										input(type="checkbox")
+										.choose-tag__indicator
+									label.choose-tag__item Продукты здорового питания
+										input(type="checkbox")
+										.choose-tag__indicator
+									label.choose-tag__item Биоактивные добавки
+										input(type="checkbox")
+										.choose-tag__indicator
+									label.choose-tag__item Спортивные и энергетические напитки
+										input(type="checkbox")
+										.choose-tag__indicator
+									label.choose-tag__item Производство безалкогольных напитков
+										input(type="checkbox")
+										.choose-tag__indicator
+									label.choose-tag__item Спортивное питание 1
+										input(type="checkbox")
+										.choose-tag__indicator
+									label.choose-tag__item Продукты здорового питания 1
+										input(type="checkbox")
+										.choose-tag__indicator
+									label.choose-tag__item Биоактивные добавки 1
+										input(type="checkbox")
+										.choose-tag__indicator
+									label.choose-tag__item Спортивные и энергетические напитки 1
+										input(type="checkbox")
+										.choose-tag__indicator
+									label.choose-tag__item Производство безалкогольных напитков 1
+										input(type="checkbox")
+										.choose-tag__indicator
 						.form__item
 							select
 								option Класс ингридиента
@@ -152,13 +176,15 @@ block content
 								option Класс ингридиента 3
 						.form__text Описание товара
 						label.form__item
-							textarea.textarea
+							textarea.textarea(maxlength="5000")
 							span.placeholder Описание товара
+							span.count-text #[span 0] /5000
 
 						.form__text Внешний вид
 						label.form__item
-							textarea.textarea
+							textarea.textarea(maxlength="5000")
 							span.placeholder Описание
+							span.count-text #[span 0] /5000
 
 						.form__2input
 							label.form__item

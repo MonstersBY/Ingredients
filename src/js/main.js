@@ -38,6 +38,8 @@ import './components/swiper_provider_orders';
 import './components/swiper_brand';
 import './components/modal_brand';
 import './components/multi-select';
+import './components/choose-tag';
+
 
 $('select').niceSelect();
 
