@@ -112,6 +112,17 @@ button {
 	&.mobile {
 		display: none;
 	}
+	&.right {
+		position: absolute;
+		top: 272rem;
+		left: 696rem;
+		pointer-events: none;
+		z-index: -1;
+		width: 2000rem;
+		img {
+			transform: rotate(286.23deg);
+		}
+	}
 }
 
 .frame {
@@ -353,6 +364,14 @@ button {
 		&.desktop {
 			display: none;
 		}
+		&.right {
+			position: absolute;
+			top: 300rem;
+			left: -550rem;
+			pointer-events: none;
+			z-index: -1;
+			width: 1848rem;
+		}
 	}
 
 	.frame {
@@ -532,3 +551,5 @@ button {
 @import "components/orders";
 @import "components/brand";
 @import "components/product_creation";
+@import "components/product_cards";
+@import "components/product_reviews";

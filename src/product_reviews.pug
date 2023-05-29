@@ -1,0 +1,190 @@
+extends pug/base
+
+prepend vars
+	//-
+	- title = "Ingredients | Отзывы по товару"
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+		section.section.cabinet.product_reviews.switcher
+			.lines.right
+				img(src="images/lines.svg" alt="lines.svg")
+			.container
+				.sidebar.gradient_border
+					.sidebar__top
+						.sidebar__img
+							img(src="images/cabinet/profile_img.png" alt="profile_img")
+						.sidebar__suptitle Компания
+						.sidebar__title ООО «Милорада»
+
+					.sidebar__items
+						.item
+							a.item__btn.item__drop_btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/box.svg
+								.item__name Товары
+							.item__drop
+								.item__list
+									a(href="#") Товары
+									a(href="#") Заказы
+									a(href="#") Отзывы и вопросы
+									a(href="#") Бренды
+						.item
+							a.item__btn.item__drop_btn.active(href="#")
+								.item__icon
+									include pug/svg/cabinet/profile_2user.svg
+								.item__name Личный кабинет
+							.item__drop(style="display: block")
+								.item__list
+									a.active(href="#") Личные данные
+									a(href="#") Личный кабинет 1
+									a(href="#") Личный кабинет 1
+									a(href="#") Личный кабинет 1
+
+						.item
+							a.item__btn.item__drop_btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/sms.svg
+								.item__name Запросы
+							.item__drop
+								.item__list
+									a(href="#") Запросы 1
+									a(href="#") Запросы 2
+									a(href="#") Запросы 3
+									a(href="#") Запросы 4
+
+				.cabinet__content
+					.section__title Отзывы по товару
+					.switcher__control
+						button.btn.switcher__btn.active(type="button") Отзывы без ответов #[span (5)]
+						button.btn.switcher__btn(type="button") Архив #[span (10)]
+					.switcher__container
+						.switcher__content.active
+							.product_reviews__item.gradient_border
+								.product_reviews__img
+									img(src="images/product_creation/card01.jpg" alt="profile_img")
+								.product_reviews__container
+									.product_reviews__title Аскорбил пальмитат
+									.product_reviews__text Пришло быстро, описание соответствует действительности Пришло быстро, описание соответствует действительности..Пришло быстро, описание соответствует действительности Пришло быстро, описание
+									.product_reviews__vendor-code #[span Артикул:] 12343465
+									.product_reviews__column
+										.product_reviews__info
+											.product_reviews__rating
+												.product_reviews__stars
+													label.star.checked
+													label.star.checked
+													label.star.checked
+													label.star.checked
+													label.star
+											.product_reviews__date 09.01.23
+										.product_reviews__answer.underline Ответить
+
+							.product_reviews__item.gradient_border
+								.product_reviews__img
+									img(src="images/product_creation/card01.jpg" alt="profile_img")
+								.product_reviews__container
+									.product_reviews__title Аскорбил пальмитат
+									.product_reviews__text Пришло быстро, описание соответствует действительности Пришло быстро, описание соответствует действительности..Пришло быстро, описание соответствует действительности Пришло быстро, описание
+									.product_reviews__vendor-code #[span Артикул:] 12343465
+									.product_reviews__column
+										.product_reviews__info
+											.product_reviews__rating
+												.product_reviews__stars
+													label.star.checked
+													label.star.checked
+													label.star.checked
+													label.star.checked
+													label.star
+											.product_reviews__date 09.01.23
+										.product_reviews__answer.underline Ответить
+
+							.product_reviews__item.gradient_border
+								.product_reviews__img
+									img(src="images/product_creation/card01.jpg" alt="profile_img")
+								.product_reviews__container
+									.product_reviews__title Аскорбил пальмитат
+									.product_reviews__text Пришло быстро, описание соответствует действительности Пришло быстро, описание соответствует действительности..Пришло быстро, описание соответствует действительности Пришло быстро, описание
+									.product_reviews__vendor-code #[span Артикул:] 12343465
+									.product_reviews__column
+										.product_reviews__info
+											.product_reviews__rating
+												.product_reviews__stars
+													label.star.checked
+													label.star.checked
+													label.star.checked
+													label.star.checked
+													label.star
+											.product_reviews__date 09.01.23
+										.product_reviews__answer.underline Ответить
+
+						.switcher__content
+							.product_reviews__item.archive.gradient_border
+								.product_reviews__img
+									img(src="images/product_creation/card01.jpg" alt="profile_img")
+								.product_reviews__container
+									.product_reviews__title Аскорбил пальмитат
+									.product_reviews__text Пришло быстро, описание соответствует действительности Пришло быстро, описание соответствует действительности..Пришло быстро, описание соответствует действительности Пришло быстро, описание
+									.product_reviews__vendor-code #[span Артикул:] 12343465
+									.product_reviews__column
+										.product_reviews__info
+											.product_reviews__rating
+												.product_reviews__stars
+													label.star.checked
+													label.star.checked
+													label.star.checked
+													label.star.checked
+													label.star
+											.product_reviews__date 09.01.23
+							.product_reviews__item.answer
+								.product_reviews__answer Ответ:
+								.product_reviews__text Спасибо что выбрали наш товар! Спасибо что выбрали наш товар!Спасибо что выбрали наш товар!Спасибо что выбрали наш товар!Спасибо что выбрали наш товар!Спасибо что выбрали наш товар!Спасибо что выбрали наш товар!
+								.product_reviews__info
+									span Милорада
+									span Логист
+									span 13 февраля, 2023 в 12:30
+
+							.product_reviews__item.archive.gradient_border
+								.product_reviews__img
+									img(src="images/product_creation/card01.jpg" alt="profile_img")
+								.product_reviews__container
+									.product_reviews__title Аскорбил пальмитат
+									.product_reviews__text Пришло быстро, описание соответствует действительности Пришло быстро, описание соответствует действительности..Пришло быстро, описание соответствует действительности Пришло быстро, описание
+									.product_reviews__vendor-code #[span Артикул:] 12343465
+									.product_reviews__column
+										.product_reviews__info
+											.product_reviews__rating
+												.product_reviews__stars
+													label.star.checked
+													label.star.checked
+													label.star.checked
+													label.star.checked
+													label.star
+											.product_reviews__date 09.01.23
+							.product_reviews__item.answer
+								.product_reviews__answer Ответ:
+								.product_reviews__text Спасибо что выбрали наш товар! Спасибо что выбрали наш товар!Спасибо что выбрали наш товар!Спасибо что выбрали наш товар!Спасибо что выбрали наш товар!Спасибо что выбрали наш товар!Спасибо что выбрали наш товар!
+								.product_reviews__info
+									span Милорада
+									span Логист
+									span 13 февраля, 2023 в 12:30
+
+						.modal-box.product_reviews__modal
+							.modal-box__container
+								button.modal-box__exit.product_reviews__close(type="button")
+									include pug/svg/cross.svg
+								.section__title Ответ на отзыв
+								.product_reviews__modal-item.gradient_border
+								form.form.form_validation
+									label.form__item
+										textarea.textarea(maxlength="5000")
+										span.placeholder Ответ на отзыв
+										span.count-text #[span 0] /5000
+									button.btn(type='submit') Ответить
+
+
+
+	include pug/components/footer

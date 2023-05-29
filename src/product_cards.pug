@@ -1,0 +1,294 @@
+extends pug/base
+
+prepend vars
+	//-
+	- title = "Ingredients | Наша продукция"
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+		section.section.cabinet.product_cards
+			.lines.right
+				img(src="images/lines.svg" alt="lines.svg")
+			.container
+				.sidebar.gradient_border
+					.sidebar__top
+						.sidebar__img
+							img(src="images/cabinet/profile_img.png" alt="profile_img")
+						.sidebar__suptitle Компания
+						.sidebar__title ООО «Милорада»
+
+					.sidebar__items
+						.item
+							a.item__btn.item__drop_btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/box.svg
+								.item__name Товары
+							.item__drop
+								.item__list
+									a(href="#") Товары
+									a(href="#") Заказы
+									a(href="#") Отзывы и вопросы
+									a(href="#") Бренды
+						.item
+							a.item__btn.item__drop_btn.active(href="#")
+								.item__icon
+									include pug/svg/cabinet/profile_2user.svg
+								.item__name Личный кабинет
+							.item__drop(style="display: block")
+								.item__list
+									a.active(href="#") Личные данные
+									a(href="#") Личный кабинет 1
+									a(href="#") Личный кабинет 1
+									a(href="#") Личный кабинет 1
+
+						.item
+							a.item__btn.item__drop_btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/sms.svg
+								.item__name Запросы
+							.item__drop
+								.item__list
+									a(href="#") Запросы 1
+									a(href="#") Запросы 2
+									a(href="#") Запросы 3
+									a(href="#") Запросы 4
+
+				.cabinet__content
+					.section__title Наша продукция
+					.product_cards__2input
+						.switcher__control
+							button.btn.switcher__btn.active(type="button") Созданные #[span (22)]
+							button.btn.switcher__btn(type="button") Черновиики
+						button.btn(type="button") Добавить
+					form.search.cabinet__search
+						.form__item
+							select(name="")
+								option Категория
+								option Категория 2
+								option Категория 3
+						.form__item
+							select(name="")
+								option Все фильтры
+								option Все фильтры 2
+								option Все фильтры 3
+						.label-container
+							label
+								include ./pug/svg/search_grey.svg
+								input(type="text" placeholder="Поиск")
+							button(type="submit")
+								include ./pug/svg/arrow.svg
+
+					.table
+						.thead
+							.tr
+								.th.circle
+									.checkbox-custom
+								.th.photo Фото
+								.th.desc Описание
+								.th.brand Бренд
+								.th.packaging Тип упаковки
+								.th.date Срок годности
+								.th.delete Удалить
+
+					.swiper_shadow.tbody
+						.swiper.swiper_product_cards
+
+							.swiper_control
+								.swiper-button-prev
+								.swiper-button-next
+								.swiper-pagination
+
+							.swiper-wrapper
+
+
+								.swiper-slide
+									.tr.gradient_border
+										label.td.circle
+											input(type="checkbox")
+											.checkbox-custom
+										.td.photo
+											img(src="images/product_creation/card01.jpg", alt="")
+										.td.desc
+											span.mobile Описание
+											span # 123454534
+											| Аскорбил пальмитат
+										.td.brand
+											span.mobile Бренд
+											| Милорада
+										.td.packaging
+											span.mobile Типо упаковки
+											| Коробка
+										.td.date
+											span.mobile Срок годности
+											| 09.01.2023
+										.td.delete
+											include pug/svg/trash.svg
+
+								.swiper-slide
+									.tr.gradient_border
+										label.td.circle
+											input(type="checkbox")
+											.checkbox-custom
+										.td.photo
+											img(src="images/product_creation/card01.jpg", alt="")
+										.td.desc
+											span.mobile Описание
+											span # 123454534
+											| Аскорбил пальмитат
+										.td.brand
+											span.mobile Бренд
+											| Милорада
+										.td.packaging
+											span.mobile Типо упаковки
+											| Коробка
+										.td.date
+											span.mobile Срок годности
+											| 09.01.2023
+										.td.delete
+											include pug/svg/trash.svg
+
+								.swiper-slide
+									.tr.gradient_border
+										label.td.circle
+											input(type="checkbox")
+											.checkbox-custom
+										.td.photo
+											img(src="images/product_creation/card01.jpg", alt="")
+										.td.desc
+											span.mobile Описание
+											span # 123454534
+											| Аскорбил пальмитат
+										.td.brand
+											span.mobile Бренд
+											| Милорада
+										.td.packaging
+											span.mobile Типо упаковки
+											| Коробка
+										.td.date
+											span.mobile Срок годности
+											| 09.01.2023
+										.td.delete
+											include pug/svg/trash.svg
+
+								.swiper-slide
+									.tr.gradient_border
+										label.td.circle
+											input(type="checkbox")
+											.checkbox-custom
+										.td.photo
+											img(src="images/product_creation/card01.jpg", alt="")
+										.td.desc
+											span.mobile Описание
+											span # 123454534
+											| Аскорбил пальмитат
+										.td.brand
+											span.mobile Бренд
+											| Милорада
+										.td.packaging
+											span.mobile Типо упаковки
+											| Коробка
+										.td.date
+											span.mobile Срок годности
+											| 09.01.2023
+										.td.delete
+											include pug/svg/trash.svg
+
+								.swiper-slide
+									.tr.gradient_border
+										label.td.circle
+											input(type="checkbox")
+											.checkbox-custom
+										.td.photo
+											img(src="images/product_creation/card01.jpg", alt="")
+										.td.desc
+											span.mobile Описание
+											span # 123454534
+											| Аскорбил пальмитат
+										.td.brand
+											span.mobile Бренд
+											| Милорада
+										.td.packaging
+											span.mobile Типо упаковки
+											| Коробка
+										.td.date
+											span.mobile Срок годности
+											| 09.01.2023
+										.td.delete
+											include pug/svg/trash.svg
+
+								.swiper-slide
+									.tr.gradient_border
+										label.td.circle
+											input(type="checkbox")
+											.checkbox-custom
+										.td.photo
+											img(src="images/product_creation/card01.jpg", alt="")
+										.td.desc
+											span.mobile Описание
+											span # 123454534
+											| Аскорбил пальмитат
+										.td.brand
+											span.mobile Бренд
+											| Милорада
+										.td.packaging
+											span.mobile Типо упаковки
+											| Коробка
+										.td.date
+											span.mobile Срок годности
+											| 09.01.2023
+										.td.delete
+											include pug/svg/trash.svg
+
+								.swiper-slide
+									.tr.gradient_border
+										label.td.circle
+											input(type="checkbox")
+											.checkbox-custom
+										.td.photo
+											img(src="images/product_creation/card01.jpg", alt="")
+										.td.desc
+											span.mobile Описание
+											span # 123454534
+											| Аскорбил пальмитат
+										.td.brand
+											span.mobile Бренд
+											| Милорада
+										.td.packaging
+											span.mobile Типо упаковки
+											| Коробка
+										.td.date
+											span.mobile Срок годности
+											| 09.01.2023
+										.td.delete
+											include pug/svg/trash.svg
+
+								.swiper-slide
+									.tr.gradient_border
+										label.td.circle
+											input(type="checkbox")
+											.checkbox-custom
+										.td.photo
+											img(src="images/product_creation/card01.jpg", alt="")
+										.td.desc
+											span.mobile Описание
+											span # 123454534
+											| Аскорбил пальмитат
+										.td.brand
+											span.mobile Бренд
+											| Милорада
+										.td.packaging
+											span.mobile Типо упаковки
+											| Коробка
+										.td.date
+											span.mobile Срок годности
+											| 09.01.2023
+										.td.delete
+											include pug/svg/trash.svg
+
+
+
+	include pug/components/footer
