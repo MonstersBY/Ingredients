@@ -1,5 +1,4 @@
 .contacts {
-    margin-top: 97rem;
 	&__us {
 		display: grid;
 		column-gap: 24rem;
@@ -114,7 +113,6 @@
 
 @include mobile {
 	.contacts {
-		margin-top: 97rem;
 		&__us {
 			display: flex;
 			flex-direction: column;

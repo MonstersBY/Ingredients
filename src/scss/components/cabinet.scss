@@ -34,6 +34,24 @@
 	.switcher__control {
 		margin-bottom: 60rem;
 	}
+	&__back {
+		&.underline {
+			padding-right: 0;
+			padding-left: 55rem;
+			margin-bottom: 36rem;
+			color: #999999;
+			&::before {
+				margin-top: -10rem;
+				transform: rotate(-135deg);
+				right: 0;
+				left: 3rem;
+				opacity: 0.5;
+			}
+			&::after {
+				background: #999999;
+			}
+		}
+	}
 }
 
 .orders {

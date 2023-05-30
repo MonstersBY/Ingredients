@@ -2,7 +2,7 @@ extends pug/base
 
 prepend vars
 	//-
-	- title = "Продукция по категории"
+	- title = "Поиск"
 
 append vars
 	//-
@@ -332,24 +332,8 @@ block content
 								button.btn Все фильтры
 
 						.filter__inner.filter__control
-							.dropdown
-								button.dropdown_btn.icon(type="button")
-									include ./pug/svg/share.svg
-								.dropdown_list
-									a(href="#")
-										.svg
-											include ./pug/svg/whatsapp.svg
-										| What’s up
-									a(href="#")
-										.svg
-											include ./pug/svg/telegram.svg
-										| Telegram
-									a(href="#")
-										.svg
-											include ./pug/svg/linkedin.svg
-										| Linked in
 							button.icon(type="button")
-								include ./pug/svg/export.svg
+								include ./pug/svg/save.svg
 					.filter__inner.filter__tags
 						.filter__tags-wrap
 				.swiper_shadow

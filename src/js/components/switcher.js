@@ -5,7 +5,7 @@ let $switcher__containers = $('.switcher__container');
 window.switcherContainerHeight = () => {
 	$('.switcher__container').each(function (index, elem) {
 		let number = 1920 / window.outerWidth
-		let height = $(elem).find('.switcher__content.active').outerHeight()*2
+		let height = $(elem).find('.switcher__content.active').outerHeight()
 		if (window.outerWidth <= 768) {
 			number = 375 / window.outerWidth
 			height = $(elem).find('.switcher__content.active').outerHeight()
@@ -26,7 +26,7 @@ if ($switcher_btns.length > 0) {
 		let $switcher_container = $switcher.find('.switcher__container');
 		let $switcher_contents = $switcher_container.find('.switcher__content');
 		let number = 1920 / window.outerWidth
-		let height = $($switcher_contents[index]).outerHeight()*2
+		let height = $($switcher_contents[index]).outerHeight()
 		if (window.outerWidth <= 768) {
 			number = 375 / window.outerWidth
 			height = $($switcher_contents[index]).outerHeight()

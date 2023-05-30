@@ -14,6 +14,7 @@ import './components/jquery.quicksearch';
 import './components/jquery.multi-select';
 import './components/search-header';
 import './components/footer';
+import './components/swiper_product_comparison';
 import './components/swiper_materials';
 import './components/swiper_solutions';
 import './components/swiper_vendors';

@@ -43,6 +43,8 @@
 		display: flex;
 		position: relative;
 		align-items: center;
+		font-size: 20rem;
+		line-height: 150%;
 
 		span.mobile {
 			display: none;
@@ -68,6 +70,7 @@
 		margin-right: auto;
 	}
 	&__load {
+		font-size: 16rem;
 		cursor: pointer;
 	}
 	&__line {
@@ -189,6 +192,7 @@
 			line-height: 150%;
 			grid-template-columns: 35% 25% 1fr;
 			row-gap: 16rem;
+			font-size: 13rem;
 
 			span.mobile {
 				display: block;
@@ -230,6 +234,7 @@
 			grid-column: 1/4;
 			padding-top: 20rem;
 			width: max-content;
+			font-size: 15rem;
 		}
 		&__line {
 			height: auto;
