@@ -1,3 +1,6 @@
+const SLIDES_GAP = 20;
+const CONTAINER_WIDTH = 1131;
+
 const swiper_my_orders = new Swiper('.swiper_sample_request', {
 	modules: [Navigation, Pagination, Grid],
 	speed: 1000,
@@ -5,7 +8,7 @@ const swiper_my_orders = new Swiper('.swiper_sample_request', {
 		rows: 4,
 		fill: 'column'
 	},
-	spaceBetween: 20,
+	spaceBetween: SLIDES_GAP / CONTAINER_WIDTH * 100 + '%',
 	pagination: {
 		el: ".swiper-pagination",
 		type: "fraction",

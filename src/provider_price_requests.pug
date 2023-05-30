@@ -1,0 +1,235 @@
+extends pug/base
+
+prepend vars
+	//-
+	- title = "Ingredients | Заявки на цену"
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+		section.section.cabinet.provider_requests
+			.lines.right
+				img(src="images/lines.svg" alt="lines.svg")
+			.container
+				.sidebar.gradient_border
+					.sidebar__top
+						.sidebar__img
+							img(src="images/cabinet/profile_img.png" alt="profile_img")
+						.sidebar__suptitle Компания
+						.sidebar__title ООО «Милорада»
+
+					.sidebar__items
+						.item
+							a.item__btn.item__drop_btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/box.svg
+								.item__name Товары
+							.item__drop
+								.item__list
+									a(href="#") Товары
+									a(href="#") Заказы
+									a(href="#") Отзывы и вопросы
+									a(href="#") Бренды
+						.item
+							a.item__btn.item__drop_btn.active(href="#")
+								.item__icon
+									include pug/svg/cabinet/profile_2user.svg
+								.item__name Личный кабинет
+							.item__drop(style="display: block")
+								.item__list
+									a.active(href="#") Личные данные
+									a(href="#") Личный кабинет 1
+									a(href="#") Личный кабинет 1
+									a(href="#") Личный кабинет 1
+
+						.item
+							a.item__btn.item__drop_btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/sms.svg
+								.item__name Запросы
+							.item__drop
+								.item__list
+									a(href="#") Запросы 1
+									a(href="#") Запросы 2
+									a(href="#") Запросы 3
+									a(href="#") Запросы 4
+
+				.cabinet__content
+					.section__title Заявки на цену
+					form.search.cabinet__search
+						label
+							include ./pug/svg/search_grey.svg
+							input(type="text" placeholder="Поиск заявки")
+						button(type="submit")
+							include ./pug/svg/arrow.svg
+
+					.table
+						.thead
+							.tr
+								.th.status_change Статус изменен
+								.th.order_title Заказ и компания
+								.th.date Дата заявки
+								.th.read_more Подробнее
+								.th.status Статус
+
+					.swiper_shadow.tbody
+						.swiper.swiper_provider_orders
+
+							.swiper_control
+								.swiper-button-prev
+								.swiper-button-next
+								.swiper-pagination
+
+							.swiper-wrapper
+
+
+								.swiper-slide
+									.tr.gradient_border
+										.td.status_change
+											span.mobile Статус изменен
+											| 01.02.23
+										.td.order_title
+											span.mobile Заказ и компания
+											span ООО “Мелорана”
+											| Аскорбил пальмитат
+										.td.date
+											span.mobile Дата заявки
+											| 01.02.23
+										.td.line
+											.read_more Чат с клиентом
+										.td.status.status_new
+											span.mobile Статус:
+											span Новый
+
+								.swiper-slide
+									.tr.gradient_border
+										.td.status_change
+											span.mobile Статус изменен
+											| 01.02.23
+										.td.order_title
+											span.mobile Заказ и компания
+											span ООО “Мелорана”
+											| Аскорбил пальмитат
+										.td.date
+											span.mobile Дата заявки
+											| 01.02.23
+										.td.line
+											.read_more Чат с клиентом
+										.td.status.status_warning
+											span.mobile Статус:
+											span Отказано
+
+								.swiper-slide
+									.tr.gradient_border
+										.td.status_change
+											span.mobile Статус изменен
+											| 01.02.23
+										.td.order_title
+											span.mobile Заказ и компания
+											span ООО “Мелорана”
+											| Аскорбил пальмитат
+										.td.date
+											span.mobile Дата заявки
+											| 01.02.23
+										.td.line
+											.read_more Чат с клиентом
+										.td.status.status
+											span.mobile Статус:
+											span Доставлено
+
+								.swiper-slide
+									.tr.gradient_border
+										.td.status_change
+											span.mobile Статус изменен
+											| 01.02.23
+										.td.order_title
+											span.mobile Заказ и компания
+											span ООО “Мелорана”
+											| Аскорбил пальмитат
+										.td.date
+											span.mobile Дата заявки
+											| 01.02.23
+										.td.line
+											.read_more Чат с клиентом
+										.td.status.status
+											span.mobile Статус:
+											span Доставлено
+
+								.swiper-slide
+									.tr.gradient_border
+										.td.status_change
+											span.mobile Статус изменен
+											| 01.02.23
+										.td.order_title
+											span.mobile Заказ и компания
+											span ООО “Мелорана”
+											| Аскорбил пальмитат
+										.td.date
+											span.mobile Дата заявки
+											| 01.02.23
+										.td.line
+											.read_more Чат с клиентом
+										.td.status.status_new
+											span.mobile Статус:
+											span Новый
+
+								.swiper-slide
+									.tr.gradient_border
+										.td.status_change
+											span.mobile Статус изменен
+											| 01.02.23
+										.td.order_title
+											span.mobile Заказ и компания
+											span ООО “Мелорана”
+											| Аскорбил пальмитат
+										.td.date
+											span.mobile Дата заявки
+											| 01.02.23
+										.td.line
+											.read_more Чат с клиентом
+										.td.status.status_warning
+											span.mobile Статус:
+											span Отказано
+
+								.swiper-slide
+									.tr.gradient_border
+										.td.status_change
+											span.mobile Статус изменен
+											| 01.02.23
+										.td.order_title
+											span.mobile Заказ и компания
+											span ООО “Мелорана”
+											| Аскорбил пальмитат
+										.td.date
+											span.mobile Дата заявки
+											| 01.02.23
+										.td.line
+											.read_more Чат с клиентом
+										.td.status.status
+											span.mobile Статус:
+											span Доставлено
+
+								.swiper-slide
+									.tr.gradient_border
+										.td.status_change
+											span.mobile Статус изменен
+											| 01.02.23
+										.td.order_title
+											span.mobile Заказ и компания
+											span ООО “Мелорана”
+											| Аскорбил пальмитат
+										.td.date
+											span.mobile Дата заявки
+											| 01.02.23
+										.td.line
+											.read_more Чат с клиентом
+										.td.status.status
+											span.mobile Статус:
+											span Доставлено
+
+
+
+	include pug/components/footer

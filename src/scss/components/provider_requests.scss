@@ -1,0 +1,127 @@
+.provider_requests {
+	.td.line {
+		display: flex;
+		height: 35rem;
+		align-items: center;
+		border-left: 1rem solid #BBCBD0;
+		padding-left: 35rem;
+	}
+	.th.read_more {
+		margin-left: 40rem;
+	}
+	.tbody .read_more {
+		cursor: pointer;
+		&::before {
+			width: 100%;
+		}
+	}
+	.tbody .swiper-wrapper {
+		height: 335rem;
+	}
+	.td.status {
+		span {
+			position: relative;
+			padding-right: 29rem;
+		}
+		span::after {
+			content: '';
+			position: absolute;
+			top: 40%;
+			right: 4rem;
+			display: block;
+			width: 10rem;
+			height: 10rem;
+			margin-top: -5rem;
+			border: 2rem solid #999999;
+			border-top: none;
+			border-left: none;
+			pointer-events: none;
+			transform-origin: 66% 66%;
+			transform: rotate(45deg);
+			transition: all 0.15s ease-in-out;
+		}
+		span.mobile::after {
+			content: unset;
+		}
+	}
+	.table .status, .thead .status, .tbody .status {
+		min-width: 140rem;
+	}
+	.table .status_change, .thead .status_change, .tbody .status_change {
+		-ms-flex-negative: 0;
+		flex-shrink: 0;
+		width: 145rem;
+	}
+}
+@include mobile {
+	.provider_requests {
+		.tbody .tr {
+			height: auto;
+			grid-template-rows: auto auto auto;
+			padding: 24rem 20rem 28rem;
+			row-gap: 16rem;
+		}
+		.tr.gradient_border::before {
+			bottom: 65rem;
+		}
+		.td.line {
+			display: flex;
+			height: auto;
+			align-items: center;
+			border-left: unset;
+			padding-left: 0;
+		}
+		.th.read_more {
+			margin-left: 40rem;
+		}
+		.tbody .read_more {
+			cursor: pointer;
+			&::before {
+				width: 100%;
+			}
+		}
+		.tbody .swiper-wrapper {
+			height: 760rem;
+		}
+		.td.status {
+			span {
+				position: relative;
+				padding-right: 25rem;
+			}
+			span::after {
+				content: '';
+				position: absolute;
+				top: 40%;
+				right: 4rem;
+				display: block;
+				width: 6rem;
+				height: 6rem;
+				margin-top: -5rem;
+				border: 2rem solid #999999;
+				border-top: none;
+				border-left: none;
+				pointer-events: none;
+				transform-origin: 66% 66%;
+				transform: rotate(45deg);
+				transition: all 0.15s ease-in-out;
+			}
+			span.mobile {
+				content: unset;
+				padding: 0;
+			}
+		}
+		.td.order_title {
+			margin-bottom: 16rem;
+		}
+		.table .status, .thead .status, .tbody .status {
+			min-width: auto;
+			grid-column: 2;
+    		grid-row: 3;
+		}
+		.table .status_change, .thead .status_change, .tbody .status_change {
+			-ms-flex-negative: 0;
+			flex-shrink: 0;
+			width: 145rem;
+		}
+	}
+}

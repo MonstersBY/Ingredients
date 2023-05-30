@@ -1,3 +1,5 @@
+const SLIDES_GAP = 20;
+const CONTAINER_WIDTH = 1131;
 
 const swiper_product_cards = new Swiper('.swiper_product_cards', {
 	modules: [Navigation, Pagination, Grid],
@@ -6,7 +8,7 @@ const swiper_product_cards = new Swiper('.swiper_product_cards', {
 		rows: 4,
 		fill: 'column'
 	},
-	spaceBetween: 20,
+	spaceBetween: SLIDES_GAP / CONTAINER_WIDTH * 100 + '%',
 	pagination: {
 		el: ".swiper-pagination",
 		type: "fraction",
