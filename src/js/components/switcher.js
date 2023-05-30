@@ -5,8 +5,12 @@ let $switcher__containers = $('.switcher__container');
 window.switcherContainerHeight = () => {
 	$('.switcher__container').each(function (index, elem) {
 		let number = 1920 / window.outerWidth
-		if (window.outerWidth <= 768) number = 375 / window.outerWidth
-		let switcher_content_height = $(elem).find('.switcher__content.active').outerHeight() * number;
+		let height = $(elem).find('.switcher__content.active').outerHeight()*2
+		if (window.outerWidth <= 768) {
+			number = 375 / window.outerWidth
+			height = $(elem).find('.switcher__content.active').outerHeight()
+		}
+		let switcher_content_height = height * number;
 		$(elem).css('height', `${switcher_content_height}rem`);
 	});
 }
@@ -22,8 +26,12 @@ if ($switcher_btns.length > 0) {
 		let $switcher_container = $switcher.find('.switcher__container');
 		let $switcher_contents = $switcher_container.find('.switcher__content');
 		let number = 1920 / window.outerWidth
-		if (window.outerWidth <= 768) number = 375 / window.outerWidth
-		let switcher_content_height = $($switcher_contents[index]).outerHeight() * number;
+		let height = $($switcher_contents[index]).outerHeight()*2
+		if (window.outerWidth <= 768) {
+			number = 375 / window.outerWidth
+			height = $($switcher_contents[index]).outerHeight()
+		}
+		let switcher_content_height = height * number;
 
 		$this.siblings('.switcher__btn').removeClass('active');
 		$this.addClass('active');

@@ -1,0 +1,92 @@
+extends pug/base
+
+prepend vars
+	//-
+	- title = "Ingredients | Сообщение подробно"
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+
+		section.section.cabinet.section_messages
+			.container
+				.sidebar.gradient_border
+					.sidebar__top
+						.sidebar__img
+							img(src="images/cabinet/profile_img.png" alt="profile_img")
+						.sidebar__suptitle Компания
+						.sidebar__title ООО «Милорада»
+
+					.sidebar__items
+						.item
+							a.item__btn.item__drop_btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/box.svg
+								.item__name Товары
+							.item__drop
+								.item__list
+									a(href="#") Товары
+									a(href="#") Заказы
+									a(href="#") Отзывы и вопросы
+									a(href="#") Бренды
+						.item
+							a.item__btn.item__drop_btn.active(href="#")
+								.item__icon
+									include pug/svg/cabinet/profile_2user.svg
+								.item__name Личный кабинет
+							.item__drop(style="display: block")
+								.item__list
+									a.active(href="#") Личные данные
+									a(href="#") Личный кабинет 1
+									a(href="#") Личный кабинет 1
+									a(href="#") Личный кабинет 1
+
+						.item
+							a.item__btn.item__drop_btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/sms.svg
+								.item__name Запросы
+							.item__drop
+								.item__list
+									a(href="#") Запросы 1
+									a(href="#") Запросы 2
+									a(href="#") Запросы 3
+									a(href="#") Запросы 4
+
+				.cabinet__content
+					a.underline.cabinet__back(href="") Назад
+
+					.messages__box
+						.messages__box-top
+							.message.gradient_border
+								.message__img
+									img(src="images/cabinet/message_img.jpg" alt="message_img")
+								.message__inner
+									.message__top
+										span.message__author Викторов Александр
+									.message__bottom
+										span Милорада
+										span Логист
+										span.desktop 13 февраля, 2023 в 12:30
+										span.mobile 13.02.23 в 12:30
+						.messages__box-bottom
+							.message__boxs
+								.message__box-date Сегодня
+								.message__box.another.unread
+									.message__box-text Здравствуйте! Разнообразный и богатый опыт начало повседневной работы по формированию позиции влечет за собой...
+									.message__box-time 16:41
+								.message__box.my
+									.message__box-text Здравствуйте! Разнообразный и богатый опыт начало повседневной работы по формированию позиции влечет за собой...
+									.message__box-time 16:41
+							form.search.cabinet__search
+								label
+									include ./pug/svg/search_grey.svg
+									input(type="text" placeholder="Введите текст сообщения")
+								button(type="submit")
+									include ./pug/svg/arrow.svg
+
+
+	include pug/components/footer

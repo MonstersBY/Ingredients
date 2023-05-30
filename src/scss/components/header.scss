@@ -39,6 +39,18 @@
 		.icon:not(:last-child) {
 			margin-right: 16rem;
 		}
+		.icon.notification {
+			&::after {
+				position: absolute;
+				content: '';
+				background: url(../images/icons/notif-circle.svg) no-repeat;
+				background-size: 6rem 6rem;
+				width: 6rem;
+				height: 6rem;
+				left: 55%;
+				top: 38%;
+			}
+		}
 	}
 
 	.feedback {

@@ -1,0 +1,79 @@
+.notifications {
+	&__container {
+		width: 423rem;
+		position: fixed;
+		z-index: 10;
+		top: 125rem;
+		right: 255rem;
+	}
+	&__item {
+		position: relative;
+		background: #E3EAEE;
+		border: 1rem solid #7C9DA8;
+		border-radius: 5rem;
+		padding: 18rem 16rem;
+		display: flex;
+		line-height: 120%;
+		margin-bottom: 8rem;
+		gap: 16rem;
+		cursor: pointer;
+
+		&-exit {
+			margin-left: auto;
+			width: 20rem;
+			height: 20rem;
+			svg {
+				path {
+					stroke: #999999;
+				}
+			}
+		}
+		&-text {
+			margin-top: 3rem;
+		}
+		&-icon {
+			width: 24rem;
+			height: 24rem;
+		}
+		&.add {
+			background: #FFFDEB;
+			border: 1rem solid #FFE500;
+		}
+		&.warning {
+			background: #F9E7E9;
+			border: 1rem solid #E33046;
+		}
+		&:first-child::after {
+			content: '';
+			position: absolute;
+			width: 0;
+			height: 0;
+			border-bottom: 16rem solid #E3EAEE;
+			border-left: 16rem solid transparent;
+			border-right: 16rem solid transparent;
+			top: -5.5rem;
+			right: 0rem;
+		}
+		&:first-child::before {
+			content: '';
+			position: absolute;
+			border-bottom: 17rem solid #7C9DA8;
+			border-left: 12rem solid transparent;
+			border-right: 12rem solid transparent;
+			top: -8rem;
+			right: 4.5rem;
+		}
+		&:first-child.add::after {
+			border-bottom: 16rem solid #FFFDEB;
+		}
+		&:first-child.add::before {
+			border-bottom: 17rem solid #FFE500;
+		}
+		&:first-child.warning::after {
+			border-bottom: 16rem solid #F9E7E9;
+		}
+		&:first-child.warning::before {
+			border-bottom: 17rem solid #E33046;
+		}
+	}
+}
