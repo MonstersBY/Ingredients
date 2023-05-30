@@ -198,3 +198,5 @@ $('.section_messages .switcher__btn').on('click', function(evt) {
 		$messages.addClass('unread_only');
 	}
 });
+
+
