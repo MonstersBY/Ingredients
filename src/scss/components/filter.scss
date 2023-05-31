@@ -1,6 +1,19 @@
 .search {
 	display: flex;
 
+	.label-container {
+		display: flex;
+		flex: 1;
+		border-radius: 5rem;
+		label {
+			border-top-left-radius: 5rem;
+			border-bottom-left-radius: 5rem;
+		}
+		button {
+			border-top-right-radius: 5rem;
+			border-bottom-right-radius: 5rem;
+		}
+	}
 	&__filter {
 
 		select,
@@ -200,7 +213,11 @@
 .all-filter {
 	position: relative;
 	cursor: pointer;
-	&::after {
+	.btn {
+		justify-content: flex-start;
+		position: relative;
+	}
+	.btn::after {
 		content: '';
 		height: 10rem;
 		margin-top: -7rem;

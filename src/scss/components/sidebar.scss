@@ -3,10 +3,66 @@
 	flex-shrink: 0;
 	width: 357rem;
 	margin-right: 31rem;
-	background: linear-gradient(133.18deg, rgba(255, 255, 255, 0) 0.79%, rgba(247, 249, 251, 0.09) 0.8%, rgba(247, 249, 251, 0.09) 99.98%);
+	// background: linear-gradient(133.18deg, rgba(255, 255, 255, 0) 0.79%, rgba(247, 249, 251, 0.09) 0.8%, rgba(247, 249, 251, 0.09) 99.98%);
 	border-radius: 10rem;
 	box-shadow: -10rem -10rem 20rem rgba(255, 255, 255, 0.2), 10rem 10rem 10rem rgba(139, 168, 189, 0.05);
+	background: #EFF3F6;
 
+	&__container {
+		display: flex;
+		flex-direction: column;
+		gap: 28rem;
+	}
+	&-experts {
+		padding: 28rem 20rem 30rem;
+		background: #EFF3F6;
+		border-radius: 5rem;
+		width: 357rem;
+		border-radius: 10rem;
+
+		&.mobile {
+			display: none;
+		}
+
+		&__top {
+			display: flex;
+			gap: 20rem;
+			margin-bottom: 26rem;
+			font-size: 20rem;
+			line-height: 24rem;
+			align-items: center;
+		}
+
+		&__icon {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 52rem;
+			height: 52rem;
+			border-radius: 5rem;
+			background: rgba(255, 255, 255, 0.4);
+
+			svg {
+				width: 24rem;
+				height: 24rem;
+
+				path {
+					fill: #7C9DA8;
+				}
+			}
+		}
+		&__text {
+			flex: 1;
+		}
+		&__bottom {
+			display: flex;
+			justify-content: space-between;
+			align-items: end;
+		}
+		&__img {
+			width: 102.65rem;
+		}
+	}
 	&__top {
 		display: grid;
 		grid-template-columns: auto 1fr;
@@ -106,6 +162,9 @@
 			}
 		}
 
+		&__number {
+			margin-left: auto;
+		}
 		&__name {
 			color: #999;
 			transition: 500ms;
@@ -145,5 +204,40 @@
 @include mobile {
 	.sidebar {
 		display: none;
+
+		&-experts {
+			padding: 16rem;
+			width: 100%;
+			margin-bottom: 100rem;
+
+			&.mobile {
+				display: block;
+			}
+			&.desc {
+				display: none;
+			}
+
+			&__top {
+				gap: 12rem;
+				margin-bottom: 16rem;
+				font-size: 15rem;
+				line-height: 130%;
+			}
+
+			&__icon {
+				width: 44rem;
+				height: 44rem;
+
+			}
+			&__bottom {
+				display: flex;
+				justify-content: space-between;
+				align-items: end;
+			}
+
+			&__img {
+				width: 97rem;
+			}
+		}
 	}
 }

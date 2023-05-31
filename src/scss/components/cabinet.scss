@@ -1,6 +1,9 @@
 .cabinet {
 	// padding-top: 60rem;
 
+	.search__modal .container {
+		display: block;
+	}
 	.container {
 		display: flex;
 		align-items: flex-start;

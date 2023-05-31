@@ -1,0 +1,321 @@
+extends pug/base
+
+prepend vars
+	//-
+	- title = "Ingredients | Продукты"
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+
+		section.section.cabinet.card_product
+			.container
+				.sidebar__container
+					.sidebar.gradient_border
+						.sidebar__top
+							.sidebar__img
+								img(src="images/cabinet/profile_img.png" alt="profile_img")
+							.sidebar__suptitle Компания
+							.sidebar__title ООО «Милорада»
+
+						.sidebar__items
+
+							.item
+								a.item__btn(href="#")
+									.item__icon
+										include pug/svg/cabinet/award.svg
+									.item__name Бренды
+							.item
+								a.item__btn(href="#")
+									.item__icon
+										include pug/svg/cabinet/box.svg
+									.item__name Продукты
+									.item__number 13
+							.item
+								a.item__btn(href="#")
+									.item__icon
+										include pug/svg/cabinet/document-text.svg
+									.item__name Документы
+									.item__number 13
+							.item
+								a.item__btn(href="#")
+									.item__icon
+										include pug/svg/cabinet/profile_2user.svg
+									.item__name Эксперты
+							.item
+								a.item__btn(href="#")
+									.item__icon
+										include pug/svg/cabinet/lamp-on.svg
+									.item__name Разработки
+				.cabinet__content
+					.section__title Молоко сухое цельное Denmilk
+					.filter__inner.filter__control
+						button.icon
+							include pug/svg/like.svg
+						.filter__text Добавить в избранное
+						button.icon
+							include pug/svg/note-not-fill.svg
+						.filter__text Добавить к сравнению
+					.section__subtitle.small-section За счет специальной термической обработки, происходят две реакции: Маяра и карамелизации. Между двумя этими реакциям соблюдается строгий баланс. Композиция из натуральных сахаров, добавленная в сухое цельное молоко, провоцирует выделение определенных продуктов реакции
+
+					.section__title Характеристики
+					.product_characteristics.small-section
+						.product_characteristics__item
+							.product_characteristics__title Страна производителя
+							.product_characteristics__text Молочная продукция
+						.product_characteristics__item
+							.product_characteristics__title Торговая марка
+							.product_characteristics__text Denmilk
+						.product_characteristics__item
+							.product_characteristics__title Производитель
+							.product_characteristics__text ООО “Зеленые линии”
+						.product_characteristics__item
+							.product_characteristics__title Состав ингридиента
+							.product_characteristics__text Молоко цельное сухое
+						.product_characteristics__item
+							.product_characteristics__title Условия хранения
+							.product_characteristics__text.more М9 месяцев при температуре воздуха от 0°С до 20°С и относительной влажности не более 65%.
+						.product_characteristics__item
+							.product_characteristics__title Область применения
+							.product_characteristics__text применяется при производстве кондитерских изделий с целью придания им карамельного вкуса и аромата.
+						.product_characteristics__item
+							.product_characteristics__title Упаковка
+							.product_characteristics__text крафт-мешок с полиэтиленовым вкладышем массой нетто 15 кг.
+						.product_characteristics__item
+							.product_characteristics__title Функциональные свойство
+							.product_characteristics__text крафт-мешок с полиэтиленовым вкладышем массой нетто 15 кг.
+
+					.section__title Документы
+					form.form.small-section
+						.document
+							.document__zone.gradient_border
+								.document__icon.icon
+									include pug/svg/document-fill.svg
+								.document__text Сертификат соответствия системы менеджмента качества требованиям ГОСТ ISO 9001-2011 (ISO 9001-2011Сертификат соответствия системы менеджмента качества требованиям ГОСТ ISO 9001-2011 (ISO 9001-2011
+								.document__watch.icon
+									include pug/svg/eye-black.svg
+								.document__download.icon
+									include pug/svg/download-simple.svg
+						.document
+							.document__zone.gradient_border
+								.document__icon.icon
+									include pug/svg/document-fill.svg
+								.document__text Сертификат соответствия системы менеджмента качества требованиям ГОСТ ISO 9001-2011 (ISO 9001-2011Сертификат соответствия системы менеджмента качества требованиям ГОСТ ISO 9001-2011 (ISO 9001-2011
+								.document__watch.icon
+									include pug/svg/eye-black.svg
+								.document__download.icon
+									include pug/svg/download-simple.svg
+						.document
+							.document__zone.gradient_border
+								.document__icon.icon
+									include pug/svg/document-fill.svg
+								.document__text Сертификат соответствия системы менеджмента качества требованиям ГОСТ ISO 9001-2011 (ISO 9001-2011Сертификат соответствия системы менеджмента качества требованиям ГОСТ ISO 9001-2011 (ISO 9001-2011
+								.document__watch.icon
+									include pug/svg/eye-black.svg
+								.document__download.icon
+									include pug/svg/download-simple.svg
+						.document
+							.document__zone.gradient_border
+								.document__icon.icon
+									include pug/svg/document-fill.svg
+								.document__text Сертификат соответствия системы менеджмента качества требованиям ГОСТ ISO 9001-2011 (ISO 9001-2011Сертификат соответствия системы менеджмента качества требованиям ГОСТ ISO 9001-2011 (ISO 9001-2011
+								.document__watch.icon
+									include pug/svg/eye-black.svg
+								.document__download.icon
+									include pug/svg/download-simple.svg
+						.form_bottom
+							button.btn.right Запросить докумены
+
+					.section__title Отзывы
+					.swiper_shadow
+						.swiper_grid_container
+							.swiper.swiper_review
+
+								.swiper-wrapper
+
+									.swiper-slide
+										.slide
+											.product-review.gradient_border
+												.product-review__top
+													.product-review__vendor
+														img(src="images/vendors/vendor2.jpg" alt="")
+													.product-review__top-container
+														.product-review__top__title «Милорада»
+														.product-review__top__subtitle Виктор Б.
+													.product-review__top__info
+														.product-review__top__rating
+															.product-review__top__stars
+																.star.checked
+																.star.checked
+																.star.checked
+																.star.checked
+																.star
+														.product-review__top__date 09.01.23
+												.product-review__text Пришло быстро, описание соответствует действительности Пришло быстро, описание соответствует действительности..Пришло быстро, описание соответствует действительности Пришло быстро, описание
+												.product-review__bottom
+													.product-review__open.underline Смотреть ответ поставщика
+													.product-review__bottom__info
+														.product-review__bottom__like
+															include pug/svg/mdi_like-outline.svg
+														span 1
+														.product-review__bottom__dislike
+															include pug/svg/mdi_dislike-outline.svg
+														span 2
+											.product-review__answer
+												.product-review__answer-title Ответ поставщикка:
+												.product-review__answer-text Спасибо что выбрали наш товар! Спасибо что выбрали наш товар!Спасибо что выбрали наш товар!Спасибо что выбрали наш товар!Спасибо что выбрали наш товар!Спасибо что выбрали наш товар!Спасибо
+												.product-review__answer-info
+													span Милорада
+													span Логист
+													span 13 февраля, 2023 в 12:30
+
+										.slide
+											.product-review.gradient_border
+												.product-review__top
+													.product-review__vendor
+														img(src="images/vendors/vendor2.jpg" alt="")
+													.product-review__top-container
+														.product-review__top__title «Милорада»
+														.product-review__top__subtitle Виктор Б.
+													.product-review__top__info
+														.product-review__top__rating
+															.product-review__top__stars
+																.star.checked
+																.star.checked
+																.star.checked
+																.star.checked
+																.star
+														.product-review__top__date 09.01.23
+												.product-review__text Пришло быстро, описание соответствует действительности Пришло быстро, описание соответствует действительности..Пришло быстро, описание соответствует действительности Пришло быстро, описание
+												.product-review__bottom
+													.product-review__open.underline Смотреть ответ поставщика
+													.product-review__bottom__info
+														.product-review__bottom__like
+															include pug/svg/mdi_like-outline.svg
+														span 1
+														.product-review__bottom__dislike
+															include pug/svg/mdi_dislike-outline.svg
+														span 2
+											.product-review__answer
+												.product-review__answer-title Ответ поставщикка:
+												.product-review__answer-text Спасибо что выбрали наш товар! Спасибо что выбрали наш товар!Спасибо что выбрали наш товар!Спасибо что выбрали наш товар!Спасибо что выбрали наш товар!Спасибо что выбрали наш товар!Спасибо
+												.product-review__answer-info
+													span Милорада
+													span Логист
+													span 13 февраля, 2023 в 12:30
+
+									.swiper-slide
+										.slide
+											.product-review.gradient_border
+												.product-review__top
+													.product-review__vendor
+														img(src="images/vendors/vendor2.jpg" alt="")
+													.product-review__top-container
+														.product-review__top__title «Милорада»
+														.product-review__top__subtitle Виктор Б.
+													.product-review__top__info
+														.product-review__top__rating
+															.product-review__top__stars
+																.star.checked
+																.star.checked
+																.star.checked
+																.star.checked
+																.star
+														.product-review__top__date 09.01.23
+												.product-review__text Пришло быстро, описание соответствует действительности Пришло быстро, описание соответствует действительности..Пришло быстро, описание соответствует действительности Пришло быстро, описание
+												.product-review__bottom
+													.product-review__open.underline Смотреть ответ поставщика
+													.product-review__bottom__info
+														.product-review__bottom__like
+															include pug/svg/mdi_like-outline.svg
+														span 1
+														.product-review__bottom__dislike
+															include pug/svg/mdi_dislike-outline.svg
+														span 2
+											.product-review__answer
+												.product-review__answer-title Ответ поставщикка:
+												.product-review__answer-text Спасибо что выбрали наш товар! Спасибо что выбрали наш товар!Спасибо что выбрали наш товар!Спасибо что выбрали наш товар!Спасибо что выбрали наш товар!Спасибо что выбрали наш товар!Спасибо
+												.product-review__answer-info
+													span Милорада
+													span Логист
+													span 13 февраля, 2023 в 12:30
+
+										.slide
+											.product-review.gradient_border
+												.product-review__top
+													.product-review__vendor
+														img(src="images/vendors/vendor2.jpg" alt="")
+													.product-review__top-container
+														.product-review__top__title «Милорада»
+														.product-review__top__subtitle Виктор Б.
+													.product-review__top__info
+														.product-review__top__rating
+															.product-review__top__stars
+																.star.checked
+																.star.checked
+																.star.checked
+																.star.checked
+																.star
+														.product-review__top__date 09.01.23
+												.product-review__text Пришло быстро, описание соответствует действительности Пришло быстро, описание соответствует действительности..Пришло быстро, описание соответствует действительности Пришло быстро, описание
+												.product-review__bottom
+													.product-review__open.underline Смотреть ответ поставщика
+													.product-review__bottom__info
+														.product-review__bottom__like
+															include pug/svg/mdi_like-outline.svg
+														span 1
+														.product-review__bottom__dislike
+															include pug/svg/mdi_dislike-outline.svg
+														span 2
+											.product-review__answer
+												.product-review__answer-title Ответ поставщикка:
+												.product-review__answer-text Спасибо что выбрали наш товар! Спасибо что выбрали наш товар!Спасибо что выбрали наш товар!Спасибо что выбрали наш товар!Спасибо что выбрали наш товар!Спасибо что выбрали наш товар!Спасибо
+												.product-review__answer-info
+													span Милорада
+													span Логист
+													span 13 февраля, 2023 в 12:30
+
+									.swiper-slide
+										.slide
+											.product-review.gradient_border
+												.product-review__top
+													.product-review__vendor
+														img(src="images/vendors/vendor2.jpg" alt="")
+													.product-review__top-container
+														.product-review__top__title «Милорада»
+														.product-review__top__subtitle Виктор Б.
+													.product-review__top__info
+														.product-review__top__rating
+															.product-review__top__stars
+																.star.checked
+																.star.checked
+																.star.checked
+																.star.checked
+																.star
+														.product-review__top__date 09.01.23
+												.product-review__text Пришло быстро, описание соответствует действительности Пришло быстро, описание соответствует действительности..Пришло быстро, описание соответствует действительности Пришло быстро, описание
+												.product-review__bottom
+													.product-review__open.underline Смотреть ответ поставщика
+													.product-review__bottom__info
+														.product-review__bottom__like
+															include pug/svg/mdi_like-outline.svg
+														span 1
+														.product-review__bottom__dislike
+															include pug/svg/mdi_dislike-outline.svg
+														span 2
+											.product-review__answer
+												.product-review__answer-title Ответ поставщикка:
+												.product-review__answer-text Спасибо что выбрали наш товар! Спасибо что выбрали наш товар!Спасибо что выбрали наш товар!Спасибо что выбрали наш товар!Спасибо что выбрали наш товар!Спасибо что выбрали наш товар!Спасибо
+												.product-review__answer-info
+													span Милорада
+													span Логист
+													span 13 февраля, 2023 в 12:30
+
+								.swiper_control
+									.swiper-button-prev
+									.swiper-button-next
+									.swiper-pagination
+	include pug/components/footer

@@ -360,8 +360,10 @@
 		margin-bottom: 8rem;
 	}
 	.document {
+		border-radius: 10rem;
 		margin-bottom: 28rem;
 		&__zone {
+			border-radius: 10rem;
 			padding: 20rem;
 			display: flex;
 		}
