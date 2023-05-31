@@ -2,7 +2,7 @@ extends pug/base
 
 prepend vars
 	//-
-	- title = "Ingredients | Запросы образцов"
+	- title = "Ingredients | Запросы документов"
 
 append vars
 	//-
@@ -57,13 +57,13 @@ block content
 									a(href="#") Закупки 4
 
 				.cabinet__content.my_sample_request
-					.section__title Запросы образцов
+					.section__title Запросы документов
 					.bnt_scroll
 						.switcher__control
-							button.btn.switcher__btn.all_btn.active(type="button") Все #[span (4)]
-							button.btn.switcher__btn.new_btn(type="button") Новые #[span (1)]
-							button.btn.switcher__btn.delivered_btn(type="button") Доставлено #[span (1)]
-							button.btn.switcher__btn.denied_btn(type="button") Отказано #[span (1)]
+							button.btn.switcher__btn.all_btn.active(type="button") Все #[span (0)]
+							button.btn.switcher__btn.new_btn(type="button") Новые #[span (0)]
+							button.btn.switcher__btn.delivered_btn(type="button") Доставлено #[span (0)]
+							button.btn.switcher__btn.denied_btn(type="button") Отказано #[span (0)]
 					form.search.cabinet__search
 						label
 							include ./pug/svg/search_grey.svg
@@ -73,14 +73,14 @@ block content
 
 					.sample_request__column.my
 						.sample_request__column_date Статус изменен
-						.sample_request__column_product Продукт
+						.sample_request__column_doc Тип документа
 						.sample_request__column_company Бренд / Компания
 						.sample_request__column_sup Поддержка
 						.sample_request__column_status Статус
 					.switcher__container
 						.switcher__content.count_all.active
 							.swiper_shadow
-								.swiper.swiper_sample_request
+								.swiper.swiper_sample_request.doc_request
 
 									.swiper-wrapper
 
@@ -89,9 +89,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -106,9 +106,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -123,9 +123,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -140,9 +140,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -157,9 +157,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -174,9 +174,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -191,9 +191,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -208,9 +208,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -225,9 +225,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -242,9 +242,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -259,9 +259,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -276,9 +276,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -293,9 +293,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -310,9 +310,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -327,9 +327,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -344,9 +344,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -361,9 +361,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -378,9 +378,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -395,9 +395,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -414,7 +414,7 @@ block content
 
 						.switcher__content
 							.swiper_shadow
-								.swiper.swiper_sample_request
+								.swiper.swiper_sample_request.doc_request
 
 									.swiper-wrapper
 
@@ -423,9 +423,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -440,9 +440,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -457,9 +457,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -474,9 +474,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -491,9 +491,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -508,7 +508,7 @@ block content
 										.swiper-pagination
 						.switcher__content
 							.swiper_shadow
-								.swiper.swiper_sample_request
+								.swiper.swiper_sample_request.doc_request
 
 									.swiper-wrapper
 
@@ -517,9 +517,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -534,9 +534,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -551,9 +551,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -568,9 +568,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -585,9 +585,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -602,7 +602,7 @@ block content
 										.swiper-pagination
 						.switcher__content
 							.swiper_shadow
-								.swiper.swiper_sample_request
+								.swiper.swiper_sample_request.doc_request
 
 									.swiper-wrapper
 
@@ -611,9 +611,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -628,9 +628,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -645,9 +645,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -662,9 +662,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -679,9 +679,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -695,9 +695,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -711,9 +711,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -727,9 +727,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette
@@ -743,9 +743,9 @@ block content
 												.sample_request__date
 													span.mobile Статус изменен
 													| 01.02.23
-												.sample_request__product
-													span.mobile Продукт
-													| Аскорбил пальмитат
+												.sample_request__doc
+													span.mobile Тип документа
+													| SDS DOC
 												.sample_request__company
 													span.mobile Бренд / Компания
 													| Lycasin / Roquette

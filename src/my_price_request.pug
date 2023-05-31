@@ -2,7 +2,7 @@ extends pug/base
 
 prepend vars
 	//-
-	- title = "Ingredients | Запросы образцов"
+	- title = "Ingredients | Запросы цен"
 
 append vars
 	//-
@@ -57,13 +57,13 @@ block content
 									a(href="#") Закупки 4
 
 				.cabinet__content.my_sample_request
-					.section__title Запросы образцов
+					.section__title Запросы цен
 					.bnt_scroll
 						.switcher__control
-							button.btn.switcher__btn.all_btn.active(type="button") Все #[span (4)]
-							button.btn.switcher__btn.new_btn(type="button") Новые #[span (1)]
-							button.btn.switcher__btn.delivered_btn(type="button") Доставлено #[span (1)]
-							button.btn.switcher__btn.denied_btn(type="button") Отказано #[span (1)]
+							button.btn.switcher__btn.all_btn.active(type="button") Все #[span (0)]
+							button.btn.switcher__btn.new_btn(type="button") Новые #[span (0)]
+							button.btn.switcher__btn.delivered_btn(type="button") Доставлено #[span (0)]
+							button.btn.switcher__btn.denied_btn(type="button") Отказано #[span (0)]
 					form.search.cabinet__search
 						label
 							include ./pug/svg/search_grey.svg
