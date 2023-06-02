@@ -1,0 +1,238 @@
+.modal-request {
+
+	.modal-box__close {
+		margin-bottom: -35rem;
+	}
+
+	&-first, &-second, &-last {
+		display: none;
+
+		&.active {
+			display: block;
+		}
+	}
+	&__product {
+		padding: 20rem;
+		display: flex;
+		gap: 20rem;
+		align-items: center;
+		background: rgba(255, 255, 255, 0.4);
+		box-shadow: -10rem -10rem 20rem rgba(255, 255, 255, 0.2), 10rem 10rem 10rem rgba(139, 168, 189, 0.05);
+		border-radius: 10rem;
+		margin-bottom: 30rem;
+
+		&-vendor {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background: #FFFFFF;
+			box-shadow: 5rem 5rem 30rem rgba(113, 147, 173, 0.1);
+			border-radius: 5rem;
+			width: 100rem;
+			height: 100rem;
+		}
+	}
+	&__steps {
+		display: flex;
+		border: 1rem solid #BBCBD0;
+		border-radius: 5rem;
+		margin-bottom: 40rem;
+	}
+	&__step {
+		text-align: center;
+		flex: 1;
+		color: #201702;
+		padding: 14rem 0;
+
+		&:first-child {
+			border-right: 1rem solid #BBCBD0;
+			position: relative;
+
+			&::after {
+				content: '';
+				position: absolute;
+				top: 10rem;
+				right: -15rem;
+				background: url(../images/vectors/Slice_1.svg) no-repeat;
+				background-size: 17rem 32rem;
+				display: block;
+				width: 17rem;
+				height: 32rem;
+			}
+		}
+		&.active {
+			font-weight: 700;
+			background: rgba(187, 203, 208, 0.2);
+		}
+		svg {
+			width: 24rem;
+			height: 24rem;
+			position: absolute;
+			left: 55rem;
+			top: 25%;
+		}
+	}
+	&__like {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 110rem;
+		height: 110rem;
+		background: #BBCBD0;
+		box-shadow: 5rem 5rem 25rem rgba(153, 173, 187, 0.1);
+		border-radius: 5rem;
+		margin: 60rem auto 35rem;
+
+		svg {
+			width: 61rem;
+			height: 61rem;
+			margin-left: 15rem;
+		}
+	}
+	&-second {
+		.modal-request__step {
+
+			&:first-child {
+
+				&::after {
+					background: url(../images/vectors/Slice_2.svg) no-repeat;
+					background-size: 17rem 32rem;
+				}
+			}
+		}
+	}
+	.section__text {
+		text-align: center;
+		font-size: 24rem;
+		line-height: 130%;
+		color: #000000;
+		margin-bottom: 85rem;
+	}
+	&__btns {
+		display: flex;
+		justify-content: center;
+		gap: 20rem;
+	}
+}
+
+@include mobile {
+	.modal-request {
+		.section__title {
+			width: 80%;
+		}
+
+		.modal-box__close {
+			margin-bottom: 0;
+		}
+
+		&-first, &-second, &-last {
+			display: none;
+
+			&.active {
+				display: block;
+			}
+		}
+		&__product {
+			padding: 12rem;
+			gap: 17rem;
+			margin-bottom: 20rem;
+
+			&-vendor {
+				width: 62rem;
+				height: 63rem;
+
+				img {
+					width: 45rem;
+				}
+			}
+			&-text {
+				flex: 1;
+			}
+		}
+		&__steps {
+			display: flex;
+			flex-direction: column;
+			border: 1rem solid #BBCBD0;
+			border-radius: 5rem;
+			margin-bottom: 40rem;
+		}
+		&__step {
+			text-align: center;
+			flex: 1;
+			color: #201702;
+			padding: 17rem 0;
+
+			&:first-child {
+				border-right: unset;
+				border-bottom: 1rem solid #BBCBD0;
+				position: relative;
+
+				&::after {
+					content: '';
+					position: absolute;
+					top: unset;
+					right: 0;
+					left: 0;
+					background: url(../images/vectors/Slice_1.svg) no-repeat;
+					background-size: 17rem 32rem;
+					display: block;
+					width: 17rem;
+					height: 32rem;
+					transform: rotate(90deg);
+					margin: 0 auto;
+					bottom: -22.5rem;
+				}
+			}
+			&.active {
+				font-weight: 700;
+				background: rgba(187, 203, 208, 0.2);
+			}
+			svg {
+				left: 45rem;
+			}
+		}
+		&__like {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 90rem;
+			height: 90rem;
+			background: #BBCBD0;
+			box-shadow: 5rem 5rem 25rem rgba(153, 173, 187, 0.1);
+			border-radius: 5rem;
+			margin: 32rem auto 22rem;
+
+			svg {
+				width: 61rem;
+				height: 61rem;
+				margin-left: 15rem;
+			}
+		}
+		.section__text {
+			text-align: center;
+			font-size: 20rem;
+			line-height: 24rem;
+			color: #000000;
+			margin-bottom: 32rem;
+		}
+		&__btns {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			gap: 20rem;
+		}
+		.nice-select {
+			line-height: 130%;
+			padding-top: 16rem;
+			padding-bottom: 16rem;
+			white-space: initial;
+			span {
+			}
+			li {
+				line-height: 130%;
+				margin-top: 10rem;
+				margin-bottom: 10rem;
+			}
+		}
+	}
+}

@@ -32,6 +32,19 @@
 		margin-bottom: 40rem;
 		color: #686666;
 	}
+	&__close {
+		margin-left: auto;
+		display: block;
+
+		svg {
+			width: 32rem;
+			height: 32rem;
+			path {
+				stroke: #686666;
+			}
+		}
+
+	}
 
 	.form {
 		.form__icon ~ .input {
@@ -96,6 +109,15 @@
 			font-size: 13rem;
 			margin-bottom: 32rem;
 			color: #686666;
+		}
+		&__close {
+			margin-left: auto;
+			display: block;
+
+			svg {
+				width: 20rem;
+				height: 20rem;
+			}
 		}
 
 		.form {

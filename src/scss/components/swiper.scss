@@ -13,7 +13,12 @@
 		display: none !important;
 	}
 }
-
+.swiper-wrapper.swiper-row-column {
+	.swiper-slide {
+		display: flex;
+		flex-direction: row;
+	}
+}
 .swiper_control {
 	display: flex;
 	align-items: center;
@@ -138,6 +143,12 @@
 
 		&-button-lock {
 			display: none !important;
+		}
+	}
+	.swiper-wrapper.swiper-row-column {
+		.swiper-slide {
+			display: flex;
+			flex-direction: column;
 		}
 	}
 

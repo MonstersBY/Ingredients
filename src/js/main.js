@@ -43,6 +43,8 @@ import './components/choose-tag';
 import './components/swiper_product_cards';
 import './components/modal_product_reviews';
 import './components/swiper_review';
+import './components/swiper_column_line';
+import './components/modal-request';
 
 
 $('select').niceSelect();

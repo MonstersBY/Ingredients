@@ -10,7 +10,6 @@ const swiper_review = new Swiper('.swiper_review', {
 		nextEl: ".swiper-button-next",
 		prevEl: ".swiper-button-prev",
 	},
-
 });
 // ChangeHeight()
 // function ChangeHeight() {
@@ -33,26 +32,16 @@ $('.swiper_review .product-review__open').on('click', function(evt){
 	let $slide = $this.closest('.slide');
 	let $wrapper = $this.closest('.swiper-wrapper');
 	const height = $wrapper[0].scrollHeight
-	if($wrapper.find('.active').length) {
+	if($slide.children('.product-review__answer').hasClass('active')) {
 		$wrapper.find('.active').slideToggle()
 		$wrapper.find('.active').toggleClass('active')
+	} else {
+		if($wrapper.find('.active').length) {
+			$wrapper.find('.active').slideToggle()
+			$wrapper.find('.active').toggleClass('active')
+		}
+		$slide.children('.product-review__answer').toggleClass('active');
+		$slide.children('.product-review__answer').slideToggle();
 	}
-
-	$slide.children('.product-review__answer').toggleClass('active');
-	$slide.children('.product-review__answer').slideToggle();
-	// setTimeout(()=>{
-	// 	console.log($slide.children('.product-review__answer').height())
-	// 	$wrapper.css("height", `${height+$slide.children('.product-review__answer')[0].scrollHeight}rem`);
-	// }, 400);
-
 })
 
-// $('.item__drop_btn').on('click', function(evt) {
-// 	evt.preventDefault();
-// 	let $this = $(this);
-// 	let $drop = $this.siblings('.item__drop');
-
-// 	$this.toggleClass('active');
-// 	$drop.slideToggle();
-
-// });

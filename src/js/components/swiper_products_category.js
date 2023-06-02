@@ -57,3 +57,16 @@ const products_category_small = new Swiper('.swiper_products-category-small', {
 		  }
 	}
 });
+
+const products_category_no_grid = new Swiper('.swiper_products-category-no-grid', {
+	modules: [Navigation, Pagination],
+	speed: 1000,
+	pagination: {
+		el: ".swiper-pagination",
+		type: "fraction",
+	},
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+});

@@ -122,6 +122,10 @@
 		align-items: center;
 		justify-content: space-between;
 		margin-top: 40rem;
+
+		&.right {
+			justify-content: end;
+		}
 	}
 
 	&__link {

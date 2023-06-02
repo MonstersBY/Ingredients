@@ -12,6 +12,99 @@ block content
 	main
 
 		section.section.cabinet.card_product
+			.modal-box.modal-request.modal-price
+				.modal-box__container
+					.modal-request-first
+						button.modal-box__close(type="button")
+							include pug/svg/cross.svg
+						.section__title Оформление заказа
+						.section__subtitle Вы оформляете заказ у Hitema
+						.modal-request__product.gradient_border
+							.modal-request__product-vendor
+								img(src="images/vendors/vendor2.jpg" alt="")
+							.modal-request__product-text FB 06 Растворимая пшеничная клетчатка
+						.modal-request__steps
+							.modal-request__step.active Сведения о покупке
+							.modal-request__step Детали получателя
+						form.form.form_login.form_validation
+							.form__item
+								select(name="")
+									option Область применения
+									option Область применения 2
+									option Область применения 3
+
+							label.form__item
+								input.input(type="text")
+								span.placeholder Объем заказа
+
+							label.form__item
+								input.input(type="text")
+								span.placeholder Ожидаемый годовой объем
+
+							label.form__item
+								input.input(type="text")
+								span.placeholder Опишите назначение в готовом продукте и ожидаемый результат
+
+							.form__item
+								select(name="")
+									option Понадобиться ли вам технологическое сопровождение?
+									option Понадобиться ли вам технологическое сопровождение? 2
+									option Понадобиться ли вам технологическое сопровождение? 3
+
+							.form__item
+								select(name="")
+									option Условия доставки
+									option Условия доставки 2
+									option Условия доставки 3
+
+							label.form__item
+								input.input(type="text")
+								span.placeholder Адрес доставки
+
+							.form__bottom.right
+								button.btn.btn-next(type="submit") Далее
+
+					.modal-request-second
+						button.modal-box__close(type="button")
+							include pug/svg/cross.svg
+						.section__title Оформление заказа
+						.section__subtitle Вы оформляете заказ у Hitema
+						.modal-request__product.gradient_border
+							.modal-request__product-vendor
+								img(src="images/vendors/vendor2.jpg" alt="")
+							.modal-request__product-text FB 06 Растворимая пшеничная клетчатка
+						.modal-request__steps
+							.modal-request__step.active Сведения о покупке
+								include pug/svg/tick-circle.svg
+							.modal-request__step.active Детали получателя
+						form.form.form_login.form_validation
+
+							label.form__item
+								input.input(type="text")
+								span.placeholder ФИО
+
+							label.form__item
+								input.input(type="tel")
+								span.placeholder Контактный телефон
+
+							label.form__item
+								input.input(type="email")
+								span.placeholder E-mail
+
+							.form__bottom.right
+								button.btn.btn-last(type="submit") Оформить заказ
+
+					.modal-request-last
+						button.modal-box__close(type="button")
+							include pug/svg/cross.svg
+						.section__title Оформление заказа
+						.modal-request__like
+							include pug/svg/big-like.svg
+						.section__text Ваш заказ успешно отправлен в Hitema!
+						.modal-request__btns
+							button.btn.empty Мои заказы
+							button.btn.btn__close Вернуться к продукту
+
 			.container
 				.sidebar__container
 					.sidebar.gradient_border
@@ -50,15 +143,51 @@ block content
 									.item__icon
 										include pug/svg/cabinet/lamp-on.svg
 									.item__name Разработки
+
+					.sidebar-request.desc
+						.sidebar-request__head
+							.sidebar-request__vendor
+								img(src="images/vendors/vendor2.jpg" alt="")
+							.sidebar-request__head-info
+								.sidebar-request__title «Милорада»
+								.sidebar-request__text Брендов: #[span 025]
+								.sidebar-request__text Продуктов: #[span 2849]
+						.sidebar-request__text Выберите количество
+						form.form
+							label.form__item
+								input.input(type="text")
+								span.placeholder Количество
+						button.btn.btn-price Запросить цену
+						button.btn.btn-sample Запросить образец
+						button.btn.btn-doc Заказать продукт
+						.sidebar-request__item
+							.sidebar-request__item-icon
+										include pug/svg/box-not-fill.svg
+							.sidebar-request__item-container
+								.sidebar-request__item-title Минимальный объем для заказа
+								.sidebar-request__item-subtitle 38 т.
+						.sidebar-request__item
+							.sidebar-request__item-icon
+										include pug/svg/convert-3d-cube.svg
+							.sidebar-request__item-container
+								.sidebar-request__item-title Условия поставки
+								.sidebar-request__item-subtitle Самовывоз
+						.sidebar-request__item
+							.sidebar-request__item-icon
+										include pug/svg/transport.svg
+							.sidebar-request__item-container
+								.sidebar-request__item-title Доступность по регионам
+								.sidebar-request__item-subtitle Вся Россия
+
 				.cabinet__content
 					.section__title Молоко сухое цельное Denmilk
 					.filter__inner.filter__control
 						button.icon
 							include pug/svg/like.svg
-						.filter__text Добавить в избранное
+						.filter__text #[span.desc Добавить] в избранное
 						button.icon
 							include pug/svg/note-not-fill.svg
-						.filter__text Добавить к сравнению
+						.filter__text #[span.desc Добавить] к сравнению
 					.section__subtitle.small-section За счет специальной термической обработки, происходят две реакции: Маяра и карамелизации. Между двумя этими реакциям соблюдается строгий баланс. Композиция из натуральных сахаров, добавленная в сухое цельное молоко, провоцирует выделение определенных продуктов реакции
 
 					.section__title Характеристики
@@ -129,7 +258,55 @@ block content
 						.form_bottom
 							button.btn.right Запросить докумены
 
-					.section__title Отзывы
+					.sidebar-request.mobile
+						.sidebar-request__head
+							.sidebar-request__vendor
+								img(src="images/vendors/vendor2.jpg" alt="")
+							.sidebar-request__head-info
+								.sidebar-request__title «Милорада»
+								.sidebar-request__text Брендов: #[span 025]
+								.sidebar-request__text Продуктов: #[span 2849]
+						.sidebar-request__text Выберите количество
+						form.form
+							label.form__item
+								input.input(type="text")
+								span.placeholder Количество
+						button.btn.btn-price Запросить цену
+						button.btn.btn-sample Запросить образец
+						button.btn.btn-doc Заказать продукт
+						.sidebar-request__item
+							.sidebar-request__item-icon
+										include pug/svg/box-not-fill.svg
+							.sidebar-request__item-container
+								.sidebar-request__item-title Минимальный объем для заказа
+								.sidebar-request__item-subtitle 38 т.
+						.sidebar-request__item
+							.sidebar-request__item-icon
+										include pug/svg/convert-3d-cube.svg
+							.sidebar-request__item-container
+								.sidebar-request__item-title Условия поставки
+								.sidebar-request__item-subtitle Самовывоз
+						.sidebar-request__item
+							.sidebar-request__item-icon
+										include pug/svg/transport.svg
+							.sidebar-request__item-container
+								.sidebar-request__item-title Доступность по регионам
+								.sidebar-request__item-subtitle Вся Россия
+
+					.section__head
+						.section__title Отзывы
+						.review__head
+							.review__head-container
+								.review__head-top
+									.review__head-top__score 4.6
+									.review__head-top__stars
+										.star.checked
+										.star.checked
+										.star.checked
+										.star.checked
+										.star
+								.review__head-bottom на основе #[span 493]  отзывов
+							button.btn Оставить отзыв
 					.swiper_shadow
 						.swiper_grid_container
 							.swiper.swiper_review
@@ -318,4 +495,283 @@ block content
 									.swiper-button-prev
 									.swiper-button-next
 									.swiper-pagination
+						a.btn(href='#') Смотреть все
+
+					.section__title.title_swiper Вас также могут заинтересовать
+
+					.swiper_shadow
+						.swiper_grid_container
+							.swiper.swiper_products-category.swiper_products-category-no-grid
+
+								.swiper-wrapper.swiper-row-column
+
+									.swiper-slide
+										.slide
+											.product-category.gradient_border
+												.product-category__img
+													img(src="images/prod-category/img1.jpg" alt="Продукт")
+												.product-category__vendor
+													img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+												.product-category__name HItema
+												.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+												.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+												a.product-category__link.underline Подробнее
+										.slide
+											.product-category.gradient_border
+												.product-category__img
+													img(src="images/prod-category/img1.jpg" alt="Продукт")
+												.product-category__vendor
+													img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+												.product-category__name HItema
+												.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+												.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+												a.product-category__link.underline Подробнее
+										.slide
+											.product-category.gradient_border
+												.product-category__img
+													img(src="images/prod-category/img1.jpg" alt="Продукт")
+												.product-category__vendor
+													img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+												.product-category__name HItema
+												.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+												.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+												a.product-category__link.underline Подробнее
+									.swiper-slide
+										.slide
+											.product-category.gradient_border
+												.product-category__img
+													img(src="images/prod-category/img1.jpg" alt="Продукт")
+												.product-category__vendor
+													img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+												.product-category__name HItema
+												.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+												.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+												a.product-category__link.underline Подробнее
+										.slide
+											.product-category.gradient_border
+												.product-category__img
+													img(src="images/prod-category/img1.jpg" alt="Продукт")
+												.product-category__vendor
+													img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+												.product-category__name HItema
+												.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+												.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+												a.product-category__link.underline Подробнее
+										.slide
+											.product-category.gradient_border
+												.product-category__img
+													img(src="images/prod-category/img1.jpg" alt="Продукт")
+												.product-category__vendor
+													img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+												.product-category__name HItema
+												.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+												.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+												a.product-category__link.underline Подробнее
+									.swiper-slide
+										.slide
+											.product-category.gradient_border
+												.product-category__img
+													img(src="images/prod-category/img1.jpg" alt="Продукт")
+												.product-category__vendor
+													img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+												.product-category__name HItema
+												.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+												.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+												a.product-category__link.underline Подробнее
+										.slide
+											.product-category.gradient_border
+												.product-category__img
+													img(src="images/prod-category/img1.jpg" alt="Продукт")
+												.product-category__vendor
+													img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+												.product-category__name HItema
+												.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+												.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+												a.product-category__link.underline Подробнее
+										.slide
+											.product-category.gradient_border
+												.product-category__img
+													img(src="images/prod-category/img1.jpg" alt="Продукт")
+												.product-category__vendor
+													img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+												.product-category__name HItema
+												.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+												.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+												a.product-category__link.underline Подробнее
+
+								.swiper_control
+									.swiper-button-prev
+									.swiper-button-next
+									.swiper-pagination
+
+		section.section.other_product
+			.container
+				.section__title Молоко сухое цельное Denmilk
+
+				.table
+					.thead
+						.tr
+							.th.photo
+							.th.name Название
+							.th.subcat Подкатегория
+							.th.packaging Тип упаковки
+							.th.date Срок годности
+							.th.watch
+
+				.swiper_shadow.tbody
+					.swiper.swiper_column_line
+
+						.swiper_control
+							.swiper-button-prev
+							.swiper-button-next
+							.swiper-pagination
+
+						.swiper-wrapper
+
+
+							.swiper-slide
+								.tr.gradient_border
+									.td.photo
+										img(src="images/product_creation/card01.jpg", alt="")
+									.td.name
+										span Пищевая промышленность
+										| Аскорбил пальминат
+									.td.subcat
+										span.mobile Подкатегория
+										| Молочные продукты
+									.td.packaging
+										span.mobile Типо упаковки
+										| Коробка
+									.td.date
+										span.mobile Срок годности
+										| 09.01.2023
+									.td.watch.underline Смотреть
+
+								.tr.gradient_border
+									.td.photo
+										img(src="images/product_creation/card01.jpg", alt="")
+									.td.name
+										span Пищевая промышленность
+										| Аскорбил пальминат
+									.td.subcat
+										span.mobile Подкатегория
+										| Молочные продукты
+									.td.packaging
+										span.mobile Типо упаковки
+										| Коробка
+									.td.date
+										span.mobile Срок годности
+										| 09.01.2023
+									.td.watch.underline Смотреть
+
+								.tr.gradient_border
+									.td.photo
+										img(src="images/product_creation/card01.jpg", alt="")
+									.td.name
+										span Пищевая промышленность
+										| Аскорбил пальминат
+									.td.subcat
+										span.mobile Подкатегория
+										| Молочные продукты
+									.td.packaging
+										span.mobile Типо упаковки
+										| Коробка
+									.td.date
+										span.mobile Срок годности
+										| 09.01.2023
+									.td.watch.underline Смотреть
+
+								.tr.gradient_border
+									.td.photo
+										img(src="images/product_creation/card01.jpg", alt="")
+									.td.name
+										span Пищевая промышленность
+										| Аскорбил пальминат
+									.td.subcat
+										span.mobile Подкатегория
+										| Молочные продукты
+									.td.packaging
+										span.mobile Типо упаковки
+										| Коробка
+									.td.date
+										span.mobile Срок годности
+										| 09.01.2023
+									.td.watch.underline Смотреть
+
+							.swiper-slide
+								.tr.gradient_border
+									.td.photo
+										img(src="images/product_creation/card01.jpg", alt="")
+									.td.name
+										span Пищевая промышленность
+										| Аскорбил пальминат
+									.td.subcat
+										span.mobile Подкатегория
+										| Молочные продукты
+									.td.packaging
+										span.mobile Типо упаковки
+										| Коробка
+									.td.date
+										span.mobile Срок годности
+										| 09.01.2023
+									.td.watch.underline Смотреть
+
+								.tr.gradient_border
+									.td.photo
+										img(src="images/product_creation/card01.jpg", alt="")
+									.td.name
+										span Пищевая промышленность
+										| Аскорбил пальминат
+									.td.subcat
+										span.mobile Подкатегория
+										| Молочные продукты
+									.td.packaging
+										span.mobile Типо упаковки
+										| Коробка
+									.td.date
+										span.mobile Срок годности
+										| 09.01.2023
+									.td.watch.underline Смотреть
+
+								.tr.gradient_border
+									.td.photo
+										img(src="images/product_creation/card01.jpg", alt="")
+									.td.name
+										span Пищевая промышленность
+										| Аскорбил пальминат
+									.td.subcat
+										span.mobile Подкатегория
+										| Молочные продукты
+									.td.packaging
+										span.mobile Типо упаковки
+										| Коробка
+									.td.date
+										span.mobile Срок годности
+										| 09.01.2023
+									.td.watch.underline Смотреть
+
+								.tr.gradient_border
+									.td.photo
+										img(src="images/product_creation/card01.jpg", alt="")
+									.td.name
+										span Пищевая промышленность
+										| Аскорбил пальминат
+									.td.subcat
+										span.mobile Подкатегория
+										| Молочные продукты
+									.td.packaging
+										span.mobile Типо упаковки
+										| Коробка
+									.td.date
+										span.mobile Срок годности
+										| 09.01.2023
+									.td.watch.underline Смотреть
+				button.btn Смотреть все
+
+
+
+
+
+
+
 	include pug/components/footer
