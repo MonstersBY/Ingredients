@@ -1,0 +1,122 @@
+extends pug/base
+
+prepend vars
+	//-
+	- title = "Ingredients | Продукты Эксперт"
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+
+		section.section.cabinet.card_product
+			.lines
+				img(src="images/lines.svg" alt="lines.svg")
+			.container
+				.sidebar__container
+					.sidebar.gradient_border
+						.sidebar__top
+							.sidebar__img
+								img(src="images/cabinet/profile_img.png" alt="profile_img")
+							.sidebar__suptitle Компания
+							.sidebar__title ООО «Милорада»
+
+						.sidebar__items
+
+							.item
+								a.item__btn(href="#")
+									.item__icon
+										include pug/svg/cabinet/award.svg
+									.item__name Бренды
+							.item
+								a.item__btn(href="#")
+									.item__icon
+										include pug/svg/cabinet/box.svg
+									.item__name Продукты
+									.item__number 13
+							.item
+								a.item__btn(href="#")
+									.item__icon
+										include pug/svg/cabinet/document-text.svg
+									.item__name Документы
+									.item__number 13
+							.item
+								a.item__btn(href="#")
+									.item__icon
+										include pug/svg/cabinet/profile_2user.svg
+									.item__name Эксперты
+							.item
+								a.item__btn(href="#")
+									.item__icon
+										include pug/svg/cabinet/lamp-on.svg
+									.item__name Разработки
+
+
+				.cabinet__content
+					.section__title Эксперт
+
+					.experts__container
+						.experts__item.gradient_border
+							.experts__head
+								.experts__img.yellow
+									img(src="images/cabinet/message_img.jpg" alt="message_img")
+								.experts__head-container
+									.experts__title Директор
+									.experts__name Виктор Макаренко
+							.experts__text Пожалуйста, обращайтесь ко мне с любыми вопросами, я буду рад помочь вам найти нужный товар или узнать больше о нашем магазине.
+							button.btn Написать
+
+						.experts__item.gradient_border
+							.experts__head
+								.experts__img.grey
+									img(src="images/cabinet/message_img.jpg" alt="message_img")
+								.experts__head-container
+									.experts__title Директор
+									.experts__name Виктор Макаренко
+							.experts__text Пожалуйста, обращайтесь ко мне с любыми вопросами, я буду рад помочь вам найти нужный товар или узнать больше о нашем магазине.
+							button.btn Написать
+
+						.experts__item.gradient_border
+							.experts__head
+								.experts__img.red
+									img(src="images/cabinet/message_img.jpg" alt="message_img")
+								.experts__head-container
+									.experts__title Директор
+									.experts__name Виктор Макаренко
+							.experts__text Пожалуйста, обращайтесь ко мне с любыми вопросами, я буду рад помочь вам найти нужный товар или узнать больше о нашем магазине.
+							button.btn Написать
+
+						.experts__item.gradient_border
+							.experts__head
+								.experts__img.yellow
+									img(src="images/cabinet/message_img.jpg" alt="message_img")
+								.experts__head-container
+									.experts__title Директор
+									.experts__name Виктор Макаренко
+							.experts__text Пожалуйста, обращайтесь ко мне с любыми вопросами, я буду рад помочь вам найти нужный товар или узнать больше о нашем магазине.
+							button.btn Написать
+
+						.experts__item.gradient_border
+							.experts__head
+								.experts__img.grey
+									img(src="images/cabinet/message_img.jpg" alt="message_img")
+								.experts__head-container
+									.experts__title Директор
+									.experts__name Виктор Макаренко
+							.experts__text Пожалуйста, обращайтесь ко мне с любыми вопросами, я буду рад помочь вам найти нужный товар или узнать больше о нашем магазине.
+							button.btn Написать
+
+						.experts__item.gradient_border
+							.experts__head
+								.experts__img.red
+									img(src="images/cabinet/message_img.jpg" alt="message_img")
+								.experts__head-container
+									.experts__title Директор
+									.experts__name Виктор Макаренко
+							.experts__text Пожалуйста, обращайтесь ко мне с любыми вопросами, я буду рад помочь вам найти нужный товар или узнать больше о нашем магазине.
+							button.btn Написать
+
+
+	include pug/components/footer

@@ -1,0 +1,341 @@
+extends pug/base
+
+prepend vars
+	//-
+	- title = "Ingredients | Продукты документы"
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+
+		section.section.cabinet.card_product.card_product_document
+			.lines
+				img(src="images/lines.svg" alt="lines.svg")
+			.container
+				.sidebar__container
+					.sidebar.gradient_border
+						.sidebar__top
+							.sidebar__img
+								img(src="images/cabinet/profile_img.png" alt="profile_img")
+							.sidebar__suptitle Компания
+							.sidebar__title ООО «Милорада»
+
+						.sidebar__items
+
+							.item
+								a.item__btn(href="#")
+									.item__icon
+										include pug/svg/cabinet/award.svg
+									.item__name Бренды
+							.item
+								a.item__btn(href="#")
+									.item__icon
+										include pug/svg/cabinet/box.svg
+									.item__name Продукты
+									.item__number 13
+							.item
+								a.item__btn(href="#")
+									.item__icon
+										include pug/svg/cabinet/document-text.svg
+									.item__name Документы
+									.item__number 13
+							.item
+								a.item__btn(href="#")
+									.item__icon
+										include pug/svg/cabinet/profile_2user.svg
+									.item__name Эксперты
+							.item
+								a.item__btn(href="#")
+									.item__icon
+										include pug/svg/cabinet/lamp-on.svg
+									.item__name Разработки
+
+
+				.cabinet__content
+					.section__title Продукты
+					form.search.cabinet__search.twoinput
+						.form__item
+							select(name="")
+								option По функциям
+								option По функциям 2
+								option По функциям 3
+						.label-container
+							label
+								include ./pug/svg/search_grey.svg
+								input(type="text" placeholder="Поиск заявки")
+							button(type="submit")
+								include ./pug/svg/arrow.svg
+					.section__subtitle Соответствующие категории
+					.card_product-category
+						.card_product-category__item.gradient_border
+							.card_product-category__img
+								img(src="images/cards/card02.jpg" alt="")
+							.card_product-category__title Снэки и злаки
+							.card_product-category__props
+								.card_product-category__prop Безалкогольные алкогольные
+								.card_product-category__prop Алкогольные
+								.card_product-category__prop Ферментированные
+							a.card_product-category__btn.underline(href="#") Перейти
+						.card_product-category__item.gradient_border
+							.card_product-category__img
+								img(src="images/cards/card03.jpg" alt="")
+							.card_product-category__title Напитки
+							.card_product-category__props
+								.card_product-category__prop Безалкогольные алкогольные
+								.card_product-category__prop Алкогольные
+								.card_product-category__prop Ферментированные
+							a.card_product-category__btn.underline(href="#") Перейти
+						.card_product-category__item.gradient_border
+							.card_product-category__img
+								img(src="images/cards/card04.jpg" alt="")
+							.card_product-category__title Кондитерские продукты
+							.card_product-category__props
+								.card_product-category__prop Безалкогольные алкогольные
+								.card_product-category__prop Алкогольные
+								.card_product-category__prop Ферментированные
+							a.card_product-category__btn.underline(href="#") Перейти
+
+					.filter
+						.filter__inner
+							form.search
+								.search__filter.desktop
+									select(name="search1")
+										option(value="0" selected) Фильтр 1
+										option(value="1") Фильтр 1 1
+										option(value="2") Фильтр 1 2
+										option(value="3") Фильтр 1 3
+
+								.search__filter.desktop
+									select(name="search2")
+										option(value="0" selected) Фильтр 1
+										option(value="1") Фильтр 1 1
+										option(value="2") Фильтр 1 2
+										option(value="3") Фильтр 1 3
+
+								.search__filter.desktop
+									select(name="search2")
+										option(value="0" selected) Фильтр 1
+										option(value="1") Фильтр 1 1
+										option(value="2") Фильтр 1 2
+										option(value="3") Фильтр 1 3
+
+								.search__inner.all-filter
+									button.btn Все фильтры
+					.table
+						.thead
+							.tr
+								.th.name Имя документа
+								.th.product Продукты
+								.th.link
+								.th.like
+
+					.swiper_shadow.tbody
+						.swiper.swiper_column_line
+
+							.swiper_control
+								.swiper-button-prev
+								.swiper-button-next
+								.swiper-pagination
+
+							.swiper-wrapper
+
+
+								.swiper-slide
+									.tr.gradient_border
+										.td.name
+											span.mobile Имя документа
+											| Ацетат магния тетрагидрат кристаллический Лист технических характеристик продукта
+										.td.product
+											span.mobile Продукты
+											| Ниацет Ацетат магния тетрагидрат кристаллический технический
+										.td.link.underline Смотреть
+										.td.like
+											.icon
+												include pug/svg/like.svg
+
+									.tr.gradient_border
+										.td.name
+											span.mobile Имя документа
+											| Ацетат магния тетрагидрат кристаллический Лист технических характеристик продукта
+										.td.product
+											span.mobile Продукты
+											| Ниацет Ацетат магния тетрагидрат кристаллический технический
+										.td.link.underline Смотреть
+										.td.like
+											.icon
+												include pug/svg/like.svg
+
+									.tr.gradient_border
+										.td.name
+											span.mobile Имя документа
+											| Ацетат магния тетрагидрат кристаллический Лист технических характеристик продукта
+										.td.product
+											span.mobile Продукты
+											| Ниацет Ацетат магния тетрагидрат кристаллический технический
+										.td.link.underline Смотреть
+										.td.like
+											.icon
+												include pug/svg/like.svg
+
+									.tr.gradient_border
+										.td.name
+											span.mobile Имя документа
+											| Ацетат магния тетрагидрат кристаллический Лист технических характеристик продукта
+										.td.product
+											span.mobile Продукты
+											| Ниацет Ацетат магния тетрагидрат кристаллический технический
+										.td.link.underline Смотреть
+										.td.like
+											.icon
+												include pug/svg/like.svg
+
+									.tr.gradient_border
+										.td.name
+											span.mobile Имя документа
+											| Ацетат магния тетрагидрат кристаллический Лист технических характеристик продукта
+										.td.product
+											span.mobile Продукты
+											| Ниацет Ацетат магния тетрагидрат кристаллический технический
+										.td.link.underline Смотреть
+										.td.like
+											.icon
+												include pug/svg/like.svg
+
+									.tr.gradient_border
+										.td.name
+											span.mobile Имя документа
+											| Ацетат магния тетрагидрат кристаллический Лист технических характеристик продукта
+										.td.product
+											span.mobile Продукты
+											| Ниацет Ацетат магния тетрагидрат кристаллический технический
+										.td.link.underline Смотреть
+										.td.like
+											.icon
+												include pug/svg/like.svg
+
+									.tr.gradient_border
+										.td.name
+											span.mobile Имя документа
+											| Ацетат магния тетрагидрат кристаллический Лист технических характеристик продукта
+										.td.product
+											span.mobile Продукты
+											| Ниацет Ацетат магния тетрагидрат кристаллический технический
+										.td.link.underline Смотреть
+										.td.like
+											.icon
+												include pug/svg/like.svg
+
+									.tr.gradient_border
+										.td.name
+											span.mobile Имя документа
+											| Ацетат магния тетрагидрат кристаллический Лист технических характеристик продукта
+										.td.product
+											span.mobile Продукты
+											| Ниацет Ацетат магния тетрагидрат кристаллический технический
+										.td.link.underline Смотреть
+										.td.like
+											.icon
+												include pug/svg/like.svg
+
+								.swiper-slide
+									.tr.gradient_border
+										.td.name
+											span.mobile Имя документа
+											| Ацетат магния тетрагидрат кристаллический Лист технических характеристик продукта
+										.td.product
+											span.mobile Продукты
+											| Ниацет Ацетат магния тетрагидрат кристаллический технический
+										.td.link.underline Смотреть
+										.td.like
+											.icon
+												include pug/svg/like.svg
+
+									.tr.gradient_border
+										.td.name
+											span.mobile Имя документа
+											| Ацетат магния тетрагидрат кристаллический Лист технических характеристик продукта
+										.td.product
+											span.mobile Продукты
+											| Ниацет Ацетат магния тетрагидрат кристаллический технический
+										.td.link.underline Смотреть
+										.td.like
+											.icon
+												include pug/svg/like.svg
+
+									.tr.gradient_border
+										.td.name
+											span.mobile Имя документа
+											| Ацетат магния тетрагидрат кристаллический Лист технических характеристик продукта
+										.td.product
+											span.mobile Продукты
+											| Ниацет Ацетат магния тетрагидрат кристаллический технический
+										.td.link.underline Смотреть
+										.td.like
+											.icon
+												include pug/svg/like.svg
+
+									.tr.gradient_border
+										.td.name
+											span.mobile Имя документа
+											| Ацетат магния тетрагидрат кристаллический Лист технических характеристик продукта
+										.td.product
+											span.mobile Продукты
+											| Ниацет Ацетат магния тетрагидрат кристаллический технический
+										.td.link.underline Смотреть
+										.td.like
+											.icon
+												include pug/svg/like.svg
+
+									.tr.gradient_border
+										.td.name
+											span.mobile Имя документа
+											| Ацетат магния тетрагидрат кристаллический Лист технических характеристик продукта
+										.td.product
+											span.mobile Продукты
+											| Ниацет Ацетат магния тетрагидрат кристаллический технический
+										.td.link.underline Смотреть
+										.td.like
+											.icon
+												include pug/svg/like.svg
+
+									.tr.gradient_border
+										.td.name
+											span.mobile Имя документа
+											| Ацетат магния тетрагидрат кристаллический Лист технических характеристик продукта
+										.td.product
+											span.mobile Продукты
+											| Ниацет Ацетат магния тетрагидрат кристаллический технический
+										.td.link.underline Смотреть
+										.td.like
+											.icon
+												include pug/svg/like.svg
+
+									.tr.gradient_border
+										.td.name
+											span.mobile Имя документа
+											| Ацетат магния тетрагидрат кристаллический Лист технических характеристик продукта
+										.td.product
+											span.mobile Продукты
+											| Ниацет Ацетат магния тетрагидрат кристаллический технический
+										.td.link.underline Смотреть
+										.td.like
+											.icon
+												include pug/svg/like.svg
+
+									.tr.gradient_border
+										.td.name
+											span.mobile Имя документа
+											| Ацетат магния тетрагидрат кристаллический Лист технических характеристик продукта
+										.td.product
+											span.mobile Продукты
+											| Ниацет Ацетат магния тетрагидрат кристаллический технический
+										.td.link.underline Смотреть
+										.td.like
+											.icon
+												include pug/svg/like.svg
+
+
+	include pug/components/footer
