@@ -17,8 +17,8 @@ block content
 					.modal-request-first
 						button.modal-box__close(type="button")
 							include pug/svg/cross.svg
-						.section__title Оформление заказа
-						.section__subtitle Вы оформляете заказ у Hitema
+						.section__title Запрос цены
+						.section__subtitle Вы запрашиваете цену у Hitema
 						.modal-request__product.gradient_border
 							.modal-request__product-vendor
 								img(src="images/vendors/vendor2.jpg" alt="")
@@ -67,8 +67,8 @@ block content
 					.modal-request-second
 						button.modal-box__close(type="button")
 							include pug/svg/cross.svg
-						.section__title Оформление заказа
-						.section__subtitle Вы оформляете заказ у Hitema
+						.section__title Запрос цены
+						.section__subtitle Вы запрашиваете цену у Hitema
 						.modal-request__product.gradient_border
 							.modal-request__product-vendor
 								img(src="images/vendors/vendor2.jpg" alt="")
@@ -97,12 +97,12 @@ block content
 					.modal-request-last
 						button.modal-box__close(type="button")
 							include pug/svg/cross.svg
-						.section__title Оформление заказа
+						.section__title.center Запрос цены
 						.modal-request__like
 							include pug/svg/big-like.svg
-						.section__text Ваш заказ успешно отправлен в Hitema!
+						.section__text Ваш запрос успешно отправлен в Hitema!
 						.modal-request__btns
-							button.btn.empty Мои заказы
+							button.btn.empty Мои запросы
 							button.btn.btn__close Вернуться к продукту
 
 			.modal-box.modal-request.modal-document
@@ -146,12 +146,12 @@ block content
 					.modal-request-second
 						button.modal-box__close(type="button")
 							include pug/svg/cross.svg
-						.section__title Запрос документа
+						.section__title.center Запрос документа
 						.modal-request__like
 							include pug/svg/big-like.svg
 						.section__text Ваш запрос успешно отправлен в Hitema!
 						.modal-request__btns
-							button.btn.empty Мои заказы
+							button.btn.empty Мои запросы
 							button.btn.btn__close Вернуться к продукту
 
 			.modal-box.modal-request.modal-sample
@@ -241,7 +241,7 @@ block content
 
 							label.form__item
 								input.input(type="text" onfocus="(this.type='date')")
-								span.placeholder Укажите дату, к которой необходимо отправить ингредиент
+								span.placeholder #[span.desc Укажите дату]  #[span.mobile Дата], к которой необходимо отправить ингредиент
 								.calendar-icon
 									include pug/svg/calendar.svg
 							.form__bottom
@@ -251,10 +251,103 @@ block content
 					.modal-request-last
 						button.modal-box__close(type="button")
 							include pug/svg/cross.svg
-						.section__title Запрос образца
+						.section__title.center Запрос образца
 						.modal-request__like
 							include pug/svg/big-like.svg
 						.section__text Ваш запрос успешно отправлен в Hitema!
+						.modal-request__btns
+							button.btn.empty Мои запросы
+							button.btn.btn__close Вернуться к продукту
+
+			.modal-box.modal-request.modal-order
+				.modal-box__container
+					.modal-request-first
+						button.modal-box__close(type="button")
+							include pug/svg/cross.svg
+						.section__title Оформление заказа
+						.section__subtitle Вы оформляете заказ у Hitema
+						.modal-request__product.gradient_border
+							.modal-request__product-vendor
+								img(src="images/vendors/vendor2.jpg" alt="")
+							.modal-request__product-text FB 06 Растворимая пшеничная клетчатка
+						.modal-request__steps
+							.modal-request__step.active Сведения о покупке
+							.modal-request__step Детали получателя
+						form.form.form_validation
+							.form__item
+								select(name="")
+									option Область применения
+									option Область применения 2
+									option Область применения 3
+
+							label.form__item
+								input.input(type="text")
+								span.placeholder Объем заказа
+
+							label.form__item
+								input.input(type="text")
+								span.placeholder Ожидаемый годовой объем
+
+							label.form__item
+								input.input(type="text")
+								span.placeholder Опишите назначение в готовом продукте и ожидаемый результат
+
+							.form__item
+								select(name="")
+									option Понадобиться ли вам технологическое сопровождение?
+									option Понадобиться ли вам технологическое сопровождение? 2
+									option Понадобиться ли вам технологическое сопровождение? 3
+
+							.form__item
+								select(name="")
+									option Условия доставки
+									option Условия доставки 2
+									option Условия доставки 3
+
+							label.form__item
+								input.input(type="text")
+								span.placeholder Адрес доставки
+
+							.form__bottom.right
+								button.btn.btn-next(type="submit") Далее
+
+					.modal-request-second
+						button.modal-box__close(type="button")
+							include pug/svg/cross.svg
+						.section__title Оформление заказа
+						.section__subtitle Вы оформляете заказ у Hitema
+						.modal-request__product.gradient_border
+							.modal-request__product-vendor
+								img(src="images/vendors/vendor2.jpg" alt="")
+							.modal-request__product-text FB 06 Растворимая пшеничная клетчатка
+						.modal-request__steps
+							.modal-request__step.active Сведения о покупке
+								include pug/svg/tick-circle.svg
+							.modal-request__step.active Детали получателя
+						form.form.form_validation
+
+							label.form__item
+								input.input(type="text")
+								span.placeholder ФИО
+
+							label.form__item
+								input.input(type="tel")
+								span.placeholder Контактный телефон
+
+							label.form__item
+								input.input(type="email")
+								span.placeholder E-mail
+
+							.form__bottom.right
+								button.btn.btn-last(type="submit") Оформить заказ
+
+					.modal-request-last
+						button.modal-box__close(type="button")
+							include pug/svg/cross.svg
+						.section__title.center Оформление заказа
+						.modal-request__like
+							include pug/svg/big-like.svg
+						.section__text Ваш заказ успешно отправлен в Hitema!
 						.modal-request__btns
 							button.btn.empty Мои заказы
 							button.btn.btn__close Вернуться к продукту

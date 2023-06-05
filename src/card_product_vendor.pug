@@ -12,6 +12,421 @@ block content
 	main
 
 		section.section.cabinet.card_product_vendor
+			.modal-box.modal-request.modal-price-vendor
+				.modal-box__container
+					.modal-request-list
+						button.modal-box__close(type="button")
+							include pug/svg/cross.svg
+						.section__title Запрос цены
+						.section__subtitle Вы запрашиваете цену у Hitema. Выберите товар для оформления запроса
+						form.search.cabinet__search
+							.label-container
+								label
+									include ./pug/svg/search_grey.svg
+									input(type="text" placeholder="Название ингредиента")
+								button(type="submit")
+									include ./pug/svg/arrow.svg
+						.modal-request-vendor__container
+							.modal-request-vendor__item.gradient_border
+								.modal-request-vendor__img
+									img(src="images/cards/card02.jpg" alt="")
+								.modal-request-vendor__name Молоко сухое цельное  Denmilk Карамелизованное
+								.underline.start-request Запрос
+							.modal-request-vendor__item.gradient_border
+								.modal-request-vendor__img
+									img(src="images/cards/card02.jpg" alt="")
+								.modal-request-vendor__name Молоко сухое цельное  Denmilk Карамелизованное
+								.underline.start-request Запрос
+							.modal-request-vendor__item.gradient_border
+								.modal-request-vendor__img
+									img(src="images/cards/card02.jpg" alt="")
+								.modal-request-vendor__name Молоко сухое цельное  Denmilk Карамелизованное
+								.underline.start-request Запрос
+							.modal-request-vendor__item.gradient_border
+								.modal-request-vendor__img
+									img(src="images/cards/card02.jpg" alt="")
+								.modal-request-vendor__name Молоко сухое цельное  Denmilk Карамелизованное
+								.underline.start-request Запрос
+							.modal-request-vendor__item.gradient_border
+								.modal-request-vendor__img
+									img(src="images/cards/card02.jpg" alt="")
+								.modal-request-vendor__name Молоко сухое цельное  Denmilk Карамелизованное
+								.underline.start-request Запрос
+							.modal-request-vendor__item.gradient_border
+								.modal-request-vendor__img
+									img(src="images/cards/card02.jpg" alt="")
+								.modal-request-vendor__name Молоко сухое цельное  Denmilk Карамелизованное
+								.underline.start-request Запрос
+							.modal-request-vendor__item.gradient_border
+								.modal-request-vendor__img
+									img(src="images/cards/card02.jpg" alt="")
+								.modal-request-vendor__name Молоко сухое цельное  Denmilk Карамелизованное
+								.underline.start-request Запрос
+							.modal-request-vendor__item.gradient_border
+								.modal-request-vendor__img
+									img(src="images/cards/card02.jpg" alt="")
+								.modal-request-vendor__name Молоко сухое цельное  Denmilk Карамелизованное
+								.underline.start-request Запрос
+						.modal-request-vendor__show
+							.underline Показать еще
+
+					.modal-request-first
+						button.modal-box__close(type="button")
+							include pug/svg/cross.svg
+						.section__title Запрос цены
+						.section__subtitle Вы запрашиваете цену у Hitema
+						.modal-request__product.gradient_border
+							.modal-request__product-vendor
+								img(src="images/vendors/vendor2.jpg" alt="")
+							.modal-request__product-text FB 06 Растворимая пшеничная клетчатка
+						.modal-request__steps
+							.modal-request__step.active Сведения о покупке
+							.modal-request__step Детали получателя
+						form.form.form_validation
+							.form__item
+								select(name="")
+									option Область применения
+									option Область применения 2
+									option Область применения 3
+
+							label.form__item
+								input.input(type="text")
+								span.placeholder Объем заказа
+
+							label.form__item
+								input.input(type="text")
+								span.placeholder Ожидаемый годовой объем
+
+							label.form__item
+								input.input(type="text")
+								span.placeholder Опишите назначение в готовом продукте и ожидаемый результат
+
+							.form__item
+								select(name="")
+									option Понадобиться ли вам технологическое сопровождение?
+									option Понадобиться ли вам технологическое сопровождение? 2
+									option Понадобиться ли вам технологическое сопровождение? 3
+
+							.form__item
+								select(name="")
+									option Условия доставки
+									option Условия доставки 2
+									option Условия доставки 3
+
+							label.form__item
+								input.input(type="text")
+								span.placeholder Адрес доставки
+
+							.form__bottom.right
+								button.btn.btn-next(type="submit") Далее
+
+					.modal-request-second
+						button.modal-box__close(type="button")
+							include pug/svg/cross.svg
+						.section__title Запрос цены
+						.section__subtitle Вы запрашиваете цену у Hitema
+						.modal-request__product.gradient_border
+							.modal-request__product-vendor
+								img(src="images/vendors/vendor2.jpg" alt="")
+							.modal-request__product-text FB 06 Растворимая пшеничная клетчатка
+						.modal-request__steps
+							.modal-request__step.active Сведения о покупке
+								include pug/svg/tick-circle.svg
+							.modal-request__step.active Детали получателя
+						form.form.form_validation
+
+							label.form__item
+								input.input(type="text")
+								span.placeholder ФИО
+
+							label.form__item
+								input.input(type="tel")
+								span.placeholder Контактный телефон
+
+							label.form__item
+								input.input(type="email")
+								span.placeholder E-mail
+
+							.form__bottom.right
+								button.btn.btn-last(type="submit") Оформить заказ
+
+					.modal-request-last
+						button.modal-box__close(type="button")
+							include pug/svg/cross.svg
+						.section__title.center Запрос цены
+						.modal-request__like
+							include pug/svg/big-like.svg
+						.section__text Ваш запрос успешно отправлен в Hitema!
+						.modal-request__btns
+							button.btn.empty Мои запросы
+							button.btn.btn__close Вернуться к продукту
+
+			.modal-box.modal-request.modal-document-vendor
+				.modal-box__container
+					.modal-request-list
+						button.modal-box__close(type="button")
+							include pug/svg/cross.svg
+						.section__title Запрос документа
+						.section__subtitle Вы запрашиваете документ у Hitema. Выберите товар для оформления запроса
+						form.search.cabinet__search
+							.label-container
+								label
+									include ./pug/svg/search_grey.svg
+									input(type="text" placeholder="Название ингредиента")
+								button(type="submit")
+									include ./pug/svg/arrow.svg
+						.modal-request-vendor__container
+							.modal-request-vendor__item.gradient_border
+								.modal-request-vendor__img
+									img(src="images/cards/card02.jpg" alt="")
+								.modal-request-vendor__name Молоко сухое цельное  Denmilk Карамелизованное
+								.underline.start-request Запрос
+							.modal-request-vendor__item.gradient_border
+								.modal-request-vendor__img
+									img(src="images/cards/card02.jpg" alt="")
+								.modal-request-vendor__name Молоко сухое цельное  Denmilk Карамелизованное
+								.underline.start-request Запрос
+							.modal-request-vendor__item.gradient_border
+								.modal-request-vendor__img
+									img(src="images/cards/card02.jpg" alt="")
+								.modal-request-vendor__name Молоко сухое цельное  Denmilk Карамелизованное
+								.underline.start-request Запрос
+							.modal-request-vendor__item.gradient_border
+								.modal-request-vendor__img
+									img(src="images/cards/card02.jpg" alt="")
+								.modal-request-vendor__name Молоко сухое цельное  Denmilk Карамелизованное
+								.underline.start-request Запрос
+							.modal-request-vendor__item.gradient_border
+								.modal-request-vendor__img
+									img(src="images/cards/card02.jpg" alt="")
+								.modal-request-vendor__name Молоко сухое цельное  Denmilk Карамелизованное
+								.underline.start-request Запрос
+							.modal-request-vendor__item.gradient_border
+								.modal-request-vendor__img
+									img(src="images/cards/card02.jpg" alt="")
+								.modal-request-vendor__name Молоко сухое цельное  Denmilk Карамелизованное
+								.underline.start-request Запрос
+							.modal-request-vendor__item.gradient_border
+								.modal-request-vendor__img
+									img(src="images/cards/card02.jpg" alt="")
+								.modal-request-vendor__name Молоко сухое цельное  Denmilk Карамелизованное
+								.underline.start-request Запрос
+							.modal-request-vendor__item.gradient_border
+								.modal-request-vendor__img
+									img(src="images/cards/card02.jpg" alt="")
+								.modal-request-vendor__name Молоко сухое цельное  Denmilk Карамелизованное
+								.underline.start-request Запрос
+						.modal-request-vendor__show
+							.underline Показать еще
+
+					.modal-request-first
+						button.modal-box__close(type="button")
+							include pug/svg/cross.svg
+						.section__title Запрос документа
+						.section__subtitle Вы запрашиваете документ у Hitema
+						.modal-request__product.gradient_border
+							.modal-request__product-vendor
+								img(src="images/vendors/vendor2.jpg" alt="")
+							.modal-request__product-text FB 06 Растворимая пшеничная клетчатка
+						form.form.form_validation
+							.form__item
+								select(name="")
+									option Область применения
+									option Область применения 2
+									option Область применения 3
+
+							.form__item
+								select(name="")
+									option Язык
+									option Язык 2
+									option Язык 3
+
+							.form__item
+								select(name="")
+									option Применяемый регион
+									option Применяемый регион 2
+									option Применяемый регион 3
+
+							label.form__item
+								input.input(type="text")
+								span.placeholder Заметки к запросу
+
+
+							.form__bottom.right
+								button.btn.btn-next(type="submit") Далее
+
+					.modal-request-second
+						button.modal-box__close(type="button")
+							include pug/svg/cross.svg
+						.section__title.center Запрос документа
+						.modal-request__like
+							include pug/svg/big-like.svg
+						.section__text Ваш запрос успешно отправлен в Hitema!
+						.modal-request__btns
+							button.btn.empty Мои запросы
+							button.btn.btn__close Вернуться к продукту
+
+			.modal-box.modal-request.modal-sample-vendor
+				.modal-box__container
+					.modal-request-list
+						button.modal-box__close(type="button")
+							include pug/svg/cross.svg
+						.section__title Запрос цены
+						.section__subtitle Вы запрашиваете цену у Hitema. Выберите товар для оформления запроса
+						form.search.cabinet__search
+							.label-container
+								label
+									include ./pug/svg/search_grey.svg
+									input(type="text" placeholder="Название ингредиента")
+								button(type="submit")
+									include ./pug/svg/arrow.svg
+						.modal-request-vendor__container
+							.modal-request-vendor__item.gradient_border
+								.modal-request-vendor__img
+									img(src="images/cards/card02.jpg" alt="")
+								.modal-request-vendor__name Молоко сухое цельное  Denmilk Карамелизованное
+								.underline.start-request Запрос
+							.modal-request-vendor__item.gradient_border
+								.modal-request-vendor__img
+									img(src="images/cards/card02.jpg" alt="")
+								.modal-request-vendor__name Молоко сухое цельное  Denmilk Карамелизованное
+								.underline.start-request Запрос
+							.modal-request-vendor__item.gradient_border
+								.modal-request-vendor__img
+									img(src="images/cards/card02.jpg" alt="")
+								.modal-request-vendor__name Молоко сухое цельное  Denmilk Карамелизованное
+								.underline.start-request Запрос
+							.modal-request-vendor__item.gradient_border
+								.modal-request-vendor__img
+									img(src="images/cards/card02.jpg" alt="")
+								.modal-request-vendor__name Молоко сухое цельное  Denmilk Карамелизованное
+								.underline.start-request Запрос
+							.modal-request-vendor__item.gradient_border
+								.modal-request-vendor__img
+									img(src="images/cards/card02.jpg" alt="")
+								.modal-request-vendor__name Молоко сухое цельное  Denmilk Карамелизованное
+								.underline.start-request Запрос
+							.modal-request-vendor__item.gradient_border
+								.modal-request-vendor__img
+									img(src="images/cards/card02.jpg" alt="")
+								.modal-request-vendor__name Молоко сухое цельное  Denmilk Карамелизованное
+								.underline.start-request Запрос
+							.modal-request-vendor__item.gradient_border
+								.modal-request-vendor__img
+									img(src="images/cards/card02.jpg" alt="")
+								.modal-request-vendor__name Молоко сухое цельное  Denmilk Карамелизованное
+								.underline.start-request Запрос
+							.modal-request-vendor__item.gradient_border
+								.modal-request-vendor__img
+									img(src="images/cards/card02.jpg" alt="")
+								.modal-request-vendor__name Молоко сухое цельное  Denmilk Карамелизованное
+								.underline.start-request Запрос
+						.modal-request-vendor__show
+							.underline Показать еще
+
+					.modal-request-first
+						button.modal-box__close(type="button")
+							include pug/svg/cross.svg
+						.section__title Запрос образца
+						.section__subtitle Вы запрашиваете образец у Hitema
+						.modal-request__product.gradient_border
+							.modal-request__product-vendor
+								img(src="images/vendors/vendor2.jpg" alt="")
+							.modal-request__product-text FB 06 Растворимая пшеничная клетчатка
+						.modal-request__steps
+							.modal-request__step.active Детали использования
+							.modal-request__step Детали доставки образца
+						form.form.form_validation
+							label.form__item
+
+								input.input(type="number")
+								span.placeholder Укажите кол-во образцов
+								.number-up(onclick="this.parentNode.querySelector('input[type=number]').stepUp()")
+								.number-down(onclick="this.parentNode.querySelector('input[type=number]').stepDown()")
+
+							.modal-request__capacity
+								.form__item
+									select(name="")
+										option Ожидаемый годовой объем
+										option Ожидаемый годовой объем 2
+										option Ожидаемый годовой объем 3
+
+								.form__item
+									select(name="")
+										option Ед. изм.
+										option Ед. изм. 2
+										option Ед. изм. 3
+
+							.form__item
+								select(name="")
+									option Когда вы планируете купить
+									option Когда вы планируете купить 2
+									option Когда вы планируете купить 3
+
+							.form__item
+								select(name="")
+									option Область применения
+									option Область применения 2
+									option Область применения 3
+
+							label.form__item
+								input.input(type="text")
+								span.placeholder Заметки к запросу
+
+							.form__bottom.right
+								button.btn.btn-next(type="submit") Далее
+
+					.modal-request-second
+						button.modal-box__close(type="button")
+							include pug/svg/cross.svg
+						.section__title Запрос образца
+						.section__subtitle Вы запрашиваете образец у Hitema
+						.modal-request__product.gradient_border
+							.modal-request__product-vendor
+								img(src="images/vendors/vendor2.jpg" alt="")
+							.modal-request__product-text FB 06 Растворимая пшеничная клетчатка
+						.modal-request__steps
+							.modal-request__step.active Детали использования
+								include pug/svg/tick-circle.svg
+							.modal-request__step.active Детали доставки образца
+						form.form.form_validation
+
+							label.form__item
+								input.input(type="text")
+								span.placeholder ФИО
+
+							label.form__item
+								input.input(type="text")
+								span.placeholder Адрес доставки
+
+							label.form__item
+								input.input(type="tel")
+								span.placeholder Контактный телефон
+
+							label.form__item
+								input.input(type="email")
+								span.placeholder E-mail
+
+							label.form__item
+								input.input(type="text" onfocus="(this.type='date')")
+								span.placeholder #[span.desc Укажите дату]  #[span.mobile Дата], к которой необходимо отправить ингредиент
+								.calendar-icon
+									include pug/svg/calendar.svg
+							.form__bottom
+								a.underline Авторизируйтесь оформления запроса
+								button.btn.btn-last(type="submit") Отправить
+
+					.modal-request-last
+						button.modal-box__close(type="button")
+							include pug/svg/cross.svg
+						.section__title.center Запрос образца
+						.modal-request__like
+							include pug/svg/big-like.svg
+						.section__text Ваш запрос успешно отправлен в Hitema!
+						.modal-request__btns
+							button.btn.empty Мои запросы
+							button.btn.btn__close Вернуться к продукту
+
 			.container
 				.sidebar__container
 					.sidebar.gradient_border
@@ -80,9 +495,9 @@ block content
 							.section__subtitle Российская компания ООО «КПФ «МИЛОРАДА» – с 1991 года активный участник рынка сырья для предприятий пищевой и парфюмерно-косметической промышленности. В основе политики компании – финансовая стабильность, профессиональная техническая поддержка клиентов, освоение и реализация программ обеспечения качества в цепочке производства пищевых продуктов, содействие внедрению инновационных технологий.
 							.section__subtitle Российская компания ООО «КПФ «МИЛОРАДА» – с 1991 года активный участник рынка сырья для предприятий пищевой и парфюмерно-косметической промышленности. В основе политики компании – финансовая стабильность, профессиональная техническая поддержка клиентов, освоение и реализация программ обеспечения качества в цепочке производства пищевых продуктов, содействие внедрению инновационных технологий.
 							.card_product_vendor__left-btns
-								button.btn.empty Запросить документ
-								button.btn.empty Запросить образец
-								button.btn.empty Запросить цену
+								button.btn.empty.btn-doc-vendor Запросить документ
+								button.btn.empty.btn-sample-vendor Запросить образец
+								button.btn.empty.btn-price-vendor Запросить цену
 						.card_product_vendor__right
 							.share.gradient_border
 								.contact__us-circle
