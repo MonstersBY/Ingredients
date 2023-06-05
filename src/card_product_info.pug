@@ -26,7 +26,7 @@ block content
 						.modal-request__steps
 							.modal-request__step.active Сведения о покупке
 							.modal-request__step Детали получателя
-						form.form.form_login.form_validation
+						form.form.form_validation
 							.form__item
 								select(name="")
 									option Область применения
@@ -77,7 +77,7 @@ block content
 							.modal-request__step.active Сведения о покупке
 								include pug/svg/tick-circle.svg
 							.modal-request__step.active Детали получателя
-						form.form.form_login.form_validation
+						form.form.form_validation
 
 							label.form__item
 								input.input(type="text")
@@ -101,6 +101,160 @@ block content
 						.modal-request__like
 							include pug/svg/big-like.svg
 						.section__text Ваш заказ успешно отправлен в Hitema!
+						.modal-request__btns
+							button.btn.empty Мои заказы
+							button.btn.btn__close Вернуться к продукту
+
+			.modal-box.modal-request.modal-document
+				.modal-box__container
+					.modal-request-first
+						button.modal-box__close(type="button")
+							include pug/svg/cross.svg
+						.section__title Запрос документа
+						.section__subtitle Вы запрашиваете документ у Hitema
+						.modal-request__product.gradient_border
+							.modal-request__product-vendor
+								img(src="images/vendors/vendor2.jpg" alt="")
+							.modal-request__product-text FB 06 Растворимая пшеничная клетчатка
+						form.form.form_validation
+							.form__item
+								select(name="")
+									option Область применения
+									option Область применения 2
+									option Область применения 3
+
+							.form__item
+								select(name="")
+									option Язык
+									option Язык 2
+									option Язык 3
+
+							.form__item
+								select(name="")
+									option Применяемый регион
+									option Применяемый регион 2
+									option Применяемый регион 3
+
+							label.form__item
+								input.input(type="text")
+								span.placeholder Заметки к запросу
+
+
+							.form__bottom.right
+								button.btn.btn-next(type="submit") Далее
+
+					.modal-request-second
+						button.modal-box__close(type="button")
+							include pug/svg/cross.svg
+						.section__title Запрос документа
+						.modal-request__like
+							include pug/svg/big-like.svg
+						.section__text Ваш запрос успешно отправлен в Hitema!
+						.modal-request__btns
+							button.btn.empty Мои заказы
+							button.btn.btn__close Вернуться к продукту
+
+			.modal-box.modal-request.modal-sample
+				.modal-box__container
+					.modal-request-first
+						button.modal-box__close(type="button")
+							include pug/svg/cross.svg
+						.section__title Запрос образца
+						.section__subtitle Вы запрашиваете образец у Hitema
+						.modal-request__product.gradient_border
+							.modal-request__product-vendor
+								img(src="images/vendors/vendor2.jpg" alt="")
+							.modal-request__product-text FB 06 Растворимая пшеничная клетчатка
+						.modal-request__steps
+							.modal-request__step.active Детали использования
+							.modal-request__step Детали доставки образца
+						form.form.form_validation
+							label.form__item
+
+								input.input(type="number")
+								span.placeholder Укажите кол-во образцов
+								.number-up(onclick="this.parentNode.querySelector('input[type=number]').stepUp()")
+								.number-down(onclick="this.parentNode.querySelector('input[type=number]').stepDown()")
+
+							.modal-request__capacity
+								.form__item
+									select(name="")
+										option Ожидаемый годовой объем
+										option Ожидаемый годовой объем 2
+										option Ожидаемый годовой объем 3
+
+								.form__item
+									select(name="")
+										option Ед. изм.
+										option Ед. изм. 2
+										option Ед. изм. 3
+
+							.form__item
+								select(name="")
+									option Когда вы планируете купить
+									option Когда вы планируете купить 2
+									option Когда вы планируете купить 3
+
+							.form__item
+								select(name="")
+									option Область применения
+									option Область применения 2
+									option Область применения 3
+
+							label.form__item
+								input.input(type="text")
+								span.placeholder Заметки к запросу
+
+							.form__bottom.right
+								button.btn.btn-next(type="submit") Далее
+
+					.modal-request-second
+						button.modal-box__close(type="button")
+							include pug/svg/cross.svg
+						.section__title Запрос образца
+						.section__subtitle Вы запрашиваете образец у Hitema
+						.modal-request__product.gradient_border
+							.modal-request__product-vendor
+								img(src="images/vendors/vendor2.jpg" alt="")
+							.modal-request__product-text FB 06 Растворимая пшеничная клетчатка
+						.modal-request__steps
+							.modal-request__step.active Детали использования
+								include pug/svg/tick-circle.svg
+							.modal-request__step.active Детали доставки образца
+						form.form.form_validation
+
+							label.form__item
+								input.input(type="text")
+								span.placeholder ФИО
+
+							label.form__item
+								input.input(type="text")
+								span.placeholder Адрес доставки
+
+							label.form__item
+								input.input(type="tel")
+								span.placeholder Контактный телефон
+
+							label.form__item
+								input.input(type="email")
+								span.placeholder E-mail
+
+							label.form__item
+								input.input(type="text" onfocus="(this.type='date')")
+								span.placeholder Укажите дату, к которой необходимо отправить ингредиент
+								.calendar-icon
+									include pug/svg/calendar.svg
+							.form__bottom
+								a.underline Авторизируйтесь оформления запроса
+								button.btn.btn-last(type="submit") Отправить
+
+					.modal-request-last
+						button.modal-box__close(type="button")
+							include pug/svg/cross.svg
+						.section__title Запрос образца
+						.modal-request__like
+							include pug/svg/big-like.svg
+						.section__text Ваш запрос успешно отправлен в Hitema!
 						.modal-request__btns
 							button.btn.empty Мои заказы
 							button.btn.btn__close Вернуться к продукту
@@ -158,8 +312,9 @@ block content
 								input.input(type="text")
 								span.placeholder Количество
 						button.btn.btn-price Запросить цену
+						button.btn.btn-doc Запросить документ
 						button.btn.btn-sample Запросить образец
-						button.btn.btn-doc Заказать продукт
+						button.btn.btn-order Заказать продукт
 						.sidebar-request__item
 							.sidebar-request__item-icon
 										include pug/svg/box-not-fill.svg
@@ -272,8 +427,9 @@ block content
 								input.input(type="text")
 								span.placeholder Количество
 						button.btn.btn-price Запросить цену
+						button.btn.btn-doc Запросить документ
 						button.btn.btn-sample Запросить образец
-						button.btn.btn-doc Заказать продукт
+						button.btn.btn-order Заказать продукт
 						.sidebar-request__item
 							.sidebar-request__item-icon
 										include pug/svg/box-not-fill.svg

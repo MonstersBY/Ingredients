@@ -1,22 +1,13 @@
 $(document).on('scroll', function() {
 	if($('.sidebar__container').length) {
-		// if ($('.sidebar-request').length) {
-		// 	var stickyMob = $('.sidebar');
-		// 	var margT = $('.sidebar-request').outerHeight(true) - $('.sidebar-request').outerHeight();
-		// 	console.log(margT +' = '+$('.sidebar-request').outerHeight(true) + ' - ' + $('.sidebar-request').outerHeight())
-		// 	// if (margT)
-		// } else {
-		// 	var stickyMob = $('.sidebar__container');
-		// 	fixedH (stickyMob)
-		// }
-		var stickyMob = $('.sidebar__container');
+		if (!$('.sidebar-request').length) {
+			var stickyMob = $('.sidebar__container');
 			fixedH (stickyMob)
+		}
 	} else {
 		var stickyMob = $('.sidebar');
 		fixedH (stickyMob)
 	}
-
-
 });
 
 function fixedH (item) {

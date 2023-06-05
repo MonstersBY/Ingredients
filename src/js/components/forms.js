@@ -25,6 +25,22 @@ $('.form__item textarea').on('input', function(evt) {
 	}
 });
 
+$('.form__item .number-up, .form__item .number-down').on('click', function(evt) {
+
+	let $this = $(this);
+	let $parent = $this.parent();
+	let $input = $parent.find('.input');
+	let $placeholder = $parent.find('.placeholder');
+
+	$this.removeClass('invalid');
+
+	if ($input.val()) {
+		$placeholder.addClass('active');
+	} else {
+		$placeholder.removeClass('active');
+	}
+});
+
 $('.form_validation').on('submit', function(evt) {
 	let $this = $(this);
 	let $inputs = $this.find('.required');

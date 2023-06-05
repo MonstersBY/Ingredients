@@ -11,6 +11,11 @@
 			display: block;
 		}
 	}
+	&-last {
+		.section__title {
+			text-align: center;
+		}
+	}
 	&__product {
 		padding: 20rem;
 		display: flex;
@@ -68,7 +73,7 @@
 			width: 24rem;
 			height: 24rem;
 			position: absolute;
-			left: 55rem;
+			left: 50rem;
 			top: 25%;
 		}
 	}
@@ -112,6 +117,17 @@
 		display: flex;
 		justify-content: center;
 		gap: 20rem;
+	}
+	&__capacity {
+		display: flex;
+		gap: 24rem;
+
+		.form__item:first-child {
+			width: 100%;
+		}
+		.form__item:last-child {
+			width: 50%;
+		}
 	}
 }
 

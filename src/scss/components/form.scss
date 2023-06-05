@@ -92,6 +92,75 @@
 		&.invalid {
 			border-color: #F96190;
 		}
+		&[type="number"] {
+			-webkit-appearance: textfield;
+			   -moz-appearance: textfield;
+					appearance: textfield;
+
+			&::-webkit-inner-spin-button,
+			&::-webkit-outer-spin-button {
+			  -webkit-appearance: none;
+			}
+
+			& ~ .number-up, & ~ .number-down {
+				position: absolute;
+				right: 24rem;
+				display: block;
+				width: 16.75rem;
+				height: 12rem;
+				cursor: pointer;
+				z-index: 1;
+
+				&::after {
+					content: '';
+					position: absolute;
+					top: 0;
+					right: 0;
+					left: 0;
+					margin: 0 auto;
+					display: block;
+					width: 10rem;
+					height: 10rem;
+					margin-top: 0;
+					border: 2rem solid #201702;
+					border-top: none;
+					border-left: none;
+					pointer-events: none;
+					transform: rotate(-135deg);
+					transition: all 0.15s ease-in-out;
+				}
+			}
+			& ~ .number-up {
+				top: 12.5rem;
+
+				&::after {
+					transform: rotate(-135deg);
+				}
+			}
+			& ~ .number-down {
+				top: 30.5rem;
+
+				&::after {
+					transform: rotate(45deg);
+				}
+			}
+		}
+		&[type="date"] {
+			&::-webkit-inner-spin-button,
+			&::-webkit-calendar-picker-indicator {
+				display: none;
+				-webkit-appearance: none;
+			}
+			& + .placeholder {
+				top: 0;
+				font-size: 14rem;
+				z-index: 2;
+			}
+		}
+	}
+	.calendar-icon {
+		right: 24rem;
+		position: absolute;
 	}
 
 	.placeholder {
