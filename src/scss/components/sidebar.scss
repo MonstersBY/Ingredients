@@ -8,10 +8,26 @@
 	box-shadow: -10rem -10rem 20rem rgba(255, 255, 255, 0.2), 10rem 10rem 10rem rgba(139, 168, 189, 0.05);
 	background: #EFF3F6;
 
+	&.active {
+		position: fixed;
+	}
+	&.active__bottom {
+		position: relative;
+		margin-top: auto;
+	}
+
 	&__container {
 		display: flex;
 		flex-direction: column;
 		gap: 28rem;
+
+		&.active {
+			position: fixed;
+		}
+		&.active__bottom {
+			position: relative;
+			margin-top: auto;
+		}
 	}
 	&-experts {
 		padding: 28rem 20rem 30rem;

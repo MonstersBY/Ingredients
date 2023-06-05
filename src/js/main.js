@@ -45,6 +45,7 @@ import './components/modal_product_reviews';
 import './components/swiper_review';
 import './components/swiper_column_line';
 import './components/modal-request';
+import './components/fixed_sidebar';
 
 
 $('select').niceSelect();

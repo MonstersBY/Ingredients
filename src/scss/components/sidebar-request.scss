@@ -1,5 +1,5 @@
 .sidebar-request {
-	margin-top: 850rem;
+	margin-top: 1345rem;
 	flex-grow: 0;
 	flex-shrink: 0;
 	width: 357rem;
@@ -11,8 +11,17 @@
 	position: relative;
 	color: #FFFFFF;
 
+	&.active {
+		position: fixed;
+	}
+	&.active__bottom {
+		position: relative;
+		margin-top: auto;
+	}
+
 	&.mobile {
 		display: none;
+		position: relative;
 	}
 
 	&::after {

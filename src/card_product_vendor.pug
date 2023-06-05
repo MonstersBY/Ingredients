@@ -1,0 +1,509 @@
+extends pug/base
+
+prepend vars
+	//-
+	- title = "Ingredients | Детальная поставщика"
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+
+		section.section.cabinet.card_product_vendor
+			.container
+				.sidebar__container
+					.sidebar.gradient_border
+						.sidebar__top
+							.sidebar__img
+								img(src="images/cabinet/profile_img.png" alt="profile_img")
+							.sidebar__suptitle Компания
+							.sidebar__title ООО «Милорада»
+
+						.sidebar__items
+
+							.item
+								a.item__btn(href="#")
+									.item__icon
+										include pug/svg/cabinet/award.svg
+									.item__name Бренды
+							.item
+								a.item__btn(href="#")
+									.item__icon
+										include pug/svg/cabinet/box.svg
+									.item__name Продукты
+									.item__number 13
+							.item
+								a.item__btn(href="#")
+									.item__icon
+										include pug/svg/cabinet/document-text.svg
+									.item__name Документы
+									.item__number 13
+							.item
+								a.item__btn(href="#")
+									.item__icon
+										include pug/svg/cabinet/profile_2user.svg
+									.item__name Эксперты
+							.item
+								a.item__btn(href="#")
+									.item__icon
+										include pug/svg/cabinet/lamp-on.svg
+									.item__name Разработки
+
+
+				.cabinet__content
+					.card_product_vendor_head.small_section
+						.card_product_vendor__left
+							.section__title Милорада
+							.filter__inner.filter__control.mobile
+								button.icon
+									include pug/svg/like.svg
+								.filter__text В избранное
+								.dropdown
+									button.dropdown_btn.icon(type="button")
+										include ./pug/svg/share.svg
+									.dropdown_list
+										a(href="#")
+											.svg
+												include ./pug/svg/whatsapp.svg
+											| What’s up
+										a(href="#")
+											.svg
+												include ./pug/svg/telegram.svg
+											| Telegram
+										a(href="#")
+											.svg
+												include ./pug/svg/linkedin.svg
+											| Linked in
+								.filter__text Поделиться
+							.section__subtitle Российская компания ООО «КПФ «МИЛОРАДА» – с 1991 года активный участник рынка сырья для предприятий пищевой и парфюмерно-косметической промышленности. В основе политики компании – финансовая стабильность, профессиональная техническая поддержка клиентов, освоение и реализация программ обеспечения качества в цепочке производства пищевых продуктов, содействие внедрению инновационных технологий.
+							.section__subtitle Российская компания ООО «КПФ «МИЛОРАДА» – с 1991 года активный участник рынка сырья для предприятий пищевой и парфюмерно-косметической промышленности. В основе политики компании – финансовая стабильность, профессиональная техническая поддержка клиентов, освоение и реализация программ обеспечения качества в цепочке производства пищевых продуктов, содействие внедрению инновационных технологий.
+							.card_product_vendor__left-btns
+								button.btn.empty Запросить документ
+								button.btn.empty Запросить образец
+								button.btn.empty Запросить цену
+						.card_product_vendor__right
+							.share.gradient_border
+								.contact__us-circle
+								.share__item
+									button.icon
+										include pug/svg/like.svg
+									.filter__text Добавить в избранное
+								.share__item
+									button.icon
+										include ./pug/svg/share.svg
+									.filter__text Поделиться
+							.dropdown
+								button.dropdown_btn.icon(type="button")
+									include ./pug/svg/share.svg
+								.dropdown_list
+									a(href="#")
+										.svg
+											include ./pug/svg/whatsapp.svg
+										| What’s up
+									a(href="#")
+										.svg
+											include ./pug/svg/telegram.svg
+										| Telegram
+									a(href="#")
+										.svg
+											include ./pug/svg/linkedin.svg
+										| Linked in
+
+							.sidebar-experts.gradient_border
+								.sidebar-experts__top
+									.sidebar-experts__icon
+										include pug/svg/profile_input.svg
+									.sidebar-experts__text Спросите экспертов компании
+								.sidebar-experts__bottom
+									.sidebar-experts__img
+										img(src="images/Group-5295.png" alt="")
+									a.sidebar-experts__link.underline(href="#") Написать нам
+
+					.small_section
+						.section__title Товары по категориям
+
+					.small_section
+						.section__title Товары по области применения
+
+
+					.small_section
+						.section__title Тренды и решения
+						.swiper_shadow.swiper_3slides
+							.swiper.swiper_solutions
+
+								.swiper_control
+									.swiper-button-prev
+									.swiper-button-next
+									.swiper-pagination
+
+								.swiper-wrapper
+
+									.swiper-slide
+										.solution.gradient_border
+											.solution__top
+												.icon.solution__icon
+													include pug/svg/cake.svg
+												.solution__title Продукты питания
+												.solution__info 6 категорий
+											ul.solution__list
+												li: a(href="#") Vegan
+												li: a(href="#") Снижение сахара и соли
+												li: a(href="#") Здоровое питание
+												li: a(href="#") Спортивное питание
+												li: a(href="#") Энергия
+
+									.swiper-slide
+										.solution.gradient_border
+											.solution__top
+												.icon.solution__icon
+													include pug/svg/brush.svg
+												.solution__title Косметика
+												.solution__info 4 категории
+											ul.solution__list
+												li: a(href="#") Anti-age
+												li: a(href="#") Hydration
+												li: a(href="#") Cosmo organic
+												li: a(href="#") Vegan
+												li: a(href="#") Hydration
+
+									.swiper-slide
+										.solution.gradient_border
+											.solution__top
+												.icon.solution__icon
+													include pug/svg/box.svg
+												.solution__title Упаковочные материалы
+												.solution__info 4 категории
+											ul.solution__list
+												li: a(href="#") Recycling
+												li: a(href="#") Снижение себестоимости
+												li: a(href="#") Cosmo organic
+												li: a(href="#") Vegan
+
+									.swiper-slide
+										.solution.gradient_border
+											.solution__top
+												.icon.solution__icon
+													include pug/svg/cake.svg
+												.solution__title Продукты питания 2
+												.solution__info 6 категорий 2
+											ul.solution__list
+												li: a(href="#") Vegan 2
+												li: a(href="#") Снижение сахара и соли 2
+												li: a(href="#") Здоровое питание 2
+												li: a(href="#") Спортивное питание 2
+												li: a(href="#") Энергия 2
+
+									.swiper-slide
+										.solution.gradient_border
+											.solution__top
+												.icon.solution__icon
+													include pug/svg/brush.svg
+												.solution__title Косметика 2
+												.solution__info 4 категории 2
+											ul.solution__list
+												li: a(href="#") Anti-age 2
+												li: a(href="#") Hydration 2
+												li: a(href="#") Cosmo organic 2
+												li: a(href="#") Vegan 2
+												li: a(href="#") Hydration 2
+
+									.swiper-slide
+										.solution.gradient_border
+											.solution__top
+												.icon.solution__icon
+													include pug/svg/box.svg
+												.solution__title Упаковочные материалы 2
+												.solution__info 4 категории 2
+											ul.solution__list
+												li: a(href="#") Recycling 2
+												li: a(href="#") Снижение себестоимости 2
+												li: a(href="#") Cosmo organic 2
+												li: a(href="#") Vegan 2
+
+					.small_section
+						.section__title Популярные товары
+						.swiper_shadow
+							.swiper_grid_container
+								.swiper.swiper_products-category.swiper_products-category-no-grid
+
+									.swiper-wrapper.swiper-row-column
+
+										.swiper-slide
+											.slide
+												.product-category.gradient_border
+													.product-category__img
+														img(src="images/prod-category/img1.jpg" alt="Продукт")
+													.product-category__vendor
+														img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+													.product-category__name HItema
+													.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+													.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+													a.product-category__link.underline Подробнее
+											.slide
+												.product-category.gradient_border
+													.product-category__img
+														img(src="images/prod-category/img1.jpg" alt="Продукт")
+													.product-category__vendor
+														img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+													.product-category__name HItema
+													.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+													.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+													a.product-category__link.underline Подробнее
+											.slide
+												.product-category.gradient_border
+													.product-category__img
+														img(src="images/prod-category/img1.jpg" alt="Продукт")
+													.product-category__vendor
+														img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+													.product-category__name HItema
+													.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+													.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+													a.product-category__link.underline Подробнее
+										.swiper-slide
+											.slide
+												.product-category.gradient_border
+													.product-category__img
+														img(src="images/prod-category/img1.jpg" alt="Продукт")
+													.product-category__vendor
+														img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+													.product-category__name HItema
+													.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+													.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+													a.product-category__link.underline Подробнее
+											.slide
+												.product-category.gradient_border
+													.product-category__img
+														img(src="images/prod-category/img1.jpg" alt="Продукт")
+													.product-category__vendor
+														img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+													.product-category__name HItema
+													.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+													.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+													a.product-category__link.underline Подробнее
+											.slide
+												.product-category.gradient_border
+													.product-category__img
+														img(src="images/prod-category/img1.jpg" alt="Продукт")
+													.product-category__vendor
+														img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+													.product-category__name HItema
+													.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+													.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+													a.product-category__link.underline Подробнее
+										.swiper-slide
+											.slide
+												.product-category.gradient_border
+													.product-category__img
+														img(src="images/prod-category/img1.jpg" alt="Продукт")
+													.product-category__vendor
+														img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+													.product-category__name HItema
+													.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+													.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+													a.product-category__link.underline Подробнее
+											.slide
+												.product-category.gradient_border
+													.product-category__img
+														img(src="images/prod-category/img1.jpg" alt="Продукт")
+													.product-category__vendor
+														img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+													.product-category__name HItema
+													.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+													.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+													a.product-category__link.underline Подробнее
+											.slide
+												.product-category.gradient_border
+													.product-category__img
+														img(src="images/prod-category/img1.jpg" alt="Продукт")
+													.product-category__vendor
+														img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+													.product-category__name HItema
+													.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+													.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+													a.product-category__link.underline Подробнее
+
+									.swiper_control
+										.swiper-button-prev
+										.swiper-button-next
+										.swiper-pagination
+
+					.small_section
+						.section__title Бренды компании
+						.swiper_shadow
+							.swiper_grid_container
+								.swiper.swiper_products-category.swiper_products-category-no-grid
+
+									.swiper-wrapper.swiper-row-column
+
+										.swiper-slide
+											.slide
+												.product-category.gradient_border
+													.product-category__img
+														img(src="images/prod-category/img1.jpg" alt="Продукт")
+													.product-category__vendor
+														img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+													.product-category__name HItema
+													.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+													.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+													a.product-category__link.underline Подробнее
+											.slide
+												.product-category.gradient_border
+													.product-category__img
+														img(src="images/prod-category/img1.jpg" alt="Продукт")
+													.product-category__vendor
+														img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+													.product-category__name HItema
+													.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+													.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+													a.product-category__link.underline Подробнее
+											.slide
+												.product-category.gradient_border
+													.product-category__img
+														img(src="images/prod-category/img1.jpg" alt="Продукт")
+													.product-category__vendor
+														img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+													.product-category__name HItema
+													.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+													.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+													a.product-category__link.underline Подробнее
+										.swiper-slide
+											.slide
+												.product-category.gradient_border
+													.product-category__img
+														img(src="images/prod-category/img1.jpg" alt="Продукт")
+													.product-category__vendor
+														img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+													.product-category__name HItema
+													.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+													.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+													a.product-category__link.underline Подробнее
+											.slide
+												.product-category.gradient_border
+													.product-category__img
+														img(src="images/prod-category/img1.jpg" alt="Продукт")
+													.product-category__vendor
+														img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+													.product-category__name HItema
+													.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+													.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+													a.product-category__link.underline Подробнее
+											.slide
+												.product-category.gradient_border
+													.product-category__img
+														img(src="images/prod-category/img1.jpg" alt="Продукт")
+													.product-category__vendor
+														img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+													.product-category__name HItema
+													.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+													.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+													a.product-category__link.underline Подробнее
+										.swiper-slide
+											.slide
+												.product-category.gradient_border
+													.product-category__img
+														img(src="images/prod-category/img1.jpg" alt="Продукт")
+													.product-category__vendor
+														img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+													.product-category__name HItema
+													.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+													.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+													a.product-category__link.underline Подробнее
+											.slide
+												.product-category.gradient_border
+													.product-category__img
+														img(src="images/prod-category/img1.jpg" alt="Продукт")
+													.product-category__vendor
+														img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+													.product-category__name HItema
+													.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+													.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+													a.product-category__link.underline Подробнее
+											.slide
+												.product-category.gradient_border
+													.product-category__img
+														img(src="images/prod-category/img1.jpg" alt="Продукт")
+													.product-category__vendor
+														img(src="images/vendors/vendor2.jpg" alt="Поставщик")
+													.product-category__name HItema
+													.product-category__title Молоко сухое цельное Denmilk Карамелизованное
+													.product-category__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет оценить...
+													a.product-category__link.underline Подробнее
+
+									.swiper_control
+										.swiper-button-prev
+										.swiper-button-next
+										.swiper-pagination
+
+					.small_section
+						.section__title Сертификаты
+						form.form.small-section
+							.document
+								.document__zone.gradient_border
+									.document__icon.icon
+										include pug/svg/document-fill.svg
+									.document__text Сертификат соответствия системы менеджмента качества требованиям ГОСТ ISO 9001-2011 (ISO 9001-2011Сертификат соответствия системы менеджмента качества требованиям ГОСТ ISO 9001-2011 (ISO 9001-2011
+									.document__watch.icon
+										include pug/svg/eye-black.svg
+									.document__download.icon
+										include pug/svg/download-simple.svg
+							.document
+								.document__zone.gradient_border
+									.document__icon.icon
+										include pug/svg/document-fill.svg
+									.document__text Сертификат соответствия системы менеджмента качества требованиям ГОСТ ISO 9001-2011 (ISO 9001-2011Сертификат соответствия системы менеджмента качества требованиям ГОСТ ISO 9001-2011 (ISO 9001-2011
+									.document__watch.icon
+										include pug/svg/eye-black.svg
+									.document__download.icon
+										include pug/svg/download-simple.svg
+
+					.small_section
+						.section__title Эксперты компании
+						.experts-list
+							.experts-list__item.gradient_border
+								.experts-list__title Маркетинг
+								.experts-list__name Виктор Макаренко
+								.experts-list__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет...
+								.experts-list__info
+									.experts-list__info-item
+										.experts-list__info-icon
+											include pug/svg/call-black.svg
+										.experts-list__info-text + 7 (351) 536-27-03
+									.experts-list__info-item
+										.experts-list__info-icon
+											include pug/svg/sms-black.svg
+										.experts-list__info-text example@mail.com
+								button.btn Написать
+
+							.experts-list__item.gradient_border
+								.experts-list__title Маркетинг
+								.experts-list__name Виктор Макаренко
+								.experts-list__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет...
+								.experts-list__info
+									.experts-list__info-item
+										.experts-list__info-icon
+											include pug/svg/call-black.svg
+										.experts-list__info-text + 7 (351) 536-27-03
+									.experts-list__info-item
+										.experts-list__info-icon
+											include pug/svg/sms-black.svg
+										.experts-list__info-text example@mail.com
+								button.btn Написать
+
+							.experts-list__item.gradient_border
+								.experts-list__title Маркетинг
+								.experts-list__name Виктор Макаренко
+								.experts-list__text Преимущества или краткое описание: повседневная практика показывает, что дальнейшее развитие различных форм деятельности позволяет...
+								.experts-list__info
+									.experts-list__info-item
+										.experts-list__info-icon
+											include pug/svg/call-black.svg
+										.experts-list__info-text + 7 (351) 536-27-03
+									.experts-list__info-item
+										.experts-list__info-icon
+											include pug/svg/sms-black.svg
+										.experts-list__info-text example@mail.com
+								button.btn Написать
+
+	include pug/components/footer

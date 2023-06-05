@@ -5,12 +5,17 @@
 		display: block;
 	}
 	.container {
-		display: flex;
+		// display: flex;
 		align-items: flex-start;
+
+		display: grid;
+		grid-template-columns: 387rem 1fr;
 	}
 
 	&__content {
 		flex-grow: 1;
+
+		grid-column: 2;
 	}
 
 	.section__title {
