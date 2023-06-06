@@ -24,11 +24,35 @@ $('.drop__back').on('click', function(evt) {
 	$this_drop.slideToggle();
 });
 
-$('.search_open-mobile, .search_close-mobile').on('click', function(evt) {
+$('.search_open-mobile, .search_close-mobile, .card_product-open-search').on('click', function(evt) {
 	evt.preventDefault();
-	let $this = $(this);
-	let $header = $this.closest('.header');
+	let $header = $('.header');
 	let $search_wrap = $header.find('.search_wrap-mobile');
 
 	$search_wrap.slideToggle();
+});
+
+$('.icon-account, .header__account-exit').on('click', function(evt) {
+	evt.preventDefault();
+	let $this = $(this);
+	let $header = $this.closest('.header');
+	let $search_wrap = $header.find('.header__account');
+
+	$search_wrap.slideToggle();
+});
+
+$('.card_product-open-review').on('click', function(evt) {
+	evt.preventDefault();
+	let $this = $(this);
+	let $footer = $this.closest('.card_product-footer');
+	let $sidebar = $footer.siblings('.sidebar');
+
+	$sidebar.slideToggle();
+});
+$('.sidebar__exit').on('click', function(evt) {
+	evt.preventDefault();
+	let $this = $(this);
+	let $footer = $this.closest('.sidebar');
+
+	$footer.slideToggle();
 });

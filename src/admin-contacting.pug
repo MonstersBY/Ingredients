@@ -1,0 +1,231 @@
+extends pug/base
+
+prepend vars
+	//-
+	- title = "Ingredients | Обрашение в техподдержку"
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+
+		section.section.admin.switcher
+			.modal-box.modal-admin-answer
+				.modal-box__container
+					button.modal-box__close(type="button")
+						include pug/svg/cross.svg
+					.section__title Ответ на обращение
+					.table
+						.thead
+							.tr
+								.th.name Название компании
+								.th.type Тип проблемы
+								.th.date-message Дата обращения
+								.th.date-changes Дата изменения
+					.tbody
+						.tr.gradient_border
+							.td.name
+								span.mobile Название компании
+								| Милорада
+							.td.type
+								span.mobile Тип проблемы
+								| Проблема с объявлением
+							.td.date-message
+								span.mobile Дата обращения
+								| 09.01.23
+							.td.date-changes
+								span.mobile Дата изменения
+								| 10.01.23
+
+					form.form.form_validation
+						label.form__item
+							textarea.textarea(maxlength="5000")
+							span.placeholder Описание товара
+							span.count-text #[span 0] /5000
+
+						.form__bottom.right
+							button.btn.btn-next(type="submit") Ответить
+
+			.lines.right.desktop
+				img(src="images/lines.svg" alt="lines.svg")
+			.container
+				.section__title Обращение в техподдержку
+				.switcher__control
+					button.btn.switcher__btn.active(type="button") Новые
+					button.btn.switcher__btn(type="button") Отвеченные
+
+				form.search.cabinet__search
+					.label-container
+						label
+							include ./pug/svg/search_grey.svg
+							input(type="text" placeholder="Поиск заявки")
+						button(type="submit")
+							include ./pug/svg/arrow.svg
+					.form__item.desk
+						select(name="")
+							option По дате
+							option По дате 2
+							option По дате 3
+					.form__item.desk
+						select(name="")
+							option Тип проблемы
+							option Тип проблемы 2
+							option Тип проблемы 3
+					.form__item.dark
+						select(name="")
+							option Все фильтры
+							option Все фильтры 2
+							option Все фильтры 3
+
+
+				.switcher__container
+					.switcher__content.active
+						.table
+							.thead
+								.tr
+									.th.name Название компании
+									.th.type Тип проблемы
+									.th.date-message Дата обращения
+									.th.date-changes Дата изменения
+									.th.answer
+						.tbody
+							.tr.gradient_border
+								.td.name
+									span.mobile Название компании
+									| Милорада
+								.td.type
+									span.mobile Тип проблемы
+									| Проблема с объявлением
+								.td.date-message
+									span.mobile Дата обращения
+									| 09.01.23
+								.td.date-changes
+									span.mobile Дата изменения
+									| 10.01.23
+								.td.answer.underline Ответить
+
+							.tr.gradient_border
+								.td.name
+									span.mobile Название компании
+									| Милорада
+								.td.type
+									span.mobile Тип проблемы
+									| Проблема с объявлением
+								.td.date-message
+									span.mobile Дата обращения
+									| 09.01.23
+								.td.date-changes
+									span.mobile Дата изменения
+									| 10.01.23
+								.td.answer.underline Ответить
+
+							.tr.gradient_border
+								.td.name
+									span.mobile Название компании
+									| Милорада
+								.td.type
+									span.mobile Тип проблемы
+									| Проблема с объявлением
+								.td.date-message
+									span.mobile Дата обращения
+									| 09.01.23
+								.td.date-changes
+									span.mobile Дата изменения
+									| 10.01.23
+								.td.answer.underline Ответить
+
+							.tr.gradient_border
+								.td.name
+									span.mobile Название компании
+									| Милорада
+								.td.type
+									span.mobile Тип проблемы
+									| Проблема с объявлением
+								.td.date-message
+									span.mobile Дата обращения
+									| 09.01.23
+								.td.date-changes
+									span.mobile Дата изменения
+									| 10.01.23
+								.td.answer.underline Ответить
+
+						.underline.down Показать еще
+
+					.switcher__content
+						.table
+							.thead
+								.tr
+									.th.name Название компании
+									.th.type Тип проблемы
+									.th.date-message Дата обращения
+									.th.date-changes Дата изменения
+									.th.answer
+						.tbody
+							.tr.gradient_border
+								.td.name
+									span.mobile Название компании
+									| Милорада
+								.td.type
+									span.mobile Тип проблемы
+									| Проблема с объявлением
+								.td.date-message
+									span.mobile Дата обращения
+									| 09.01.23
+								.td.date-changes
+									span.mobile Дата изменения
+									| 10.01.23
+								.td.answer.underline Ответить
+
+							.tr.gradient_border
+								.td.name
+									span.mobile Название компании
+									| Милорада
+								.td.type
+									span.mobile Тип проблемы
+									| Проблема с объявлением
+								.td.date-message
+									span.mobile Дата обращения
+									| 09.01.23
+								.td.date-changes
+									span.mobile Дата изменения
+									| 10.01.23
+								.td.answer.underline Ответить
+
+							.tr.gradient_border
+								.td.name
+									span.mobile Название компании
+									| Милорада
+								.td.type
+									span.mobile Тип проблемы
+									| Проблема с объявлением
+								.td.date-message
+									span.mobile Дата обращения
+									| 09.01.23
+								.td.date-changes
+									span.mobile Дата изменения
+									| 10.01.23
+								.td.answer.underline Ответить
+
+							.tr.gradient_border
+								.td.name
+									span.mobile Название компании
+									| Милорада
+								.td.type
+									span.mobile Тип проблемы
+									| Проблема с объявлением
+								.td.date-message
+									span.mobile Дата обращения
+									| 09.01.23
+								.td.date-changes
+									span.mobile Дата изменения
+									| 10.01.23
+								.td.answer.underline Ответить
+
+
+
+
+
+
+	include pug/components/footer

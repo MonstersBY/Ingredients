@@ -20,7 +20,6 @@ const swiper_my_orders = new Swiper('.swiper_sample_request', {
 });
 
 if($('.my_sample_request').length){
-	console.log($('.count_all .sample_request__item').length)
 	$('.all_btn').children('span').text(`(${$('.count_all .sample_request__item').length})`)
 	$('.new_btn').children('span').text(`(${$('.count_all .status_new').length})`)
 	$('.denied_btn').children('span').text(`(${$('.count_all .status_denied').length})`)

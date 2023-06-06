@@ -12,6 +12,14 @@
 	&-button-lock {
 		display: none !important;
 	}
+	&.revers {
+		margin-top: 8rem;
+
+		.swiper_control {
+			margin-top: 42rem;
+			margin-bottom: 0;
+		}
+	}
 }
 .swiper-wrapper.swiper-row-column {
 	.swiper-slide {
@@ -143,6 +151,15 @@
 
 		&-button-lock {
 			display: none !important;
+		}
+		&.revers {
+			margin-top: 8rem;
+			flex-direction: column;
+
+			.swiper_control {
+				margin-top: 42rem;
+				margin-bottom: 0;
+			}
 		}
 	}
 	.swiper-wrapper.swiper-row-column {

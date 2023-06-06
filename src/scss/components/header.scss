@@ -416,6 +416,238 @@
 			.icon:not(:last-child) {
 				margin-right: 16rem;
 			}
+			.icon-account {
+				display: flex;
+				padding: 4rem 36rem 4rem 4rem;
+				background: rgba(255, 255, 255, 0.4);
+				box-shadow: 5rem 5rem 25rem rgba(153, 173, 187, 0.1);
+				border-radius: 5rem;
+				position: relative;
+
+				&__img {
+					display: flex;
+					background: #7C9DA8;
+					color: #FFFFFF;
+					font-size: 13rem;
+					line-height: 130%;
+					border-radius: 5rem;
+					width: 32rem;
+					height: 28rem;
+					position: relative;
+					justify-content: center;
+					align-items: center;
+
+					img {
+						width: 100%;
+						height: 100%;
+						object-fit: cover;
+					}
+
+				}
+				&::after {
+					content: '';
+					position: absolute;
+					top: 50%;
+					right: 12rem;
+					display: block;
+					width: 10rem;
+					height: 10rem;
+					margin-top: -5rem;
+					border: 2rem solid #7C9DA8;
+					border-top: none;
+					border-left: none;
+					pointer-events: none;
+					transform-origin: 66% 66%;
+					transform: rotate(45deg);
+					transition: all 0.15s ease-in-out;
+				}
+			}
+		}
+		&__account {
+			display: none;
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			margin: 0 -20rem;
+			padding: 35rem 0 35rem;
+			background: #F0F3F6;
+			top: 0;
+			overflow-y: scroll;
+			color: #999999;
+
+			&.header__bottom-mobile {
+				display: none;
+			}
+
+			&-container {
+				display: flex;
+				flex-direction: column;
+				padding: 0 20rem;
+			}
+			&-exit {
+				width: 32rem;
+				height: 32rem;
+				margin-left: auto;
+
+				path {
+					stroke: #181818;
+				}
+			}
+			&-head {
+				display: flex;
+				gap: 12rem;
+				padding-bottom: 32rem;
+				border-bottom: 2rem solid rgba(207, 224, 230, 0.4);
+				margin-bottom: 25rem;
+
+				&-container {
+					display: flex;
+					flex-direction: column;
+				}
+				&-name {
+					color: #181818;
+				}
+				&-email {
+					font-size: 13rem;
+					line-height: 150%;
+				}
+			}
+			&-img {
+				width: 42rem;
+				height: 42rem;
+				border-radius: 50%;
+				background: #7C9DA8;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: #FFFFFF;
+
+				img {
+					width: 100%;
+					height: 100%;
+					border-radius: 50%;
+				}
+			}
+			&-subtitle {
+				margin-bottom: 20rem;
+			}
+			&-items {
+				padding-bottom: 20rem;
+				border-bottom: 2rem solid rgba(207, 224, 230, 0.4);
+				margin-bottom: 20rem;
+			}
+			.item {
+				&:not(:last-child) {
+					margin-bottom: 11.5rem;
+				}
+
+				&__btn {
+					display: flex;
+					align-items: center;
+					padding: 5rem 10rem;
+					border-radius: 5rem;
+					overflow: hidden;
+					transition: 500ms;
+
+					&.item__drop_btn::after {
+						content: "";
+						width: 10rem;
+						height: 10rem;
+						margin-left: auto;
+						border: 2rem solid #999;
+						border-left: none;
+						border-bottom: none;
+						transform: rotate(45deg);
+						transform-origin: 30% 20%;
+						transition: 300ms;
+					}
+
+					&.active,
+					&:hover {
+
+							background: rgba(187, 203, 208, 0.2);
+
+						.item__name {
+							color: #181818;
+						}
+					}
+
+					&.active {
+						&::after {
+							transform: rotate(135deg);
+						}
+					}
+
+				}
+
+				&__icon {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 39rem;
+					height: 39rem;
+					margin-right: 20rem;
+					border-radius: 50%;
+					overflow: hidden;
+					background: rgba(255, 255, 255, 0.4);
+					box-shadow: 5rem 5rem 25rem rgba(153, 173, 187, 0.1);
+
+					svg {
+						width: 24rem;
+						height: 24rem;
+					}
+				}
+
+				&__number {
+					margin-left: auto;
+				}
+				&__name {
+					color: #999;
+					transition: 500ms;
+				}
+
+				&__drop {
+					display: none;
+				}
+
+				&__list {
+					display: flex;
+					flex-direction: column;
+					align-items: flex-start;
+					padding-top: 11rem;
+					padding-left: 0;
+					padding-bottom: 5rem;
+					color: #999;
+
+					a {
+						display: block;
+						transition: 500ms;
+
+						&:not(:last-child) {
+							margin-bottom: 12rem;
+						}
+
+						&.active,
+						&:hover {
+							color: #181818;
+						}
+					}
+				}
+
+			}
+			&-footer {
+				a {
+					display: flex;
+					align-items: center;
+					font-size: 16rem;
+					line-height: 150%;
+					gap: 12rem;
+				}
+				svg {
+					width: 24rem;
+					height: 24rem;
+				}
+			}
 		}
 
 		.feedback {

@@ -13,7 +13,6 @@ $(document).on('scroll', function() {
 function fixedH (item) {
 	const sideHeight = item.height()
 	const containerHeight = $('.sidebar').closest('.container').height()
-	console.log('this: ' + $(this).scrollTop() + ' ; containerHeight: ' + containerHeight + ' ; sideHeight: ' + sideHeight)
 	if ($(this).scrollTop() >= containerHeight-sideHeight) {
 		item.removeClass('active')
 		item.addClass('active__bottom')

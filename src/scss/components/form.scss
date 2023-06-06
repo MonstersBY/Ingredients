@@ -25,6 +25,19 @@
 				}
 			}
 		}
+		&.dark {
+			background: #201702;
+			color: #FBFBFB;
+
+			.nice-select {
+				ul {
+					color: #201702;
+				}
+				&:after {
+					border-color: #FBFBFB;
+				}
+			}
+		}
 	}
 	.select-department-list {
 		display: flex;

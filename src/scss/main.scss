@@ -191,6 +191,7 @@ button {
 	display: inline-block;
 	padding-right: 55rem;
 	padding-bottom: 5rem;
+	transition: all 0.15s ease-in-out;
 
 
 	// Arrow
@@ -209,6 +210,7 @@ button {
 		pointer-events: none;
 		transform-origin: 66% 66%;
 		transform: rotate(45deg);
+		transition: all 0.15s ease-in-out;
 	}
 
 	// Line
@@ -221,6 +223,25 @@ button {
 		display: block;
 		height: 1px;
 		background: #000;
+	}
+
+	&.down {
+		&::before {
+			content: '';
+			position: absolute;
+			top: 40%;
+			right: 3rem;
+			display: block;
+			width: 10rem;
+			height: 10rem;
+			margin-top: -5rem;
+			border: 2rem solid $color_black;
+			border-bottom: none;
+			border-left: none;
+			pointer-events: none;
+			transform-origin: 66% 66%;
+			transform: rotate(135deg);
+		}
 	}
 }
 
@@ -570,3 +591,4 @@ button {
 @import "components/other_product";
 @import "components/sidebar-request";
 @import "components/modal-request";
+@import "components/admin";

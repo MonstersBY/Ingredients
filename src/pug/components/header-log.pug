@@ -1,0 +1,375 @@
+.header-blur
+header.header
+	.container.desktop
+		.header__top
+			a.logo(href="#")
+				img(src="images/logo.svg" alt="logo")
+
+			form.localizer
+				select(name="lang")
+					option(value="ru" selected) Ru
+					option(value="en") En
+
+			.header__links
+				a(href="#") О нас
+				a(href="#") Сотрудничество
+
+			a.btn.feedback(type="button") Связаться с нами
+
+			.header__setup
+				a.icon(href="#")
+					include ../svg/like.svg
+				a.icon(href="#")
+					include ../svg/note.svg
+				a.icon.notification(href="#")
+					include ../svg/notif.svg
+				a.icon(href="#")
+					include ../svg/profile.svg
+
+		.header__bottom
+			nav.nav
+				ul.nav__list
+					li.nav__item: a(href="#") О проекте
+
+					li.nav__item
+						a.drop_btn(type="#") Материалы
+						.drop
+							.drop_content
+								a.drop__title(href="#") Материалы
+								ul.nav__list_drop
+									li: a(href="#") Подраздел 1
+									li: a(href="#") Подраздел 2
+									li: a(href="#") Подраздел 3 с длинным названием
+									li: a(href="#") Подраздел 4
+
+					li.nav__item
+						a.drop_btn(type="#") Инновации
+						.drop
+							.drop_content
+								a.drop__title(href="#") Инновации
+								ul.nav__list_drop
+									li: a(href="#") Подраздел 1
+									li: a(href="#") Подраздел 3 с длинным названием
+									li: a(href="#") Подраздел 2
+									li: a(href="#") Подраздел 4
+
+					li.nav__item
+						a.drop_btn(type="#") Технологии
+						.drop
+							.drop_content
+								a.drop__title(href="#") Технологии
+								ul.nav__list_drop
+										li: a(href="#") Подраздел 3 с длинным названием
+										li: a(href="#") Подраздел 1
+										li: a(href="#") Подраздел 2
+										li: a(href="#") Подраздел 4
+
+					li.nav__item: a(href="#") Поставщики
+
+			button.search_open(type="button")
+				include ../svg/search.svg
+
+		.search_wrap
+			.search_container
+				form.search
+					.search__filter
+						select.head-category(name="search")
+							option(value="0" selected) Все категории
+							option(value="1") Молочные продукты
+							option(value="2") Снэки и злаки
+							option(value="3") Напитки
+							option(value="4") Детское питание
+							option(value="5") Плодово-овощные консервы
+							option(value="6") Мороженое
+							option(value="7") Веган альтернативы
+
+					.search__inner.head-search
+						label
+							include ../svg/search_grey.svg
+							input.head-search-input(type="text" placeholder="Поиск")
+						button(type="submit")
+							include ../svg/arrow.svg
+						.head-search-help
+							.head-search-left
+								.head-search-container
+									.head-search-title Молочные продукты
+									ul.head-search-list
+										li: a(href="#") Молоко
+										li: a(href="#") Верблюжье молоко
+										li: a(href="#") Козье молоко
+								.head-search-container
+									.head-search-title Детское питание
+									ul.head-search-list
+										li: a(href="#") Молоко
+										li: a(href="#") Верблюжье молоко
+										li: a(href="#") Козье молоко
+										li: a(href="#") Овечье молоко
+										li: a(href="#") Овечье молоко
+								.head-search-container
+									.head-search-title Молочные продукты
+									ul.head-search-list
+										li: a(href="#") Молоко
+										li: a(href="#") Верблюжье молоко
+										li: a(href="#") Козье молоко
+								.head-search-container
+									.head-search-title Детское питание
+									ul.head-search-list
+										li: a(href="#") Молоко
+										li: a(href="#") Верблюжье молоко
+										li: a(href="#") Козье молоко
+										li: a(href="#") Овечье молоко
+										li: a(href="#") Овечье молоко
+
+							.head-search-right
+								.head-search-container
+									.head-search-title Поставщики
+									a(href="#").head-search-item
+										.head-search-icon
+											img(src="images/vendors/vendor1.png" alt="Милорада")
+										.head-search-name Милорада
+									a(href="#").head-search-item
+										.head-search-icon
+											img(src="images/vendors/vendor1.png" alt="Милорада")
+										.head-search-name Милорада
+								.head-search-container
+									.head-search-title Бренд
+									a(href="#").head-search-item
+										.head-search-icon
+											img(src="images/vendors/vendor1.png" alt="Милорада")
+										.head-search-name Милорада
+									a(href="#").head-search-item
+										.head-search-icon
+											img(src="images/vendors/vendor1.png" alt="Милорада")
+										.head-search-name Милорада
+									a(href="#").head-search-item
+										.head-search-icon
+											img(src="images/vendors/vendor1.png" alt="Милорада")
+										.head-search-name Милорада
+								.head-search-container
+									.head-search-title Поставщики
+									a(href="#").head-search-item
+										.head-search-icon
+											img(src="images/vendors/vendor1.png" alt="Милорада")
+										.head-search-name Милорада
+									a(href="#").head-search-item
+										.head-search-icon
+											img(src="images/vendors/vendor1.png" alt="Милорада")
+										.head-search-name Милорада
+								.head-search-container
+									.head-search-title Бренд
+									a(href="#").head-search-item
+										.head-search-icon
+											img(src="images/vendors/vendor1.png" alt="Милорада")
+										.head-search-name Милорада
+									a(href="#").head-search-item
+										.head-search-icon
+											img(src="images/vendors/vendor1.png" alt="Милорада")
+										.head-search-name Милорада
+									a(href="#").head-search-item
+										.head-search-icon
+											img(src="images/vendors/vendor1.png" alt="Милорада")
+										.head-search-name Милорада
+
+
+				button.search_close(type="button")
+					include ../svg/cross.svg
+	.container.mobile
+		.header__top
+			.hamburger
+				.hamburger-icon
+			a.logo(href="#")
+				img(src="images/logo.svg" alt="logo")
+			.header__setup
+				button.search_open-mobile.icon(type="button")
+					include ../svg/search_grey.svg
+				a.icon(href="#")
+					include ../svg/phone_fill.svg
+				a.icon-account(href="#")
+					.icon-account__img СВ
+
+
+		.header__bottom.header__bottom-mobile
+			.header__bottom-list
+				ul.header__bottom-items
+					li: a(href="#") Избранное
+						include ../svg/like.svg
+					li: a(href="#") Заметки
+						include ../svg/note.svg
+					li: a(href="#") Уведомления
+						include ../svg/notif.svg
+				ul.header__bottom-items
+					li.header__bottom-title Узнайте больше о компании MIT
+					li: a(href="#") О проекте
+					li: a(href="#") О нас
+					li: a(href="#") Сотрудничество
+				ul.header__bottom-items
+					li.header__bottom-title обзор рынка
+					li
+						a.drop_btn(type="#") Материалы
+						.drop
+							.drop_content
+								.drop__back Назад
+								a.drop__title(href="#") Материалы
+								ul.nav__list_drop
+									li: a(href="#") Подраздел 1
+									li: a(href="#") Подраздел 2
+									li: a(href="#") Подраздел 3 с длинным названием
+									li: a(href="#") Подраздел 4
+					li
+						a.drop_btn(type="#") Инновации
+						.drop
+							.drop_content
+								.drop__back Назад
+								a.drop__title(href="#") Инновации
+								ul.nav__list_drop
+									li: a(href="#") Подраздел 1
+									li: a(href="#") Подраздел 2 с длинным названием
+									li: a(href="#") Подраздел 3
+									li: a(href="#") Подраздел 4
+					li
+						a.drop_btn(type="#") Технологии
+						.drop
+							.drop_content
+								.drop__back Назад
+								a.drop__title(href="#") Технологии
+								ul.nav__list_drop
+									li: a(href="#") Подраздел 1
+									li: a(href="#") Подраздел 2
+									li: a(href="#") Подраздел 3
+									li: a(href="#") Подраздел 4 с длинным названием
+				ul.header__bottom-items
+					li.header__bottom-title Партнерам
+					li: a(href="#") Поставщики
+				form.localizer
+					select(name="lang")
+						option(value="ru" selected) Ru
+						option(value="en") En
+		.search_wrap-mobile
+			.search_container
+				form.search
+					.search__inner
+						div.search_close-mobile
+						label
+							input.head-search-input-mobile(type="text" placeholder="Поиск")
+						button(type="submit")
+							include ../svg/arrow.svg
+					.search__category
+						span Поиск:
+						span.search__category-btn Все категории
+						.search__category-wrapper
+							.search__category-container
+								label
+									include ../svg/search_grey.svg
+									input.input(type='text' placeholder="Поиск")
+
+								.search__category-all Все категории
+									include ../svg/tick-circle.svg
+								.search__category-title Категории:
+								ul.search__category-list
+									li Молочные продукты
+									li Молочные продукты
+									li Снэки и злаки
+									li Снэки и злаки
+									li Напитки
+									li Напитки
+									li Детское питание
+									li Детское питание
+									li Плодово-овощные консервы
+									li Плодово-овощные консервы
+									li Мороженое
+									li Мороженое
+									li Веган альтернативы
+									li Веган альтернативы
+				.search__wait
+					.search__wait-title MIT - портал по продаже сырья, материалов и оборудования.
+					.search__wait-text Введите свой запрос в поле Поиск.
+				.search__by-word
+					.search__by-word-container
+						.search__by-word-title Молочные продукты
+						ul.search__by-word-list
+							li: a(href="#") Молоко
+							li: a(href="#") Верблюжье молоко
+							li: a(href="#") Козье молоко
+					.search__by-word-container
+						.search__by-word-title Детское питание
+						ul.search__by-word-list
+							li: a(href="#") Молоко
+							li: a(href="#") Верблюжье молоко
+							li: a(href="#") Козье молоко
+							li: a(href="#") Овечье молоко
+							li: a(href="#") Овечье молоко
+					.search__by-word-container
+						.search__by-word-title Веганские альтернативы
+						ul.search__by-word-list
+							li: a(href="#") Молоко соевое
+					.search__by-word-container
+						.search__by-word-title Поставщики
+						ul.search__by-word-list
+							li.search__by-word-icon: a(href="#") Милорада
+								.head-search-icon
+									img(src="images/vendors/vendor1.png" alt="Милорада")
+							li.search__by-word-icon: a(href="#") Милорада
+								.head-search-icon
+									img(src="images/vendors/vendor1.png" alt="Милорада")
+					.search__by-word-container
+						.search__by-word-title Бренды
+						ul.search__by-word-list
+							li.search__by-word-icon: a(href="#") Милорада
+								.head-search-icon
+									img(src="images/vendors/vendor1.png" alt="Милорада")
+							li.search__by-word-icon: a(href="#") Милорада
+								.head-search-icon
+									img(src="images/vendors/vendor1.png" alt="Милорада")
+							li.search__by-word-icon: a(href="#") Милорада
+								.head-search-icon
+									img(src="images/vendors/vendor1.png" alt="Милорада")
+		.header__account
+			.header__account-container
+				button.header__account-exit(type="button")
+					include ../svg/cross.svg
+				.header__account-head
+					.header__account-img СВ
+					.header__account-head-container
+						.header__account-head-name Cергей Вячеславович
+						.header__account-head-email info@gmail.com
+				.header__account-subtitle Просмотр разделов
+				.header__account-items
+					.item
+						a.item__btn.item__drop_btn(href="#")
+							.item__icon
+								include ../svg/cabinet/profile.svg
+							.item__name Профиль
+						.item__drop
+							.item__list
+								a(href="#") Личные данные
+								a(href="#") Мои заказы
+								a(href="#") Профиль 3
+								a(href="#") Профиль 4
+					.item
+						a.item__btn(href="#")
+							.item__icon
+								include ../svg/cabinet/sms.svg
+							.item__name Сообщения
+
+					.item
+						a.item__btn(href="#")
+							.item__icon
+								include ../svg/cabinet/search.svg
+							.item__name Сохраненный поиск
+
+					.item
+						a.item__btn.item__drop_btn(href="#")
+							.item__icon
+								include ../svg/cabinet/box.svg
+							.item__name Закупки
+						.item__drop
+							.item__list
+								a(href="#") Запросы образцов
+								a(href="#") Запросы цен
+								a(href="#") Запросы документов
+								a(href="#") Расчет цены
+
+				.header__account-footer
+					a(href="#")
+						include ../svg/signout.svg
+						| Выход

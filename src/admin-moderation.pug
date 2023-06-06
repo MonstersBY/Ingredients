@@ -1,0 +1,743 @@
+extends pug/base
+
+prepend vars
+	//-
+	- title = "Ingredients | Обрашение в техподдержку модерация"
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+
+		section.section.admin.admin-moderation.switcher
+			.modal-box.modal-admin-reject
+				.modal-box__container
+					button.modal-box__close(type="button")
+						include pug/svg/cross.svg
+					.section__title Выберите причину отклонения
+					.section__subtitle Данная информация будет отправлена пользователю, для корректировки объявления
+
+					form.form.form_validation
+						.form__item
+							select(name="")
+								option Нарушение правил портала #29576
+								option Нарушение правил портала #29576 2
+								option Нарушение правил портала #29576 3
+
+						.form__bottom.right
+							button.btn.btn-next(type="submit") Выбрать
+
+			.lines.right.desktop
+				img(src="images/lines.svg" alt="lines.svg")
+			.container
+				.section__title Обращение в техподдержку
+				.bnt_scroll
+					.switcher__control
+						button.btn.switcher__btn.active(type="button") Новые
+						button.btn.switcher__btn(type="button") Отклоненные
+						button.btn.switcher__btn(type="button") Утвержденные
+
+				form.search.cabinet__search
+					.label-container
+						label
+							include ./pug/svg/search_grey.svg
+							input(type="text" placeholder="Поиск заявки")
+						button(type="submit")
+							include ./pug/svg/arrow.svg
+					.form__item.desk
+						select(name="")
+							option По дате
+							option По дате 2
+							option По дате 3
+					.form__item.desk
+						select(name="")
+							option Тип проблемы
+							option Тип проблемы 2
+							option Тип проблемы 3
+					.form__item.dark
+						select(name="")
+							option Все фильтры
+							option Все фильтры 2
+							option Все фильтры 3
+
+
+				.switcher__container
+					.switcher__content.active
+						.table
+							.thead
+								.tr
+									.th.name Название компании
+									.th.type Тип проблемы
+									.th.description Описание
+									.th.date-message Дата обращения
+									.th.date-changes Дата изменения
+									.th.detail
+						.tbody
+							.details
+								.tr.gradient_border
+									.td.name
+										span.mobile Название компании
+										| Милорада
+									.td.type
+										span.mobile Тип проблемы
+										| Проблема с объявлением
+									.td.description
+										span.mobile Описание
+										| Пришло быстро, описание соответствует действительности.
+									.td.date-message
+										span.mobile Дата обращения
+										| 09.01.23
+									.td.date-changes
+										span.mobile Дата изменения
+										| 10.01.23
+									.td.detail.underline #[span.not-active Ответить] #[span.active Свернуть]
+								.details__bottom
+									.details__items
+										.details__item
+											.details__title Категория товара
+											.details__info Молочная продукция
+										.details__item
+											.details__title Упаковка
+											.details__info Ширина - 12 см, Высота - 12 см, Длина - 15 см
+										.details__item
+											.details__title Бренд
+											.details__info Милорада
+										.details__item
+											.details__title Срок годности
+											.details__info до 08.12.23
+										.details__item
+											.details__title Артикул
+											.details__info 125547456
+										.details__item
+											.details__title Название товара
+											.details__info Молоко обезжиренное Dietecs
+										.details__item
+											.details__title Физическое состояние
+											.details__info Газообразное
+										.details__item
+											.details__title Состав
+											.details__info Сахар, вода, грецкий орех
+										.details__item
+											.details__title Сфера использования
+											.details__info Спортивное питание, биоактивные добавки
+									.details__title Описание
+									.details__info Российская компания ООО «КПФ «МИЛОРАДА» – с 1991 года активный участник рынка сырья для предприятий пищевой и парфюмерно-косметической промышленности. В основе политики компании – финансовая стабильность, профессиональная техническая поддержка клиентов, освоение и реализация программ обеспечения качества в цепочке производства пищевых продуктов, содействие внедрению инновационных технологий.
+									.details__btns
+										button.btn.empty.btn-reject Отклонить
+										button.btn Утвердить
+
+							.details
+								.tr.gradient_border
+									.td.name
+										span.mobile Название компании
+										| Милорада
+									.td.type
+										span.mobile Тип проблемы
+										| Проблема с объявлением
+									.td.description
+										span.mobile Описание
+										| Пришло быстро, описание соответствует действительности.
+									.td.date-message
+										span.mobile Дата обращения
+										| 09.01.23
+									.td.date-changes
+										span.mobile Дата изменения
+										| 10.01.23
+									.td.detail.underline #[span.not-active Ответить] #[span.active Свернуть]
+								.details__bottom
+									.details__items
+										.details__item
+											.details__title Категория товара
+											.details__info Молочная продукция
+										.details__item
+											.details__title Упаковка
+											.details__info Ширина - 12 см, Высота - 12 см, Длина - 15 см
+										.details__item
+											.details__title Бренд
+											.details__info Милорада
+										.details__item
+											.details__title Срок годности
+											.details__info до 08.12.23
+										.details__item
+											.details__title Артикул
+											.details__info 125547456
+										.details__item
+											.details__title Название товара
+											.details__info Молоко обезжиренное Dietecs
+										.details__item
+											.details__title Физическое состояние
+											.details__info Газообразное
+										.details__item
+											.details__title Состав
+											.details__info Сахар, вода, грецкий орех
+										.details__item
+											.details__title Сфера использования
+											.details__info Спортивное питание, биоактивные добавки
+									.details__title Описание
+									.details__info Российская компания ООО «КПФ «МИЛОРАДА» – с 1991 года активный участник рынка сырья для предприятий пищевой и парфюмерно-косметической промышленности. В основе политики компании – финансовая стабильность, профессиональная техническая поддержка клиентов, освоение и реализация программ обеспечения качества в цепочке производства пищевых продуктов, содействие внедрению инновационных технологий.
+									.details__btns
+										button.btn.empty.btn-reject Отклонить
+										button.btn Утвердить
+
+							.details
+								.tr.gradient_border
+									.td.name
+										span.mobile Название компании
+										| Милорада
+									.td.type
+										span.mobile Тип проблемы
+										| Проблема с объявлением
+									.td.description
+										span.mobile Описание
+										| Пришло быстро, описание соответствует действительности.
+									.td.date-message
+										span.mobile Дата обращения
+										| 09.01.23
+									.td.date-changes
+										span.mobile Дата изменения
+										| 10.01.23
+									.td.detail.underline #[span.not-active Ответить] #[span.active Свернуть]
+								.details__bottom
+									.details__items
+										.details__item
+											.details__title Категория товара
+											.details__info Молочная продукция
+										.details__item
+											.details__title Упаковка
+											.details__info Ширина - 12 см, Высота - 12 см, Длина - 15 см
+										.details__item
+											.details__title Бренд
+											.details__info Милорада
+										.details__item
+											.details__title Срок годности
+											.details__info до 08.12.23
+										.details__item
+											.details__title Артикул
+											.details__info 125547456
+										.details__item
+											.details__title Название товара
+											.details__info Молоко обезжиренное Dietecs
+										.details__item
+											.details__title Физическое состояние
+											.details__info Газообразное
+										.details__item
+											.details__title Состав
+											.details__info Сахар, вода, грецкий орех
+										.details__item
+											.details__title Сфера использования
+											.details__info Спортивное питание, биоактивные добавки
+									.details__title Описание
+									.details__info Российская компания ООО «КПФ «МИЛОРАДА» – с 1991 года активный участник рынка сырья для предприятий пищевой и парфюмерно-косметической промышленности. В основе политики компании – финансовая стабильность, профессиональная техническая поддержка клиентов, освоение и реализация программ обеспечения качества в цепочке производства пищевых продуктов, содействие внедрению инновационных технологий.
+									.details__btns
+										button.btn.empty.btn-reject Отклонить
+										button.btn Утвердить
+
+							.details
+								.tr.gradient_border
+									.td.name
+										span.mobile Название компании
+										| Милорада
+									.td.type
+										span.mobile Тип проблемы
+										| Проблема с объявлением
+									.td.description
+										span.mobile Описание
+										| Пришло быстро, описание соответствует действительности.
+									.td.date-message
+										span.mobile Дата обращения
+										| 09.01.23
+									.td.date-changes
+										span.mobile Дата изменения
+										| 10.01.23
+									.td.detail.underline #[span.not-active Ответить] #[span.active Свернуть]
+								.details__bottom
+									.details__items
+										.details__item
+											.details__title Категория товара
+											.details__info Молочная продукция
+										.details__item
+											.details__title Упаковка
+											.details__info Ширина - 12 см, Высота - 12 см, Длина - 15 см
+										.details__item
+											.details__title Бренд
+											.details__info Милорада
+										.details__item
+											.details__title Срок годности
+											.details__info до 08.12.23
+										.details__item
+											.details__title Артикул
+											.details__info 125547456
+										.details__item
+											.details__title Название товара
+											.details__info Молоко обезжиренное Dietecs
+										.details__item
+											.details__title Физическое состояние
+											.details__info Газообразное
+										.details__item
+											.details__title Состав
+											.details__info Сахар, вода, грецкий орех
+										.details__item
+											.details__title Сфера использования
+											.details__info Спортивное питание, биоактивные добавки
+									.details__title Описание
+									.details__info Российская компания ООО «КПФ «МИЛОРАДА» – с 1991 года активный участник рынка сырья для предприятий пищевой и парфюмерно-косметической промышленности. В основе политики компании – финансовая стабильность, профессиональная техническая поддержка клиентов, освоение и реализация программ обеспечения качества в цепочке производства пищевых продуктов, содействие внедрению инновационных технологий.
+									.details__btns
+										button.btn.empty.btn-reject Отклонить
+										button.btn Утвердить
+
+
+						.underline.down Показать еще
+
+					.switcher__content
+						.table
+							.thead
+								.tr
+									.th.name Название компании
+									.th.type Тип проблемы
+									.th.description Описание
+									.th.date-message Дата обращения
+									.th.date-changes Дата изменения
+									.th.detail
+						.tbody
+							.details
+								.tr.gradient_border
+									.td.name
+										span.mobile Название компании
+										| Милорада
+									.td.type
+										span.mobile Тип проблемы
+										| Проблема с объявлением
+									.td.description
+										span.mobile Описание
+										| Пришло быстро, описание соответствует действительности.
+									.td.date-message
+										span.mobile Дата обращения
+										| 09.01.23
+									.td.date-changes
+										span.mobile Дата изменения
+										| 10.01.23
+									.td.detail.underline #[span.not-active Ответить] #[span.active Свернуть]
+								.details__bottom
+									.details__items
+										.details__item
+											.details__title Категория товара
+											.details__info Молочная продукция
+										.details__item
+											.details__title Упаковка
+											.details__info Ширина - 12 см, Высота - 12 см, Длина - 15 см
+										.details__item
+											.details__title Бренд
+											.details__info Милорада
+										.details__item
+											.details__title Срок годности
+											.details__info до 08.12.23
+										.details__item
+											.details__title Артикул
+											.details__info 125547456
+										.details__item
+											.details__title Название товара
+											.details__info Молоко обезжиренное Dietecs
+										.details__item
+											.details__title Физическое состояние
+											.details__info Газообразное
+										.details__item
+											.details__title Состав
+											.details__info Сахар, вода, грецкий орех
+										.details__item
+											.details__title Сфера использования
+											.details__info Спортивное питание, биоактивные добавки
+									.details__title Описание
+									.details__info Российская компания ООО «КПФ «МИЛОРАДА» – с 1991 года активный участник рынка сырья для предприятий пищевой и парфюмерно-косметической промышленности. В основе политики компании – финансовая стабильность, профессиональная техническая поддержка клиентов, освоение и реализация программ обеспечения качества в цепочке производства пищевых продуктов, содействие внедрению инновационных технологий.
+									.details__btns
+										button.btn.empty.btn-reject Отклонить
+										button.btn Утвердить
+
+							.details
+								.tr.gradient_border
+									.td.name
+										span.mobile Название компании
+										| Милорада
+									.td.type
+										span.mobile Тип проблемы
+										| Проблема с объявлением
+									.td.description
+										span.mobile Описание
+										| Пришло быстро, описание соответствует действительности.
+									.td.date-message
+										span.mobile Дата обращения
+										| 09.01.23
+									.td.date-changes
+										span.mobile Дата изменения
+										| 10.01.23
+									.td.detail.underline #[span.not-active Ответить] #[span.active Свернуть]
+								.details__bottom
+									.details__items
+										.details__item
+											.details__title Категория товара
+											.details__info Молочная продукция
+										.details__item
+											.details__title Упаковка
+											.details__info Ширина - 12 см, Высота - 12 см, Длина - 15 см
+										.details__item
+											.details__title Бренд
+											.details__info Милорада
+										.details__item
+											.details__title Срок годности
+											.details__info до 08.12.23
+										.details__item
+											.details__title Артикул
+											.details__info 125547456
+										.details__item
+											.details__title Название товара
+											.details__info Молоко обезжиренное Dietecs
+										.details__item
+											.details__title Физическое состояние
+											.details__info Газообразное
+										.details__item
+											.details__title Состав
+											.details__info Сахар, вода, грецкий орех
+										.details__item
+											.details__title Сфера использования
+											.details__info Спортивное питание, биоактивные добавки
+									.details__title Описание
+									.details__info Российская компания ООО «КПФ «МИЛОРАДА» – с 1991 года активный участник рынка сырья для предприятий пищевой и парфюмерно-косметической промышленности. В основе политики компании – финансовая стабильность, профессиональная техническая поддержка клиентов, освоение и реализация программ обеспечения качества в цепочке производства пищевых продуктов, содействие внедрению инновационных технологий.
+									.details__btns
+										button.btn.empty.btn-reject Отклонить
+										button.btn Утвердить
+
+							.details
+								.tr.gradient_border
+									.td.name
+										span.mobile Название компании
+										| Милорада
+									.td.type
+										span.mobile Тип проблемы
+										| Проблема с объявлением
+									.td.description
+										span.mobile Описание
+										| Пришло быстро, описание соответствует действительности.
+									.td.date-message
+										span.mobile Дата обращения
+										| 09.01.23
+									.td.date-changes
+										span.mobile Дата изменения
+										| 10.01.23
+									.td.detail.underline #[span.not-active Ответить] #[span.active Свернуть]
+								.details__bottom
+									.details__items
+										.details__item
+											.details__title Категория товара
+											.details__info Молочная продукция
+										.details__item
+											.details__title Упаковка
+											.details__info Ширина - 12 см, Высота - 12 см, Длина - 15 см
+										.details__item
+											.details__title Бренд
+											.details__info Милорада
+										.details__item
+											.details__title Срок годности
+											.details__info до 08.12.23
+										.details__item
+											.details__title Артикул
+											.details__info 125547456
+										.details__item
+											.details__title Название товара
+											.details__info Молоко обезжиренное Dietecs
+										.details__item
+											.details__title Физическое состояние
+											.details__info Газообразное
+										.details__item
+											.details__title Состав
+											.details__info Сахар, вода, грецкий орех
+										.details__item
+											.details__title Сфера использования
+											.details__info Спортивное питание, биоактивные добавки
+									.details__title Описание
+									.details__info Российская компания ООО «КПФ «МИЛОРАДА» – с 1991 года активный участник рынка сырья для предприятий пищевой и парфюмерно-косметической промышленности. В основе политики компании – финансовая стабильность, профессиональная техническая поддержка клиентов, освоение и реализация программ обеспечения качества в цепочке производства пищевых продуктов, содействие внедрению инновационных технологий.
+									.details__btns
+										button.btn.empty.btn-reject Отклонить
+										button.btn Утвердить
+
+							.details
+								.tr.gradient_border
+									.td.name
+										span.mobile Название компании
+										| Милорада
+									.td.type
+										span.mobile Тип проблемы
+										| Проблема с объявлением
+									.td.description
+										span.mobile Описание
+										| Пришло быстро, описание соответствует действительности.
+									.td.date-message
+										span.mobile Дата обращения
+										| 09.01.23
+									.td.date-changes
+										span.mobile Дата изменения
+										| 10.01.23
+									.td.detail.underline #[span.not-active Ответить] #[span.active Свернуть]
+								.details__bottom
+									.details__items
+										.details__item
+											.details__title Категория товара
+											.details__info Молочная продукция
+										.details__item
+											.details__title Упаковка
+											.details__info Ширина - 12 см, Высота - 12 см, Длина - 15 см
+										.details__item
+											.details__title Бренд
+											.details__info Милорада
+										.details__item
+											.details__title Срок годности
+											.details__info до 08.12.23
+										.details__item
+											.details__title Артикул
+											.details__info 125547456
+										.details__item
+											.details__title Название товара
+											.details__info Молоко обезжиренное Dietecs
+										.details__item
+											.details__title Физическое состояние
+											.details__info Газообразное
+										.details__item
+											.details__title Состав
+											.details__info Сахар, вода, грецкий орех
+										.details__item
+											.details__title Сфера использования
+											.details__info Спортивное питание, биоактивные добавки
+									.details__title Описание
+									.details__info Российская компания ООО «КПФ «МИЛОРАДА» – с 1991 года активный участник рынка сырья для предприятий пищевой и парфюмерно-косметической промышленности. В основе политики компании – финансовая стабильность, профессиональная техническая поддержка клиентов, освоение и реализация программ обеспечения качества в цепочке производства пищевых продуктов, содействие внедрению инновационных технологий.
+									.details__btns
+										button.btn.empty.btn-reject Отклонить
+										button.btn Утвердить
+
+					.switcher__content
+						.table
+							.thead
+								.tr
+									.th.name Название компании
+									.th.type Тип проблемы
+									.th.description Описание
+									.th.date-message Дата обращения
+									.th.date-changes Дата изменения
+									.th.detail
+						.tbody
+							.details
+								.tr.gradient_border
+									.td.name
+										span.mobile Название компании
+										| Милорада
+									.td.type
+										span.mobile Тип проблемы
+										| Проблема с объявлением
+									.td.description
+										span.mobile Описание
+										| Пришло быстро, описание соответствует действительности.
+									.td.date-message
+										span.mobile Дата обращения
+										| 09.01.23
+									.td.date-changes
+										span.mobile Дата изменения
+										| 10.01.23
+									.td.detail.underline #[span.not-active Ответить] #[span.active Свернуть]
+								.details__bottom
+									.details__items
+										.details__item
+											.details__title Категория товара
+											.details__info Молочная продукция
+										.details__item
+											.details__title Упаковка
+											.details__info Ширина - 12 см, Высота - 12 см, Длина - 15 см
+										.details__item
+											.details__title Бренд
+											.details__info Милорада
+										.details__item
+											.details__title Срок годности
+											.details__info до 08.12.23
+										.details__item
+											.details__title Артикул
+											.details__info 125547456
+										.details__item
+											.details__title Название товара
+											.details__info Молоко обезжиренное Dietecs
+										.details__item
+											.details__title Физическое состояние
+											.details__info Газообразное
+										.details__item
+											.details__title Состав
+											.details__info Сахар, вода, грецкий орех
+										.details__item
+											.details__title Сфера использования
+											.details__info Спортивное питание, биоактивные добавки
+									.details__title Описание
+									.details__info Российская компания ООО «КПФ «МИЛОРАДА» – с 1991 года активный участник рынка сырья для предприятий пищевой и парфюмерно-косметической промышленности. В основе политики компании – финансовая стабильность, профессиональная техническая поддержка клиентов, освоение и реализация программ обеспечения качества в цепочке производства пищевых продуктов, содействие внедрению инновационных технологий.
+									.details__btns
+										button.btn.empty.btn-reject Отклонить
+										button.btn Утвердить
+
+							.details
+								.tr.gradient_border
+									.td.name
+										span.mobile Название компании
+										| Милорада
+									.td.type
+										span.mobile Тип проблемы
+										| Проблема с объявлением
+									.td.description
+										span.mobile Описание
+										| Пришло быстро, описание соответствует действительности.
+									.td.date-message
+										span.mobile Дата обращения
+										| 09.01.23
+									.td.date-changes
+										span.mobile Дата изменения
+										| 10.01.23
+									.td.detail.underline #[span.not-active Ответить] #[span.active Свернуть]
+								.details__bottom
+									.details__items
+										.details__item
+											.details__title Категория товара
+											.details__info Молочная продукция
+										.details__item
+											.details__title Упаковка
+											.details__info Ширина - 12 см, Высота - 12 см, Длина - 15 см
+										.details__item
+											.details__title Бренд
+											.details__info Милорада
+										.details__item
+											.details__title Срок годности
+											.details__info до 08.12.23
+										.details__item
+											.details__title Артикул
+											.details__info 125547456
+										.details__item
+											.details__title Название товара
+											.details__info Молоко обезжиренное Dietecs
+										.details__item
+											.details__title Физическое состояние
+											.details__info Газообразное
+										.details__item
+											.details__title Состав
+											.details__info Сахар, вода, грецкий орех
+										.details__item
+											.details__title Сфера использования
+											.details__info Спортивное питание, биоактивные добавки
+									.details__title Описание
+									.details__info Российская компания ООО «КПФ «МИЛОРАДА» – с 1991 года активный участник рынка сырья для предприятий пищевой и парфюмерно-косметической промышленности. В основе политики компании – финансовая стабильность, профессиональная техническая поддержка клиентов, освоение и реализация программ обеспечения качества в цепочке производства пищевых продуктов, содействие внедрению инновационных технологий.
+									.details__btns
+										button.btn.empty.btn-reject Отклонить
+										button.btn Утвердить
+
+							.details
+								.tr.gradient_border
+									.td.name
+										span.mobile Название компании
+										| Милорада
+									.td.type
+										span.mobile Тип проблемы
+										| Проблема с объявлением
+									.td.description
+										span.mobile Описание
+										| Пришло быстро, описание соответствует действительности.
+									.td.date-message
+										span.mobile Дата обращения
+										| 09.01.23
+									.td.date-changes
+										span.mobile Дата изменения
+										| 10.01.23
+									.td.detail.underline #[span.not-active Ответить] #[span.active Свернуть]
+								.details__bottom
+									.details__items
+										.details__item
+											.details__title Категория товара
+											.details__info Молочная продукция
+										.details__item
+											.details__title Упаковка
+											.details__info Ширина - 12 см, Высота - 12 см, Длина - 15 см
+										.details__item
+											.details__title Бренд
+											.details__info Милорада
+										.details__item
+											.details__title Срок годности
+											.details__info до 08.12.23
+										.details__item
+											.details__title Артикул
+											.details__info 125547456
+										.details__item
+											.details__title Название товара
+											.details__info Молоко обезжиренное Dietecs
+										.details__item
+											.details__title Физическое состояние
+											.details__info Газообразное
+										.details__item
+											.details__title Состав
+											.details__info Сахар, вода, грецкий орех
+										.details__item
+											.details__title Сфера использования
+											.details__info Спортивное питание, биоактивные добавки
+									.details__title Описание
+									.details__info Российская компания ООО «КПФ «МИЛОРАДА» – с 1991 года активный участник рынка сырья для предприятий пищевой и парфюмерно-косметической промышленности. В основе политики компании – финансовая стабильность, профессиональная техническая поддержка клиентов, освоение и реализация программ обеспечения качества в цепочке производства пищевых продуктов, содействие внедрению инновационных технологий.
+									.details__btns
+										button.btn.empty.btn-reject Отклонить
+										button.btn Утвердить
+
+							.details
+								.tr.gradient_border
+									.td.name
+										span.mobile Название компании
+										| Милорада
+									.td.type
+										span.mobile Тип проблемы
+										| Проблема с объявлением
+									.td.description
+										span.mobile Описание
+										| Пришло быстро, описание соответствует действительности.
+									.td.date-message
+										span.mobile Дата обращения
+										| 09.01.23
+									.td.date-changes
+										span.mobile Дата изменения
+										| 10.01.23
+									.td.detail.underline #[span.not-active Ответить] #[span.active Свернуть]
+								.details__bottom
+									.details__items
+										.details__item
+											.details__title Категория товара
+											.details__info Молочная продукция
+										.details__item
+											.details__title Упаковка
+											.details__info Ширина - 12 см, Высота - 12 см, Длина - 15 см
+										.details__item
+											.details__title Бренд
+											.details__info Милорада
+										.details__item
+											.details__title Срок годности
+											.details__info до 08.12.23
+										.details__item
+											.details__title Артикул
+											.details__info 125547456
+										.details__item
+											.details__title Название товара
+											.details__info Молоко обезжиренное Dietecs
+										.details__item
+											.details__title Физическое состояние
+											.details__info Газообразное
+										.details__item
+											.details__title Состав
+											.details__info Сахар, вода, грецкий орех
+										.details__item
+											.details__title Сфера использования
+											.details__info Спортивное питание, биоактивные добавки
+									.details__title Описание
+									.details__info Российская компания ООО «КПФ «МИЛОРАДА» – с 1991 года активный участник рынка сырья для предприятий пищевой и парфюмерно-косметической промышленности. В основе политики компании – финансовая стабильность, профессиональная техническая поддержка клиентов, освоение и реализация программ обеспечения качества в цепочке производства пищевых продуктов, содействие внедрению инновационных технологий.
+									.details__btns
+										button.btn.empty.btn-reject Отклонить
+										button.btn Утвердить
+
+
+
+
+
+	include pug/components/footer

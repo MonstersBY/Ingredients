@@ -15,6 +15,9 @@
 		position: relative;
 		margin-top: auto;
 	}
+	&.desck {
+		display: none;
+	}
 
 	&__container {
 		display: flex;
@@ -47,6 +50,9 @@
 			font-size: 20rem;
 			line-height: 24rem;
 			align-items: center;
+			position: relative;
+
+
 		}
 
 		&__icon {
@@ -85,6 +91,19 @@
 		grid-column-gap: 20rem;
 		padding: 28rem 24rem;
 		border-bottom: 2rem solid rgba(207, 224, 230, 0.4);
+		position: relative;
+
+		&::before {
+			content: '';
+			display: block;
+			background: url(../images/icons/arrow-square-right.svg) no-repeat;
+			background-size: 24rem 22.02rem;
+			width: 24rem;
+			height: 22.02rem;
+			right: 20rem;
+			top: 40%;
+			position: absolute;
+		}
 	}
 
 	&__img {
@@ -220,7 +239,38 @@
 @include mobile {
 	.sidebar {
 		display: none;
+		position: fixed;
+		z-index: 10;
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		padding: 35rem 20rem 0;
+		overflow: auto;
 
+		&-container {
+			display: flex;
+			flex-direction: column;
+		}
+		&__exit {
+			width: 18rem;
+			height: 18rem;
+			margin-bottom: 47rem;
+			padding: 0;
+			margin-left: auto;
+
+			svg {
+				path {
+					stroke:#181818;
+				}
+			}
+		}
+		&__top {
+			padding: 0;
+			padding-bottom: 30rem;
+		}
+		&__items {
+			padding: 0;
+		}
 		&-experts {
 			padding: 16rem;
 			width: 100%;
