@@ -288,6 +288,7 @@ html(class=html.classList)&attributes(html.attrs)
 					script.src = "https://raw.githubusercontent.com/w3c/IntersectionObserver/master/polyfill/intersection-observer.js";
 					document.getElementsByTagName('head')[0].appendChild(script);
 				}
+			script(src!=`https://cdn.jsdelivr.net/npm/d3-shape@3`)
 			script(src!=`${baseDir}js/vendor.js?v=${Date.now()}`)
 			script(src!=`${baseDir}js/main.js?v=${Date.now()}`)
 		block body-end

@@ -1,0 +1,213 @@
+extends pug/base
+
+prepend vars
+	//-
+	- title = "Ingredients | Заказы"
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+		section.section.cabinet.statistics
+			.container
+				.sidebar.gradient_border
+					.sidebar__top
+						.sidebar__img
+							img(src="images/cabinet/profile_img.png" alt="profile_img")
+						.sidebar__suptitle Компания
+						.sidebar__title ООО «Милорада»
+
+					.sidebar__items
+						.item
+							a.item__btn.item__drop_btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/box.svg
+								.item__name Товары
+							.item__drop
+								.item__list
+									a(href="#") Товары
+									a(href="#") Заказы
+									a(href="#") Отзывы и вопросы
+									a(href="#") Бренды
+						.item
+							a.item__btn.item__drop_btn.active(href="#")
+								.item__icon
+									include pug/svg/cabinet/profile_2user.svg
+								.item__name Личный кабинет
+							.item__drop(style="display: block")
+								.item__list
+									a.active(href="#") Личные данные
+									a(href="#") Личный кабинет 1
+									a(href="#") Личный кабинет 1
+									a(href="#") Личный кабинет 1
+
+						.item
+							a.item__btn.item__drop_btn(href="#")
+								.item__icon
+									include pug/svg/cabinet/sms.svg
+								.item__name Запросы
+							.item__drop
+								.item__list
+									a(href="#") Запросы 1
+									a(href="#") Запросы 2
+									a(href="#") Запросы 3
+									a(href="#") Запросы 4
+
+				.cabinet__content
+					.section__title Общая статистика активности пользователей
+					form.form__one
+						.form__item
+							select(name="")
+								option За последние 3 месяца
+								option За последние 3 месяца 2
+								option За последние 3 месяца 3
+					.statistics-container
+						.statistics-item.gradient_border
+							.statistics-icon
+								include pug/svg/profile-not-fill.svg
+							.text-box
+								.statistics-title 89
+								.statistics-subtitle посетителей
+
+						.statistics-item.gradient_border
+							.statistics-icon
+								include pug/svg/like-tag.svg
+							.text-box
+								.statistics-title 10
+								.statistics-subtitle отзывов о товарах
+
+						.statistics-item.gradient_border
+							.statistics-icon
+								include pug/svg/box-open-done.svg
+							.text-box
+								.statistics-title 200
+								.statistics-subtitle количество продаж
+
+					.statistics-box.gradient_border.switcher
+						.statistics-box-switcher
+							.section__title Действия
+							.switcher__control
+								button.btn.switcher__btn.active(type="button") Все
+								button.btn.switcher__btn(type="button") Выполненные
+								button.btn.switcher__btn(type="button") Ожидающие ответа
+						.switcher__container
+							.switcher__content.active
+								.statistics-container
+									a.statistics-item.link.gradient_border(href="#")
+										.statistics-icon
+											include pug/svg/clipboard-text.svg
+										.text-box
+											.statistics-title 104
+											.statistics-subtitle запросов документов
+
+									a.statistics-item.link.gradient_border(href="#")
+										.statistics-icon
+											include pug/svg/clipboard-text.svg
+										.text-box
+											.statistics-title 100
+											.statistics-subtitle запросов образцов
+
+									a.statistics-item.link.gradient_border(href="#")
+										.statistics-icon
+											include pug/svg/clipboard-text.svg
+										.text-box
+											.statistics-title 52
+											.statistics-subtitle запросов цен
+
+									a.statistics-item.link.gradient_border(href="#")
+										.statistics-icon
+											include pug/svg/help.svg
+										.text-box
+											.statistics-title 30
+											.statistics-subtitle вопросов
+
+
+							.switcher__content
+								.statistics-container
+									a.statistics-item.link.gradient_border(href="#")
+										.statistics-icon
+											include pug/svg/clipboard-text.svg
+										.text-box
+											.statistics-title 104
+											.statistics-subtitle запросов документов
+
+									a.statistics-item.link.gradient_border(href="#")
+										.statistics-icon
+											include pug/svg/clipboard-text.svg
+										.text-box
+											.statistics-title 100
+											.statistics-subtitle запросов образцов
+
+									a.statistics-item.link.gradient_border(href="#")
+										.statistics-icon
+											include pug/svg/clipboard-text.svg
+										.text-box
+											.statistics-title 52
+											.statistics-subtitle запросов цен
+
+									a.statistics-item.link.gradient_border(href="#")
+										.statistics-icon
+											include pug/svg/help.svg
+										.text-box
+											.statistics-title 30
+											.statistics-subtitle вопросов
+
+							.switcher__content
+								.statistics-container
+									a.statistics-item.link.gradient_border(href="#")
+										.statistics-icon
+											include pug/svg/clipboard-text.svg
+										.text-box
+											.statistics-title 104
+											.statistics-subtitle запросов документов
+
+									a.statistics-item.link.gradient_border(href="#")
+										.statistics-icon
+											include pug/svg/clipboard-text.svg
+										.text-box
+											.statistics-title 100
+											.statistics-subtitle запросов образцов
+
+									a.statistics-item.link.gradient_border(href="#")
+										.statistics-icon
+											include pug/svg/clipboard-text.svg
+										.text-box
+											.statistics-title 52
+											.statistics-subtitle запросов цен
+
+									a.statistics-item.link.gradient_border(href="#")
+										.statistics-icon
+											include pug/svg/help.svg
+										.text-box
+											.statistics-title 30
+											.statistics-subtitle вопросов
+
+					.statistics-box.gradient_border
+						.section__title Средняя скорость ответа
+						.statistics-container
+							.statistics-item.gradient_border
+								.statistics-icon
+									include pug/svg/fast-time.svg
+								.text-box
+									.statistics-title 1 ч
+									.statistics-subtitle запросов документов
+
+							.statistics-item.gradient_border
+								.statistics-icon
+									include pug/svg/fast-time.svg
+								.text-box
+									.statistics-title 24 ч
+									.statistics-subtitle запросов образцов
+
+							.statistics-item.gradient_border
+								.statistics-icon
+									include pug/svg/fast-time.svg
+								.text-box
+									.statistics-title 30 мин
+									.statistics-subtitle запросов цен
+
+					include pug/components/number-of-actions
+
+	include pug/components/footer

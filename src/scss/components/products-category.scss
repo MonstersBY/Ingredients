@@ -24,7 +24,6 @@
 }
 .product-category {
 	background: rgba(255, 255, 255, 0.2);
-	backdrop-filter: blur(5px);
 	border-radius: 10rem;
 	position: relative;
 	padding-bottom: 32rem;
@@ -82,7 +81,16 @@
 	.desktop {
 		display: none;
 	}
-
+	.products-category {
+		.search__modal-bottom {
+			.btn {
+				justify-content: center;
+			}
+		}
+		.filter__control .icon:last-child {
+			margin-left: 0;
+		}
+	}
 	.product-category {
 		background: rgba(255, 255, 255, 0.2);
 		backdrop-filter: blur(5px);

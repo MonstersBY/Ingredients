@@ -8,6 +8,9 @@ import header from './components/header';
 import lazyLoading from './modules/lazyLoading';
 import scrollToAnchor from './modules/scrollToAnchor';
 
+import './amcharts/index';
+import './amcharts/xy';
+import './amcharts/themes/Animated';
 
 import './components/jquery.nice-select';
 import './components/jquery.quicksearch';
@@ -47,6 +50,7 @@ import './components/swiper_column_line';
 import './components/modal-request';
 import './components/fixed_sidebar';
 import './components/modal_admin';
+import './components/number-of-actions';
 
 
 $('select').niceSelect();

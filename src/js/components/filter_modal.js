@@ -5,6 +5,8 @@ $('.all-filter').on('click', function(evt) {
 
 	$this.toggleClass('active');
 	$drop.slideToggle();
+	$('main').toggleClass('modal');
+	$('html').toggleClass('modal');
 
 });
 
@@ -16,6 +18,8 @@ $('.search__modal-exit').on('click', function(evt) {
 	$all.toggleClass('active');
 	$drop.slideToggle();
 
+	$('main').toggleClass('modal');
+	$('html').toggleClass('modal');
 });
 
 $('.search__modal-apply').on('click', function(evt) {
@@ -25,6 +29,17 @@ $('.search__modal-apply').on('click', function(evt) {
 
 	$all.toggleClass('active');
 	$drop.slideToggle();
+
+	$('main').toggleClass('modal');
+	$('html').toggleClass('modal');
+
+	if(window.outerWidth <= 768) {
+		if($('.item__drop.active').length) {
+			$('.item__drop.active').toggleClass('active')
+			$('.search__modal-bottom').toggleClass('active');
+		}
+	}
+
 	$('.filter__tags-wrap').empty()
 	$('input[type="checkbox"]:checked').each(function(){
 		let $checked = $(this).siblings('span').text();

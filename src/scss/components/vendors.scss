@@ -197,6 +197,9 @@
 		}
 		.swiper {
 			flex-direction: column;
+			&.revers {
+				flex-direction: column-reverse;
+			}
 		}
 		.switcher__container {
 			height: 830rem !important;
