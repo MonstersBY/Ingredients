@@ -9,7 +9,9 @@ import lazyLoading from './modules/lazyLoading';
 import scrollToAnchor from './modules/scrollToAnchor';
 
 import './amcharts/index';
+import './amcharts/ru_RU';
 import './amcharts/xy';
+import './amcharts/percent';
 import './amcharts/themes/Animated';
 
 import './components/jquery.nice-select';
@@ -50,7 +52,10 @@ import './components/swiper_column_line';
 import './components/modal-request';
 import './components/fixed_sidebar';
 import './components/modal_admin';
+import './components/modal-experts';
 import './components/number-of-actions';
+import './components/actions-by-category';
+import './components/action-in-store';
 
 
 $('select').niceSelect();

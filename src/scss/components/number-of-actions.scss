@@ -1,30 +1,143 @@
 .number-of-actions {
+	position: relative;
+	margin-top: 80rem;
+	margin-bottom: 80rem;
 	.statistics-box {
 		padding: 28rem;
 	}
-	&__refresh {
+	.section__title {
+		font-size: 24rem;
+		line-height: 130%;
+		margin: 0;
+	}
+	&__head {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: 30rem;
+
+	}
+	&__months {
+		display: flex;
+		gap: 24rem;
+	}
+	&__month {
 		display: flex;
 		align-items: center;
-		justify-content: flex-end;
-		gap: 20rem;
+		gap: 12rem;
+		color: #999999;
 
-		span {
-			color: #999999;
+		&-color {
+			background-color: #00ff00;
+			width: 6rem;
+			height: 6rem;
+			border-radius: 50%;
 		}
-
-		&-btn {
-			display: flex;
-			align-items: center;
-			gap: 12rem;
-
-			svg {
-				width: 24rem;
-			}
-		}
+	}
+	.form__item {
+		overflow: unset;
+		margin: 0;
+		gap: 8rem;
+		background: unset;
+	}
+	.nice-select {
+		width: 267rem;
+		background: rgba(255, 255, 255, 0.2);
+		border: 2rem solid #fff;;
 	}
 	#number-of-actions__graph {
 		width: 100%;
-		height: 500rem;
-		background-color: green;
+		height: 310rem;
+	}
+	.form__one {
+		margin-bottom: 40rem;
+		.form__item {
+			background: #FBFBFB;
+			width: fit-content;
+		}
+		.nice-select {
+			border: unset;
+			width: 335rem;
+		}
+	}
+	&__box {
+		display: flex;
+		flex-direction: column;
+		gap: 8rem;
+		padding: 20rem 32rem 32rem;
+		width: fit-content;
+		background: #FFFFFF;
+		border-radius: 5rem;
+		position: absolute;
+    	top: 113rem;
+    	right: 116rem;
+
+		.number-of-actions__month {
+			display: grid;
+			gap: 0;
+			column-gap: 8rem;
+
+			&-color {
+				width: 10rem;
+				height: 10rem;
+				grid-column: 1;
+				grid-row: 1;
+			}
+			&-name {
+				grid-column: 2;
+				grid-row: 1;
+			}
+			&-number {
+				grid-column: 2;
+				grid-row: 2;
+				font-size: 32rem;
+				line-height: 39rem;
+				color: #181818;
+			}
+		}
+	}
+
+}
+
+.refresh-container {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	gap: 20rem;
+
+	span {
+		color: #999999;
+	}
+
+	&-btn {
+		display: flex;
+		align-items: center;
+		gap: 12rem;
+
+		svg {
+			width: 24rem;
+		}
+	}
+}
+
+.insights-my-store {
+	.section__title {
+		font-size: 32rem;
+		line-height: 39rem;
+		margin-bottom: 40rem;
+	}
+	.section__subtitle {
+		margin-bottom: 24rem;
+	}
+	.number-of-actions__head {
+		.section__title {
+			font-size: 24rem;
+			line-height: 130%;
+			margin-bottom: 0;
+		}
+	}
+	#number-of-actions__multiple {
+		width: 100%;
+		height: 310rem;
 	}
 }

@@ -1,0 +1,38 @@
+.actions-by-category
+	.section__title Просмотр действий по категориям
+	.section__subtitle Настройте фильтры для сравнения
+	form.one-line
+		.form__item
+			select(name="")
+				option Категории
+				option Категории 2
+				option Категории 3
+		.form__item
+			select(name="")
+				option Год
+				option Год 2
+				option Год 3
+		.form__item
+			select(name="")
+				option Месяц
+				option Месяц 2
+				option Месяц 3
+		.icon.gradient_border.blank
+			include ../svg/idea.svg
+	.statistics-box.gradient_border
+		.actions-by-category__head
+			.section__title Действия по категориям за январь 2022
+		.actions-by-category__bottom
+			#actions-by-category__funnel-chart
+
+	.statistics-box.gradient_border
+		.actions-by-category__head
+			.section__title Действия по категориям за январь 2022
+		.actions-by-category__bottom
+			#actions-by-category__donut-chart
+
+	.refresh-container
+		.refresh-container-btn
+			include ../svg/radix-icons_update.svg
+			| Обновить
+		span Последнее обновление в 12.30

@@ -1,17 +1,15 @@
-.number-of-actions
+.insights-my-store.number-of-actions
+	.section__title Инсайты по моему магазину
+	.section__subtitle Настройте фильтры для просмотра
+	form.form__one
+		.form__item
+			select(name="")
+				option Выбрано 3 класса
+				option Выбрано 3 класса 2
+				option Выбрано 3 класса 3
 	.statistics-box.gradient_border
 		.number-of-actions__head
-			.section__title Количество действий за 3 месяца
-			.number-of-actions__months
-				.number-of-actions__month
-					.number-of-actions__month-color
-					.number-of-actions__month-name Январь
-				.number-of-actions__month
-					.number-of-actions__month-color
-					.number-of-actions__month-name Январь
-				.number-of-actions__month
-					.number-of-actions__month-color
-					.number-of-actions__month-name Январь
+			.section__title Кол-во просмотров по классам
 			.form__item
 				select(name="")
 					option За последние 3 месяца
@@ -20,20 +18,20 @@
 				.icon.gradient_border.blank
 					include ../svg/idea.svg
 		.number-of-actions__bottom
-			#number-of-actions__graph
+			#number-of-actions__multiple
 
 		.number-of-actions__box
 			.number-of-actions__month
 				.number-of-actions__month-color
-				.number-of-actions__month-name Январь
+				.number-of-actions__month-name Ароматизаторы
 				.number-of-actions__month-number 1 000
 			.number-of-actions__month
 				.number-of-actions__month-color
-				.number-of-actions__month-name Февраль
+				.number-of-actions__month-name Эмульгаторы
 				.number-of-actions__month-number 2 000
 			.number-of-actions__month
 				.number-of-actions__month-color
-				.number-of-actions__month-name Март
+				.number-of-actions__month-name Стабилизаторы
 				.number-of-actions__month-number 5 000
 
 	.refresh-container

@@ -79,6 +79,11 @@ button {
 		width: 24rem;
 		height: 24rem;
 	}
+
+	&.blank {
+		background: rgba(255, 255, 255, 0.2);
+		border-radius: 10rem;
+	}
 }
 
 .section {
@@ -613,5 +618,8 @@ button {
 @import "components/sidebar-request";
 @import "components/modal-request";
 @import "components/admin";
+@import "components/modal-experts";
 @import "components/statistics";
 @import "components/number-of-actions";
+@import "components/actions-by-category";
+@import "components/action-in-store";
