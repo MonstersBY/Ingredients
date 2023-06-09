@@ -94,11 +94,20 @@ am5.ready(function() {
 
 	// Create chart
 	// https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/
-	var chart = root.container.children.push(am5percent.PieChart.new(root, {
-		radius: am5.percent(90),
-		innerRadius: am5.percent(50),
-		layout: root.horizontalLayout,
-	}));
+	if (window.outerWidth <= 768) {
+		var chart = root.container.children.push(am5percent.PieChart.new(root, {
+			radius: am5.percent(90),
+			innerRadius: am5.percent(40),
+			layout: root.verticalLayout,
+		}));
+	} else {
+		var chart = root.container.children.push(am5percent.PieChart.new(root, {
+			radius: am5.percent(90),
+			innerRadius: am5.percent(40),
+			layout: root.horizontalLayout,
+		}));
+	}
+
 
 	// Create series
 	// https://www.amcharts.com/docs/v5/charts/percent-charts/pie-chart/#Series
@@ -134,11 +143,17 @@ am5.ready(function() {
 
 	// Create legend
 	// https://www.amcharts.com/docs/v5/charts/percent-charts/legend-percent-series/
-	var legend = chart.children.push(am5.Legend.new(root, {
-		centerY: am5.percent(50),
-		y: am5.percent(50),
-		layout: root.verticalLayout,
-	}));
+
+	if (window.outerWidth <= 768) {
+		var legend = chart.children.push(am5.Legend.new(root, {}));
+	} else {
+		var legend = chart.children.push(am5.Legend.new(root, {
+			centerY: am5.percent(50),
+			y: am5.percent(50),
+			layout: root.verticalLayout,
+		}));
+	}
+
 	legend.markerRectangles.template.setAll({
 		cornerRadiusTL: 10,
 		cornerRadiusTR: 10,

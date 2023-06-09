@@ -7,6 +7,10 @@
 		display: flex;
 		gap: 24rem;
 
+		.mobile {
+			display: none;
+		}
+
 		.nice-select {
 			width: 233rem;
 		}
@@ -18,5 +22,43 @@
 	#actions-by-category__donut-chart {
 		width: 100%;
 		height: 400rem;
+	}
+}
+
+@include mobile {
+	.actions-by-category {
+		margin-bottom: 120rem;
+		.section__subtitle {
+			margin-bottom: 24rem;
+		}
+		.one-line {
+			display: flex;
+			gap: 24rem;
+
+			.mobile {
+				display: flex;
+			}
+			.desc {
+				display: none;
+			}
+			.form__item {
+				flex: 1;
+			}
+
+			.nice-select {
+				width: 100%;
+			}
+		}
+		.statistics-box {
+			width: 355rem;
+		}
+		#actions-by-category__funnel-chart {
+			width: 100%;
+			height: 444rem;
+		}
+		#actions-by-category__donut-chart {
+			width: 100%;
+			height: 500rem;
+		}
 	}
 }
