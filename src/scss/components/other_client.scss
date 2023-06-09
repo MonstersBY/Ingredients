@@ -1,0 +1,47 @@
+.other_client {
+	&.sidebar {
+		box-shadow: unset;
+	}
+	.slide {
+		padding: 10rem;
+	}
+	&-title {
+		font-size: 20rem;
+		line-height: 150%;
+	}
+	&-item {
+		box-shadow: -10rem -10rem 20rem rgba(255, 255, 255, 0.2), 10rem 10rem 10rem rgba(139, 168, 189, 0.05);
+		border-radius: 5rem;
+		padding: 12rem;
+		display: flex;
+		color: #999999;
+		align-items: center;
+
+		&-img {
+			background: #FFFFFF;
+			width: 88rem;
+			height: 88rem;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin-right: 20rem;
+			border-radius: 5rem;
+		}
+		&-name {
+			font-size: 20rem;
+			line-height: 150%;
+			color: #181818;
+		}
+	}
+	.swiper_control {
+		align-self: flex-start;
+	}
+	.swiper_shadow {
+		padding: 20rem;
+		padding-bottom: 50rem;
+		padding-top: 50rem;
+		margin: -20rem;
+		margin-bottom: -50rem;
+		margin-top: -50rem;
+	}
+}

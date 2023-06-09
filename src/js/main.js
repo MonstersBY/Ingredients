@@ -56,6 +56,8 @@ import './components/modal-experts';
 import './components/number-of-actions';
 import './components/actions-by-category';
 import './components/action-in-store';
+import './components/client_portrait__donut-chart';
+import './components/client_portrait__column';
 
 
 $('select').niceSelect();

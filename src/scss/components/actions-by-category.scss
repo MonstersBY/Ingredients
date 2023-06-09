@@ -15,14 +15,18 @@
 			width: 233rem;
 		}
 	}
-	#actions-by-category__funnel-chart {
-		width: 100%;
-		height: 444rem;
-	}
-	#actions-by-category__donut-chart {
-		width: 100%;
-		height: 400rem;
-	}
+}
+#actions-by-category__funnel-chart {
+	width: 100%;
+	height: 444rem;
+}
+#actions-by-category__donut-chart, #client_portrait__donut-chart-one, #client_portrait__donut-chart-two {
+	width: 100%;
+	height: 400rem;
+}
+#client_portrait__column-one, #client_portrait__column-two {
+	width: 100%;
+	height: 400rem;
 }
 
 @include mobile {
@@ -52,13 +56,13 @@
 		.statistics-box {
 			width: 355rem;
 		}
-		#actions-by-category__funnel-chart {
-			width: 100%;
-			height: 444rem;
-		}
-		#actions-by-category__donut-chart {
-			width: 100%;
-			height: 500rem;
-		}
+	}
+	#actions-by-category__funnel-chart {
+		width: 100%;
+		height: 444rem;
+	}
+	#actions-by-category__donut-chart, #client_portrait__donut-chart-one, #client_portrait__donut-chart-two {
+		width: 100%;
+		height: 500rem;
 	}
 }
