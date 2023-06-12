@@ -259,6 +259,57 @@ block content
 							button.btn.empty Мои запросы
 							button.btn.btn__close Вернуться к продукту
 
+			.modal-box.modal-request.modal-feedback
+				.modal-box__container
+					.modal-request-first
+						button.modal-box__close(type="button")
+							include pug/svg/cross.svg
+						.section__title Отзыв
+						form.form.form_validation
+
+							label.form__item
+								input.input(type="text")
+								span.placeholder ФИО
+
+							label.form__item
+								input.input(type="email")
+								span.placeholder E-mail
+
+							label.form__item
+								input.input(type="text")
+								span.placeholder Компания
+
+							label.form__item
+								textarea.textarea(maxlength="5000")
+								span.placeholder Описание товара
+								span.count-text #[span 0] /5000
+
+							.form__bottom.right.raiting
+
+								.product-review__top__stars
+									input(type="radio" name="rating1").stars-input
+									.star
+									input(type="radio" name="rating1").stars-input
+									.star
+									input(type="radio" name="rating1").stars-input
+									.star
+									input(type="radio" name="rating1").stars-input
+									.star
+									input(type="radio" name="rating1").stars-input
+									.star
+									| Оценка:
+								button.btn.btn-next(type="submit") Отправить
+
+					.modal-request-second
+						button.modal-box__close(type="button")
+							include pug/svg/cross.svg
+						.section__title.center Ваш отзыв
+						.modal-request__like
+							include pug/svg/big-like.svg
+						.section__text Ваш отзыв успешно отправлен в Hitema!
+						.modal-request__btns
+							button.btn.btn__close Вернуться к продукту
+
 			.modal-box.modal-request.modal-order
 				.modal-box__container
 					.modal-request-first
@@ -555,7 +606,7 @@ block content
 										.star.checked
 										.star
 								.review__head-bottom на основе #[span 493]  отзывов
-							button.btn Оставить отзыв
+							button.btn.empty.feedback-open Оставить отзыв
 					.swiper_shadow
 						.swiper_grid_container
 							.swiper.swiper_review

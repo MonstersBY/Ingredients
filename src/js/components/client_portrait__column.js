@@ -63,7 +63,7 @@ am5.ready(function() {
 		valueXField: "value",
 		categoryYField: "product",
 		tooltip: am5.Tooltip.new(root, {
-			pointerOrientation: "left",
+			pointerOrientation: "vertical",
 			labelText: "{valueX}"
 		})
 	}));
@@ -74,7 +74,8 @@ am5.ready(function() {
 	series.columns.template.setAll({
 		cornerRadiusTR: 5,
 		cornerRadiusBR: 5,
-		strokeOpacity: 0
+		strokeOpacity: 0,
+		tooltipText: "{valueX}",
 	});
 
 	// Make each column to be of a different color
@@ -86,61 +87,67 @@ am5.ready(function() {
 		return chart.get("colors").getIndex(series.columns.indexOf(target));
 	});
 
-	// series.columns.template.adapters.add("fillGradient", am5.LinearGradient.new(root, {
-	// 	stops: [{
-	// 	  color: am5.color(0xffffff)
-	// 	}, {
-	// 	  color: am5.color(0x946b49)
-	// 	}],
-	// 	rotation: 0
-	// }));
+	series.columns.template.set("fillGradient", am5.LinearGradient.new(root, {
+		stops: [{
+		  opacity: 0,
+		}, {
+		  opacity: 1,
+		}],
+		rotation: 0
+	}));
 
 
   // Set data
-  var data = [{
-	product: "Бады",
-	value: 2025
-  }, {
-	product: "Снижение сахара",
-	value: 1882
-  }, {
-	product: "Снеки",
-	value: 1809
-  }, {
-	product: "Корма для животных",
-	value: 1322
-  }, {
-	product: "Газированные напитки",
-	value: 1122
-  }, {
-	product: "Энергетические напитки",
-	value: 1114
-  }, {
-	product: "Безалкогольные напитки",
-	value: 984
-  }];
+	var data = [{
+		product: "Бады",
+		value: 1
+	}, {
+		product: "Снижение сахара",
+		value: 2
+	}, {
+		product: "Снеки",
+		value: 3
+	}, {
+		product: "Корма для животных",
+		value: 4
+	}, {
+		product: "Газированные напитки",
+		value: 5
+	}, {
+		product: "Энергетические напитки",
+		value: 6
+	}, {
+		product: "Безалкогольные напитки",
+		value: 7
+	}];
+	randomData(data)
 
-  series.bullets.push(function () {
-	return am5.Bullet.new(root, {
-	  locationX: 1,
-	  sprite: am5.Label.new(root, {
-		text: "{product}",
-		fill: root.interfaceColors.get("alternativeText"),
-		centerX: am5.p100,
-		centerY: am5.p50,
-		populateText: true
-	  })
+	function randomData(data) {
+		for (let i = 0; i < data.length; i++) {
+			data[i].value = Math.floor(Math.random() * 100) + 1
+		}
+	}
+
+	series.bullets.push(function () {
+		return am5.Bullet.new(root, {
+			locationX: 0,
+			sprite: am5.Label.new(root, {
+				text: "{product}",
+				fill: 0x000000,
+				centerY: am5.p50,
+				populateText: true
+			})
+		});
 	});
-  });
 
-  yAxis.data.setAll(data);
-  series.data.setAll(data);
+	yAxis.data.setAll(data);
+	series.data.setAll(data);
 
 
-  // Make stuff animate on load
-  // https://www.amcharts.com/docs/v5/concepts/animations/
-  series.appear(1000);
-  chart.appear(1000, 100);
+	// Make stuff animate on load
+	// https://www.amcharts.com/docs/v5/concepts/animations/
+	series.appear(1000);
+	chart.appear(1000, 100);
 
 });
 
@@ -194,7 +201,7 @@ am5.ready(function() {
 		min: 0,
 		extraMax: 0.1,
 		renderer: am5xy.AxisRendererX.new(root, {
-		strokeOpacity: 0.1
+			strokeOpacity: 0.1
 		})
 	}));
 
@@ -208,8 +215,8 @@ am5.ready(function() {
 		valueXField: "value",
 		categoryYField: "product",
 		tooltip: am5.Tooltip.new(root, {
-		pointerOrientation: "left",
-		labelText: "{valueX}"
+			pointerOrientation: "vertical",
+			labelText: "{valueX}"
 		})
 	}));
 
@@ -218,7 +225,8 @@ am5.ready(function() {
 	series.columns.template.setAll({
 		cornerRadiusTR: 5,
 		cornerRadiusBR: 5,
-		strokeOpacity: 0
+		strokeOpacity: 0,
+		tooltipText: "{valueX}",
 	});
 
 	// Make each column to be of a different color
@@ -230,51 +238,67 @@ am5.ready(function() {
 		return chart.get("colors").getIndex(series.columns.indexOf(target));
 	});
 
+	series.columns.template.set("fillGradient", am5.LinearGradient.new(root, {
+		stops: [{
+		  opacity: 0,
+		}, {
+		  opacity: 1,
+		}],
+		rotation: 0
+	}));
 
-  // Set data
-  var data = [{
-	product: "Бады",
-	value: 2025
-  }, {
-	product: "Снижение сахара",
-	value: 1882
-  }, {
-	product: "Снеки",
-	value: 1809
-  }, {
-	product: "Корма для животных",
-	value: 1322
-  }, {
-	product: "Газированные напитки",
-	value: 1122
-  }, {
-	product: "Энергетические напитки",
-	value: 1114
-  }, {
-	product: "Безалкогольные напитки",
-	value: 984
-  }];
 
-  series.bullets.push(function () {
-	return am5.Bullet.new(root, {
-	  locationX: 1,
-	  sprite: am5.Label.new(root, {
-		text: "{product}",
-		fill: root.interfaceColors.get("alternativeText"),
-		centerX: am5.p100,
-		centerY: am5.p50,
-		populateText: true
-	  })
+	// Set data
+	var data = [{
+		product: "Бады",
+		value: 2025
+	}, {
+		product: "Снижение сахара",
+		value: 1882
+	}, {
+		product: "Снеки",
+		value: 1809
+	}, {
+		product: "Корма для животных",
+		value: 1322
+	}, {
+		product: "Газированные напитки",
+		value: 1122
+	}, {
+		product: "Энергетические напитки",
+		value: 1114
+	}, {
+		product: "Безалкогольные напитки",
+		value: 984
+	}];
+
+	randomData(data)
+
+	function randomData(data) {
+		for (let i = 0; i < data.length; i++) {
+			data[i].value = Math.floor(Math.random() * 100) + 1
+		}
+	}
+
+	series.bullets.push(function () {
+		return am5.Bullet.new(root, {
+			locationX: 0,
+			sprite: am5.Label.new(root, {
+				text: "{product}",
+				fill: 0x000000,
+				centerY: am5.p50,
+				populateText: true
+			})
+		});
 	});
-  });
 
-  yAxis.data.setAll(data);
-  series.data.setAll(data);
+	yAxis.data.setAll(data);
+	series.data.setAll(data);
 
 
-  // Make stuff animate on load
-  // https://www.amcharts.com/docs/v5/concepts/animations/
-  series.appear(1000);
-  chart.appear(1000, 100);
+	// Make stuff animate on load
+	// https://www.amcharts.com/docs/v5/concepts/animations/
+	series.appear(1000);
+	chart.appear(1000, 100);
 
 });

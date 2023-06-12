@@ -25,20 +25,23 @@ am5.ready(function() {
 	// Create series
 	// https://www.amcharts.com/docs/v5/charts/percent-charts/sliced-chart/#Series
 	var series = chart.series.push(am5percent.FunnelSeries.new(root, {
-	  alignLabels: false,
-	  orientation: "vertical",
-	  valueField: "value",
-	  categoryField: "category",
+		alignLabels: false,
+		orientation: "vertical",
+		valueField: "value",
+		categoryField: "category",
 	}));
+
+	// series.slices.template.setAll({
+	// 	cornerRadius: 1000,
+	// 	fillOpacity: 0.5,
+	// 	strokeWidth: 0,
+	// });
 
 	series.links.template.setAll({
 		height: 12,
 		fillOpacity: 0,
 	});
 
-	// var footnote = chart.children.push(am5.Label.new(root, {
-	// 	text: "Copyright 2021 amCharts"
-	// }));
 
 	series.labels.template.setAll({
 		fontSize: 20,
