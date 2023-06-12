@@ -11,6 +11,14 @@ block content
 	include pug/components/header
 	main
 		section.section.cabinet.statistics
+			.modal-box.modal-advice
+				.modal-box__container
+					button.modal-box__close(type="button")
+						include pug/svg/cross.svg
+					.section__title Совет по статистике
+					.section__subtitle Для корректной работы статистики задайте нужный временной промежуток и интересующие вас категории.
+					.section__subtitle Данные статистики обновляются в режиме реального времени
+					.btn.btn-exit Понятно
 			.container
 				.sidebar.gradient_border
 					.sidebar__top

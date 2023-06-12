@@ -7,7 +7,7 @@
 	}
 
 	&-head {
-		padding-bottom: 80rem;
+		margin-bottom: 80rem;
 		display: flex;
 		gap: 28rem;
 
@@ -166,11 +166,23 @@
 				display: flex;
 				gap: 20rem;
 				align-items: center;
+				cursor: pointer;
 			}
 		}
 	}
 	.number-of-actions {
 		margin-top: 0;
+	}
+	.contact__us-circle {
+		width: 272rem;
+		height: 272rem;
+		top: -25%;
+		left: -32%;
+		z-index: -1;
+		&::before {
+			width: 162rem;
+			height: 162rem;
+		}
 	}
 	&-section {
 		margin-bottom: 80rem;
@@ -252,6 +264,305 @@
 		&-time {
 			color: #686666;
 			margin-left: auto;
+		}
+	}
+}
+
+@include mobile {
+	.client_portrait {
+		.container.back {
+			margin-bottom: 24rem;
+			.underline {
+				width: fit-content;
+			}
+		}
+
+		&-head {
+			margin-bottom: 120rem;
+			display: flex;
+			flex-direction: column;
+			gap: 20rem;
+
+			&__left {
+				flex: 1;
+			}
+
+			&__breadcrumbs {
+				width: 355rem;
+				display: flex;
+				margin-bottom: 32rem;
+			}
+			&__breadcrumb {
+				color: #181818;
+				background: rgba(255, 255, 255, 0.2);
+				position: relative;
+				height: 48rem;
+				padding: 0 5rem 0 5rem;
+				text-align: center;
+				font-size: 15rem;
+				line-height: 150%;
+				margin-right: 40rem;
+				display: none;
+				align-items: center;
+				width: 100%;
+				justify-content: center;
+				box-shadow: -15rem -15rem 40rem rgba(255, 255, 255, 0.5), 15rem 15rem 40rem rgba(139, 168, 189, 0.15);
+
+				&.active {
+					color: #FFFFFF;
+					background: #7C9DA8;
+					display: flex;
+
+					&::before, &::after {
+						content: "";
+						position: absolute;
+						top: 0;
+						border: 0 solid #7C9DA8;
+						border-width: 24rem 20rem;
+						width: 0;
+						height: 0;
+					}
+					&::before {
+						left: -30rem;
+						border-color: #7C9DA8;
+						border-left-color: transparent;
+					}
+					&::after {
+						left: 100%;
+						border-color: transparent;
+						border-left-color: #7C9DA8;
+					}
+				}
+
+				&:first-child {
+					border-top-left-radius: 5rem;
+					border-bottom-left-radius: 5rem;
+					&::before {
+						content: unset;
+					}
+				}
+				&:last-child {
+					margin-right: 0;
+					border-top-right-radius: 5rem;
+					border-bottom-right-radius: 5rem;
+					&::after{
+						content: unset;
+					}
+				}
+				&::before, &::after {
+					content: "";
+					position: absolute;
+					top: 0;
+					border: 0 solid rgba(255, 255, 255, 0.2);
+					border-width: 37rem 25rem;
+					width: 0;
+					height: 0;
+				}
+				&::before {
+					left: -30rem;
+					border-color: rgba(255, 255, 255, 0.2);
+					border-left-color: transparent;
+				}
+				&::after {
+					left: 99%;
+					border-color: transparent;
+					border-left-color: rgba(255, 255, 255, 0.2);
+				}
+			}
+
+			&__box {
+				padding: 24rem 16rem;
+				grid-template-columns: auto 1fr;
+				align-items: center;
+				row-gap: 16rem;
+
+				&-img {
+					width: 52rem;
+					height: 52rem;
+					margin-right: 16rem;
+				}
+				&-title {
+					font-size: 12rem;
+					line-height: 150%;
+					color: #686666;
+					margin-bottom: 4rem;
+				}
+				&-name {
+					font-size: 15rem;
+					line-height: 150%;
+				}
+				&-head {
+					grid-column: 2;
+
+					.client_portrait-head__box-title {
+						color: #999999;
+					}
+					&-time {
+						grid-column: 1/3;
+						grid-row: 6;
+						color: #999999;
+						.client_portrait-head__box-title {
+							color: #999999;
+						}
+						.client_portrait-head__box-name {
+							font-size: 15rem;
+							line-height: 150%;
+						}
+					}
+					&-company, &-position {
+						margin-top: 0;
+						margin-bottom: 0;
+					}
+					&-company, &-phone {
+						grid-column: 1/3;
+					}
+					&-position, &-email {
+						grid-column: 1/3;
+					}
+					&-company {
+						grid-row: 2;
+					}
+					&-position {
+						grid-row: 3;
+					}
+					&-phone {
+						grid-row: 4;
+					}
+					&-email {
+						grid-row: 5;
+					}
+				}
+			}
+
+
+			&__right {
+				width: 359rem;
+			}
+			&__info-box {
+				border-radius: 5rem;
+				padding: 28rem 20rem;
+				width: 100%;
+				display: flex;
+				gap: 20rem;
+				font-size: 20rem;
+				line-height: 150%;
+				flex-direction: column;
+
+				.info-box__item {
+					display: flex;
+					gap: 20rem;
+					align-items: center;
+					cursor: pointer;
+				}
+			}
+		}
+		.number-of-actions {
+			margin-top: 0;
+		}
+		.contact__us-circle {
+			width: 272rem;
+			height: 272rem;
+			top: -25%;
+			left: -32%;
+			&::before {
+				width: 162rem;
+				height: 162rem;
+			}
+		}
+		&-section {
+			margin-bottom: 120rem;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			.underline {
+				display: flex;
+				width: fit-content;
+				margin: 20rem auto 0;
+			}
+		}
+		&__info {
+			&-list {
+				display: flex;
+				flex-direction: column;
+				gap: 20rem;
+			}
+			&-item {
+				display: grid;
+				padding: 18rem 16rem;
+				align-items: center;
+				box-shadow: -10rem -10rem 20rem rgba(255, 255, 255, 0.2), 10rem 10rem 10rem rgba(139, 168, 189, 0.05);
+				border-radius: 5rem;
+			}
+			&-img {
+				width: 65rem;
+				height: 65rem;
+				margin-right: 12rem;
+				grid-row: 1/3;
+				grid-column: 1;
+			}
+			&-name {
+				font-size: 15rem;
+				line-height: 150%;
+				grid-row: 1;
+				grid-column: 2;
+			}
+			&-time {
+				font-size: 13rem;
+				line-height: 150%;
+				margin-left: 0;
+				grid-row: 2;
+				grid-column: 2;
+			}
+		}
+		&__contacts {
+			&-list {
+				display: flex;
+				flex-direction: column;
+				gap: 20rem;
+			}
+			&-item {
+				display: grid;
+				padding: 16rem;
+				align-items: center;
+				grid-template-columns: auto 1fr;
+				row-gap: 12rem;
+				box-shadow: -10rem -10rem 20rem rgba(255, 255, 255, 0.2), 10rem 10rem 10rem rgba(139, 168, 189, 0.05);
+				border-radius: 5rem;
+
+				.text-box {
+					grid-row: 1;
+					grid-column: 2;
+				}
+			}
+			&-img {
+				grid-row: 1;
+				grid-column: 1;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				background: #FFFFFF;
+				box-shadow: 5rem 5rem 30rem rgba(113, 147, 173, 0.1);
+				width: 65rem;
+				height: 65rem;
+				margin-right: 12rem;
+			}
+			&-title {
+				font-size: 13rem;
+				line-height: 150%;
+			}
+			&-name {
+				font-size: 15rem;
+				line-height: 150%;
+			}
+			&-time {
+				font-size: 13rem;
+				line-height: 150%;
+				margin-left: 0;
+				grid-row: 2;
+				grid-column: 1/3;
+			}
 		}
 	}
 }

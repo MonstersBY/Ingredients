@@ -58,6 +58,9 @@ import './components/actions-by-category';
 import './components/action-in-store';
 import './components/client_portrait__donut-chart';
 import './components/client_portrait__column';
+import './components/modal-instruction';
+import './components/modal-note';
+import './components/modal-advice';
 
 
 $('select').niceSelect();

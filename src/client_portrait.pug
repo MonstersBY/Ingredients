@@ -13,6 +13,47 @@ block content
 		section.section.cabinet.statistics.client_portrait
 			.container.back
 				.underline Вернуться назад
+
+			.modal-box.modal-instruction
+				.modal-box__container
+					button.modal-box__close(type="button")
+						include pug/svg/cross.svg
+					.section__title Инструкция
+					.modal__text
+						.modal__text-title Покупатель
+						.modal__text-subtitle пользователь сайта, который заинтересован в категории вашего продукта или аналогах
+					.modal__text
+						.modal__text-title Marketing Leads (MQL)
+						.modal__text-subtitle потенциальные клиенты, которые еще не интересуются покупкой, но уже просматривают ваш онлайн профиль в магазине, скачивает документы, добавляют к сравнение с конкурентами
+					.modal__text
+						.modal__text-title Sales leads (SQL)
+						.modal__text-subtitle потенциальные клиенты, которые уже интересуются покупкой, запрашивают цену, образцы для тестов, интересуются условиями поставки.
+					.btn.btn-exit Понятно
+
+			.modal-box.modal-note
+				.modal-box__container
+					button.modal-box__close(type="button")
+						include pug/svg/cross.svg
+					.section__title Заметка о клиенте
+
+					form.form.form_validation
+						label.form__item
+							textarea.textarea(maxlength="5000")
+							span.placeholder Введите заметку о клиенте
+							span.count-text #[span 0] /5000
+
+						.form__bottom.right
+							button.btn.btn-exit.btn-right(type="submit") Добавить
+
+			.modal-box.modal-advice
+				.modal-box__container
+					button.modal-box__close(type="button")
+						include pug/svg/cross.svg
+					.section__title Совет по статистике
+					.section__subtitle Для корректной работы статистики задайте нужный временной промежуток и интересующие вас категории.
+					.section__subtitle Данные статистики обновляются в режиме реального времени
+					.btn.btn-exit Понятно
+
 			.container
 				.sidebar.other_client
 					.other_client-title Другие клиенты:
@@ -140,18 +181,58 @@ block content
 						.client_portrait-head__right
 							.client_portrait-head__info-box.gradient_border
 								.contact__us-circle
-								.info-box__item
+								.info-box__item.instruction-open
 									button.icon
 										include ./pug/svg/invoice.svg
 									.filter__text Инструкция
-								.info-box__item
+								.info-box__item.note-open
 									button.icon
 										include ./pug/svg/edit-fill.svg
 									.filter__text Оставить заметку
 
+					.other_client.mobile
+						.other_client-title Другие клиенты:
+						.swiper_shadow
+							.swiper_grid_container
+								.swiper.swiper_review
+
+									.swiper-wrapper
+
+										.swiper-slide
+											.slide
+												.other_client-item.gradient_border
+													.other_client-item-img
+														img(src="images/vendors/vendor2.jpg" alt="")
+													.text-box
+														.other_client-item-title ООО «Милорада»
+														.other_client-item-name Викторов Александр
+														.other_client-item-status Статус: Новый
+
+										.swiper-slide
+											.slide
+												.other_client-item.gradient_border
+													.other_client-item-img
+														img(src="images/vendors/vendor2.jpg" alt="")
+													.text-box
+														.other_client-item-title ООО «Милорада»
+														.other_client-item-name Викторов Александр
+														.other_client-item-status Статус: Новый
+
+										.swiper-slide
+											.slide
+												.other_client-item.gradient_border
+													.other_client-item-img
+														img(src="images/vendors/vendor2.jpg" alt="")
+													.text-box
+														.other_client-item-title ООО «Милорада»
+														.other_client-item-name Викторов Александр
+														.other_client-item-status Статус: Новый
+
+
+
 					.section__title Активность на портале
 
-					.number-of-actions
+					.number-of-actions.with-scroll
 						.statistics-box.gradient_border
 							.number-of-actions__head
 								.section__title Общее количество действий
@@ -170,7 +251,7 @@ block content
 										option За последние 3 месяца
 										option За последние 3 месяца 2
 										option За последние 3 месяца 3
-									.icon.gradient_border.blank
+									.icon.gradient_border.blank.advice-open
 										include ./pug/svg/idea.svg
 							.number-of-actions__bottom
 								#number-of-actions__graph
@@ -178,7 +259,7 @@ block content
 						.statistics-box.gradient_border
 							.number-of-actions__head
 								.section__title Действия по категориям за январь 2022
-								.icon.gradient_border.blank
+								.icon.gradient_border.blank.advice-open
 									include ./pug/svg/idea.svg
 							.actions-by-category__bottom
 								#actions-by-category__funnel-chart
@@ -216,7 +297,7 @@ block content
 									option Фильтры
 									option Фильтры 2
 									option Фильтры 3
-							.icon.gradient_border.blank
+							.icon.gradient_border.blank.advice-open
 								include ./pug/svg/idea.svg
 						.switcher__container
 							.switcher__content.active

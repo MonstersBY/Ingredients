@@ -147,6 +147,15 @@
 		position: relative;
 		margin-top: 120rem;
 		margin-bottom: 120rem;
+
+		&.with-scroll {
+			#number-of-actions__graph {
+				width: 1000rem;
+				height: 280rem;
+				padding-top: 20rem;
+				position: relative;
+			}
+		}
 		.statistics-box {
 			padding: 20rem 16rem;
 			width: 355rem;
@@ -196,8 +205,6 @@
 			width: 335rem;
 			height: 310rem;
 			overflow-x: auto;
-		}
-		#number-of-actions__graph {
 		}
 		.form__one {
 			margin-bottom: 40rem;

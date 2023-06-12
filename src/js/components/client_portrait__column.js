@@ -49,7 +49,7 @@ am5.ready(function() {
 		min: 0,
 		extraMax: 0.1,
 		renderer: am5xy.AxisRendererX.new(root, {
-		strokeOpacity: 0.1
+			strokeOpacity: 0.1
 		})
 	}));
 
@@ -63,8 +63,8 @@ am5.ready(function() {
 		valueXField: "value",
 		categoryYField: "product",
 		tooltip: am5.Tooltip.new(root, {
-		pointerOrientation: "left",
-		labelText: "{valueX}"
+			pointerOrientation: "left",
+			labelText: "{valueX}"
 		})
 	}));
 
