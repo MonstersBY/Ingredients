@@ -42,13 +42,22 @@ am5.ready(function() {
 		fillOpacity: 0,
 	});
 
+	if (window.outerWidth <= 768) {
+		series.labels.template.setAll({
+			fontSize: '12rem',
+			fill: am5.color(0xFFFFFF),
+			textAlign: "center",
+			text: "[fontFamily: Gilroy]{category} \n{value}"
+		});
+	}else {
+		series.labels.template.setAll({
+			fontSize: '16rem',
+			fill: am5.color(0xFFFFFF),
+			textAlign: "center",
+			text: "[fontFamily: Gilroy]{category} \n{value}"
+		});
+	}
 
-	series.labels.template.setAll({
-		fontSize: 20,
-		fill: am5.color(0xFFFFFF),
-		textAlign: "center",
-		text: "[fontFamily: Gilroy]{category} \n{value}"
-	});
 	series.get("colors").set("colors", [
 		am5.color(0x9CEC8A),
 		am5.color(0x4DE3B6),
@@ -118,7 +127,8 @@ am5.ready(function() {
 		name: "Series",
 		valueField: "value",
 		categoryField: "category",
-		alignLabels: false
+		alignLabels: false,
+		legendValueText: "{valuePercentTotal.formatNumber('0')}%[/]",
 	}));
 
 	// Set data

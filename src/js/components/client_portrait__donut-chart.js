@@ -36,7 +36,8 @@ am5.ready(function() {
 		name: "Series",
 		valueField: "value",
 		categoryField: "category",
-		alignLabels: false
+		alignLabels: false,
+		legendValueText: "{valuePercentTotal.formatNumber('0')}%[/]",
 	}));
 
 	// Set data
@@ -55,7 +56,7 @@ am5.ready(function() {
 	// series.labels.template.set("visible", false);
 	series.labels.template.setAll({
 		fill: am5.color(0xffffff),
-		text: "{valuePercentTotal.formatNumber('0.00')}%[/]",
+		text: "{valuePercentTotal.formatNumber('0')}%[/]",
 		textType: "circular",
 		radius: 10,
 		inside: true,
@@ -79,7 +80,10 @@ am5.ready(function() {
 		cornerRadiusTL: 10,
 		cornerRadiusTR: 10,
 		cornerRadiusBL: 10,
-		cornerRadiusBR: 10
+		cornerRadiusBR: 10,
+		centerY: am5.percent(-25),
+		maxWidth: 10,
+		maxHeight: 10,
 	});
 	// set value labels align to right
 	legend.valueLabels.template.setAll({ textAlign: "right" })
@@ -136,7 +140,8 @@ am5.ready(function() {
 		name: "Series",
 		valueField: "value",
 		categoryField: "category",
-		alignLabels: false
+		alignLabels: false,
+		legendValueText: "{valuePercentTotal.formatNumber('0')}%[/]",
 	}));
 
 	// Set data
@@ -155,7 +160,7 @@ am5.ready(function() {
 	// series.labels.template.set("visible", false);
 	series.labels.template.setAll({
 		fill: am5.color(0xffffff),
-		text: "{valuePercentTotal.formatNumber('0.00')}%[/]",
+		text: "{valuePercentTotal.formatNumber('0')}%[/]",
 		textType: "circular",
 		radius: 10,
 		inside: true,
@@ -179,7 +184,10 @@ am5.ready(function() {
 		cornerRadiusTL: 10,
 		cornerRadiusTR: 10,
 		cornerRadiusBL: 10,
-		cornerRadiusBR: 10
+		cornerRadiusBR: 10,
+		centerY: am5.percent(-25),
+		maxWidth: 10,
+		maxHeight: 10,
 	});
 	// set value labels align to right
 	legend.valueLabels.template.setAll({ textAlign: "right" })

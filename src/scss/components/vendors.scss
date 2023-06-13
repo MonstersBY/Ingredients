@@ -12,6 +12,17 @@
 	.switcher__container {
 		height: 1116rem !important;
 	}
+	&.vendors-main {
+		.swiper_shadow {
+			margin-top: -135rem;
+		}
+
+		.swiper_control {
+			margin-top: 0;
+			margin-bottom: 67rem;
+		}
+	}
+
 }
 
 
@@ -203,6 +214,20 @@
 		}
 		.switcher__container {
 			height: 830rem !important;
+		}
+
+		&.vendors-main {
+			.swiper_shadow {
+				margin-top: -70rem;
+			}
+
+			.swiper_control {
+				margin-top: 33rem;
+				margin-bottom: 0;
+			}
+			.slide {
+				padding: 10rem;
+			}
 		}
 	}
 

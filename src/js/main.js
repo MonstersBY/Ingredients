@@ -61,6 +61,7 @@ import './components/client_portrait__column';
 import './components/modal-instruction';
 import './components/modal-note';
 import './components/modal-advice';
+import './components/modal-contacts';
 
 
 $('select').niceSelect();

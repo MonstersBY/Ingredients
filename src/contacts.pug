@@ -11,6 +11,16 @@ block content
 	include pug/components/header
 	main
 		section.section.contacts
+			.modal-box.modal-request.modal-contacts
+				.modal-box__container
+					button.modal-box__close(type="button")
+						include pug/svg/cross.svg
+					.section__title.center Обратная связь
+					.modal-request__like
+						include pug/svg/big-like.svg
+					.section__text Ваше сообщение успешно отправлено!
+					.modal-request__btns
+						button.btn.btn__close Вернуться
 			.lines
 				img(src="images/lines.svg" alt="lines.svg")
 			.container
@@ -56,7 +66,7 @@ block content
 								textarea.textarea
 								span.placeholder Сообщение
 							.form__bottom
-								button.btn(type="submit") Отправить
+								button.btn.btn-contacts(type="submit") Отправить
 
 		section.section.contacts-info
 			.container
