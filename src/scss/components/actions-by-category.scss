@@ -15,6 +15,13 @@
 			width: 233rem;
 		}
 	}
+	.statistics-box {
+		.section__title {
+			font-weight: 500;
+			font-size: 24rem;
+			line-height: 130%;
+		}
+	}
 }
 #actions-by-category__funnel-chart {
 	width: 100%;
@@ -55,6 +62,13 @@
 		}
 		.statistics-box {
 			width: 355rem;
+		}
+		.statistics-box {
+			.section__title {
+				font-weight: 500;
+				font-size: 20rem;
+				line-height: 130%;
+			}
 		}
 	}
 	#actions-by-category__funnel-chart {

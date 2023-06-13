@@ -59,13 +59,13 @@ block content
 					.other_client-title Другие клиенты:
 					.swiper_shadow
 						.swiper_grid_container
-							.swiper.swiper_review
+							.swiper.swiper_review_one
 
 								.swiper-wrapper
 
 									.swiper-slide
 										.slide
-											.other_client-item.gradient_border
+											a.other_client-item.gradient_border(href="#")
 												.other_client-item-img
 													img(src="images/vendors/vendor2.jpg" alt="")
 												.text-box
@@ -73,7 +73,7 @@ block content
 													.other_client-item-name Викторов Александр
 													.other_client-item-status Статус: Новый
 										.slide
-											.other_client-item.gradient_border
+											a.other_client-item.gradient_border(href="#")
 												.other_client-item-img
 													img(src="images/vendors/vendor2.jpg" alt="")
 												.text-box
@@ -81,33 +81,7 @@ block content
 													.other_client-item-name Викторов Александр
 													.other_client-item-status Статус: Новый
 										.slide
-											.other_client-item.gradient_border
-												.other_client-item-img
-													img(src="images/vendors/vendor2.jpg" alt="")
-												.text-box
-													.other_client-item-title ООО «Милорада»
-													.other_client-item-name Викторов Александр
-													.other_client-item-status Статус: Новый
-
-									.swiper-slide
-										.slide
-											.other_client-item.gradient_border
-												.other_client-item-img
-													img(src="images/vendors/vendor2.jpg" alt="")
-												.text-box
-													.other_client-item-title ООО «Милорада»
-													.other_client-item-name Викторов Александр
-													.other_client-item-status Статус: Новый
-										.slide
-											.other_client-item.gradient_border
-												.other_client-item-img
-													img(src="images/vendors/vendor2.jpg" alt="")
-												.text-box
-													.other_client-item-title ООО «Милорада»
-													.other_client-item-name Викторов Александр
-													.other_client-item-status Статус: Новый
-										.slide
-											.other_client-item.gradient_border
+											a.other_client-item.gradient_border(href="#")
 												.other_client-item-img
 													img(src="images/vendors/vendor2.jpg" alt="")
 												.text-box
@@ -117,7 +91,7 @@ block content
 
 									.swiper-slide
 										.slide
-											.other_client-item.gradient_border
+											a.other_client-item.gradient_border(href="#")
 												.other_client-item-img
 													img(src="images/vendors/vendor2.jpg" alt="")
 												.text-box
@@ -125,7 +99,7 @@ block content
 													.other_client-item-name Викторов Александр
 													.other_client-item-status Статус: Новый
 										.slide
-											.other_client-item.gradient_border
+											a.other_client-item.gradient_border(href="#")
 												.other_client-item-img
 													img(src="images/vendors/vendor2.jpg" alt="")
 												.text-box
@@ -133,7 +107,33 @@ block content
 													.other_client-item-name Викторов Александр
 													.other_client-item-status Статус: Новый
 										.slide
-											.other_client-item.gradient_border
+											a.other_client-item.gradient_border(href="#")
+												.other_client-item-img
+													img(src="images/vendors/vendor2.jpg" alt="")
+												.text-box
+													.other_client-item-title ООО «Милорада»
+													.other_client-item-name Викторов Александр
+													.other_client-item-status Статус: Новый
+
+									.swiper-slide
+										.slide
+											a.other_client-item.gradient_border(href="#")
+												.other_client-item-img
+													img(src="images/vendors/vendor2.jpg" alt="")
+												.text-box
+													.other_client-item-title ООО «Милорада»
+													.other_client-item-name Викторов Александр
+													.other_client-item-status Статус: Новый
+										.slide
+											a.other_client-item.gradient_border(href="#")
+												.other_client-item-img
+													img(src="images/vendors/vendor2.jpg" alt="")
+												.text-box
+													.other_client-item-title ООО «Милорада»
+													.other_client-item-name Викторов Александр
+													.other_client-item-status Статус: Новый
+										.slide
+											a.other_client-item.gradient_border(href="#")
 												.other_client-item-img
 													img(src="images/vendors/vendor2.jpg" alt="")
 												.text-box
@@ -202,7 +202,7 @@ block content
 
 										.swiper-slide
 											.slide
-												.other_client-item.gradient_border
+												a.other_client-item.gradient_border(href="#")
 													.other_client-item-img
 														img(src="images/vendors/vendor2.jpg" alt="")
 													.text-box
@@ -212,7 +212,7 @@ block content
 
 										.swiper-slide
 											.slide
-												.other_client-item.gradient_border
+												a.other_client-item.gradient_border(href="#")
 													.other_client-item-img
 														img(src="images/vendors/vendor2.jpg" alt="")
 													.text-box
@@ -222,7 +222,7 @@ block content
 
 										.swiper-slide
 											.slide
-												.other_client-item.gradient_border
+												a.other_client-item.gradient_border(href="#")
 													.other_client-item-img
 														img(src="images/vendors/vendor2.jpg" alt="")
 													.text-box
@@ -257,6 +257,20 @@ block content
 										include ./pug/svg/idea.svg
 							.number-of-actions__bottom
 								#number-of-actions__graph
+
+							.number-of-actions__box
+								.number-of-actions__month
+									.number-of-actions__month-color
+									.number-of-actions__month-name Январь
+									.number-of-actions__month-number 1 000
+								.number-of-actions__month
+									.number-of-actions__month-color
+									.number-of-actions__month-name Февраль
+									.number-of-actions__month-number 2 000
+								.number-of-actions__month
+									.number-of-actions__month-color
+									.number-of-actions__month-name Март
+									.number-of-actions__month-number 5 000
 
 						.statistics-box.gradient_border
 							.number-of-actions__head

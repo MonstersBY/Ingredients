@@ -97,7 +97,7 @@ am5.ready(function() {
 	}));
 
 	var yAxis = chart.yAxes.push(am5xy.ValueAxis.new(root, {
-	  renderer: am5xy.AxisRendererY.new(root, {})
+	  	renderer: am5xy.AxisRendererY.new(root, {})
 	}));
 	var yRenderer = yAxis.get("renderer");
 	var xRenderer = xAxis.get("renderer");
@@ -110,6 +110,13 @@ am5.ready(function() {
 		strokeOpacity: 0
 	});
 
+	yRenderer.labels.template.setAll({
+		fill: am5.color(0x999999),
+	});
+	xRenderer.labels.template.setAll({
+		fill: am5.color(0x999999),
+	});
+
 
 	// Add series
 	// https://www.amcharts.com/docs/v5/charts/xy-chart/series/
@@ -119,7 +126,7 @@ am5.ready(function() {
 	  yAxis: yAxis,
 	  valueYField: "value",
 	  valueXField: "date",
-	  curveFactory: d3.curveNatural
+	  curveFactory: d3.curveNatural,
 	}));
 
 	series.fills.template.setAll({
@@ -321,6 +328,13 @@ am5.ready(function() {
 	});
 	xRenderer.grid.template.setAll({
 		strokeOpacity: 0
+	});
+
+	yRenderer.labels.template.setAll({
+		fill: am5.color(0x999999),
+	});
+	xRenderer.labels.template.setAll({
+		fill: am5.color(0x999999),
 	});
 
 

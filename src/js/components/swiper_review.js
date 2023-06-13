@@ -11,6 +11,19 @@ const swiper_review = new Swiper('.swiper_review', {
 		prevEl: ".swiper-button-prev",
 	},
 });
+const swiper_review_one = new Swiper('.swiper_review_one', {
+	modules: [Navigation, Pagination],
+	slidesPerView: 1,
+	speed: 1000,
+	pagination: {
+		el: ".swiper-pagination",
+		type: "fraction",
+	},
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+});
 // ChangeHeight()
 // function ChangeHeight() {
 // 	if ($('.swiper_review').length) {

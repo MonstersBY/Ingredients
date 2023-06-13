@@ -54,6 +54,11 @@ am5.ready(function() {
 	}));
 
 
+	var xRenderer = xAxis.get("renderer");
+	xRenderer.labels.template.setAll({
+		fill: am5.color(0x999999),
+	});
+
 	// Add series
 	// https://www.amcharts.com/docs/v5/charts/xy-chart/series/
 	var series = chart.series.push(am5xy.ColumnSeries.new(root, {
@@ -205,6 +210,10 @@ am5.ready(function() {
 		})
 	}));
 
+	var xRenderer = xAxis.get("renderer");
+	xRenderer.labels.template.setAll({
+		fill: am5.color(0x999999),
+	});
 
 	// Add series
 	// https://www.amcharts.com/docs/v5/charts/xy-chart/series/
