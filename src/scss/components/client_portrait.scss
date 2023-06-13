@@ -266,6 +266,15 @@
 			margin-left: auto;
 		}
 	}
+	.with-note {
+		height: 100%;
+
+		.info-box__item:last-child {
+			font-size: 16rem;
+			line-height: 150%;
+			color: #999999;
+		}
+	}
 }
 
 @include mobile {
