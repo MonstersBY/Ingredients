@@ -62,6 +62,7 @@ import './components/modal-instruction';
 import './components/modal-note';
 import './components/modal-advice';
 import './components/modal-contacts';
+import './components/swiper_trust';
 
 
 $('select').niceSelect();

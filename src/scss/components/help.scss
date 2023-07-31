@@ -1,10 +1,28 @@
 .help {
 
+	&.about-us {
+		.help__inner {
+			width: 1046rem;
+			padding: 76rem 55rem 0;
+		}
+		.section__title {
+			margin-right: auto;
+		}
+		.help__text {
+			font-size: 23rem;
+			font-style: normal;
+			font-weight: 500;
+			line-height: 130%;
+			color: #999;
+			margin-bottom: 16rem;
+		}
+	}
 	&__img {
 		position: relative;
 		border-radius: 5rem;
 		overflow: hidden;
 		z-index: 0;
+		height: 480rem;
 	}
 
 	&__inner {
@@ -45,6 +63,17 @@
 @include mobile {
 	.help {
 
+		&.about-us {
+			.help__inner {
+				width: auto;
+				padding: 24rem 20rem 0;
+			}
+			.help__text {
+				font-size: 15rem;
+				margin-bottom: 8rem;
+			}
+		}
+
 		.container {
 			padding: 0;
 		}
@@ -53,7 +82,7 @@
 			position: relative;
 			border-radius: 5rem;
 			overflow: hidden;
-			height: 220px;
+			height: 174rem;
 
 			img {
 				max-width: 185%;

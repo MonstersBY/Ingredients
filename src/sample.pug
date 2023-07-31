@@ -1,0 +1,107 @@
+extends pug/base
+
+prepend vars
+	//-
+	- title = "Шаблон"
+
+append vars
+	//-
+
+block content
+	include pug/components/header
+	main
+		section.section.help.about-us
+			.container
+				.help__img
+					img(src="images/about-us.jpg" alt="about-us")
+
+				.help__inner
+					.section__title О нас
+					.help__text Российская компания ООО «КПФ «МИЛОРАДА» – с 1991 года активный участник рынка сырья для предприятий пищевой и парфюмерно-косметической промышленности. В основе политики компании – финансовая стабильность, профессиональная техническая поддержка клиентов, освоение и реализация программ обеспечения качества в цепочке производства пищевых продуктов, содействие внедрению инновационных технологий.
+					.help__text «МИЛОРАДА» – надежный партнер крупнейших системообразующих предприятий пищевой промышленности Европейского и Западно-Сибирского регионов РФ, работающих в области производства соков и напитков, кондитерских изделий, молочных продуктов и сыров, маргариновой продукции и соусов, фруктовых полуфабрикатов для промышленной переработки и др.
+
+		section.section.sample
+			.container
+				.sample-container-img.sample-container-img-three
+					.sample__img
+						img(src="images/sample/sample1.jpg", alt="")
+					.sample__img
+						img(src="images/sample/sample2.jpg", alt="")
+					.sample__img
+						img(src="images/sample/sample3.jpg", alt="")
+				.sample-container-text
+					.sample__top Мы возглавляем движение по переосмыслению пищевой промышленности для новой эры.
+					.sample__bottom
+						p Рынок сырья для пищевой, парфюмерно-косметической промышленности достаточно велик и разнообразен. Эти отрасли промышленности полагаются на широкий спектр натуральных и синтетических ингредиентов для создания своей продукции, включая масла, ароматизаторы, эмульгаторы, стабилизаторы и консерванты, среди многих других.
+						p Многие компании специализируются на поставках сырья для этих отраслей, в том числе крупные транснациональные корпорации и более мелкие региональные поставщики. Эти компании могут получать сырье из разных мест, включая фермы, шахты и химические заводы, а также могут обрабатывать и очищать материалы самостоятельно, прежде чем продавать их своим клиентам.
+				.sample-container-img.sample-container-img-two
+					.sample__img
+						img(src="images/sample/sample1.jpg", alt="")
+					.sample__img
+						img(src="images/sample/sample2.jpg", alt="")
+				.sample-container-text
+					.sample__top Мы стремимся постоянно улучшать наши стандарты, в том числе в отношении сырья
+					.sample__bottom
+						p В последние годы растет интерес к использованию устойчивого и экологически чистого сырья в этих отраслях, что привело к развитию новых цепочек поставок и методов производства. В результате многие компании на этом рынке начали уделять приоритетное внимание устойчивости в своей деятельности и маркетинговых усилиях.
+						p В последние годы растет интерес к использованию устойчивого и экологически чистого сырья в этих отраслях, что привело к развитию новых цепочек поставок и методов производства. В результате многие компании на этом рынке начали уделять приоритетное внимание устойчивости в своей деятельности и маркетинговых усилиях.
+
+		section.section.contacts
+			.modal-box.modal-request.modal-contacts
+				.modal-box__container
+					button.modal-box__close(type="button")
+						include pug/svg/cross.svg
+					.section__title.center Обратная связь
+					.modal-request__like
+						include pug/svg/big-like.svg
+					.section__text Ваше сообщение успешно отправлено!
+					.modal-request__btns
+						button.btn.btn__close Вернуться
+			.lines
+				img(src="images/lines.svg" alt="lines.svg")
+			.container
+				.section__title Контакты
+				.contacts__us
+					.contact__us.gradient_border
+						.contact__us-circle
+						.contact__us-icon
+							img(src="images/contacts/call.svg" alt="")
+						.contact__us-inner
+							.contact__us-title Номер телефона
+							.contact__us-text + 7 (351) 536-27-03
+
+					.contact__us.gradient_border
+						.contact__us-circle
+						.contact__us-icon
+							img(src="images/contacts/mail.svg" alt="")
+						.contact__us-inner
+							.contact__us-title Электронная почта
+							.contact__us-text example@mail.com
+
+					.contact__us.gradient_border
+						.contact__us-circle
+						.contact__us-icon
+							img(src="images/contacts/location.svg" alt="")
+						.contact__us-inner
+							.contact__us-title Локация
+							.contact__us-text г. Москва, ул. 1905 года, д.476, 003
+
+					.contact__us.gradient_border
+						form.form.form_login.form_validation
+							.contact__us-title Обратная связь
+							label.form__item
+								input.input(type="text")
+								span.placeholder Ваше имя
+							label.form__item
+								input.input(type="tel")
+								span.placeholder Номер телефона
+							label.form__item
+								input.input(type="email")
+								span.placeholder E-mail
+							label.form__item
+								textarea.textarea
+								span.placeholder Сообщение
+							.form__bottom
+								button.btn.btn-contacts(type="submit") Отправить
+
+
+	include pug/components/footer
